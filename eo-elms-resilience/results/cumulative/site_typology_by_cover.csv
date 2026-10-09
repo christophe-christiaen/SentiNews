@@ -1,0 +1,72 @@
+region,site,cover,typology,x,y
+East Midlands,0,crop,Back-to-back hits,506976.32077115774,368186.134296796
+East Midlands,1,crop,Persistent stress,528045.8100393355,329746.2501711962
+East Midlands,2,crop,Back-to-back hits,519774.55767833086,390750.5648750638
+East Midlands,3,crop,Back-to-back hits,478340.49451674847,278620.3133948254
+East Midlands,4,crop,Back-to-back hits,470238.12442996586,367505.85128033144
+Eastern,0,crop,Persistent stress,539726.9743150971,274414.37959617225
+Eastern,1,crop,Back-to-back hits,596047.1145636764,315314.8552327156
+Eastern,2,crop,Back-to-back hits,604881.9871185431,265553.6180728653
+Eastern,3,crop,Back-to-back hits,572288.3389981878,219777.15829860145
+Eastern,4,crop,Persistent stress,520100.4153040729,240512.6874072277
+North East,0,crop,Back-to-back hits,419121.8904694133,606260.4020941873
+North East,0,grass,Back-to-back hits,419121.8904694133,606260.4020941873
+North East,1,crop,Persistent stress,412876.244118485,572851.9386491644
+North East,1,grass,Persistent stress,412876.244118485,572851.9386491644
+North East,2,crop,Persistent stress,435630.60132945096,522897.0045158997
+North East,2,grass,Slow recovery,435630.60132945096,522897.0045158997
+North East,3,crop,Bounced back,393809.94234505744,642950.339522728
+North East,4,grass,Back-to-back hits,425781.47177619603,550650.6371984922
+North West and Merseyside,0,crop,Back-to-back hits,340861.86914883653,437457.73143666226
+North West and Merseyside,0,grass,Slow recovery,340861.86914883653,437457.73143666226
+North West and Merseyside,1,crop,Slow recovery,343846.5498201838,411828.54169693484
+North West and Merseyside,2,crop,Back-to-back hits,349879.7832933449,356129.69536167337
+North West and Merseyside,2,grass,Back-to-back hits,349879.7832933449,356129.69536167337
+North West and Merseyside,3,grass,Bounced back,351763.2635978936,534144.0753301844
+North West and Merseyside,4,grass,Persistent stress,330168.9846165426,381968.18188848667
+Scotland,0,crop,Little affected,335035.1970455207,706882.7324192702
+Scotland,0,grass,Bounced back,335035.1970455207,706882.7324192702
+Scotland,1,crop,Persistent stress,354110.1451012865,751161.8737912248
+Scotland,2,crop,Bounced back,382070.1784138549,834439.4095187001
+Scotland,3,crop,Persistent stress,359506.17240365985,673186.9693436763
+Scotland,3,grass,Bounced back,359506.17240365985,673186.9693436763
+Scotland,4,crop,Slow recovery,381242.8021482658,645212.5330736345
+South East and London,0,crop,Back-to-back hits,452555.03491858154,139238.35965624265
+South East and London,1,crop,Back-to-back hits,448527.08279345854,194810.33621313958
+South East and London,1,grass,Back-to-back hits,448527.08279345854,194810.33621313958
+South East and London,2,crop,Back-to-back hits,616434.8003102096,154657.70040566358
+South East and London,2,grass,Persistent stress,616434.8003102096,154657.70040566358
+South East and London,3,crop,Back-to-back hits,491513.8877334038,111973.83857419147
+South East and London,3,grass,Persistent stress,491513.8877334038,111973.83857419147
+South East and London,4,crop,Back-to-back hits,462569.3529103913,178279.5717387554
+South West,0,crop,Back-to-back hits,410565.60720728757,150102.8899712932
+South West,0,grass,Back-to-back hits,410565.60720728757,150102.8899712932
+South West,1,crop,Persistent stress,382478.13425716886,100078.70978761747
+South West,1,grass,Back-to-back hits,382478.13425716886,100078.70978761747
+South West,2,crop,Persistent stress,354534.1167439738,128051.41615934993
+South West,2,grass,Persistent stress,354534.1167439738,128051.41615934993
+South West,3,crop,Back-to-back hits,410451.8758334335,205711.14514971746
+South West,4,crop,Persistent stress,308580.9881703841,106414.55517836413
+South West,4,grass,Back-to-back hits,308580.9881703841,106414.55517836413
+Wales,0,crop,Persistent stress,302811.77222900034,173264.9436228549
+Wales,0,grass,Persistent stress,302811.77222900034,173264.9436228549
+Wales,1,grass,Persistent stress,196466.39658897635,209819.63357750757
+Wales,2,crop,Back-to-back hits,341418.04441293277,206042.57500392385
+Wales,2,grass,Back-to-back hits,341418.04441293277,206042.57500392385
+Wales,3,grass,Bounced back,243308.26785533037,375131.4374582644
+Wales,4,grass,Slow recovery,326616.5881150552,367556.5629217834
+West Midlands,0,crop,Back-to-back hits,359597.713691686,317100.3458431959
+West Midlands,1,crop,Back-to-back hits,348722.6134822178,244894.69770337152
+West Midlands,1,grass,Back-to-back hits,348722.6134822178,244894.69770337152
+West Midlands,2,crop,Persistent stress,434231.56036492717,261431.23967424774
+West Midlands,2,grass,Back-to-back hits,434231.56036492717,261431.23967424774
+West Midlands,3,crop,Persistent stress,396729.9390888487,328056.71081703395
+West Midlands,3,grass,Persistent stress,396729.9390888487,328056.71081703395
+West Midlands,4,crop,Persistent stress,396675.74674858723,250191.79709339706
+West Midlands,4,grass,Back-to-back hits,396675.74674858723,250191.79709339706
+Yorkshire & The Humber,0,crop,Back-to-back hits,495030.2485080659,462531.88982359297
+Yorkshire & The Humber,1,crop,Persistent stress,525234.7021696356,435418.2354209232
+Yorkshire & The Humber,2,crop,Persistent stress,445983.3363942101,456223.10442041536
+Yorkshire & The Humber,3,crop,Back-to-back hits,469419.3505077575,423129.8953230654
+Yorkshire & The Humber,4,crop,Persistent stress,478380.179939283,478914.2680062838
+Yorkshire & The Humber,4,grass,Back-to-back hits,478380.179939283,478914.2680062838

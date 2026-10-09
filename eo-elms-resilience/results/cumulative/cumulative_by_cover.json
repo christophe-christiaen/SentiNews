@@ -1,0 +1,231 @@
+{
+  "national_shock_years": [
+    2018,
+    2022,
+    2025,
+    2026
+  ],
+  "n_site_covers": 71,
+  "covers": {
+    "crop": 44,
+    "grass": 27
+  },
+  "pooled (cover x year FE)": {
+    "T1_legacy": {
+      "n": 1775,
+      "coef": 0.12,
+      "p": 0.0027
+    },
+    "T2_hit_harder": {
+      "n": 284,
+      "coef": 0.339,
+      "p": 0.0003
+    },
+    "T3_debt_slows_rebound": {
+      "n": 213,
+      "coef": 0.234,
+      "p": 0.0883
+    },
+    "mean_rebound_after_shock": 1.11
+  },
+  "crop only": {
+    "T1_legacy": {
+      "n": 1100,
+      "coef": 0.115,
+      "p": 0.0062
+    },
+    "T2_hit_harder": {
+      "n": 176,
+      "coef": 0.383,
+      "p": 0.0004
+    },
+    "T3_debt_slows_rebound": {
+      "n": 132,
+      "coef": 0.234,
+      "p": 0.1175
+    },
+    "mean_rebound_after_shock": 1.03
+  },
+  "grass only": {
+    "T1_legacy": {
+      "n": 675,
+      "coef": 0.128,
+      "p": 0.0276
+    },
+    "T2_hit_harder": {
+      "n": 108,
+      "coef": 0.274,
+      "p": 0.027
+    },
+    "T3_debt_slows_rebound": {
+      "n": 81,
+      "coef": 0.226,
+      "p": 0.3151
+    },
+    "mean_rebound_after_shock": 1.23
+  },
+  "grass_difference": {
+    "T1": {
+      "n": 1775,
+      "coef": 0.013,
+      "p": 0.8194
+    },
+    "T2": {
+      "n": 284,
+      "coef": -0.109,
+      "p": 0.4184
+    },
+    "T3": {
+      "n": 213,
+      "coef": -0.05,
+      "p": 0.8255
+    }
+  },
+  "region_typology_by_cover": {
+    "East Midlands": {
+      "crop": "Back-to-back hits",
+      "combined (main)": "Back-to-back hits"
+    },
+    "Eastern": {
+      "crop": "Back-to-back hits",
+      "combined (main)": "Back-to-back hits"
+    },
+    "North East": {
+      "crop": "Persistent stress",
+      "grass": "Slow recovery",
+      "combined (main)": "Persistent stress"
+    },
+    "North West and Merseyside": {
+      "crop": "Slow recovery",
+      "grass": "Persistent stress",
+      "combined (main)": "Persistent stress"
+    },
+    "Scotland": {
+      "crop": "Little affected",
+      "grass": "Bounced back",
+      "combined (main)": "Bounced back"
+    },
+    "South East and London": {
+      "crop": "Back-to-back hits",
+      "grass": "Back-to-back hits",
+      "combined (main)": "Back-to-back hits"
+    },
+    "South West": {
+      "crop": "Back-to-back hits",
+      "grass": "Back-to-back hits",
+      "combined (main)": "Back-to-back hits"
+    },
+    "Wales": {
+      "crop": "Back-to-back hits",
+      "grass": "Slow recovery",
+      "combined (main)": "Slow recovery"
+    },
+    "West Midlands": {
+      "crop": "Persistent stress",
+      "grass": "Back-to-back hits",
+      "combined (main)": "Back-to-back hits"
+    },
+    "Yorkshire & The Humber": {
+      "crop": "Persistent stress",
+      "combined (main)": "Back-to-back hits"
+    }
+  },
+  "grass_share": {
+    "East Midlands": 0.0,
+    "Eastern": 0.0,
+    "North East": 0.24,
+    "North West and Merseyside": 0.57,
+    "Scotland": 0.02,
+    "South East and London": 0.09,
+    "South West": 0.15,
+    "Wales": 0.95,
+    "West Midlands": 0.15,
+    "Yorkshire & The Humber": 0.01
+  },
+  "T4_AR1_by_cover": {
+    "crop": {
+      "regions": {
+        "East Midlands": {
+          "early": -0.16,
+          "late": 0.4
+        },
+        "Eastern": {
+          "early": -0.34,
+          "late": 0.11
+        },
+        "North East": {
+          "early": 0.07,
+          "late": 0.14
+        },
+        "North West and Merseyside": {
+          "early": -0.13,
+          "late": -0.12
+        },
+        "Scotland": {
+          "early": -0.51,
+          "late": 0.16
+        },
+        "South East and London": {
+          "early": -0.47,
+          "late": 0.03
+        },
+        "South West": {
+          "early": -0.32,
+          "late": 0.35
+        },
+        "Wales": {
+          "early": 0.1,
+          "late": -0.07
+        },
+        "West Midlands": {
+          "early": -0.03,
+          "late": 0.28
+        },
+        "Yorkshire & The Humber": {
+          "early": -0.03,
+          "late": 0.41
+        }
+      },
+      "rose": 9.0,
+      "n": 10,
+      "mean_early": -0.18,
+      "mean_late": 0.17
+    },
+    "grass": {
+      "regions": {
+        "North East": {
+          "early": -0.04,
+          "late": 0.11
+        },
+        "North West and Merseyside": {
+          "early": -0.44,
+          "late": 0.15
+        },
+        "Scotland": {
+          "early": -0.18,
+          "late": -0.13
+        },
+        "South East and London": {
+          "early": -0.32,
+          "late": -0.01
+        },
+        "South West": {
+          "early": -0.24,
+          "late": 0.2
+        },
+        "Wales": {
+          "early": -0.28,
+          "late": 0.06
+        },
+        "West Midlands": {
+          "early": -0.2,
+          "late": 0.26
+        }
+      },
+      "rose": 7.0,
+      "n": 7,
+      "mean_early": -0.24,
+      "mean_late": 0.09
+    }
+  }
+}

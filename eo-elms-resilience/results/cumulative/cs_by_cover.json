@@ -1,0 +1,95 @@
+{
+  "combined": {
+    "n_sites": 40,
+    "drought 2022": {
+      "n": 40,
+      "spearman": 0.2,
+      "p": 0.209,
+      "coef_per_10pct": 0.337,
+      "p_region_fe": 0.3
+    },
+    "rebound 2023": {
+      "n": 40,
+      "spearman": -0.08,
+      "p": 0.611,
+      "coef_per_10pct": -0.403,
+      "p_region_fe": 0.235
+    },
+    "drought 2025": {
+      "n": 40,
+      "spearman": -0.11,
+      "p": 0.49,
+      "coef_per_10pct": 0.171,
+      "p_region_fe": 0.137
+    },
+    "drought 2026": {
+      "n": 40,
+      "spearman": -0.12,
+      "p": 0.478,
+      "coef_per_10pct": 0.136,
+      "p_region_fe": 0.175
+    }
+  },
+  "crop": {
+    "n_sites": 37,
+    "drought 2022": {
+      "n": 37,
+      "spearman": 0.15,
+      "p": 0.374,
+      "coef_per_10pct": 0.4,
+      "p_region_fe": 0.23
+    },
+    "rebound 2023": {
+      "n": 37,
+      "spearman": -0.0,
+      "p": 0.993,
+      "coef_per_10pct": -0.431,
+      "p_region_fe": 0.245
+    },
+    "drought 2025": {
+      "n": 37,
+      "spearman": -0.17,
+      "p": 0.312,
+      "coef_per_10pct": 0.102,
+      "p_region_fe": 0.254
+    },
+    "drought 2026": {
+      "n": 37,
+      "spearman": -0.1,
+      "p": 0.575,
+      "coef_per_10pct": 0.128,
+      "p_region_fe": 0.221
+    }
+  },
+  "grass": {
+    "n_sites": 20,
+    "drought 2022": {
+      "n": 20,
+      "spearman": 0.07,
+      "p": 0.782,
+      "coef_per_10pct": -0.292,
+      "p_region_fe": 0.559
+    },
+    "rebound 2023": {
+      "n": 20,
+      "spearman": -0.16,
+      "p": 0.502,
+      "coef_per_10pct": 0.01,
+      "p_region_fe": 0.986
+    },
+    "drought 2025": {
+      "n": 20,
+      "spearman": -0.13,
+      "p": 0.574,
+      "coef_per_10pct": 0.193,
+      "p_region_fe": 0.371
+    },
+    "drought 2026": {
+      "n": 20,
+      "spearman": -0.24,
+      "p": 0.313,
+      "coef_per_10pct": 0.037,
+      "p_region_fe": 0.769
+    }
+  }
+}

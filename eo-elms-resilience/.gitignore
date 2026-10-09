@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+data/raw/modis/
+*.pyc
+.DS_Store
+data/raw/modis_aqua/
+shared/data/*
+!shared/data/.gitkeep
+wp*/data/
+.DS_Store

@@ -1,0 +1,193 @@
+{
+  "definitions": {
+    "shock": -1.0,
+    "recovered": -0.5,
+    "carryover": 0.5,
+    "baseline": "2001-2015"
+  },
+  "region_typology": [
+    {
+      "region": "Eastern",
+      "typology": "Back-to-back hits",
+      "shocks_2016_2026": 6,
+      "compound_hits": 3,
+      "longest_episode": 2,
+      "episode_years": "2017-2018;2020-2020;2022-2023;2025-2026",
+      "peak_debt": -5.97,
+      "peak_debt_year": 2026,
+      "debt_2026": -5.97
+    },
+    {
+      "region": "South West",
+      "typology": "Back-to-back hits",
+      "shocks_2016_2026": 5,
+      "compound_hits": 2,
+      "longest_episode": 2,
+      "episode_years": "2018-2018;2022-2023;2025-2026",
+      "peak_debt": -4.97,
+      "peak_debt_year": 2026,
+      "debt_2026": -4.97
+    },
+    {
+      "region": "East Midlands",
+      "typology": "Back-to-back hits",
+      "shocks_2016_2026": 4,
+      "compound_hits": 1,
+      "longest_episode": 2,
+      "episode_years": "2017-2018;2022-2023;2025-2026",
+      "peak_debt": -4.93,
+      "peak_debt_year": 2026,
+      "debt_2026": -4.93
+    },
+    {
+      "region": "West Midlands",
+      "typology": "Back-to-back hits",
+      "shocks_2016_2026": 3,
+      "compound_hits": 1,
+      "longest_episode": 2,
+      "episode_years": "2022-2023;2025-2026",
+      "peak_debt": -4.18,
+      "peak_debt_year": 2026,
+      "debt_2026": -4.18
+    },
+    {
+      "region": "South East and London",
+      "typology": "Back-to-back hits",
+      "shocks_2016_2026": 3,
+      "compound_hits": 1,
+      "longest_episode": 2,
+      "episode_years": "2022-2023;2025-2026",
+      "peak_debt": -3.66,
+      "peak_debt_year": 2026,
+      "debt_2026": -3.66
+    },
+    {
+      "region": "North West and Merseyside",
+      "typology": "Persistent stress",
+      "shocks_2016_2026": 3,
+      "compound_hits": 2,
+      "longest_episode": 5,
+      "episode_years": "2018-2018;2022-2026",
+      "peak_debt": -2.8,
+      "peak_debt_year": 2026,
+      "debt_2026": -2.8
+    },
+    {
+      "region": "Yorkshire & The Humber",
+      "typology": "Back-to-back hits",
+      "shocks_2016_2026": 2,
+      "compound_hits": 1,
+      "longest_episode": 2,
+      "episode_years": "2025-2026",
+      "peak_debt": -2.75,
+      "peak_debt_year": 2026,
+      "debt_2026": -2.75
+    },
+    {
+      "region": "North East",
+      "typology": "Persistent stress",
+      "shocks_2016_2026": 3,
+      "compound_hits": 2,
+      "longest_episode": 3,
+      "episode_years": "2022-2022;2024-2026",
+      "peak_debt": -1.95,
+      "peak_debt_year": 2026,
+      "debt_2026": -1.95
+    },
+    {
+      "region": "Wales",
+      "typology": "Slow recovery",
+      "shocks_2016_2026": 3,
+      "compound_hits": 0,
+      "longest_episode": 2,
+      "episode_years": "2018-2018;2022-2023;2025-2026",
+      "peak_debt": -2.36,
+      "peak_debt_year": 2022,
+      "debt_2026": -1.85
+    },
+    {
+      "region": "Scotland",
+      "typology": "Bounced back",
+      "shocks_2016_2026": 1,
+      "compound_hits": 0,
+      "longest_episode": 1,
+      "episode_years": "2018-2018",
+      "peak_debt": -1.16,
+      "peak_debt_year": 2001,
+      "debt_2026": -0.63
+    }
+  ],
+  "site_typology_counts": {
+    "Back-to-back hits": 25,
+    "Persistent stress": 16,
+    "Bounced back": 5,
+    "Slow recovery": 4
+  },
+  "tests": {
+    "national_shock_years": [
+      2018,
+      2022,
+      2025,
+      2026
+    ],
+    "T1_legacy": {
+      "n": 1250,
+      "coef": 0.12116918769587634,
+      "p": 0.002156925969257059
+    },
+    "T2_unrecovered_hit_harder": {
+      "n": 200,
+      "coef": 0.3491487125832707,
+      "p": 0.00022030201004184503,
+      "note": "+1 SD better pre-shock state -> coef SD better state in the shock year"
+    },
+    "T3_debt_slows_rebound": {
+      "n": 150,
+      "coef": 0.3115642095723766,
+      "p": 0.03664999719715622,
+      "note": "positive coef: more debt (more negative D) -> smaller rebound"
+    }
+  },
+  "T4_AR1_by_region": {
+    "East Midlands": {
+      "early": -0.16,
+      "late": 0.4
+    },
+    "Eastern": {
+      "early": -0.34,
+      "late": 0.11
+    },
+    "North East": {
+      "early": 0.09,
+      "late": 0.13
+    },
+    "North West and Merseyside": {
+      "early": -0.39,
+      "late": 0.06
+    },
+    "Scotland": {
+      "early": -0.54,
+      "late": 0.04
+    },
+    "South East and London": {
+      "early": -0.45,
+      "late": 0.02
+    },
+    "South West": {
+      "early": -0.28,
+      "late": 0.29
+    },
+    "Wales": {
+      "early": -0.3,
+      "late": 0.04
+    },
+    "West Midlands": {
+      "early": -0.03,
+      "late": 0.29
+    },
+    "Yorkshire & The Humber": {
+      "early": -0.07,
+      "late": 0.44
+    }
+  }
+}

@@ -1,0 +1,15 @@
+# Common frame for all work packages
+crs: EPSG:27700            # British National Grid
+grid_m: 10                 # Sentinel-derived analysis grid
+years:
+  baseline: [2001, 2026]   # MODIS / Landsat record (pilot)
+  sentinel: [2017, 2026]   # Sentinel-1/-2 and annual embeddings
+  growing_season_doy: [60, 260]
+  early_warning_cutoff_doy: 193   # mid-July
+units:
+  wp1: ITL3 region (aggregated from fields)
+  wp2: ITL3 region and catchment
+  wp3: field parcel
+regions: [North East, North West, Yorkshire and The Humber, East Midlands, West Midlands, East of England,
+          London and the South East, South West, Wales, Scotland]
+pilot_sites: ../../src/sites.py   # 50 pilot windows, reused for first tests

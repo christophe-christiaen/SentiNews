@@ -1,0 +1,268 @@
+{
+ "probes": [
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2019,
+   "task": "Grassland vs arable SFI land",
+   "n_pos": 753,
+   "n_neg": 547,
+   "auc": 0.921,
+   "bal_acc": 0.888
+  },
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2019,
+   "task": "Herbal leys vs arable SFI land",
+   "n_pos": 388,
+   "n_neg": 546,
+   "auc": 0.9,
+   "bal_acc": 0.846
+  },
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2019,
+   "task": "Herbal leys vs other grassland SFI land",
+   "n_pos": 394,
+   "n_neg": 758,
+   "auc": 0.572,
+   "bal_acc": 0.548
+  },
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2019,
+   "task": "Scheme parcels vs random pixels",
+   "n_pos": 3912,
+   "n_neg": 2981,
+   "auc": 0.639,
+   "bal_acc": 0.6
+  },
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2025,
+   "task": "Grassland vs arable SFI land",
+   "n_pos": 753,
+   "n_neg": 547,
+   "auc": 0.969,
+   "bal_acc": 0.925
+  },
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2025,
+   "task": "Herbal leys vs arable SFI land",
+   "n_pos": 388,
+   "n_neg": 546,
+   "auc": 0.944,
+   "bal_acc": 0.91
+  },
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2025,
+   "task": "Herbal leys vs other grassland SFI land",
+   "n_pos": 394,
+   "n_neg": 758,
+   "auc": 0.617,
+   "bal_acc": 0.571
+  },
+  {
+   "backend": "AlphaEarth (20 m, 64-d)",
+   "year": 2025,
+   "task": "Scheme parcels vs random pixels",
+   "n_pos": 3912,
+   "n_neg": 2982,
+   "auc": 0.657,
+   "bal_acc": 0.617
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2019,
+   "task": "Grassland vs arable SFI land",
+   "n_pos": 748,
+   "n_neg": 544,
+   "auc": 0.931,
+   "bal_acc": 0.881
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2019,
+   "task": "Herbal leys vs arable SFI land",
+   "n_pos": 385,
+   "n_neg": 543,
+   "auc": 0.888,
+   "bal_acc": 0.819
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2019,
+   "task": "Herbal leys vs other grassland SFI land",
+   "n_pos": 391,
+   "n_neg": 753,
+   "auc": 0.581,
+   "bal_acc": 0.572
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2019,
+   "task": "Scheme parcels vs random pixels",
+   "n_pos": 3895,
+   "n_neg": 2951,
+   "auc": 0.635,
+   "bal_acc": 0.597
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2025,
+   "task": "Grassland vs arable SFI land",
+   "n_pos": 757,
+   "n_neg": 550,
+   "auc": 0.941,
+   "bal_acc": 0.902
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2025,
+   "task": "Herbal leys vs arable SFI land",
+   "n_pos": 388,
+   "n_neg": 549,
+   "auc": 0.93,
+   "bal_acc": 0.902
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2025,
+   "task": "Herbal leys vs other grassland SFI land",
+   "n_pos": 394,
+   "n_neg": 762,
+   "auc": 0.583,
+   "bal_acc": 0.563
+  },
+  {
+   "backend": "TESSERA (10 m, 128-d)",
+   "year": 2025,
+   "task": "Scheme parcels vs random pixels",
+   "n_pos": 3931,
+   "n_neg": 3000,
+   "auc": 0.651,
+   "bal_acc": 0.61
+  }
+ ],
+ "change": {
+  "AlphaEarth (20 m, 64-d)": {
+   "Arable actions": {
+    "mean": 0.1129,
+    "count": 949
+   },
+   "CS options (2021-25)": {
+    "mean": 0.0654,
+    "count": 1967
+   },
+   "ES options (2009-14)": {
+    "mean": 0.0639,
+    "count": 1038
+   },
+   "Hedgerows and boundaries": {
+    "mean": 0.0696,
+    "count": 2994
+   },
+   "Herbal leys": {
+    "mean": 0.0618,
+    "count": 395
+   },
+   "Low-input / legume grassland": {
+    "mean": 0.0519,
+    "count": 760
+   },
+   "Whole-farm soil plan": {
+    "mean": 0.0727,
+    "count": 1887
+   }
+  },
+  "TESSERA (10 m, 128-d)": {
+   "Arable actions": {
+    "mean": 0.2784,
+    "count": 941
+   },
+   "CS options (2021-25)": {
+    "mean": 0.1647,
+    "count": 1982
+   },
+   "ES options (2009-14)": {
+    "mean": 0.1818,
+    "count": 1030
+   },
+   "Hedgerows and boundaries": {
+    "mean": 0.1752,
+    "count": 2969
+   },
+   "Herbal leys": {
+    "mean": 0.1634,
+    "count": 392
+   },
+   "Low-input / legume grassland": {
+    "mean": 0.1415,
+    "count": 755
+   },
+   "Whole-farm soil plan": {
+    "mean": 0.1869,
+    "count": 1887
+   }
+  }
+ },
+ "change_reg": {
+  "AlphaEarth (20 m, 64-d)": {
+   "Arable actions": {
+    "coef": 0.417,
+    "p": 0.0
+   },
+   "CS options (2021-25)": {
+    "coef": -0.1,
+    "p": 0.0006
+   },
+   "ES options (2009-14)": {
+    "coef": -0.31,
+    "p": 0.0
+   },
+   "Hedgerows and boundaries": {
+    "coef": -0.041,
+    "p": 0.1227
+   },
+   "Herbal leys": {
+    "coef": -0.099,
+    "p": 0.0273
+   },
+   "Low-input / legume grassland": {
+    "coef": -0.206,
+    "p": 0.0
+   }
+  },
+  "TESSERA (10 m, 128-d)": {
+   "Arable actions": {
+    "coef": 0.313,
+    "p": 0.0
+   },
+   "CS options (2021-25)": {
+    "coef": -0.086,
+    "p": 0.0
+   },
+   "ES options (2009-14)": {
+    "coef": -0.277,
+    "p": 0.0
+   },
+   "Hedgerows and boundaries": {
+    "coef": -0.041,
+    "p": 0.0122
+   },
+   "Herbal leys": {
+    "coef": -0.081,
+    "p": 0.0048
+   },
+   "Low-input / legume grassland": {
+    "coef": -0.19,
+    "p": 0.0
+   }
+  }
+ },
+ "change_agreement": {
+  "n": 10183,
+  "spearman": 0.797
+ }
+}

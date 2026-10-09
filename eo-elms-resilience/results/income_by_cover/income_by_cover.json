@@ -1,0 +1,122 @@
+{
+  "tiff~crop_peak_a": {
+    "n": 128,
+    "regions": 8,
+    "pct_per_0p1": 12.6,
+    "p_ols": 0.24,
+    "p_cluster_region": 0.203
+  },
+  "tiff~crop_early_a": {
+    "n": 128,
+    "regions": 8,
+    "pct_per_0p1": 12.1,
+    "p_ols": 0.236,
+    "p_cluster_region": 0.168
+  },
+  "crop_out~crop_peak_a": {
+    "n": 128,
+    "regions": 8,
+    "pct_per_0p1": 4.2,
+    "p_ols": 0.344,
+    "p_cluster_region": 0.064
+  },
+  "crop_out~crop_early_a": {
+    "n": 128,
+    "regions": 8,
+    "pct_per_0p1": 4.8,
+    "p_ols": 0.259,
+    "p_cluster_region": 0.031
+  },
+  "livestock_out~crop_peak_a": {
+    "n": 128,
+    "regions": 8,
+    "pct_per_0p1": -1.0,
+    "p_ols": 0.786,
+    "p_cluster_region": 0.655
+  },
+  "livestock_out~crop_early_a": {
+    "n": 128,
+    "regions": 8,
+    "pct_per_0p1": -0.9,
+    "p_ols": 0.797,
+    "p_cluster_region": 0.72
+  },
+  "tiff~grass_peak_a": {
+    "n": 80,
+    "regions": 5,
+    "pct_per_0p1": 8.5,
+    "p_ols": 0.687,
+    "p_cluster_region": 0.424
+  },
+  "tiff~grass_early_a": {
+    "n": 80,
+    "regions": 5,
+    "pct_per_0p1": 5.9,
+    "p_ols": 0.776,
+    "p_cluster_region": 0.48
+  },
+  "crop_out~grass_peak_a": {
+    "n": 80,
+    "regions": 5,
+    "pct_per_0p1": -3.1,
+    "p_ols": 0.702,
+    "p_cluster_region": 0.457
+  },
+  "crop_out~grass_early_a": {
+    "n": 80,
+    "regions": 5,
+    "pct_per_0p1": -5.0,
+    "p_ols": 0.521,
+    "p_cluster_region": 0.076
+  },
+  "livestock_out~grass_peak_a": {
+    "n": 80,
+    "regions": 5,
+    "pct_per_0p1": -7.6,
+    "p_ols": 0.258,
+    "p_cluster_region": 0.066
+  },
+  "livestock_out~grass_early_a": {
+    "n": 80,
+    "regions": 5,
+    "pct_per_0p1": -6.0,
+    "p_ols": 0.362,
+    "p_cluster_region": 0.161
+  },
+  "tiff~both": {
+    "n": 80,
+    "regions": 5,
+    "crop": {
+      "pct_per_0p1": 24.9,
+      "p": 0.29
+    },
+    "grass": {
+      "pct_per_0p1": -16.1,
+      "p": 0.607
+    }
+  },
+  "crop_out~both": {
+    "n": 80,
+    "regions": 5,
+    "crop": {
+      "pct_per_0p1": 14.9,
+      "p": 0.092
+    },
+    "grass": {
+      "pct_per_0p1": -17.8,
+      "p": 0.132
+    }
+  },
+  "livestock_out~both": {
+    "n": 80,
+    "regions": 5,
+    "crop": {
+      "pct_per_0p1": 3.9,
+      "p": 0.605
+    },
+    "grass": {
+      "pct_per_0p1": -11.4,
+      "p": 0.256
+    }
+  }
+}

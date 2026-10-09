@@ -1,0 +1,119 @@
+{
+  "crop": {
+    "n": 250,
+    "regions": 10,
+    "r": 0.570901218805145,
+    "p": 5.0554176669550535e-23,
+    "r2_loyo": 0.26978273696631716,
+    "yearFE_slope_t_per_0p1": 1.0391640438123235,
+    "yearFE_p": 1.952636300296646e-06,
+    "by_region": {
+      "East Midlands": 0.65,
+      "Eastern": 0.61,
+      "North East": 0.76,
+      "North West and Merseyside": 0.24,
+      "Scotland": 0.57,
+      "South East and London": 0.54,
+      "South West": 0.51,
+      "Wales": 0.46,
+      "West Midlands": 0.71,
+      "Yorkshire & The Humber": 0.42
+    },
+    "early": {
+      "n": 250,
+      "r": 0.5802395428996161,
+      "p": 6.778640336283652e-24,
+      "r2_loyo": 0.26286238300088327,
+      "yearFE_slope_t_per_0p1": 0.8923580189368299,
+      "yearFE_p": 7.978669377344635e-06
+    }
+  },
+  "grass": {
+    "n": 175,
+    "regions": 7,
+    "r": 0.40257812066605203,
+    "p": 3.333803084437041e-08,
+    "r2_loyo": 0.10290264453564935,
+    "yearFE_slope_t_per_0p1": 0.9423066983353543,
+    "yearFE_p": 0.006657993834226766,
+    "by_region": {
+      "North East": 0.57,
+      "North West and Merseyside": 0.25,
+      "Scotland": 0.34,
+      "South East and London": 0.4,
+      "South West": 0.1,
+      "Wales": 0.33,
+      "West Midlands": 0.62
+    },
+    "early": {
+      "n": 175,
+      "r": 0.4067883551036603,
+      "p": 2.320682196223919e-08,
+      "r2_loyo": 0.10579543500498312,
+      "yearFE_slope_t_per_0p1": 0.7773864718870962,
+      "yearFE_p": 0.01718010980221669
+    }
+  },
+  "horse_race_early": {
+    "n": 175,
+    "crop": {
+      "coef": 0.8030157985188099,
+      "p": 0.0217805525232203
+    },
+    "grass": {
+      "coef": 0.08064382350348129,
+      "p": 0.8524060826234526
+    }
+  },
+  "horse_race": {
+    "crop_only": {
+      "n": 175,
+      "r2": 0.3299411212644924,
+      "ndvi_a_crop": {
+        "coef": 2.1958546891415103,
+        "p": 9.482866505589231e-17
+      }
+    },
+    "grass_only": {
+      "n": 175,
+      "r2": 0.16206914323901067,
+      "ndvi_a_grass": {
+        "coef": 1.9914047237469188,
+        "p": 3.3338030844369836e-08
+      }
+    },
+    "both": {
+      "n": 175,
+      "r2": 0.34070159202941264,
+      "ndvi_a_crop": {
+        "coef": 2.738539885975233,
+        "p": 1.4306907169061448e-10
+      },
+      "ndvi_a_grass": {
+        "coef": -0.8697181257444939,
+        "p": 0.09565737284546945
+      }
+    },
+    "both_yearFE": {
+      "n": 175,
+      "r2": 0.7047729552559053,
+      "ndvi_a_crop": {
+        "coef": 1.0787735724581342,
+        "p": 0.004469756958150561
+      },
+      "ndvi_a_grass": {
+        "coef": 0.030653052771983002,
+        "p": 0.9463510441793537
+      }
+    },
+    "regions": [
+      "North East",
+      "North West and Merseyside",
+      "Scotland",
+      "South East and London",
+      "South West",
+      "Wales",
+      "West Midlands"
+    ]
+  }
+}
