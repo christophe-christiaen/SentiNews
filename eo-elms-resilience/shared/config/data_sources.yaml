@@ -1,6 +1,6 @@
 # Data catalogue shared by WP1-WP3. status: used | to_ingest | to_check
 sentinel2_l2a:   {provider: Microsoft Planetary Computer (COGs; src/extract_s2_parcels.py), res_m: 10-20, years: 2017-2025, unit: cereal parcels (NDVI, NDRE, NDMI per clear date), licence: Copernicus open, status: extracting, wps: [1, 2, 3]}
-sentinel1_grd:   {provider: Planetary Computer (sentinel-1-rtc) or Earth Engine (COPERNICUS/S1_GRD), res_m: 10, years: 2017-2025, unit: cereal parcels (VV, VH, VH/VV), use: cloud gap-filling, waterlogging, harvest / cover-crop timing, licence: Copernicus open, status: planned (priority 3), wps: [1, 2, 3]}
+sentinel1_grd:   {provider: Planetary Computer (sentinel-1-rtc) or Earth Engine (COPERNICUS/S1_GRD), res_m: 10, years: 2017-2025, unit: cereal parcels (VV, VH, VH/VV), use: cloud gap-filling, waterlogging, harvest / cover-crop timing, licence: Copernicus open, status: test done (soil wetness visible, floods not at point scale); national run Oct-Aug half-monthly via Earth Engine (gee_s1_interactive.py), wps: [1, 2, 3]}
 lst_landsat_c2:  {provider: USGS (Landsat 8/9 C2 L2 ST), res_m: 30, years: 2013-2026, licence: public domain, status: deprioritised (too coarse / cloudy per parcel), wps: [2, 3]}
 lst_modis:       {provider: NASA (MOD11A1/MYD11A1), res_m: 1000, years: 2000-2026, licence: NASA open, status: to_ingest, wps: [1, 2]}
 lst_sentinel3:   {provider: Copernicus (SLSTR LST), res_m: 1000, years: 2017-2026, licence: Copernicus open, status: to_ingest, wps: [1, 2]}

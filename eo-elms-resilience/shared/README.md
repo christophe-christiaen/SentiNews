@@ -25,6 +25,13 @@ python fetch_schemes.py --national rpa_parcel_points   # 2.7M RPA parcel points
 python build_parcel_schemes.py    # parcel-level groups: agreement / no agreement / legacy ES / uncertain, entry year
 python download_crome.py          # CROME 2016-2025 (resumable signed links); then fetch_crome.py --gdb ... per year
 python build_parcel_crops.py      # crop history per parcel -> parcels/parcel_panel.parquet
+python fetch_era5land.py --project <ee-project> [--years 2026]   # weather 1991-now at cereal-parcel cells
+python fetch_risk_layers.py       # flood zones + peaty soils per parcel
+python gee_s2_interactive.py --project <ee-project>   # Sentinel-2 half-monthly per cereal parcel, 2017-2026
+python build_s2_panel.py          # outcomes as pre-registered + weather shocks
+python gee_s1_interactive.py --project <ee-project>   # Sentinel-1 half-monthly Oct-Aug per cereal parcel
+python build_s1_panel.py          # winter soil wetness, cover, spring growth
+python link_accounts_news.py      # Companies House accounts + GDELT news vs weather (SentiNews)
 for l in es_agreements sfi_agreement_areas cs_management_areas es_options cs_options sfi_actions; do
   python fetch_schemes.py --national $l; done   # all England, live agreements to 2026 (~4.5M records)
 ```

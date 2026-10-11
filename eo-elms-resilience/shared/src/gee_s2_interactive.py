@@ -44,6 +44,15 @@ def square_year(t, sq, year, pool):
     return sq, year, 'done', len(res)
 
 
+def init_ee(project, tries=20):
+    for k in range(tries):                              # restricted-mode projects: login can be refused while busy
+        try:
+            ee.Initialize(project=project); return
+        except Exception as e:
+            if k == tries - 1: raise
+            time.sleep(30)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--project', required=True)
@@ -52,7 +61,7 @@ def main():
     ap.add_argument('--all', action='store_true', help='also redo square-years already exported to Drive')
     ap.add_argument('--parallel-squares', type=int, default=6, help='square-years in flight at once (keeps all request slots busy)')
     a = ap.parse_args()
-    ee.Initialize(project=a.project)
+    init_ee(a.project)
     os.makedirs(OUT, exist_ok=True)
     t = g.chunks()
     jobs = [(sq, y) for sq in sorted(t.sq.unique()) for y in g.YEARS]

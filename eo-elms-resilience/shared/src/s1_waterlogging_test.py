@@ -72,7 +72,10 @@ def main():
     s = pd.concat(out, ignore_index=True)
     os.makedirs(os.path.join(D, 's1'), exist_ok=True)
     s.to_parquet(os.path.join(D, 's1', 's1_test_30UXD.parquet'), index=False)
+    summarise(s, p)
 
+
+def summarise(s, p):
     s['water'] = s.vv_db < WATER_DB
     s = s.merge(p[['parcref', 'flood_zone']], on='parcref', how='left')
     s['fz3'] = s.flood_zone.eq(3).fillna(False)
@@ -86,11 +89,15 @@ def main():
     lines = ['# Sentinel-1 waterlogging test, tile 30UXD (counts only)', '',
              f'- Cereal parcels: {p.parcref.nunique():,}; passes read: {s.date.nunique()} dates; observations: {len(s):,}',
              f'- Water-like = VV backscatter below {WATER_DB} dB (40 m overview of Sentinel-1 RTC gamma0)', '',
-             '## By winter and flood zone', '', tab.reset_index().replace({'fz3': {True: 'Flood Zone 3', False: 'other'}}).to_markdown(index=False), '',
+             '## By winter and flood zone', '', tab.reset_index().assign(fz3=lambda d: d.fz3.map({True: 'Flood Zone 3', False: 'other'})).to_markdown(index=False), '',
              '## Share of parcel observations water-like, by month', '', monthly.reset_index().to_markdown(index=False)]
     open(SUMMARY, 'w').write('\n'.join(lines) + '\n')
     print('\n'.join(lines))
 
 
 if __name__ == '__main__':
-    main()
+    import sys
+    if '--summary' in sys.argv:                  # rebuild the summary from the saved passes
+        summarise(pd.read_parquet(os.path.join(D, 's1', 's1_test_30UXD.parquet')), parcels())
+    else:
+        main()
