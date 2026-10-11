@@ -41,7 +41,18 @@ rather than per field. WP3 fixes all three.
 - [x] First embedding probes (`src/embedding_probe.py` → `results/embedding_probe/`): grassland vs arable SFI land AUC 0.92–0.97
   on held-out sites; herbal leys vs other grassland only 0.57–0.62; 2019→2025 change dominated by crop rotation
 - [ ] Detection probe per CS option type, with a Sentinel-2 index baseline
-- [x] Pre-registration drafted (`results/preregistration.md`; to freeze after review)
+- [x] Pre-registration frozen 11 Oct 2026 (`results/preregistration.md`, commit b0f232b; later choices in its decisions record)
+- [x] First run on Sentinel-2, 2017–2026 (below)
+
+## First results (Sentinel-2, October 2026)
+337,131 cereal parcels (247,441 entering an agreement in 2021–2026, 89,690 never in a scheme), matched within region.
+- **H1, smaller July drop in shock seasons:** +0.06 to +0.08 SD in all three designs. Significant in the frozen plan
+  (+0.082) and trend-adjusted (+0.074), but the frozen-plan placebo fails (+0.079), and the within-cohort design, which
+  passes its placebo, is not significant (+0.062, p = 0.44). **Consistent with buffering, not established.**
+- **H2, better recovery:** null in every design. **H3, land-use change vs management options:** sign changes, no evidence.
+- Files: `results/wp3_results.md` (frozen plan and all pre-agreed checks), `results/wp3_trend_adjusted.md`,
+  `results/wp3_within_cohort.md`, `results/treatment_summary.md`; figure `../results/maps/wp3_effects.png`.
+- Run: `src/build_treatment.py` → `src/wp3_did.py` → `src/wp3_trend_adjusted.py` → `src/wp3_within_cohort.py` → `src/wp3_figure.py`.
 
 ```
 src/        models and feature pipelines specific to WP3
