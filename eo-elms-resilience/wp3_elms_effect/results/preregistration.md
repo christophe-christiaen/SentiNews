@@ -141,3 +141,9 @@ separate, smaller descriptive check.
 | 2026-10-11 | Draft written | Before any group comparison of outcomes |
 | 2026-10-11 | Dry shock widened to include June–July soil moisture | The rainfall-only rule flagged 9% of cells in 2018, a known summer drought; soil moisture flags 93%. Decided from weather data only, before any outcome comparison |
 | 2026-10-11 | Review before freezing: (1) section 1 lists the pooled national analyses run since the draft; (2) H2 only when the following season is not a shock; (3) crop rotation absorbed within cell × season × crop in the main specification, 2026 in a secondary version; (4) H3 (land-use change vs management actions) made confirmatory, Holm over three tests; (5) check excluding Flood Zone 3 and deep peat | Agreed with the project lead after section-by-section review; no outcome by agreement status had been seen |
+
+---
+
+**Frozen version:** commit `b0f232b67dbb6d32630dae55778e7c08ff5750e3` in christophe-christiaen/SentiNews
+(`eo-elms-resilience/wp3_elms_effect/results/preregistration.md`), 11 October 2026. The text above this line is
+identical to that commit; later changes are listed in the decisions record.
