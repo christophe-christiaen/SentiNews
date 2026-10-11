@@ -8,3 +8,6 @@ shared/data/*
 !shared/data/.gitkeep
 wp*/data/
 .DS_Store
+
+# per-parcel tables stay out of the repo (rebuilt by the scripts)
+*.parquet
