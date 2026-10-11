@@ -13,6 +13,36 @@ shared/
   data/                      raw + harmonised data (git-ignored; large)
 ```
 
+### Stage 0 · farm list and scheme history
+```bash
+cd shared/src
+python build_farms.py             # Companies House exports -> deduplicated, geocoded farm list (local postcode lookup)
+python prepare_elms_history.py    # ELMS_all.csv (ES agreement history) -> parquet + summary
+python join_farm_schemes.py       # agreements -> farms (spatial, nearest farm, 500 m = agreement)
+python match_payments.py          # Defra payment register check + final groups (farm_groups.csv)
+python match_cap_history.py       # CAP 2020/2021 England payments -> BPS + agri-env history per farm
+python fetch_schemes.py --national rpa_parcel_points   # 2.7M RPA parcel points
+python build_parcel_schemes.py    # parcel-level groups: agreement / no agreement / legacy ES / uncertain, entry year
+python download_crome.py          # CROME 2016-2025 (resumable signed links); then fetch_crome.py --gdb ... per year
+python build_parcel_crops.py      # crop history per parcel -> parcels/parcel_panel.parquet
+for l in es_agreements sfi_agreement_areas cs_management_areas es_options cs_options sfi_actions; do
+  python fetch_schemes.py --national $l; done   # all England, live agreements to 2026 (~4.5M records)
+```
+- **Farms:** 13,767 unique companies from 7 Companies House search exports (SIC 01110 cereals, 01500 mixed farming, ...);
+  10,897 in England with coordinates. Geocoded to the postcode centroid with OS Code-Point Open, so no address leaves
+  the machine. The point is the **registered office**: about a quarter of English records are accountants, agents or
+  shared addresses (`address_kind`), and need another location before farm-level extraction. Counts:
+  `results/farms_stage0_summary.md`.
+- **ELMS_all.csv** is Environmental Stewardship (HLS/ELS+HLS) options with holding coordinates, agreements starting
+  2006–2014. It has exactly Excel's row limit and a cut-off last line, so it is probably truncated. Summary:
+  `results/elms_all_summary.md`.
+- **Groups:** agreement (paid SFI/CS in Defra's payment register, or an agreement within 500 m), no agreement (not in
+  the register, nothing assigned within 1 km), uncertain (left out). Counts: `results/farm_schemes_summary.md`,
+  `results/payment_check_summary.md`. Spatial links alone are weak evidence: only ~40% are confirmed by the register.
+- **2015–2026** comes from the national CS and SFI layers (live agreements only; ended CS agreements are still a gap).
+- Raw and farm-level files stay in `shared/data/` (git-ignored). Company names and addresses are public-register data,
+  but the repo is public and `ELMS_all.csv` (337 MB) is over GitHub's 100 MB file limit: share them separately.
+
 ### Running the fetchers
 ```bash
 cd shared/src

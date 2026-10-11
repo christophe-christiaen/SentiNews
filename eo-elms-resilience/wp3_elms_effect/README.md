@@ -41,7 +41,7 @@ rather than per field. WP3 fixes all three.
 - [x] First embedding probes (`src/embedding_probe.py` → `results/embedding_probe/`): grassland vs arable SFI land AUC 0.92–0.97
   on held-out sites; herbal leys vs other grassland only 0.57–0.62; 2019→2025 change dominated by crop rotation
 - [ ] Detection probe per CS option type, with a Sentinel-2 index baseline
-- [ ] Write the pre-registration (outcomes, shock years, matching) in `results/preregistration.md`
+- [x] Pre-registration drafted (`results/preregistration.md`; to freeze after review)
 
 ```
 src/        models and feature pipelines specific to WP3

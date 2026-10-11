@@ -6,7 +6,7 @@ Sources (all OGL v3):
 
 Usage
   python fetch_schemes.py --pilot              # clip every layer to the 40 English pilot windows (6 x 6 km)
-  python fetch_schemes.py --national cs_options # whole-England attribute table (no geometry) for one layer
+  python fetch_schemes.py --national cs_options # whole-England table for one layer (points: x/y; polygons: centroid + area)
 
 Output: shared/data/schemes/pilot/<layer>.geojson (EPSG:27700, with region/site columns)
         shared/data/schemes/national/<layer>.csv
@@ -48,7 +48,12 @@ LAYERS = {
     'sfi_agreement_areas': dict(kind='ogc', url=f'{DSP}/0f799be5-20c3-4e03-8f43-3cf549724a03/ogc/features/v1/collections/'
                                                 'Sustainable_Farming_Incentive_Scheme_Agreement_Areas_England/items',
                                 date_fields=['contract_start', 'contract_end'], clip=True),
+    # RPA parcel points: one point per registered land parcel (2.7M), keyed by the same PARCREF as CS / ES options.
+    # National only (--national rpa_parcel_points): the unit of the parcel-level design.
+    'rpa_parcel_points': dict(kind='ogc', url=f'{DSP}/93a2433d-054a-484c-aec4-4e2ce9d7f2a9/ogc/features/v1/collections/'
+                                              'RPA_Parcel_Points_England/items', date_fields=[], national_only=True),
 }
+PILOT_LAYERS = [k for k, v in LAYERS.items() if not v.get('national_only')]
 
 S = requests.Session()
 to_bng = Transformer.from_crs(4326, 27700, always_xy=True)
@@ -88,9 +93,11 @@ def arcgis_features(url, bbox_bng=None, geometry=True, page=1000):
         off += len(feats)
 
 
-def ogc_features(url, bbox_bng=None, limit=1000):
+def ogc_features(url, bbox_bng=None, limit=1000, start=0):
     """Page through an OGC API Features collection (WGS84); returns features reprojected to EPSG:27700."""
     p = dict(f='json', limit=limit)
+    if start:
+        p['startIndex'] = start
     if bbox_bng:
         xs, ys = zip(*[to_wgs.transform(bx, by) for bx in (bbox_bng[0], bbox_bng[2]) for by in (bbox_bng[1], bbox_bng[3])])
         p['bbox'] = f'{min(xs)},{min(ys)},{max(xs)},{max(ys)}'   # WGS84 box enclosing the BNG window
@@ -141,17 +148,54 @@ def fetch_pilot(layers):
         w = csv.DictWriter(fh, fieldnames=['layer', 'region', 'site', 'features']); w.writeheader(); w.writerows(summary)
 
 
-def fetch_national(name):
-    """Whole-England attribute table (no geometry, but point layers keep their coordinates as columns)."""
+def arcgis_national(url, page=2000):
+    """Light national paging: points come with x/y; polygons come as a server-side centroid plus Shape__Area,
+    so no polygon geometry is transferred (full polygons in large pages stall the server)."""
+    meta = get(url, dict(f='json'))
+    is_point = 'Point' in meta.get('geometryType', '')
+    page = min(meta.get('maxRecordCount') or page, 10000)
+    off = 0
+    while True:
+        p = dict(where='1=1', outFields='*', f='json', resultOffset=off, resultRecordCount=page, outSR=27700,
+                 returnGeometry=str(is_point).lower(), returnCentroid=str(not is_point).lower(), orderByFields='OBJECTID')
+        d = get(f'{url}/query', p)
+        feats = d.get('features', [])
+        for f in feats:
+            props = dict(f['attributes'])
+            c = f.get('geometry') if is_point else f.get('centroid')
+            props['x_bng'], props['y_bng'] = (round(c['x'], 1), round(c['y'], 1)) if c else (None, None)
+            props['area_ha'] = round(props['Shape__Area'] / 1e4, 4) if props.get('Shape__Area') else None
+            yield dict(type='Feature', properties=props, geometry=None)
+        if len(feats) < page and not d.get('exceededTransferLimit'):
+            break
+        off += len(feats)
+
+
+def fetch_national(name, resume=False):
+    """Whole-England attribute table. Geometry is reduced to columns: point layers keep x_bng/y_bng, polygon layers
+    keep their centroid and area (ha), which is enough to join records to farms. resume=True continues an
+    interrupted OGC download from the rows already on disk."""
     os.makedirs(os.path.join(OUT, 'national'), exist_ok=True)
     cfg = LAYERS[name]; fn = os.path.join(OUT, 'national', f'{name}.csv'); n = 0
-    src = arcgis_features(cfg['url'], geometry=False, page=2000) if cfg['kind'] == 'arcgis' else ogc_features(cfg['url'], limit=10000)
-    with open(fn, 'w', newline='') as fh:
-        w = None
+    w, mode, start = None, 'w', 0
+    if resume and cfg['kind'] == 'ogc' and os.path.exists(fn):
+        with open(fn, newline='') as fh:
+            r = csv.reader(fh); header = next(r); start = sum(1 for _ in r)
+        mode, n = 'a', start
+        print(f'  resuming {name} at row {start}', flush=True)
+    src = arcgis_national(cfg['url']) if cfg['kind'] == 'arcgis' else ogc_features(cfg['url'], limit=10000, start=start)
+    with open(fn, mode, newline='') as fh:
+        if mode == 'a':
+            w = csv.DictWriter(fh, fieldnames=header, extrasaction='ignore')
         for f in src:
             props = clean(f['properties'])
-            if cfg['kind'] == 'ogc' and f.get('geometry') and f['geometry']['type'] == 'Point':
-                props['x_bng'], props['y_bng'] = f['geometry']['coordinates'][:2]
+            g = f.get('geometry')
+            props.setdefault('x_bng', None); props.setdefault('y_bng', None); props.setdefault('area_ha', None)
+            if g and g['type'] == 'Point':
+                props['x_bng'], props['y_bng'] = g['coordinates'][:2]
+            elif g:
+                s = shape(g); c = s.representative_point()
+                props['x_bng'], props['y_bng'], props['area_ha'] = round(c.x, 1), round(c.y, 1), round(s.area / 1e4, 4)
             if w is None:
                 w = csv.DictWriter(fh, fieldnames=list(props), extrasaction='ignore'); w.writeheader()
             w.writerow(props); n += 1
@@ -163,12 +207,13 @@ def fetch_national(name):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--pilot', action='store_true', help='clip all layers to the English pilot windows')
-    ap.add_argument('--layers', nargs='*', default=list(LAYERS), choices=list(LAYERS))
+    ap.add_argument('--layers', nargs='*', default=PILOT_LAYERS, choices=PILOT_LAYERS)
     ap.add_argument('--national', choices=list(LAYERS), help='download one layer for all of England (attributes)')
+    ap.add_argument('--resume', action='store_true', help='continue an interrupted --national download (OGC layers)')
     a = ap.parse_args()
     if a.pilot:
         fetch_pilot(a.layers)
     if a.national:
-        fetch_national(a.national)
+        fetch_national(a.national, a.resume)
     if not (a.pilot or a.national):
         ap.print_help()
