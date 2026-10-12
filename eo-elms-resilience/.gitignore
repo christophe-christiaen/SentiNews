@@ -11,3 +11,6 @@ wp*/data/
 
 # per-parcel tables stay out of the repo (rebuilt by the scripts)
 *.parquet
+
+# per-parcel lender scores stay local
+data/lender/
