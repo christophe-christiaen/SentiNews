@@ -1,0 +1,49 @@
+crop,cutoff,model,region,parcels,nowcast_t_ha,lo80,hi80,lo90,hi90,mean_2017_2025
+wheat,mid-July,s2+weather,East Midlands,24901,8.09,7.27,9.17,7.12,9.37,7.72
+wheat,mid-July,s2+weather,Eastern,28907,8.47,7.47,9.61,7.3,9.79,8.11
+wheat,mid-July,s2+weather,North East,5678,8.51,7.75,9.3,7.58,9.39,8.02
+wheat,mid-July,s2+weather,North West and Merseyside,1858,5.97,5.37,7.03,5.22,7.07,5.94
+wheat,mid-July,s2+weather,South East and London,14669,8.54,7.69,9.62,7.44,9.82,7.99
+wheat,mid-July,s2+weather,South West,10410,8.15,7.35,9.21,7.1,9.4,7.63
+wheat,mid-July,s2+weather,West Midlands,11780,8.12,7.12,9.2,6.87,9.39,7.3
+wheat,mid-July,s2+weather,Yorkshire & The Humber,17868,8.71,7.83,9.58,7.76,9.68,8.07
+wheat,end of August,s2+weather,East Midlands,26652,8.05,7.05,9.12,6.93,9.29,7.72
+wheat,end of August,s2+weather,Eastern,31484,8.15,7.16,9.53,6.98,9.93,8.11
+wheat,end of August,s2+weather,North East,5940,8.55,7.52,9.3,7.47,9.36,8.02
+wheat,end of August,s2+weather,North West and Merseyside,2012,6.26,5.3,7.06,5.22,7.13,5.94
+wheat,end of August,s2+weather,South East and London,16084,8.32,7.35,9.5,7.12,9.76,7.99
+wheat,end of August,s2+weather,South West,11437,8.06,7.11,9.17,6.87,9.32,7.63
+wheat,end of August,s2+weather,West Midlands,13064,7.83,6.87,8.98,6.63,9.32,7.3
+wheat,end of August,s2+weather,Yorkshire & The Humber,18904,8.62,7.64,9.51,7.55,9.64,8.07
+winter barley,mid-July,s2+weather,East Midlands,6128,7.27,6.38,8.22,6.11,8.38,6.57
+winter barley,mid-July,s2+weather,Eastern,10428,7.42,6.5,8.26,6.23,8.46,6.89
+winter barley,mid-July,s2+weather,North East,2678,7.51,6.46,8.51,6.29,8.74,6.91
+winter barley,mid-July,s2+weather,North West and Merseyside,1876,6.44,5.6,7.37,5.28,7.65,6.12
+winter barley,mid-July,s2+weather,South East and London,3020,7.31,6.48,8.51,6.26,8.69,6.66
+winter barley,mid-July,s2+weather,South West,5637,7.34,6.45,8.39,6.21,8.63,6.85
+winter barley,mid-July,s2+weather,West Midlands,5848,7.21,6.16,8.16,5.92,8.46,6.37
+winter barley,mid-July,s2+weather,Yorkshire & The Humber,7514,8.02,7.0,8.92,6.85,9.11,7.17
+winter barley,end of August,s2+weather,East Midlands,6544,7.2,6.38,7.99,6.2,8.13,6.57
+winter barley,end of August,s2+weather,Eastern,10637,7.39,6.55,8.16,6.32,8.23,6.89
+winter barley,end of August,s2+weather,North East,2643,7.41,6.59,8.21,6.37,8.32,6.91
+winter barley,end of August,s2+weather,North West and Merseyside,1871,6.69,5.88,7.47,5.72,7.61,6.12
+winter barley,end of August,s2+weather,South East and London,3321,7.19,6.25,7.96,6.13,8.03,6.66
+winter barley,end of August,s2+weather,South West,6072,7.38,6.47,8.13,6.3,8.2,6.85
+winter barley,end of August,s2+weather,West Midlands,5776,7.21,6.34,8.0,6.13,8.07,6.37
+winter barley,end of August,s2+weather,Yorkshire & The Humber,7417,8.03,7.23,8.84,7.01,8.97,7.17
+spring barley,mid-July,s2,East Midlands,7101,5.54,4.79,6.26,4.62,6.39,5.59
+spring barley,mid-July,s2,Eastern,8918,4.99,4.26,5.72,4.06,5.85,5.64
+spring barley,mid-July,s2,North East,1070,6.26,5.52,6.94,5.39,7.19,5.73
+spring barley,mid-July,s2,North West and Merseyside,1944,4.19,3.46,4.9,3.42,5.28,4.19
+spring barley,mid-July,s2,South East and London,4551,5.25,4.57,5.95,4.31,6.07,5.68
+spring barley,mid-July,s2,South West,6037,5.27,4.54,5.99,4.38,6.2,5.36
+spring barley,mid-July,s2,West Midlands,2987,4.84,4.13,5.48,4.06,5.83,4.94
+spring barley,mid-July,s2,Yorkshire & The Humber,5263,6.05,5.28,6.73,5.19,7.01,5.68
+spring barley,end of August,s2,East Midlands,7965,5.43,4.67,6.12,4.42,6.21,5.59
+spring barley,end of August,s2,Eastern,9502,5.0,4.35,5.72,4.07,5.97,5.64
+spring barley,end of August,s2,North East,1237,6.05,5.19,6.71,4.97,6.84,5.73
+spring barley,end of August,s2,North West and Merseyside,2004,4.14,3.44,4.85,3.24,5.06,4.19
+spring barley,end of August,s2,South East and London,5161,5.2,4.54,5.92,4.25,6.11,5.68
+spring barley,end of August,s2,South West,6623,5.19,4.5,5.88,4.23,6.05,5.36
+spring barley,end of August,s2,West Midlands,3692,4.65,3.93,5.34,3.71,5.43,4.94
+spring barley,end of August,s2,Yorkshire & The Humber,5716,5.97,5.22,6.66,4.97,6.77,5.68
