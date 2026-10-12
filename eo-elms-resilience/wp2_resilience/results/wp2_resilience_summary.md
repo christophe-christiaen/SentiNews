@@ -1,5 +1,13 @@
 # WP2 · Parcel-level resilience of England's cereal land, 2017–2026 (no scheme-group comparisons)
 
+> **Correction, 12 October 2026.** The tests below (T1 legacy, T2 hit harder, T3 debt slows rebound) do **not**
+> survive a within-field check ([within_field_check.md](within_field_check.md)): with each season's normal taken from
+> separate years, or with a dynamic-panel estimator that removes each field's own level, T1 and T2 are about zero
+> (−0.01 and +0.005), and T3 does not hold either. The +0.20 / +0.21 / +0.18 mostly reflect fields sitting
+> persistently above or below a normal estimated from only four seasons (2017–2020). They are kept below as run, but
+> they are not evidence that shocks compound at field level. The typology and maps describe persistent stress
+> against that short normal and carry the same caveat.
+
 - Parcels: 381,400; parcel-seasons: 3,814,000. Stress index S = mean of July and peak NDVI z-scores vs each parcel's 2017–2020 seasons.
 - Shock seasons from ERA5-Land (dry or heat shock for the parcel's cell, pre-registration definitions).
 

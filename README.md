@@ -24,8 +24,8 @@ attention than the rest. The news follows the national story, not local severity
 
 **The land shows where.** Satellites see every field every couple of weeks, so they can show which areas are under the
 most stress and which recover. The full analysis uses Sentinel-2 images for about 380,000 cereal fields across
-England, 2017–2026, and it confirms what a smaller pilot found: **land still recovering from one drought is hit harder
-by the next**.
+England, 2017–2026. A smaller pilot suggested that **land still recovering from one drought is hit harder by the
+next**, but a stricter check at field level does not confirm it (see below).
 
 **Money shows it last.** We linked the published accounts of about 2,400 farm companies to the weather their own area
 had. So far there is no clear sign of drought in their balance sheets, mostly because accounts arrive late: the
@@ -41,9 +41,11 @@ accounts do.
   wheat yield will compare with normal, for years the model never saw: they explain about two-thirds of the
   year-to-year differences, against under half for the older satellites used in the pilot. Barley works almost as
   well. A forecast for the 2026 harvest was published here before the official figures.
-- **Stress carries over (WP2).** A field that has not recovered from one bad season does worse in the next. About a
-  third of cereal fields were under repeated stress between 2018 and 2026, most of all in the East Midlands and
-  Lincolnshire, a belt across central-southern England, and Cornwall.
+- **Do droughts compound? Not confirmed (WP2).** At first it looked as if a field that had not recovered from one
+  bad season did worse in the next. A stricter check, comparing each field only with itself, shows no such carry-over:
+  the pattern came from fields that sit above or below their normal for years, and with only four seasons to set
+  that normal we cannot yet tell real lasting decline from noise. We corrected this on 12 October 2026; a longer
+  baseline (older satellites, back to 2001) is the next test.
 - **Nature-friendly farming: a small cushion, not yet proven (WP3).** Fields in an agreement drop a little less in
   drought seasons than similar fields outside. But land that later joined already coped slightly better before it
   joined, so we cannot yet say the agreements caused it. There is no sign of faster recovery, and no difference

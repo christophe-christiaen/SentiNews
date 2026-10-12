@@ -94,6 +94,12 @@ Same method as the pilot income test (log £/ha, region + year effects, ITL1 Eng
 No reliable income signal from either land cover at regional scale.
 
 ## Cumulative and compound shocks (`src/cumulative.py`, results in `results/cumulative/`)
+
+> **Correction, 12 October 2026.** The national field-level version of these tests (WP2, 381,400 parcels) does not
+> survive a within-field check: once each field's own level is removed, legacy and hit-harder effects are about zero
+> (`wp2_resilience/results/within_field_check.md`). The pilot results below were not tested that way; sites were
+> compared against a 2001–2015 normal and later seasons share any offset from it, so "unrecovered land is hit harder"
+> is **not confirmed** until the pilot is re-run with site effects.
 Responds to the question of regions hit again before they could recover. Uses the 2026 MODIS season (complete to mid-August).
 
 * **Stress index** per site-year: mean of peak-season and July NDVI anomalies (z vs the site's 2001–2015 normal), averaged over crop and grass masks.
