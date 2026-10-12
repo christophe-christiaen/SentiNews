@@ -23,9 +23,9 @@ the country, coverage jumps in the same month. But within a dry year, the region
 attention than the rest. The news follows the national story, not local severity.
 
 **The land shows where.** Satellites see every field every couple of weeks, so they can show which areas are under the
-most stress and which recover. A pilot with older satellites found that **land still recovering from one drought was
-hit harder by the next**, a result that held under every setting we tried. The full analysis now uses Sentinel-2
-images for about 380,000 cereal fields across England, 2017–2026.
+most stress and which recover. The full analysis uses Sentinel-2 images for about 380,000 cereal fields across
+England, 2017–2026, and it confirms what a smaller pilot found: **land still recovering from one drought is hit harder
+by the next**.
 
 **Money shows it last.** We linked the published accounts of about 2,400 farm companies to the weather their own area
 had. So far there is no clear sign of drought in their balance sheets, mostly because accounts arrive late: the
@@ -35,7 +35,24 @@ monthly data would show it much sooner.
 **So, for finding the farms in trouble:** measured stress on the land beats headlines, and it arrives well before the
 accounts do.
 
-## What we can already say about the land
+## What the satellites found (first national results, October 2026)
+
+- **The harvest can be read by mid-July (WP1).** Field-by-field satellite data predict how each English region's
+  wheat yield will compare with normal, for years the model never saw: they explain about two-thirds of the
+  year-to-year differences, against under half for the older satellites used in the pilot. Barley works almost as
+  well. A forecast for the 2026 harvest was published here before the official figures.
+- **Stress carries over (WP2).** A field that has not recovered from one bad season does worse in the next. About a
+  third of cereal fields were under repeated stress between 2018 and 2026, most of all in the East Midlands and
+  Lincolnshire, a belt across central-southern England, and Cornwall.
+- **Nature-friendly farming: a small cushion, not yet proven (WP3).** Fields in an agreement drop a little less in
+  drought seasons than similar fields outside. But land that later joined already coped slightly better before it
+  joined, so we cannot yet say the agreements caused it. There is no sign of faster recovery, and no difference
+  between types of action. The test was written down before we looked, and every later choice is recorded.
+- **A watch-list for lenders.** A simple score built from each field's own history picks out 20% of fields that
+  hold about 1.6 times their share of next season's hardest-hit fields. About 18,000 high-risk fields are also in
+  the highest flood-risk zone or on deep peat, mostly in the Fens and around the Humber.
+
+## What the data foundation shows
 
 - **Two-thirds of England's cereal land is now in a nature-friendly farming agreement** (the Sustainable Farming
   Incentive or Countryside Stewardship), most of it from a big wave of agreements in 2024. About 90,000 cereal fields
@@ -43,9 +60,9 @@ accounts do.
 - **2025 and 2026 were the driest springs in our record** over cereal areas: rainfall 37% and 41% below normal.
 - **About 46,000 cereal fields (12%) are in the highest flood-risk zone or on deep peat**, mostly in the Fens: the first
   candidates for a watch-list of land at risk of losing value.
-- **The main test, whether land in an agreement copes better with drought, is written down before we look**
-  ([pre-registration](eo-elms-resilience/wp3_elms_effect/results/preregistration.md)), so the answer cannot be shaped
-  by the data.
+- **The main test, whether land in an agreement copes better with drought, was written down before we looked**
+  ([pre-registration](eo-elms-resilience/wp3_elms_effect/results/preregistration.md)), so the answer could not be
+  shaped by the data.
 
 ## What is in this repository
 
@@ -90,7 +107,17 @@ See [`eo-elms-resilience/README.md`](eo-elms-resilience/README.md) for the pilot
 Earth Engine for the national satellite extraction). The news-and-accounts link is
 [`eo-elms-resilience/shared/src/link_accounts_news.py`](eo-elms-resilience/shared/src/link_accounts_news.py).
 
+## Where to read more
+
+| Work package | Results |
+|---|---|
+| WP1 · Harvest signal | [results](eo-elms-resilience/wp1_regional_signal/results/wp1_results.md), [evaluation rules](eo-elms-resilience/wp1_regional_signal/results/protocol.md) |
+| WP2 · Resilience | [summary](eo-elms-resilience/wp2_resilience/results/wp2_resilience_summary.md) |
+| WP3 · Nature schemes | [results](eo-elms-resilience/wp3_elms_effect/results/wp3_results.md), [pre-registration](eo-elms-resilience/wp3_elms_effect/results/preregistration.md) |
+| Lender score | [back-test](eo-elms-resilience/results/lender/lender_score_backtest.md) |
+
 ## Status
 
-Work in progress (October 2026). The data foundation is built and the national satellite extraction is running;
-results for the three work packages will follow.
+Work in progress (October 2026). First national results are in for all three work packages. Next: radar
+(Sentinel-1) soil wetness re-processed per satellite orbit, checking the 2026 harvest forecast against the official
+figures, and linking the field score to real financial outcomes with a lender's own data.
