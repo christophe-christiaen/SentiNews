@@ -1,8 +1,8 @@
 # Sensitivity of the cumulative-shock results to thresholds (pilot, 50 sites)
 
-> **Correction, 12 October 2026:** robustness to thresholds does not address the main problem found later: lasting
-> site offsets from the 2001–2015 normal can produce these effects on their own. Not confirmed; see
-> `wp2_resilience/results/within_field_check.md`.
+> **Correction, 12 October 2026:** robustness to thresholds does not settle these effects. The re-check
+> (`pilot_within_check.md`) shows "hit harder" comes entirely from 2026 (zero without it, negative within each site);
+> not confirmed as a general effect.
 
 Baseline (used in the deck): shock S <= -1.0, recovered S >= -0.5, debt carry-over 0.5.
 

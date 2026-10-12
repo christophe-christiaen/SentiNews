@@ -97,9 +97,10 @@ No reliable income signal from either land cover at regional scale.
 
 > **Correction, 12 October 2026.** The national field-level version of these tests (WP2, 381,400 parcels) does not
 > survive a within-field check: once each field's own level is removed, legacy and hit-harder effects are small at most
-> (`wp2_resilience/results/within_field_check.md`). The pilot results below were not tested that way; sites were
-> compared against a 2001–2015 normal and later seasons share any offset from it, so "unrecovered land is hit harder"
-> is **not confirmed** until the pilot is re-run with site effects.
+> (`wp2_resilience/results/within_field_check.md`). The pilot was re-checked the same way
+> (`results/cumulative/pilot_within_check.md`): its 15-season normal creates no artefact, but "unrecovered land is hit
+> harder" comes entirely from one event (2025 → 2026; zero without 2026, negative within each site), the legacy effect
+> is at most about 0.1, and debt slowing the rebound is not confirmed.
 Responds to the question of regions hit again before they could recover. Uses the 2026 MODIS season (complete to mid-August).
 
 * **Stress index** per site-year: mean of peak-season and July NDVI anomalies (z vs the site's 2001–2015 normal), averaged over crop and grass masks.

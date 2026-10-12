@@ -7,7 +7,8 @@ weather and history; resistance = gap to observed, recovery = how fast it closes
 
 ## Starting point (pilot)
 *Correction (12 Oct 2026): the field-level version of the compounding tests does not survive a within-field check
-(`results/within_field_check.md`); the pilot figures below are untested in the same way and are not confirmed.*
+(`results/within_field_check.md`). The pilot re-check (`../results/cumulative/pilot_within_check.md`) finds its "hit
+harder" effect comes entirely from 2025 → 2026 and is not confirmed as a general effect.*
 2018, 2022, 2025 and 2026 shocks with distinct regional footprints; unrecovered land is hit harder (+0.38 SD cropland,
 +0.27 grassland); persistence rising in 9/10 cropland and 7/7 grassland regions; typology: bounced back, slow,
 back-to-back, persistent. Robust across Terra and Aqua; 2022 depth sensor-dependent.
