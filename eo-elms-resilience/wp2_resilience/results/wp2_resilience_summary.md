@@ -1,10 +1,12 @@
 # WP2 · Parcel-level resilience of England's cereal land, 2017–2026 (no scheme-group comparisons)
 
 > **Correction, 12 October 2026.** The tests below (T1 legacy, T2 hit harder, T3 debt slows rebound) do **not**
-> survive a within-field check ([within_field_check.md](within_field_check.md)): with each season's normal taken from
-> separate years, or with a dynamic-panel estimator that removes each field's own level, T1 and T2 are about zero
-> (−0.01 and +0.005), and T3 does not hold either. The +0.20 / +0.21 / +0.18 mostly reflect fields sitting
-> persistently above or below a normal estimated from only four seasons (2017–2020). They are kept below as run, but
+> survive a within-field check ([within_field_check.md](within_field_check.md)): a dynamic-panel estimator that
+> removes each field's own level gives −0.006 (T1), which, calibrated by simulation, means a true carry-over of at
+> most about 0.05; for T2 the estimates disagree (+0.005 and +0.07), so at most a small effect (up to about 0.1);
+> T3 does not hold either. A four-season normal alone produces about +0.13 in this
+> test when there is no carry-over at all; the rest of the +0.20 / +0.21 / +0.18 is consistent with lasting
+> differences between fields. They are kept below as run, but
 > they are not evidence that shocks compound at field level. The typology and maps describe persistent stress
 > against that short normal and carry the same caveat.
 

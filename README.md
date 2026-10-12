@@ -42,7 +42,7 @@ accounts do.
   year-to-year differences, against under half for the older satellites used in the pilot. Barley works almost as
   well. A forecast for the 2026 harvest was published here before the official figures.
 - **Do droughts compound? Not confirmed (WP2).** At first it looked as if a field that had not recovered from one
-  bad season did worse in the next. A stricter check, comparing each field only with itself, shows no such carry-over:
+  bad season did worse in the next. A stricter check, comparing each field only with itself, finds little or none:
   the pattern came from fields that sit above or below their normal for years, and with only four seasons to set
   that normal we cannot yet tell real lasting decline from noise. We corrected this on 12 October 2026; a longer
   baseline (older satellites, back to 2001) is the next test.

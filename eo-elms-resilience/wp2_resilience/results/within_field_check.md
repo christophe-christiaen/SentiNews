@@ -20,21 +20,26 @@ Each field's normal comes from four seasons (2017–2020); an error in it shifts
 | T3 | field FE (lower bound) | -0.335 | 0.011 | 0 | 926,264 |  |
 | T3 | shuffled seasons (placebo) | +0.110 | 0.002 | 0 | 929,720 |  |
 
-## Reading (12 October 2026)
+## Reading (12 October 2026, revised after the simulation the same day)
 
-- **No season-to-season legacy once each field's own level is removed.** With the two normals taken from disjoint
-  seasons, T1 and T2 fall from +0.20 to −0.01; the Anderson–Hsiao estimate with a strong instrument (first-stage
-  r −0.62) is −0.006 for T1 and +0.005 for T2. Field fixed effects agree for T1 (−0.013). The S(t−3) instrument is
-  far too weak (r 0.01) to say anything and is ignored.
-- **So the published +0.20 / +0.21 / +0.18 are not evidence that shocks compound.** They come from fields sitting
-  persistently above or below their 2017–2020 normal in later seasons. Shuffling the season order still gives +0.08
-  (stable differences); the rest comes from the post-2020 seasons sharing the same offset, which the four-season
-  normal cannot separate from a real lasting shift in the field.
-- **T3 (debt slows rebound) does not survive either:** +0.11 of +0.18 appears with shuffled seasons, and with field
-  fixed effects the sign reverses (−0.34, partly the short-panel bias).
-- **What remains true:** fields differ persistently in how they sit against their own normal, and that persistence is
-  what makes the field score predictive in its back-test (which is out-of-sample and stands as measured). Whether
-  the lasting offsets are real decline or noise in a four-season normal needs a longer baseline (MODIS 2001–2016, or
-  Landsat) to settle.
-- **The pilot** used a 15-season normal (2001–2015) and regional averages, so it is less exposed, but it was not
-  tested this way and should not be cited as confirmation until it is.
+- **Calibration by simulation** (`src/baseline_artefact_sim.py`, fields with a known carry-over ρ, z-scored against
+  their first four seasons as here): the Anderson–Hsiao estimate is attenuated in this setting: true ρ 0, 0.1, 0.2,
+  0.3 give −0.02, +0.07, +0.13, +0.20 (+0.08 for ρ 0.2 with added measurement noise); field fixed effects give
+  −0.06, +0.03, +0.08, +0.16.
+- **T1 (stress carries over): at most a small carry-over.** Anderson–Hsiao −0.006 sits between the simulated ρ = 0
+  and ρ = 0.1, and field fixed effects (−0.013) imply ρ ≈ 0.05. The published +0.20 is far outside this range.
+- **T2 (unrecovered land hit harder): unresolved, but much smaller than published.** Anderson–Hsiao gives +0.005,
+  while field fixed effects give +0.070, above the ≈ −0.06 they show with no carry-over; taken at face value that
+  points to a small effect (up to about 0.1). The published +0.21 is not supported either way.
+- **The short baseline explains most of the published figure.** With no carry-over at all, a four-season normal over
+  ten seasons produces about +0.13 in the same test (simulation). The rest is consistent with lasting differences
+  between fields (shuffled seasons: +0.08).
+- **The "split normal" version is not valid evidence** and is withdrawn: in the simulation it returns +0.04 when the
+  true carry-over is 0.2, so its −0.01 says little. It stays in the table for the record.
+- **T3 (debt slows rebound) is not supported:** +0.11 of +0.18 appears with shuffled seasons, and field fixed effects
+  reverse its sign.
+- **What remains true:** fields differ in a lasting way against their own normal, which is what makes the field score
+  predictive in its back-test (out-of-sample, stands as measured). A longer baseline (MODIS 2001–2016, or Landsat)
+  is needed to tell real lasting decline from noise in a four-season normal.
+- **The pilot** used a 15-season normal and regional averages; the simulated artefact for that set-up is small, but
+  the pilot was not tested this way and is not confirmed.
