@@ -6,7 +6,10 @@
 > most about 0.05; for T2 the estimates disagree (+0.005 and +0.07), so at most a small effect (up to about 0.1);
 > T3 does not hold either. A four-season normal alone produces about +0.13 in this
 > test when there is no carry-over at all; the rest of the +0.20 / +0.21 / +0.18 is consistent with lasting
-> differences between fields. They are kept below as run, but
+> differences between fields.
+> **Long-baseline test (MODIS, 16-season normal 2001–2016,
+> [modis_long_baseline_check.md](modis_long_baseline_check.md)):** carry-over at most about 0.05–0.07, about zero
+> within each field, confirming the correction with a second sensor. They are kept below as run, but
 > they are not evidence that shocks compound at field level. The typology and maps describe persistent stress
 > against that short normal and carry the same caveat.
 
