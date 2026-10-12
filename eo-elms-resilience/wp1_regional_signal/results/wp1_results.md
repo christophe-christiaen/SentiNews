@@ -126,11 +126,16 @@ Run of [protocol.md](protocol.md) (written before any yield comparison). Leave-o
 - ~~Dry springs are the model's blind spot.~~ **Corrected 12 October 2026:** trained on 2017–2024, the model put
   England's 2025 wheat at 7.37 t/ha against Defra's 6.97. But the other dry-spring years go the other way: 2018,
   2020 and 2022 were *under*-predicted (by 0.25, 0.34 and 0.44 t/ha), and the mean error over the four dry-spring
-  years is −0.15 t/ha. There is no consistent dry-year bias. The claim that the pilot missed 2022 "in the same way"
+  years is −0.15 t/ha. ~~There is no consistent dry-year bias.~~ *(Too strong: 2026 was over-predicted too; see below.)* The claim that the pilot missed 2022 "in the same way"
   was not checked and is withdrawn.
 - **Reading 2026.** The nowcast puts wheat about 0.4–0.5 t/ha and winter barley about 0.6 t/ha above the 2017–2025
   mean. Over 2017–2025 single-year England errors ran from −0.44 to +0.41 t/ha, so 2026 could be near the mean as
   easily as above it; the 80% intervals (calibrated over all years) are the honest summary.
+- **Scored 12 October 2026** ([wp1_score_2026.md](wp1_score_2026.md)): Defra's provisional 2026 figures had been
+  published on 8 October, three days before the nowcast was written (we did not look at them, so the nowcast is
+  blind, but it was not made before publication). The nowcast was too high for every crop by about 0.7–0.9 t/ha, and
+  only about half the regions fell inside the 80% intervals. 2025 and 2026, the two most recent dry springs, were
+  both over-predicted.
 - **Grain-fill features (addendum A, [wp1_grainfill.md](wp1_grainfill.md)):** they did not help wheat or winter
   barley (wheat R² 0.64 → 0.56 at mid-July) and left the 2025 error unchanged (+0.44). They helped spring barley
   (0.51 → 0.57), whose 2026 nowcast is re-issued under the addendum's rule.

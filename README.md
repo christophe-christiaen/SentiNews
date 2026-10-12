@@ -40,7 +40,9 @@ accounts do.
 - **The harvest can be read by mid-July (WP1).** Field-by-field satellite data predict how each English region's
   wheat yield will compare with normal, for years the model never saw: they explain about two-thirds of the
   year-to-year differences, against under half for the older satellites used in the pilot. Barley works almost as
-  well. A forecast for the 2026 harvest was published here before the official figures.
+  well. But the 2026 forecast, made without looking at Defra's figures (which, it turned out, had been published
+  three days earlier), was too high for every crop, by about 0.7–0.9 t/ha: the second dry spring in a row the model
+  over-predicted. Something about these droughts is not yet captured.
 - **Do droughts compound? Not confirmed (WP2).** At first it looked as if a field that had not recovered from one
   bad season did worse in the next. A stricter check, comparing each field only with itself, finds little or none:
   the pattern came from fields that sit above or below their normal for years, and with only four seasons to set
@@ -121,5 +123,5 @@ Earth Engine for the national satellite extraction). The news-and-accounts link 
 ## Status
 
 Work in progress (October 2026). First national results are in for all three work packages. Next: radar
-(Sentinel-1) soil wetness re-processed per satellite orbit, checking the 2026 harvest forecast against the official
-figures, and linking the field score to real financial outcomes with a lender's own data.
+(Sentinel-1) soil wetness re-processed per satellite orbit (done for 2017–2025), understanding why the 2025 and 2026
+harvests were over-predicted, and a longer baseline for the drought-legacy question.

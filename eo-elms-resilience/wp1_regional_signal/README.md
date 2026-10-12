@@ -31,10 +31,11 @@ Sentinel-2, 2022 is under-predicted, not over-predicted).
 - [x] Sentinel-2 field statistics for all 381,400 cereal parcels, 2017–2026 (`shared/src/gee_s2_interactive.py`)
 - [x] Evaluation protocol fixed before any yield comparison (`results/protocol.md`)
 - [x] Regional nowcast vs MODIS on the same years, 8 English regions, wheat and barley (`src/wp1_nowcast.py`)
-- [x] 2026 nowcast written 11 Oct 2026, before the official 2026 figures (`results/wp1_nowcast_2026.csv`)
+- [x] 2026 nowcast written 11 Oct 2026 without looking at Defra's figures (which had been published on 8 Oct) (`results/wp1_nowcast_2026.csv`)
 - [x] Grain-fill features (protocol addendum A, `src/wp1_grainfill.py`): no gain for wheat or winter barley;
       spring barley R² 0.51 → 0.57 (2026 spring barley nowcast re-issued)
-- [ ] Score the 2026 nowcast against Defra's provisional figures when published
+- [x] Scored against Defra's provisional 2026 figures (`results/wp1_score_2026.md`): too high for every crop
+- [ ] Find out why the dry springs of 2025 and 2026 were over-predicted (2018, 2020, 2022 were not)
 - [ ] Learning from aggregates (field attention / multiple-instance learning) vs region medians; ITL3 targets
 
 ## First results (October 2026)
@@ -42,9 +43,13 @@ Leave-one-year-out over 2017–2025, 8 English Defra regions ([results](results/
 - **Wheat:** Sentinel-2 + weather by mid-July R² 0.64 (England 0.78), against 0.44 for the MODIS pilot on the same
   years and 0.45 for peak NDVI alone; already 0.55 by mid-May. Weather alone has no skill (−0.05).
 - **Winter barley** 0.52, **spring barley** 0.52 by mid-July. 80% intervals cover 79–81% of held-out region-years.
-- **2026:** wheat nowcast about 0.4–0.5 t/ha above the 2017–2025 mean. The model over-predicted 2025 by 0.4 t/ha but
-  under-predicted the other dry springs (2018, 2020, 2022), so there is no consistent dry-year bias; single-year
-  errors run from −0.44 to +0.41 t/ha. Read the 80% intervals, not the point.
+- **2026, scored blind against Defra** ([score](results/wp1_score_2026.md)): the nowcast was too high for every crop,
+  by about 0.8–0.9 t/ha for wheat (8.07 vs 7.18 averaged over regions), 0.8 for winter barley and 0.7–0.8 for spring
+  barley; only half the regions fell inside the 80% intervals, against 79–81% in the back-test. The South East,
+  South West, West Midlands and Eastern regions were missed by 1.4–1.8 t/ha for wheat; the North East and Yorkshire
+  were close. With 2025 (+0.4 t/ha) this is the second dry spring in a row over-predicted, while 2018, 2020 and 2022
+  were under-predicted, so the earlier statement that there is "no consistent dry-year bias" was too strong: the
+  model misses badly in some droughts and we do not yet know which kind.
 
 ```
 src/        models and feature pipelines specific to WP1

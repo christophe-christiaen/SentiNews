@@ -1,0 +1,65 @@
+crop,cutoff,model,region,parcels,nowcast_t_ha,lo80,hi80,lo90,hi90,mean_2017_2025,version,actual,error,in80,in90,abs_error,direction_ok
+wheat,mid-July,s2+weather,East Midlands,24901.0,8.09,7.27,9.17,7.12,9.37,7.72,first nowcast (11 Oct),7.41,0.68,True,1.0,0.68,False
+wheat,mid-July,s2+weather,Eastern,28907.0,8.47,7.47,9.61,7.3,9.79,8.11,first nowcast (11 Oct),7.029,1.441,False,0.0,1.441,False
+wheat,mid-July,s2+weather,North East,5678.0,8.51,7.75,9.3,7.58,9.39,8.02,first nowcast (11 Oct),8.398,0.112,True,1.0,0.112,True
+wheat,mid-July,s2+weather,North West and Merseyside,1858.0,5.97,5.37,7.03,5.22,7.07,5.94,first nowcast (11 Oct),6.54,-0.57,True,1.0,0.57,True
+wheat,mid-July,s2+weather,South East and London,14669.0,8.54,7.69,9.62,7.44,9.82,7.99,first nowcast (11 Oct),6.713,1.827,False,0.0,1.827,False
+wheat,mid-July,s2+weather,South West,10410.0,8.15,7.35,9.21,7.1,9.4,7.63,first nowcast (11 Oct),6.61,1.54,False,0.0,1.54,False
+wheat,mid-July,s2+weather,West Midlands,11780.0,8.12,7.12,9.2,6.87,9.39,7.3,first nowcast (11 Oct),6.574,1.546,False,0.0,1.546,False
+wheat,mid-July,s2+weather,Yorkshire & The Humber,17868.0,8.71,7.83,9.58,7.76,9.68,8.07,first nowcast (11 Oct),8.201,0.509,True,1.0,0.509,True
+wheat,end of August,s2+weather,East Midlands,26652.0,8.05,7.05,9.12,6.93,9.29,7.72,first nowcast (11 Oct),7.41,0.64,True,1.0,0.64,False
+wheat,end of August,s2+weather,Eastern,31484.0,8.15,7.16,9.53,6.98,9.93,8.11,first nowcast (11 Oct),7.029,1.121,False,1.0,1.121,False
+wheat,end of August,s2+weather,North East,5940.0,8.55,7.52,9.3,7.47,9.36,8.02,first nowcast (11 Oct),8.398,0.152,True,1.0,0.152,True
+wheat,end of August,s2+weather,North West and Merseyside,2012.0,6.26,5.3,7.06,5.22,7.13,5.94,first nowcast (11 Oct),6.54,-0.28,True,1.0,0.28,True
+wheat,end of August,s2+weather,South East and London,16084.0,8.32,7.35,9.5,7.12,9.76,7.99,first nowcast (11 Oct),6.713,1.607,False,0.0,1.607,False
+wheat,end of August,s2+weather,South West,11437.0,8.06,7.11,9.17,6.87,9.32,7.63,first nowcast (11 Oct),6.61,1.45,False,0.0,1.45,False
+wheat,end of August,s2+weather,West Midlands,13064.0,7.83,6.87,8.98,6.63,9.32,7.3,first nowcast (11 Oct),6.574,1.256,False,0.0,1.256,False
+wheat,end of August,s2+weather,Yorkshire & The Humber,18904.0,8.62,7.64,9.51,7.55,9.64,8.07,first nowcast (11 Oct),8.201,0.419,True,1.0,0.419,True
+winter barley,mid-July,s2+weather,East Midlands,6128.0,7.27,6.38,8.22,6.11,8.38,6.57,first nowcast (11 Oct),7.025,0.245,True,1.0,0.245,True
+winter barley,mid-July,s2+weather,Eastern,10428.0,7.42,6.5,8.26,6.23,8.46,6.89,first nowcast (11 Oct),6.048,1.372,False,0.0,1.372,False
+winter barley,mid-July,s2+weather,North East,2678.0,7.51,6.46,8.51,6.29,8.74,6.91,first nowcast (11 Oct),7.471,0.039,True,1.0,0.039,True
+winter barley,mid-July,s2+weather,North West and Merseyside,1876.0,6.44,5.6,7.37,5.28,7.65,6.12,first nowcast (11 Oct),5.57,0.87,False,1.0,0.87,False
+winter barley,mid-July,s2+weather,South East and London,3020.0,7.31,6.48,8.51,6.26,8.69,6.66,first nowcast (11 Oct),5.699,1.611,False,0.0,1.611,False
+winter barley,mid-July,s2+weather,South West,5637.0,7.34,6.45,8.39,6.21,8.63,6.85,first nowcast (11 Oct),6.528,0.812,True,1.0,0.812,False
+winter barley,mid-July,s2+weather,West Midlands,5848.0,7.21,6.16,8.16,5.92,8.46,6.37,first nowcast (11 Oct),6.536,0.674,True,1.0,0.674,True
+winter barley,mid-July,s2+weather,Yorkshire & The Humber,7514.0,8.02,7.0,8.92,6.85,9.11,7.17,first nowcast (11 Oct),7.314,0.706,True,1.0,0.706,True
+winter barley,end of August,s2+weather,East Midlands,6544.0,7.2,6.38,7.99,6.2,8.13,6.57,first nowcast (11 Oct),7.025,0.175,True,1.0,0.175,True
+winter barley,end of August,s2+weather,Eastern,10637.0,7.39,6.55,8.16,6.32,8.23,6.89,first nowcast (11 Oct),6.048,1.342,False,0.0,1.342,False
+winter barley,end of August,s2+weather,North East,2643.0,7.41,6.59,8.21,6.37,8.32,6.91,first nowcast (11 Oct),7.471,-0.061,True,1.0,0.061,True
+winter barley,end of August,s2+weather,North West and Merseyside,1871.0,6.69,5.88,7.47,5.72,7.61,6.12,first nowcast (11 Oct),5.57,1.12,False,0.0,1.12,False
+winter barley,end of August,s2+weather,South East and London,3321.0,7.19,6.25,7.96,6.13,8.03,6.66,first nowcast (11 Oct),5.699,1.491,False,0.0,1.491,False
+winter barley,end of August,s2+weather,South West,6072.0,7.38,6.47,8.13,6.3,8.2,6.85,first nowcast (11 Oct),6.528,0.852,True,1.0,0.852,False
+winter barley,end of August,s2+weather,West Midlands,5776.0,7.21,6.34,8.0,6.13,8.07,6.37,first nowcast (11 Oct),6.536,0.674,True,1.0,0.674,True
+winter barley,end of August,s2+weather,Yorkshire & The Humber,7417.0,8.03,7.23,8.84,7.01,8.97,7.17,first nowcast (11 Oct),7.314,0.716,True,1.0,0.716,True
+spring barley,mid-July,s2,East Midlands,7101.0,5.54,4.79,6.26,4.62,6.39,5.59,first nowcast (11 Oct),4.745,0.795,False,1.0,0.795,True
+spring barley,mid-July,s2,Eastern,8918.0,4.99,4.26,5.72,4.06,5.85,5.64,first nowcast (11 Oct),4.754,0.236,True,1.0,0.236,True
+spring barley,mid-July,s2,North East,1070.0,6.26,5.52,6.94,5.39,7.19,5.73,first nowcast (11 Oct),4.653,1.607,False,0.0,1.607,False
+spring barley,mid-July,s2,North West and Merseyside,1944.0,4.19,3.46,4.9,3.42,5.28,4.19,first nowcast (11 Oct),4.357,-0.167,True,1.0,0.167,False
+spring barley,mid-July,s2,South East and London,4551.0,5.25,4.57,5.95,4.31,6.07,5.68,first nowcast (11 Oct),4.247,1.003,False,0.0,1.003,True
+spring barley,mid-July,s2,South West,6037.0,5.27,4.54,5.99,4.38,6.2,5.36,first nowcast (11 Oct),4.143,1.127,False,0.0,1.127,True
+spring barley,mid-July,s2,West Midlands,2987.0,4.84,4.13,5.48,4.06,5.83,4.94,first nowcast (11 Oct),3.865,0.975,False,0.0,0.975,True
+spring barley,mid-July,s2,Yorkshire & The Humber,5263.0,6.05,5.28,6.73,5.19,7.01,5.68,first nowcast (11 Oct),5.519,0.531,True,1.0,0.531,False
+spring barley,end of August,s2,East Midlands,7965.0,5.43,4.67,6.12,4.42,6.21,5.59,first nowcast (11 Oct),4.745,0.685,True,1.0,0.685,True
+spring barley,end of August,s2,Eastern,9502.0,5.0,4.35,5.72,4.07,5.97,5.64,first nowcast (11 Oct),4.754,0.246,True,1.0,0.246,True
+spring barley,end of August,s2,North East,1237.0,6.05,5.19,6.71,4.97,6.84,5.73,first nowcast (11 Oct),4.653,1.397,False,0.0,1.397,False
+spring barley,end of August,s2,North West and Merseyside,2004.0,4.14,3.44,4.85,3.24,5.06,4.19,first nowcast (11 Oct),4.357,-0.217,True,1.0,0.217,False
+spring barley,end of August,s2,South East and London,5161.0,5.2,4.54,5.92,4.25,6.11,5.68,first nowcast (11 Oct),4.247,0.953,False,0.0,0.953,True
+spring barley,end of August,s2,South West,6623.0,5.19,4.5,5.88,4.23,6.05,5.36,first nowcast (11 Oct),4.143,1.047,False,0.0,1.047,True
+spring barley,end of August,s2,West Midlands,3692.0,4.65,3.93,5.34,3.71,5.43,4.94,first nowcast (11 Oct),3.865,0.785,False,1.0,0.785,True
+spring barley,end of August,s2,Yorkshire & The Humber,5716.0,5.97,5.22,6.66,4.97,6.77,5.68,first nowcast (11 Oct),5.519,0.451,True,1.0,0.451,False
+spring barley,mid-July,,East Midlands,,5.56,4.83,6.24,,,5.59,spring barley re-issue (12 Oct),4.745,0.815,False,,0.815,True
+spring barley,mid-July,,Eastern,,4.93,4.25,5.68,,,5.64,spring barley re-issue (12 Oct),4.754,0.176,True,,0.176,True
+spring barley,mid-July,,North East,,6.37,5.66,7.02,,,5.73,spring barley re-issue (12 Oct),4.653,1.717,False,,1.717,False
+spring barley,mid-July,,North West and Merseyside,,4.21,3.56,4.91,,,4.19,spring barley re-issue (12 Oct),4.357,-0.147,True,,0.147,True
+spring barley,mid-July,,South East and London,,5.16,4.47,5.93,,,5.68,spring barley re-issue (12 Oct),4.247,0.913,False,,0.913,True
+spring barley,mid-July,,South West,,5.24,4.54,5.99,,,5.36,spring barley re-issue (12 Oct),4.143,1.097,False,,1.097,True
+spring barley,mid-July,,West Midlands,,4.86,4.16,5.53,,,4.94,spring barley re-issue (12 Oct),3.865,0.995,False,,0.995,True
+spring barley,mid-July,,Yorkshire & The Humber,,6.23,5.47,6.89,,,5.68,spring barley re-issue (12 Oct),5.519,0.711,True,,0.711,False
+spring barley,end of August,,East Midlands,,5.36,4.57,6.02,,,5.59,spring barley re-issue (12 Oct),4.745,0.615,True,,0.615,True
+spring barley,end of August,,Eastern,,4.9,4.18,5.62,,,5.64,spring barley re-issue (12 Oct),4.754,0.146,True,,0.146,True
+spring barley,end of August,,North East,,6.11,5.28,6.75,,,5.73,spring barley re-issue (12 Oct),4.653,1.457,False,,1.457,False
+spring barley,end of August,,North West and Merseyside,,4.17,3.44,4.8,,,4.19,spring barley re-issue (12 Oct),4.357,-0.187,True,,0.187,False
+spring barley,end of August,,South East and London,,5.01,4.28,5.72,,,5.68,spring barley re-issue (12 Oct),4.247,0.763,False,,0.763,True
+spring barley,end of August,,South West,,5.11,4.38,5.86,,,5.36,spring barley re-issue (12 Oct),4.143,0.967,False,,0.967,True
+spring barley,end of August,,West Midlands,,4.56,3.77,5.22,,,4.94,spring barley re-issue (12 Oct),3.865,0.695,True,,0.695,True
+spring barley,end of August,,Yorkshire & The Humber,,6.09,5.24,6.83,,,5.68,spring barley re-issue (12 Oct),5.519,0.571,True,,0.571,False
