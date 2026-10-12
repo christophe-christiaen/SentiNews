@@ -123,12 +123,14 @@ Run of [protocol.md](protocol.md) (written before any yield comparison). Leave-o
 
 - **The crop mask is not the issue.** Using the classifier's wheat fields instead of CROME's in 2025 changes the
   prediction by +0.03 t/ha (7.40 vs 7.37); the classifier's fields are as green as CROME's within 0.004 NDVI.
-- **Dry springs are the model's blind spot.** Trained on 2017–2024, the model put England's 2025 wheat at 7.37
-  t/ha; Defra's figure is 6.97. In dry-spring years the canopy stays green into July, but grain fill suffers later.
-  The pilot missed 2022 in the same way.
-- **So read 2026 with care.** The nowcast puts wheat about 0.4–0.5 t/ha and winter barley about 0.6 t/ha above the
-  2017–2025 mean, in the driest spring of the record. If 2026 behaves like 2025, the true figures are lower, likely
-  near the bottom of the 80% intervals. The intervals are calibrated over all years (80% coverage 79–81%), not for
-  dry years in particular.
-- **Next fix, under a new protocol entry:** grain-fill heat and moisture after mid-July (land surface temperature,
-  ERA5 July–August), the gap the 2022 and 2025 misses point to.
+- ~~Dry springs are the model's blind spot.~~ **Corrected 12 October 2026:** trained on 2017–2024, the model put
+  England's 2025 wheat at 7.37 t/ha against Defra's 6.97. But the other dry-spring years go the other way: 2018,
+  2020 and 2022 were *under*-predicted (by 0.25, 0.34 and 0.44 t/ha), and the mean error over the four dry-spring
+  years is −0.15 t/ha. There is no consistent dry-year bias. The claim that the pilot missed 2022 "in the same way"
+  was not checked and is withdrawn.
+- **Reading 2026.** The nowcast puts wheat about 0.4–0.5 t/ha and winter barley about 0.6 t/ha above the 2017–2025
+  mean. Over 2017–2025 single-year England errors ran from −0.44 to +0.41 t/ha, so 2026 could be near the mean as
+  easily as above it; the 80% intervals (calibrated over all years) are the honest summary.
+- **Grain-fill features (addendum A, [wp1_grainfill.md](wp1_grainfill.md)):** they did not help wheat or winter
+  barley (wheat R² 0.64 → 0.56 at mid-July) and left the 2025 error unchanged (+0.44). They helped spring barley
+  (0.51 → 0.57), whose 2026 nowcast is re-issued under the addendum's rule.

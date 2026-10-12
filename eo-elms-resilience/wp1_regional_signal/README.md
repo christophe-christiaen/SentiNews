@@ -6,7 +6,8 @@
 
 ## Starting point (pilot)
 Cropland MODIS NDVI vs Defra wheat yield: r = 0.57, out-of-sample R² = 0.27; by mid-July 0.58 / 0.26. The signal comes
-from cropland (grassland adds nothing once cropland is in). Misses: 2012 (disease), 2022 (late drought).
+from cropland (grassland adds nothing once cropland is in). Misses: 2012 (disease), 2022 (late drought; with
+Sentinel-2, 2022 is under-predicted, not over-predicted).
 
 ## Data and how it is used here
 | Input | Role in WP1 |
@@ -31,8 +32,8 @@ from cropland (grassland adds nothing once cropland is in). Misses: 2012 (diseas
 - [x] Evaluation protocol fixed before any yield comparison (`results/protocol.md`)
 - [x] Regional nowcast vs MODIS on the same years, 8 English regions, wheat and barley (`src/wp1_nowcast.py`)
 - [x] 2026 nowcast written 11 Oct 2026, before the official 2026 figures (`results/wp1_nowcast_2026.csv`)
-- [ ] **Grain-fill fix:** heat and moisture after mid-July (LST, ERA5 July–August); dry springs (2022, 2025) are
-      over-predicted. New protocol entry before running
+- [x] Grain-fill features (protocol addendum A, `src/wp1_grainfill.py`): no gain for wheat or winter barley;
+      spring barley R² 0.51 → 0.57 (2026 spring barley nowcast re-issued)
 - [ ] Score the 2026 nowcast against Defra's provisional figures when published
 - [ ] Learning from aggregates (field attention / multiple-instance learning) vs region medians; ITL3 targets
 
@@ -41,8 +42,9 @@ Leave-one-year-out over 2017–2025, 8 English Defra regions ([results](results/
 - **Wheat:** Sentinel-2 + weather by mid-July R² 0.64 (England 0.78), against 0.44 for the MODIS pilot on the same
   years and 0.45 for peak NDVI alone; already 0.55 by mid-May. Weather alone has no skill (−0.05).
 - **Winter barley** 0.52, **spring barley** 0.52 by mid-July. 80% intervals cover 79–81% of held-out region-years.
-- **2026:** wheat nowcast about 0.4–0.5 t/ha above the 2017–2025 mean, but the model over-predicted the dry 2025 by
-  0.4 t/ha, so 2026 (drier still) is probably too high: see the last section of the results.
+- **2026:** wheat nowcast about 0.4–0.5 t/ha above the 2017–2025 mean. The model over-predicted 2025 by 0.4 t/ha but
+  under-predicted the other dry springs (2018, 2020, 2022), so there is no consistent dry-year bias; single-year
+  errors run from −0.44 to +0.41 t/ha. Read the 80% intervals, not the point.
 
 ```
 src/        models and feature pipelines specific to WP1

@@ -43,9 +43,32 @@ CROME yet), crop masks come from a classifier trained on the 2017–2024 Sentine
 on 2025. The 2026 wheat nowcast (mid-July and end of August cutoffs) is written down and committed before any official
 2026 regional figure is looked at.
 
+## Addendum A: grain-fill features (written 12 October 2026, before they were computed)
+
+The first run over-predicted dry-spring years (2025 by 0.4 t/ha; the pilot missed 2022 the same way): canopies stay
+green into July while grain fill is cut short. This addendum adds features for the grain-fill period, scored by the
+same leave-one-year-out rules.
+
+- **Weather, mid-July cutoff (June only, as monthly ERA5-Land is complete for June by mid-July):** June mean
+  temperature anomaly; June water balance anomaly (rain minus potential evaporation); June root-zone soil moisture z
+  (7–28 cm); April–June water balance anomaly (the depth of the spring drought). Anomalies against each cell's
+  1991–2020 June (or April–June) normal, averaged over the crop's parcels in the region.
+- **Weather, end-of-August cutoff:** the above plus the same three for July, and days ≥ 28 °C and ≥ 30 °C (June–August).
+- **Sentinel-2 grain-fill features:** NDVI and NDMI fall from the season peak (half-months 4–9) to the last
+  half-month before the cutoff (k = 9 at mid-July; mean of k = 10–11 at end of August); median senescence half-month
+  (end of August only).
+- **Models:** "Sentinel-2 + weather + grain fill" (ridge, all features) at both cutoffs, against the first-run
+  models.
+- **Scores:** out-of-sample R² as before (primary), and the mean error in dry-spring years: seasons in which at least
+  half of the wheat region-years are in a dry shock (section 5 of the WP3 pre-registration), listed in the results.
+- **Rule for the 2026 nowcast:** the 2026 figures are re-issued with the new model only where it improves the
+  leave-one-year-out R² at that cutoff; the first nowcast (commit 8427362) stays on record either way.
+
 ## Record
 
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-11 | Protocol written | Before any yield comparison |
 | 2026-10-11 | Diagnostic after the nowcast was written: classifier vs CROME mask in 2025, and the 2025 held-out error (results, last section). Nowcast left unchanged | The 2026 nowcast is above average in a record-dry spring; checked whether the mask or the model drives it |
+| 2026-10-12 | Addendum A: grain-fill features | Dry-spring years over-predicted in the first run; written before the new features were computed |
+| 2026-10-12 | Addendum A run: no gain for wheat or winter barley, spring barley improved and re-issued for 2026 under the rule; the earlier "dry springs over-predicted" reading corrected in wp1_results.md (only 2025 was; 2018, 2020, 2022 were under-predicted) | Results of addendum A |
