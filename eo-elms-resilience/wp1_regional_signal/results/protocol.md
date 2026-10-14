@@ -64,6 +64,27 @@ same leave-one-year-out rules.
 - **Rule for the 2026 nowcast:** the 2026 figures are re-issued with the new model only where it improves the
   leave-one-year-out R² at that cutoff; the first nowcast (commit 8427362) stays on record either way.
 
+## Addendum B: no extrapolation, damage-only weather, compound drought (written 14 October 2026, before running)
+
+Prompted by the post hoc diagnosis of the 2026 miss (wp1_diagnose_2026.md): a positive weight on hot days, learned in
+2017–2025, was extrapolated to an unprecedented 2026 heatwave. **Defra's 2026 figures are known, so 2026 cannot test
+this addendum**; it is judged on leave-one-year-out 2017–2025 only, and any 2026 figure it gives is an illustration.
+
+- **Features:** Sentinel-2 indices averaged to months instead of half-months (March to the cutoff; 3 indices × 5 months
+  at mid-July, × 6 at end of August), plus the four weather features of the first run.
+- **No extrapolation:** each weather feature is clipped to the range seen in the training years of the fold.
+- **Damage-only weather:** standardised coefficients constrained in sign: hot days ≤ 0; spring rainfall anomaly ≥ 0;
+  June–July soil moisture ≥ 0; winter rainfall anomaly ≤ 0 (wet winters can only hurt). Sentinel-2 terms unconstrained.
+- **Compound drought:** one added term, max(0, −spring rainfall anomaly / 20) × max(0, −soil moisture z), clipped like the
+  others, coefficient ≤ 0.
+- **Estimation:** bounded least squares with a ridge penalty (penalty from 1 to 1,000, chosen by inner
+  leave-one-year-out), features standardised within each fold.
+- **Scores:** as before (out-of-sample R², England R²), plus mean error and mean absolute error in the dry-spring years
+  2018, 2020, 2022 and 2025, and the 2025 error on its own.
+- **Adoption rule (for future nowcasts, from 2027):** addendum B replaces the first-run model for a crop and cutoff if
+  its leave-one-year-out R² is no more than 0.02 below the first run **and** its mean absolute error in the dry-spring
+  years is lower. Otherwise the first-run model stays.
+
 ## Record
 
 | Date | Change | Reason |
@@ -73,3 +94,6 @@ same leave-one-year-out rules.
 | 2026-10-12 | Addendum A: grain-fill features | Dry-spring years over-predicted in the first run; written before the new features were computed |
 | 2026-10-12 | Addendum A run: no gain for wheat or winter barley, spring barley improved and re-issued for 2026 under the rule; the earlier "dry springs over-predicted" reading corrected in wp1_results.md (only 2025 was; 2018, 2020, 2022 were under-predicted) | Results of addendum A |
 | 2026-10-12 | 2026 nowcast scored against Defra's provisional figures (wp1_score_2026.md). Defra had published them on 8 October 2026, before the nowcast was written on 11 October; they were not looked at, so the nowcast is blind, but the protocol's wording "before any official 2026 regional figure is looked at" holds only in that sense | Discovered when checking for the release |
+| 2026-10-12 | Post hoc diagnosis of the 2026 miss (wp1_diagnose_2026.md): main cause extrapolation of a positive hot-day weight far beyond the 2017–2025 range; fix proposed, not yet run | Understanding the miss before any change |
+| 2026-10-14 | Addendum B written (no extrapolation, damage-only weather, compound drought); 2026 excluded as a test because Defra's figures are known | Response to the diagnosed 2026 miss |
+| 2026-10-14 | Addendum B run: adopted for spring barley (both cutoffs) under the rule; not for wheat or winter barley. 2026 shown as an illustration only | Results of addendum B |

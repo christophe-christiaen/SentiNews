@@ -35,7 +35,9 @@ Sentinel-2, 2022 is under-predicted, not over-predicted).
 - [x] Grain-fill features (protocol addendum A, `src/wp1_grainfill.py`): no gain for wheat or winter barley;
       spring barley R² 0.51 → 0.57 (2026 spring barley nowcast re-issued)
 - [x] Scored against Defra's provisional 2026 figures (`results/wp1_score_2026.md`): too high for every crop
-- [ ] Find out why the dry springs of 2025 and 2026 were over-predicted (2018, 2020, 2022 were not)
+- [x] Diagnosed the 2026 miss (`results/wp1_diagnose_2026.md`): a positive hot-day weight extrapolated to an
+      unprecedented heatwave; protocol addendum B (`results/wp1_addendum_b.md`) adopted for spring barley only
+- [ ] Test the wheat question on the 2027 harvest (2026 can no longer be a test)
 - [ ] Learning from aggregates (field attention / multiple-instance learning) vs region medians; ITL3 targets
 
 ## First results (October 2026)
