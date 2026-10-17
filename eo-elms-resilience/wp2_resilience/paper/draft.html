@@ -30,8 +30,8 @@
 <body>
 
 <div class="draft">DRAFT FOR DISCUSSION, 17 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (commit 7e49b21); results files are named in brackets. Items in orange are still to do.
-The literature review has not been written and no papers beyond the methods references are cited yet.</div>
+christophe-christiaen/SentiNews (commit to follow); results files are named in brackets. Items in orange are still to do.
+A first related-work section is in place (references checked against publisher or index records); crop-specific studies are still to add.</div>
 
 <h1>Short baselines manufacture drought legacies: evidence from 381,400 cereal fields in England</h1>
 <div class="meta">[Authors and affiliations to be added]</div>
@@ -56,8 +56,10 @@ We give a simple diagnostic set (dynamic-panel estimates, season-shuffling place
 any resilience study built on short anomaly baselines.</p></div>
 
 <h2>1. Introduction</h2>
-<p>Droughts are increasingly consecutive. England's cereal land had dry springs in 2025 and 2026 back to back, after
-dry summers in 2018, 2020 and 2022 (Figure 1). Whether damage from one season carries into the next matters for food
+<p>Droughts are increasingly consecutive. The 2018–2020 drought in Europe lasted more than two years and set a new
+benchmark against a record reconstructed back to 1766 (Rakovec et al., 2022), and risk assessments that treat hazards
+one at a time can understate the risk from such compound events (Zscheischler et al., 2018). England's cereal land had
+dry springs in 2025 and 2026 back to back, after dry summers in 2018, 2020 and 2022 (Figure 1). Whether damage from one season carries into the next matters for food
 supply forecasting, for farm finance, where a second shock on an unrecovered farm is a credit event, and for policy
 that pays farmers to build resilience. Earth observation is attractive here because it sees every field every few
 days and needs no farm survey.</p>
@@ -68,8 +70,29 @@ Any error in a short normal is shared by every later season of that field. A fie
 high will look stressed season after season, and the test reads that as carry-over.</p>
 <p>We set out to measure drought legacies across all of England's cereal land, found strong ones, and then found that
 most of the effect came from the baseline. This paper reports both, because the second finding is the more useful:
-it applies to any resilience indicator built on short per-pixel or per-field normals. <span class="todo">[Position
-against the drought legacy, consecutive extremes and EO resilience literature: to be written.]</span></p>
+it applies to any resilience indicator built on short per-pixel or per-field normals.</p>
+<h3>1.1 Drought legacies and resilience seen from space</h3>
+<p>That drought damage can outlast the drought is well established for trees: across 1,338 forest sites, stem growth
+stayed reduced for one to four years after severe drought, a legacy largely missing from vegetation models (Anderegg et
+al., 2015). Globally, vegetation responds to climate with lags, and allowing for them improves how much of its
+variation climate explains (Wu et al., 2015). Satellite drought monitoring has long expressed crop condition relative
+to a historical range, as in the Vegetation Condition Index (Kogan, 1995). A separate line of work estimates
+resilience from the time series itself: rising lag-1 autocorrelation is read as slowing recovery (Dakos et al., 2012),
+and satellite records have been used in this way to map the resilience of tropical forests (Verbesselt et al., 2016),
+of vegetation worldwide from 1992 to 2017 (Smith, Traxl and Boers, 2022) and of forests from 2000 to 2020 (Forzieri et
+al., 2022). These estimates depend on data and method: optical indices give unreliable resilience estimates in dense
+tropical and boreal forests, and a systematic comparison of pre-processing and estimation choices removes biases
+present in earlier results (Smith and Boers, 2023).</p>
+<h3>1.2 Short baselines, shared errors and dynamic panels</h3>
+<p>The studies above work with records of a decade or more. Field-scale work with Sentinel-2 cannot: its normal for each
+field rests on a handful of seasons. Standardising every later season against the same short normal gives all of them
+a shared error, a mechanism close to regression to the mean, which can make natural variation in repeated
+measurements look like real change (Barnett, van der Pols and Dobson, 2005). Testing for persistence within each unit
+instead runs into the short-panel bias of fixed-effects estimators with a lagged dependent variable (Nickell, 1981),
+which instrumental-variable estimators were designed to avoid (Anderson and Hsiao, 1981; Arellano and Bond, 1991). We
+bring these econometric tools, with simulation to calibrate them, to the remote-sensing question of drought legacies.
+<span class="todo">[Still to add: crop-specific drought-legacy studies and field-scale Sentinel-2 resilience
+studies, each checked against its source.]</span></p>
 <p>Contributions: (i) a field-scale measurement of crop stress and weather shocks for a whole country's cereal land;
 (ii) evidence that the conventional persistence test is dominated by a short-baseline artefact, quantified by
 simulation; (iii) within-field estimates, calibrated by simulation, that bound the true carry-over; (iv) a diagnostic
@@ -280,20 +303,43 @@ Field-level panels are rebuilt by the code from open data; RPA parcel references
 used.</p>
 
 <h2>Still to do before submission</h2>
-<p class="todo">Literature review and positioning; T2 resolution within fields (alternative instruments, or Landsat at
+<p class="todo">Extend related work (crop-specific drought legacies, field-scale Sentinel-2 resilience studies); T2 resolution within fields (alternative instruments, or Landsat at
 30 m to separate neighbouring fields); Sentinel-1 2026 against Environment Agency flood records; venue choice and deadline
 check (ISPRS Journal of Photogrammetry and Remote Sensing, Remote Sensing of Environment, or a methods venue);
 co-author review.</p>
 
 <h2>References</h2>
 <ol class="refs">
+<li>Anderegg, W. R. L. et al. (2015). Pervasive drought legacies in forest ecosystems and their implications for carbon
+cycle models. <i>Science</i>, 349, 528–532.</li>
 <li>Anderson, T. W. and Hsiao, C. (1981). Estimation of dynamic models with error components. <i>Journal of the
 American Statistical Association</i>, 76(375), 598–606.</li>
-<li>Nickell, S. (1981). Biases in dynamic models with fixed effects. <i>Econometrica</i>, 49(6), 1417–1426.</li>
+<li>Arellano, M. and Bond, S. (1991). Some tests of specification for panel data: Monte Carlo evidence and an
+application to employment equations. <i>Review of Economic Studies</i>, 58(2), 277–297.</li>
+<li>Barnett, A. G., van der Pols, J. C. and Dobson, A. J. (2005). Regression to the mean: what it is and how to deal
+with it. <i>International Journal of Epidemiology</i>, 34(1), 215–220.</li>
+<li>Dakos, V. et al. (2012). Methods for detecting early warnings of critical transitions in time series illustrated
+using simulated ecological data. <i>PLoS ONE</i>, 7(7), e41010.</li>
+<li>Forzieri, G. et al. (2022). Emerging signals of declining forest resilience under climate change. <i>Nature</i>,
+608, 534–539.</li>
+<li>Kogan, F. N. (1995). Application of vegetation index and brightness temperature for drought detection.
+<i>Advances in Space Research</i>, 15(11), 91–100.</li>
 <li>Muñoz-Sabater, J. et al. (2021). ERA5-Land: a state-of-the-art global reanalysis dataset for land applications.
 <i>Earth System Science Data</i>, 13, 4349–4383.</li>
-<li class="todo">[Sentinel-2 and Cloud Score+ data references; CROME and RPA data licences; drought legacy and
-resilience-indicator literature: to be added and checked.]</li>
+<li>Nickell, S. (1981). Biases in dynamic models with fixed effects. <i>Econometrica</i>, 49(6), 1417–1426.</li>
+<li>Rakovec, O. et al. (2022). The 2018–2020 multi-year drought sets a new benchmark in Europe. <i>Earth's Future</i>,
+10(3), e2021EF002394.</li>
+<li>Smith, T. and Boers, N. (2023). Reliability of vegetation resilience estimates depends on biomass density.
+<i>Nature Ecology &amp; Evolution</i>, 7, 1799–1808 (author correction 2024).</li>
+<li>Smith, T., Traxl, D. and Boers, N. (2022). Empirical evidence for recent global shifts in vegetation resilience.
+<i>Nature Climate Change</i>, 12, 477–484.</li>
+<li>Verbesselt, J. et al. (2016). Remotely sensed resilience of tropical forests. <i>Nature Climate Change</i>, 6(11),
+1028–1031.</li>
+<li>Wu, D. et al. (2015). Time-lag effects of global vegetation responses to climate change. <i>Global Change
+Biology</i>, 21(9), 3520–3531.</li>
+<li>Zscheischler, J. et al. (2018). Future climate risk from compound events. <i>Nature Climate Change</i>, 8(6),
+469–477.</li>
+<li class="todo">[Sentinel-1/2, Cloud Score+, MODIS, AlphaEarth, CROME and RPA data references: to be added and checked.]</li>
 </ol>
 </body>
 </html>
