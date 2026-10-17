@@ -30,7 +30,7 @@
 <body>
 
 <div class="draft">DRAFT FOR DISCUSSION, 17 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (commit 238dc89); results files are named in brackets. Items in orange are still to do.
+christophe-christiaen/SentiNews (source commit to follow); results files are named in brackets. Items in orange are still to do.
 The literature review has not been written and no papers beyond a few methods and data references are cited yet.</div>
 
 <h1>Seeing agri-environment options from space: detection, selection and effects on England's cereal land</h1>
@@ -50,7 +50,9 @@ and in-field flower and bird-food plots fall short of the threshold; margins and
 family including the controls scores about 0.7, entirely explained by the placebo: a naive evaluation would report
 detection of actions that a field-centre point cannot see. Embeddings beat a Sentinel-2 index baseline in every family.
 In the companion pre-registered evaluation, agreement land drops about 0.08 standard deviations less in drought
-seasons, consistently across designs but not established once cohorts are compared within themselves.</p></div>
+seasons, consistently across designs but not established once cohorts are compared within themselves. Fields with the
+two visible options cushion droughts about twice as much as management-only scheme fields (+0.13 and +0.12 against
++0.05), but the difference is well within its uncertainty.</p></div>
 
 <h2>1. Introduction</h2>
 <p>England's farm payments have shifted from area-based support to paying for actions: soil cover, herbal leys,
@@ -158,6 +160,24 @@ may be which land joined. Recovery after a shock and the type of action show no 
 suggest why the type of action is hard to test: only herbal leys and no-till are reliably visible, so most declared
 options cannot be checked on the ground from space, and effects by option rest on declared rather than verified
 actions.</p>
+<p>For the two options that are visible, a further exploratory test, specified before running
+[results/wp3_e4_visible_options.md], compares their drought-season effect with that of scheme land carrying only
+management actions, so that both groups chose to join and only one changed the field visibly.</p>
+<div class="tcap"><b>Table 3.</b> Drought-season effect (shock minus non-shock seasons, July NDVI, SD) against never-treated
+fields, embedding-matched sample; frozen-plan estimator. SE clustered by ERA5 cell.</div>
+<table>
+<tr><th>Group</th><th>Matched fields</th><th>Effect</th><th>95% CI</th></tr>
+<tr><td>Herbal leys</td><td>10,033</td><td>+0.126</td><td>−0.031 to +0.283</td></tr>
+<tr><td>No-till</td><td>11,159</td><td>+0.124</td><td>−0.013 to +0.261</td></tr>
+<tr><td>Management only</td><td>75,833</td><td>+0.050</td><td>−0.030 to +0.130</td></tr>
+<tr><td><b>Herbal leys minus management only</b></td><td></td><td><b>+0.076</b></td><td>−0.095 to +0.246</td></tr>
+<tr><td><b>No-till minus management only</b></td><td></td><td><b>+0.074</b></td><td>−0.079 to +0.226</td></tr>
+</table>
+<p>The visible options cushion droughts about twice as much as management-only land, but the differences are well
+within their uncertainty. Within cohorts the estimates carry no information (standard errors 0.17–0.23, signs
+changing); the before-entry placebo is clean for both options (+0.031 and +0.008). About 10,000 fields per option,
+clustered in weather cells and observed over nine seasons, are too few for this design. Verifying actions from space
+sharpens the question but does not yet answer it.</p>
 
 <h2>6. Discussion</h2>
 <p><b>For monitoring.</b> A field's annual embedding can confirm whole-field land-cover options such as herbal leys,
@@ -174,7 +194,8 @@ to parcel points; the live scheme layers omit agreements that have ended.</p>
 <p>From space, on England's cereal land, herbal leys and no-till are visible; grassland options look visible mostly
 because of which land converts; edge features and management practices are not. Land that joins a scheme is itself
 distinctive, enough to fake an AUC of 0.7, so detection must be measured against a pre-entry placebo. The schemes'
-effect on drought resilience is small, consistent and not yet established.</p>
+effect on drought resilience is small, consistent and not yet established, and for the two options that can be seen
+from space it points the same way, more strongly, but within its uncertainty.</p>
 
 <h2>Data and code availability</h2>
 <p style="text-align:left">Code and aggregate results: christophe-christiaen/SentiNews (<code>eo-elms-resilience/wp3_elms_effect</code>). All
@@ -182,8 +203,8 @@ inputs are open; parcel references are public and no personal data are used.</p>
 
 <h2>Still to do before submission</h2>
 <p class="todo">Literature review and positioning; field polygons instead of points (edge options, partial-field
-plots); seasonal Sentinel-1 and Sentinel-2 features for cover crops; option-level effects for the visible families
-(herbal leys, no-till); verification against inspection data if obtainable; venue choice and co-author review.</p>
+plots); seasonal Sentinel-1 and Sentinel-2 features for cover crops; the option-level effect test again with more
+seasons (2027 onwards) and field-polygon outcomes; verification against inspection data if obtainable; venue choice and co-author review.</p>
 
 <h2>References</h2>
 <ol class="refs">
