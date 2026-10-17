@@ -41,17 +41,25 @@ accounts do.
   wheat yield will compare with normal, for years the model never saw: they explain about two-thirds of the
   year-to-year differences, against under half for the older satellites used in the pilot. Barley works almost as
   well. But the 2026 forecast, made without looking at Defra's figures (which, it turned out, had been published
-  three days earlier), was too high for every crop, by about 0.7–0.9 t/ha: the second dry spring in a row the model
-  over-predicted. Something about these droughts is not yet captured.
+  three days earlier), was too high for every crop, by about 0.7–0.9 t/ha. The cause is now clear: the model had
+  learned from 2017–2025 that hot summers came with decent yields, and 2026 was far hotter than any of those years.
+  Fixes are written down; the 2027 harvest is their first fair test.
 - **Do droughts compound? Not confirmed (WP2).** At first it looked as if a field that had not recovered from one
   bad season did worse in the next. A stricter check, comparing each field only with itself, finds little or none:
   the pattern came from fields that sit above or below their normal for years, and with only four seasons to set
-  that normal we cannot yet tell real lasting decline from noise. We corrected this on 12 October 2026; a longer
-  baseline (older satellites, back to 2001) is the next test.
+  that normal we cannot yet tell real lasting decline from noise. We corrected this on 12 October 2026, and a much
+  longer normal from older satellites (back to 2001) confirms it: within each field, the carry-over is about zero.
+  Two other things did show up: fields in flood zones or on peat hold up *better* in droughts, and a waterlogged
+  winter, seen by radar, is followed by a weaker crop in the same field.
 - **Nature-friendly farming: a small cushion, not yet proven (WP3).** Fields in an agreement drop a little less in
   drought seasons than similar fields outside. But land that later joined already coped slightly better before it
   joined, so we cannot yet say the agreements caused it. There is no sign of faster recovery, and no difference
   between types of action. The test was written down before we looked, and every later choice is recorded.
+- **Which scheme actions can satellites see?** Whole-field changes, yes: herbal leys and no-till are recognisable
+  from space, even in regions the model never saw. Field-edge strips and management practices (pest and nutrient
+  plans), no. And a warning for anyone checking schemes by satellite: land that joins a scheme already looks
+  different, enough that a naive test "detects" invisible buffer strips. Comparing against the same fields before
+  they joined removes that trap.
 - **A watch-list for lenders.** A simple score built from each field's own history picks out 20% of fields that
   hold about 1.6 times their share of next season's hardest-hit fields. About 11,600 high-risk fields are also in
   the highest flood-risk zone or on deep peat, mostly in the East Midlands and the Fens. (Flood zone and peat are a
@@ -120,10 +128,16 @@ Earth Engine for the national satellite extraction). The news-and-accounts link 
 | WP1 · Harvest signal | [results](eo-elms-resilience/wp1_regional_signal/results/wp1_results.md), [evaluation rules](eo-elms-resilience/wp1_regional_signal/results/protocol.md) |
 | WP2 · Resilience | [summary](eo-elms-resilience/wp2_resilience/results/wp2_resilience_summary.md) |
 | WP3 · Nature schemes | [results](eo-elms-resilience/wp3_elms_effect/results/wp3_results.md), [pre-registration](eo-elms-resilience/wp3_elms_effect/results/preregistration.md) |
+| Option detection | [results](eo-elms-resilience/wp3_elms_effect/results/option_detection.md), [protocol](eo-elms-resilience/wp3_elms_effect/results/detection_protocol.md) |
 | Lender score | [back-test](eo-elms-resilience/results/lender/lender_score_backtest.md) |
+
+**Paper drafts** (not for circulation yet): [Paper 1, harvest nowcast](eo-elms-resilience/wp1_regional_signal/paper/draft.html) ·
+[Paper 2, short baselines and false drought legacies](eo-elms-resilience/wp2_resilience/paper/draft.html) ·
+[Paper 3, seeing scheme options from space](eo-elms-resilience/wp3_elms_effect/paper/draft.html).
 
 ## Status
 
-Work in progress (October 2026). First national results are in for all three work packages. Next: radar
-(Sentinel-1) soil wetness re-processed per satellite orbit (done for 2017–2025), understanding why the 2025 and 2026
-harvests were over-predicted, and a longer baseline for the drought-legacy question.
+Work in progress (October 2026). All three work packages have national results, every listed dataset has been
+tested in each of them (satellites, radar, weather, crop maps, scheme records, flood and peat maps, and AlphaEarth
+embeddings), and each has a draft paper. Next: literature reviews, Defra's final 2026 figures (10 December 2026) and
+the 2027 harvest as the first fair test of the yield fixes.
