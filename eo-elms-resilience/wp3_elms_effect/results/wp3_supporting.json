@@ -1,0 +1,59 @@
+{
+ "E1_modis_history": {
+  "2002\u20132016 (before any agreement in the sample)": {
+   "shock_contrast": 0.016377647456540703,
+   "se": 0.002543937308517767,
+   "p": 1.211273303880489e-10,
+   "level_gap": -0.0031849373820259487,
+   "level_se": 0.000616199302649074,
+   "n": 4573052,
+   "clusters": 1613,
+   "shock_share": 0.2198448650922841
+  },
+  "2017\u20132020 (bridge, still pre-entry)": {
+   "shock_contrast": 0.017104056748264394,
+   "se": 0.005220231374915578,
+   "p": 0.0010510454803109859,
+   "level_gap": 0.00740539509714288,
+   "level_se": 0.00403476236812548,
+   "n": 1219482,
+   "clusters": 1613,
+   "shock_share": 0.5273263566005895
+  }
+ },
+ "E2_sentinel1_waterlogging": {
+  "wet-winter contrast after entry (dB)": {
+   "name": "wet-winter contrast after entry (dB)",
+   "est": -0.038782401541594624,
+   "se": 0.01210274788144351,
+   "lo": -0.06250378738922391,
+   "hi": -0.015061015693965344,
+   "p": 0.001353304599271895,
+   "clusters": 1536,
+   "n": 400875,
+   "note": ""
+  },
+  "overall effect after entry (dB)": {
+   "name": "overall effect after entry (dB)",
+   "est": 0.0032577185864014827,
+   "se": 0.008795538249643365,
+   "lo": -0.013981536382899513,
+   "hi": 0.02049697355570248,
+   "p": 0.7110970756893291,
+   "clusters": 1536,
+   "n": 400875,
+   "note": ""
+  },
+  "wet-winter contrast before entry (placebo, dB)": {
+   "name": "wet-winter contrast before entry (placebo, dB)",
+   "est": 0.00921302325201799,
+   "se": 0.005559310154470875,
+   "lo": -0.0016832246507449238,
+   "hi": 0.020109271154780905,
+   "p": 0.09747415820711491,
+   "clusters": 1536,
+   "n": 1279427,
+   "note": ""
+  }
+ }
+}

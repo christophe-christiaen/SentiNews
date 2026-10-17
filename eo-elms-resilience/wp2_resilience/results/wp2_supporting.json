@@ -1,0 +1,51 @@
+{
+ "W1_flood_peat": {
+  "fields": {
+   "flood zone 3 or deep peat": 46095,
+   "other": 335305
+  },
+  "stress gap, other seasons (fp minus other)": {
+   "coef": -0.0049665530624472525,
+   "se": 0.0025594088182381214,
+   "p": 0.05231799353866351,
+   "n": 9532960
+  },
+  "extra gap in shock seasons": {
+   "coef": 0.05036433273729853,
+   "se": 0.006120792932206313,
+   "p": 2.220446049250313e-16,
+   "n": 9532960
+  },
+  "carry-over within field (Anderson-Hsiao), flood zone 3 or deep peat": {
+   "coef": -0.04317083785560366,
+   "se": 0.003954701835096163,
+   "p": 0.0,
+   "n": 1105255,
+   "clusters": 1093,
+   "first_stage_r": -0.6988779311683264
+  },
+  "carry-over within field (Anderson-Hsiao), other": {
+   "coef": -0.016157923168238202,
+   "se": 0.0017707286868923586,
+   "p": 0.0,
+   "n": 8044655,
+   "clusters": 1647,
+   "first_stage_r": -0.6879625618797056
+  }
+ },
+ "W2_sentinel1": {
+  "all winters: S per dB of winter VH anomaly": {
+   "coef": -0.05440851706585178,
+   "se": 0.0017018532643165464,
+   "p": 0.0,
+   "n": 3429725,
+   "clusters": 1655
+  },
+  "extra slope in wet-shock winters": {
+   "coef": 0.032726743642495684,
+   "se": 0.0022021067121526143,
+   "p": 0.0,
+   "n": 3429725
+  }
+ }
+}

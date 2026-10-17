@@ -85,6 +85,22 @@ this addendum**; it is judged on leave-one-year-out 2017–2025 only, and any 20
   its leave-one-year-out R² is no more than 0.02 below the first run **and** its mean absolute error in the dry-spring
   years is lower. Otherwise the first-run model stays.
 
+## Addendum C: supporting datasets (written 17 October 2026, before running)
+
+Uses the datasets the WP1 plan lists as supporting. Same targets, regions and leave-one-year-out scoring.
+
+- **C1, MODIS long record:** region medians of MODIS July and peak NDVI (250 m, at cereal-land parcel points, since
+  CROME starts in 2016), as anomalies, plus the four weather features; trained and scored by leave-one-year-out over
+  2001–2025 (up to 25 seasons instead of 9). Scored on all years and on 2017–2025 alone, for comparison with Sentinel-2.
+- **C2, Sentinel-1 in spring:** the first-run Sentinel-2 + weather model plus monthly Sentinel-1 cross-ratio (VH − VV,
+  dB, mean of both orbit directions) medians over the crop's fields, March to the cutoff, as anomalies (2017–2025).
+- **C3, schemes, flood and peat:** the first-run model plus the share of the crop's fields under an agreement that
+  season, and the share in Flood Zone 3 or on deep peat multiplied by the wet-winter indicator (a static share alone
+  is absorbed by each region's mean).
+- **Rule:** an addition is adopted for a crop and cutoff if its leave-one-year-out R² on 2017–2025 is at least 0.02
+  above the first run and its dry-spring-year mean absolute error is not higher. C1 is reported as a separate model.
+  2026 is not used as a test (Defra's figures are known).
+
 ## Record
 
 | Date | Change | Reason |
@@ -97,3 +113,5 @@ this addendum**; it is judged on leave-one-year-out 2017–2025 only, and any 20
 | 2026-10-12 | Post hoc diagnosis of the 2026 miss (wp1_diagnose_2026.md): main cause extrapolation of a positive hot-day weight far beyond the 2017–2025 range; fix proposed, not yet run | Understanding the miss before any change |
 | 2026-10-14 | Addendum B written (no extrapolation, damage-only weather, compound drought); 2026 excluded as a test because Defra's figures are known | Response to the diagnosed 2026 miss |
 | 2026-10-14 | Addendum B run: adopted for spring barley (both cutoffs) under the rule; not for wheat or winter barley. 2026 shown as an illustration only | Results of addendum B |
+| 2026-10-17 | Addendum C written: MODIS long record, Sentinel-1 spring cross-ratio, scheme share and flood/peat × wet winter | Using the supporting datasets listed for WP1 |
+| 2026-10-17 | Addendum C run: C2 (Sentinel-1) adopted for winter barley at mid-July; C1 reported separately (weaker than Sentinel-2). **Deviation from the rule:** C3 met the adoption rule for wheat but is not adopted, because a post hoc check showed its gain comes from the agreement share acting as an indicator of the two poor 2024–2025 seasons (see wp1_addendum_c.md) | Avoid building a timing coincidence into future forecasts |

@@ -14,3 +14,4 @@ wp*/data/
 
 # per-parcel lender scores stay local
 data/lender/
+logs/
