@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Paper 3 draft: seeing agri-environment options from space</title>
+<style>
+  @page { size: A4; margin: 22mm 20mm 22mm 20mm; }
+  body { font-family: Georgia, 'Times New Roman', serif; font-size: 10.5pt; line-height: 1.45; color: #111; }
+  h1 { font-size: 17pt; line-height: 1.25; margin: 0 0 6pt; }
+  h2 { font-size: 12.5pt; margin: 16pt 0 5pt; page-break-after: avoid; break-after: avoid; }
+  h3 { font-size: 11pt; margin: 11pt 0 4pt; font-style: italic; font-weight: normal; page-break-after: avoid; break-after: avoid; }
+  p { margin: 0 0 7pt; text-align: justify; }
+  .draft { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; color: #9A5F14; border: 1px solid #9A5F14; padding: 6pt 8pt; margin: 0 0 12pt; }
+  .meta { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; color: #444; margin-bottom: 12pt; }
+  .abstract { background: #F6F4EE; padding: 9pt 11pt; margin: 0 0 12pt; }
+  .abstract p { margin: 0; }
+  figure { margin: 10pt 0 12pt; page-break-inside: avoid; }
+  figure img { width: 100%; }
+  figcaption { font-size: 9pt; line-height: 1.35; color: #333; margin-top: 4pt; }
+  table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: 6pt 0 4pt; page-break-inside: avoid; }
+  th, td { border-bottom: 1px solid #ccc; padding: 3pt 5pt; text-align: left; }
+  th { border-bottom: 1.5px solid #333; }
+  td.n { text-align: right; }
+  .tcap { font-size: 9pt; color: #333; margin: 8pt 0 2pt; }
+  .todo { color: #9A5F14; }
+  ol.refs { font-size: 9pt; padding-left: 16pt; }
+  code { font-size: 8.5pt; }
+</style>
+</head>
+<body>
+
+<div class="draft">DRAFT FOR DISCUSSION, 17 October 2026. Not for circulation or citation. All numbers come from the code in
+christophe-christiaen/SentiNews (commit to follow); results files are named in brackets. Items in orange are still to do.
+The literature review has not been written and no papers beyond a few methods and data references are cited yet.</div>
+
+<h1>Seeing agri-environment options from space: detection, selection and effects on England's cereal land</h1>
+<div class="meta">[Authors and affiliations to be added]</div>
+
+<div class="abstract"><p><b>Abstract.</b> Paying farmers for environmental actions raises two questions a satellite
+might answer: are the actions on the ground, and do they change how land copes with shocks? We test the first for the
+options of England's Sustainable Farming Incentive and Countryside Stewardship on 381,400 cereal fields, using
+AlphaEarth annual embeddings and Sentinel-2, with a design fixed in advance. The central difficulty is selection: land
+that joins a scheme differs from land that does not, so a detector can appear to work by recognising who joins. We
+measure this with a placebo, the same model applied to embeddings from 2017–2019, before any of these fields carried an
+option, and count only the gain over it. Against scheme land with management-only actions, and tested on regions held
+out of training, herbal leys are detected (AUC 0.83, gain over the placebo +0.19) and so is no-till (0.77, +0.13).
+Grassland options score highly (0.81) but mostly because the land was already distinctive (placebo 0.73); cover crops
+and in-field flower and bird-food plots fall short of the threshold; margins and corners, and the two negative controls
+(field-edge buffer strips and management-only actions), show no detection at all. Against land never in a scheme, every
+family including the controls scores about 0.7, entirely explained by the placebo: a naive evaluation would report
+detection of actions that a field-centre point cannot see. Embeddings beat a Sentinel-2 index baseline in every family.
+In the companion pre-registered evaluation, agreement land drops about 0.08 standard deviations less in drought
+seasons, consistently across designs but not established once cohorts are compared within themselves.</p></div>
+
+<h2>1. Introduction</h2>
+<p>England's farm payments have shifted from area-based support to paying for actions: soil cover, herbal leys,
+flower-rich margins, reduced tillage. Whether those actions happen, and whether they make land more resilient, are
+questions of verification and of effect. Earth observation is attractive for both because it covers every field, every
+year, at no cost to the farmer. <span class="todo">[Position against the literature on monitoring agri-environment
+schemes, crop and cover-crop mapping from Sentinel-1/2, geospatial foundation models and embeddings, and causal
+evaluation with remote sensing: to be written.]</span></p>
+<p>Detection studies usually compare fields with an action against fields without. When joining is voluntary, that
+comparison mixes two things: the action, and the kind of land and farm that chooses to join. We show that the second
+alone gives an apparent detection accuracy of about 0.7, and we separate the two with a pre-entry placebo and a
+within-scheme comparison.</p>
+<p>Contributions: (i) a pre-registered, field-scale test of which scheme options are visible from space, across
+eight option families on 381,400 fields; (ii) a selection placebo and negative controls that expose how much apparent
+detection is selection; (iii) a comparison of a geospatial foundation-model embedding with an interpretable Sentinel-2
+baseline; (iv) the link to the scheme's effect on shock resilience, evaluated under a frozen pre-registration.</p>
+
+<h2>2. Data</h2>
+<p><b>Fields and options.</b> Rural Payments Agency parcel points; cereal land as parcels in cereals in at least half
+of the CROME years 2016–2025 (381,400 parcels). Options from the public Countryside Stewardship layers (joined by parcel
+reference) and Sustainable Farming Incentive actions (snapped to the nearest parcel point within 50 m); only area-based
+options count. Parcels inside legacy Countryside Stewardship Scheme agreements are excluded.</p>
+<p><b>Embeddings.</b> AlphaEarth annual embeddings (64 dimensions, 10 m), 2017–2025, sampled at each parcel point.
+Each year's embedding summarises that year's satellite record.</p>
+<p><b>Sentinel-2.</b> Half-monthly medians of NDVI, red-edge NDRE and NDMI, March–August, from L2A surface reflectance
+masked with Cloud Score+, over a 15 m buffer at each parcel point.</p>
+
+<h2>3. Methods</h2>
+<p>The design below was written down before any model was fitted [results/detection_protocol.md].</p>
+<div class="tcap"><b>Table 1.</b> Option families. Parcels = cereal-land agreement parcels entering 2021–2024 that carry
+at least one option of the family.</div>
+<table>
+<tr><th>Family</th><th>Codes</th><th class="n">Parcels</th><th>Expected</th></tr>
+<tr><td>Herbal leys</td><td>SAM3, CSAM3</td><td class="n">7,935</td><td>visible</td></tr>
+<tr><td>Cover crops</td><td>SAM2, CSAM2, SOH2, SOH3</td><td class="n">23,136</td><td>visible in winter and spring</td></tr>
+<tr><td>No-till</td><td>SOH1</td><td class="n">7,770</td><td>possibly (residue, stubble)</td></tr>
+<tr><td>In-field flower and bird-food plots</td><td>AHL1, AHL2, CAHL1, CAHL2</td><td class="n">17,121</td><td>where the plot covers the field centre</td></tr>
+<tr><td>Margins and corners</td><td>AHL3, AHL4, CAHL3, CAHL4, AB8</td><td class="n">45,667</td><td>weak: field edges</td></tr>
+<tr><td>Grassland options</td><td>LIG1, CLIG3, IGL2, CIGL2, GS1, GS2</td><td class="n">3,331</td><td>visible: arable to grass</td></tr>
+<tr><td>Buffer strips (negative control)</td><td>SW1, SW3, SW4, AHW6–11</td><td class="n">47,105</td><td>not visible at a field-centre point</td></tr>
+<tr><td>Management only (negative control)</td><td>SAM1, IPM, CIPM, NUM, CNUM, PRF</td><td class="n">164,990</td><td>not visible: practices and plans</td></tr>
+</table>
+<p><b>Comparisons.</b> Positives are agreement parcels entering 2021–2024, so the option is in place for the 2025
+season. Comparison A: parcels never in any scheme record. Comparison B: agreement parcels whose only options are
+management-only, so both groups chose to join. Each positive is matched by a random draw of comparison parcels from the
+same ITL1 region (positives capped at 15,000 per family).</p>
+<p><b>Features.</b> The 2025 AlphaEarth embedding; the 2025 Sentinel-2 indices (36 values); both together. <b>Placebo:</b>
+the mean embedding of 2017–2019, before any of these parcels carried an option. Detection gain = AUC with the 2025
+embedding minus AUC with the placebo.</p>
+<p><b>Model and evaluation.</b> Gradient-boosted trees (default settings, 200 iterations), one per family, comparison and
+feature set, evaluated by leaving one region out (eight regions; London merged with the South East) and pooling the
+held-out predictions. <b>Reading rule fixed in advance:</b> a family is detected if the 2025 embedding reaches AUC ≥ 0.70
+against comparison B and gains at least 0.10 over the placebo.</p>
+
+<h2>4. Results</h2>
+<h3>4.1 Detection by option family</h3>
+<figure><img src="p3_detection.png" alt="Detection AUC by option family">
+<figcaption><b>Figure 1.</b> Area under the ROC curve on held-out regions for each option family, with the 2025
+embedding (circles), the 2025 Sentinel-2 indices (squares) and the 2017–2019 embedding placebo (diamonds). A: against
+land never in a scheme. B: against scheme land with management-only actions. Dashed line: the 0.70 threshold.</figcaption></figure>
+<div class="tcap"><b>Table 2.</b> AUC on held-out regions [results/option_detection.md]. Gain = 2025 embedding minus
+placebo. Verdict by the rule fixed in advance (comparison B).</div>
+<table>
+<tr><th rowspan="2">Family</th><th colspan="3">B: vs management-only scheme land</th><th colspan="2">A: vs never in a scheme</th><th rowspan="2">Verdict</th></tr>
+<tr><th>Embedding 2025</th><th>Placebo</th><th>Gain</th><th>Embedding 2025</th><th>Placebo</th></tr>
+<tr><td>Herbal leys</td><td>0.83</td><td>0.65</td><td><b>+0.19</b></td><td>0.86</td><td>0.70</td><td><b>detected</b></td></tr>
+<tr><td>No-till</td><td>0.77</td><td>0.64</td><td><b>+0.13</b></td><td>0.85</td><td>0.77</td><td><b>detected</b></td></tr>
+<tr><td>Grassland options</td><td>0.81</td><td>0.73</td><td>+0.08</td><td>0.75</td><td>0.65</td><td>not (gain short)</td></tr>
+<tr><td>In-field flower and bird-food plots</td><td>0.66</td><td>0.56</td><td>+0.11</td><td>0.75</td><td>0.67</td><td>not (AUC short)</td></tr>
+<tr><td>Cover crops</td><td>0.64</td><td>0.57</td><td>+0.08</td><td>0.77</td><td>0.72</td><td>not</td></tr>
+<tr><td>Margins and corners</td><td>0.57</td><td>0.56</td><td>+0.01</td><td>0.71</td><td>0.71</td><td>not</td></tr>
+<tr><td>Buffer strips (control)</td><td>0.57</td><td>0.56</td><td>+0.00</td><td>0.73</td><td>0.72</td><td>not, as expected</td></tr>
+<tr><td>Management only (control)</td><td>–</td><td>–</td><td>–</td><td>0.69</td><td>0.68</td><td>not, as expected</td></tr>
+</table>
+<p>Two families pass the rule. Herbal leys, which turn a whole field into a multi-species sward, are the clearest:
+AUC 0.83 against other scheme land and a gain of 0.19 over what the pre-entry embedding already knew. No-till is the
+second (0.77, gain 0.13), plausibly through residue cover and the absence of a cultivated seedbed. Grassland options
+score highly (0.81) but fail the gain criterion: the fields that later went to grass were already distinctive before
+entry (placebo 0.73), so most of the score is selection, not detection. In-field flower and bird-food plots gain 0.11
+but stay below 0.70, as expected for plots that cover the field centre only sometimes. Cover crops are only weakly
+visible in an annual embedding (0.64), which averages over a season in which the cover is present for a few months.</p>
+
+<h3>4.2 Negative controls and the size of selection</h3>
+<p>Both negative controls behave as designed: buffer strips, which sit at field edges a centre point does not see, and
+management-only actions show no gain over the placebo (+0.00 and +0.01). But against land never in a scheme, every
+family, the controls included, reaches an AUC of about 0.7, and the placebo, using embeddings from before any option,
+reaches the same. Land that joins a scheme is recognisably different land. An evaluation without the placebo would
+report that satellites "detect" buffer strips at 0.73 and management plans at 0.69; neither is visible. The
+within-scheme comparison (B) removes most of this, and the placebo measures what is left.</p>
+
+<h3>4.3 Embeddings and an interpretable baseline</h3>
+<p>The 2025 embedding beats the Sentinel-2 index baseline in every family, by 0.03–0.08 AUC (herbal leys 0.83 vs 0.79;
+no-till 0.77 vs 0.72; grassland 0.81 vs 0.78), and adding the indices to the embedding changes almost nothing. The
+indices, however, are interpretable, and they reach the same verdict for herbal leys on their own (0.79).</p>
+
+<h2>5. Do the options change resilience?</h2>
+<p>A companion evaluation, pre-registered and frozen on 11 October 2026 before any outcome was compared by agreement
+status [wp3_elms_effect/results/preregistration.md], asks whether agreement land drops less in drought and heat seasons
+(Callaway–Sant'Anna staggered difference-in-differences on 247,441 agreement and 89,690 never-treated fields, compared
+within weather cell, season and crop). Agreement land drops about 0.08 SD less in shock seasons under every design: the
+frozen plan (+0.082), a trend adjustment (+0.074), a within-cohort comparison (+0.062), and matching that also balances
+the pre-entry embedding (+0.087; within cohort +0.081). It is not significant within cohorts, the placebo of the frozen
+plan fails, and MODIS shows a small difference already present long before entry (+0.016 in 2002–2016), so part of it
+may be which land joined. Recovery after a shock and the type of action show no effect. The detection results above
+suggest why the type of action is hard to test: only herbal leys and no-till are reliably visible, so most declared
+options cannot be checked on the ground from space, and effects by option rest on declared rather than verified
+actions.</p>
+
+<h2>6. Discussion</h2>
+<p><b>For monitoring.</b> A field's annual embedding can confirm whole-field land-cover options such as herbal leys,
+and no-till, against other scheme land and in regions the model has not seen. It cannot confirm options at field edges
+from a centre point, nor management practices. Monitoring those needs field polygons, finer timing (cover crops are
+seasonal) or other evidence.</p>
+<p><b>For evaluation.</b> Any detection or effect study of voluntary schemes should include a pre-entry placebo and
+negative controls; without them, selection looks like detection, at about AUC 0.7 here.</p>
+<p><b>Limits.</b> Labels are declared options, not verified ones, and an option may cover only part of a field; the
+parcel point samples the field centre; the annual embedding cannot resolve within-season timing; SFI actions are snapped
+to parcel points; the live scheme layers omit agreements that have ended.</p>
+
+<h2>7. Conclusion</h2>
+<p>From space, on England's cereal land, herbal leys and no-till are visible; grassland options look visible mostly
+because of which land converts; edge features and management practices are not. Land that joins a scheme is itself
+distinctive, enough to fake an AUC of 0.7, so detection must be measured against a pre-entry placebo. The schemes'
+effect on drought resilience is small, consistent and not yet established.</p>
+
+<h2>Data and code availability</h2>
+<p>Code and aggregate results: christophe-christiaen/SentiNews (<code>eo-elms-resilience/wp3_elms_effect</code>). All
+inputs are open; parcel references are public and no personal data are used.</p>
+
+<h2>Still to do before submission</h2>
+<p class="todo">Literature review and positioning; field polygons instead of points (edge options, partial-field
+plots); seasonal Sentinel-1 and Sentinel-2 features for cover crops; option-level effects for the visible families
+(herbal leys, no-till); verification against inspection data if obtainable; venue choice and co-author review.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>Callaway, B. and Sant'Anna, P. H. C. (2021). Difference-in-differences with multiple time periods. <i>Journal of
+Econometrics</i>, 225(2), 200–230.</li>
+<li>Muñoz-Sabater, J. et al. (2021). ERA5-Land: a state-of-the-art global reanalysis dataset for land applications.
+<i>Earth System Science Data</i>, 13, 4349–4383.</li>
+<li class="todo">[AlphaEarth Foundations, Sentinel-1/2 and Cloud Score+ data references; CROME and RPA data licences;
+monitoring and evaluation literature: to be added and checked.]</li>
+</ol>
+</body>
+</html>
