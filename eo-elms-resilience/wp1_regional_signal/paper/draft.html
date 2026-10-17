@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Paper 1 draft: reading the harvest from space</title>
+<style>
+  @page { size: A4; margin: 22mm 20mm 22mm 20mm; }
+  body { font-family: Georgia, 'Times New Roman', serif; font-size: 10.5pt; line-height: 1.45; color: #111; }
+  h1 { font-size: 17pt; line-height: 1.25; margin: 0 0 6pt; }
+  h2 { font-size: 12.5pt; margin: 16pt 0 5pt; page-break-after: avoid; break-after: avoid; }
+  h3 { font-size: 11pt; margin: 11pt 0 4pt; font-style: italic; font-weight: normal; page-break-after: avoid; break-after: avoid; }
+  p { margin: 0 0 7pt; text-align: justify; }
+  .draft { font-family: Helvetica, Arial, sans-serif; font-size: 8.5pt; color: #9A5F14; border: 1px solid #9A5F14; padding: 6pt 8pt; margin: 0 0 12pt; }
+  .meta { font-family: Helvetica, Arial, sans-serif; font-size: 9pt; color: #444; margin-bottom: 12pt; }
+  .abstract { background: #F6F4EE; padding: 9pt 11pt; margin: 0 0 12pt; }
+  .abstract p { margin: 0; }
+  figure { margin: 10pt 0 12pt; page-break-inside: avoid; }
+  figure img { width: 100%; }
+  figcaption { font-size: 9pt; line-height: 1.35; color: #333; margin-top: 4pt; }
+  table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: 6pt 0 4pt; page-break-inside: avoid; }
+  th, td { border-bottom: 1px solid #ccc; padding: 3pt 5pt; text-align: left; }
+  th { border-bottom: 1.5px solid #333; }
+  .tcap { font-size: 9pt; color: #333; margin: 8pt 0 2pt; }
+  .todo { color: #9A5F14; }
+  ol.refs { font-size: 9pt; padding-left: 16pt; }
+  code { font-size: 8.5pt; }
+</style>
+</head>
+<body>
+
+<div class="draft">DRAFT FOR DISCUSSION, 17 October 2026. Not for circulation or citation. All numbers come from the code in
+christophe-christiaen/SentiNews (commit to follow); results files are named in brackets. Items in orange are still to do.
+The literature review has not been written and no papers beyond a few data references are cited yet.</div>
+
+<h1>Reading the harvest from space by mid-July, and where it breaks: a pre-specified regional yield nowcast for England</h1>
+<div class="meta">[Authors and affiliations to be added]</div>
+
+<div class="abstract"><p><b>Abstract.</b> We nowcast regional cereal yields in England from field-level Sentinel-2
+observations, aggregating 381,400 cereal fields to the eight regions for which Defra publishes yields, under an
+evaluation protocol fixed before any yield was compared. Tested on seasons the model never saw (2017–2025), Sentinel-2
+with ERA5-Land weather explains 64% of the year-to-year variation in regional wheat yields by mid-July (England 78%),
+against 44% for MODIS over the same seasons; 55% is already available by mid-May; weather alone has no skill. Barley
+reaches 52–58% with crop-specific additions. Prediction intervals hold their nominal coverage (79–81% for 80%
+intervals). A nowcast for 2026, written without looking at Defra's provisional figures, was too high for every crop
+(wheat by 0.89 t/ha averaged over regions) and only half the regions fell inside their intervals. A post hoc diagnosis
+traces most of the miss to one mechanism: a positive weight on hot days, learned from 2017–2025 summers in which heat
+happened to coincide with decent yields, extrapolated to a heatwave four to five standard deviations outside the
+training range. Protocol addenda written before each test show that constraining weather to damaging effects helps
+spring barley, radar helps winter barley at mid-July, and neither a 25-year MODIS record nor geospatial embeddings help
+at regional scale; an apparent gain from scheme uptake was a coincidence of timing and was rejected. Nine seasons are
+too few to learn how crops respond to weather outside their range; the 2027 harvest is the first fair test of the fixes.</p></div>
+
+<h2>1. Introduction</h2>
+<p>Official regional crop statistics arrive months after harvest. A forecast of regional yield by mid-July, a month
+before harvest, would serve food-supply planning, commodity markets and farm lenders. Satellites see crop condition on
+every field throughout the season; the question is how much of the year-to-year swing in regional yield that condition
+explains, how early, with what honest uncertainty, and what happens in a year unlike the training years.
+<span class="todo">[Position against crop-yield forecasting from remote sensing, learning from aggregate labels, and
+out-of-distribution failure of yield models under climate extremes: to be written.]</span></p>
+<p>Contributions: (i) a field-to-region nowcast evaluated only on held-out seasons under a protocol fixed in advance;
+(ii) a blind out-of-sample test on an extreme season (2026) and a diagnosis of its failure; (iii) a disciplined record
+of which additional datasets help and which do not, each tested under a protocol entry written before it ran.</p>
+
+<h2>2. Data</h2>
+<p><b>Targets.</b> Defra regional yields (t/ha) for wheat, winter barley and spring barley in the eight English regions,
+harvest years 2017–2025 (72 region-years per crop); the target is each region's yield anomaly against its mean over
+the training years of each fold.</p>
+<p><b>Fields.</b> Rural Payments Agency parcel points on cereal land (381,400 parcels); the crop in each season from the
+Crop Map of England (CROME, 2016–2025; median 16,993 wheat parcels per region-year). For 2026, before CROME is
+published, crop masks come from a classifier trained on 2017–2024 Sentinel-2 profiles (83% correct on 2025; wheat
+precision 0.94, recall 0.86).</p>
+<p><b>Satellite.</b> Sentinel-2 L2A (Cloud Score+ masked), half-monthly medians of NDVI, red-edge NDRE and NDMI,
+March–August, at each parcel point; region features are medians over the crop's fields. <b>Weather.</b> ERA5-Land:
+March–July rainfall anomaly, June–July root-zone soil moisture, days ≥ 28 °C in June–August, October–March rainfall.</p>
+
+<h2>3. Methods</h2>
+<p>Everything below was written into the evaluation protocol before any yield comparison
+[results/protocol.md]. Features are anomalies against each region's training-year mean. Models: ridge regression on
+Sentinel-2 features, on weather alone, and on both, with the penalty chosen by inner leave-one-year-out; a pilot-style
+single-feature model (peak NDVI); and the same pilot model on MODIS for the same seasons. Cutoffs: mid-May, mid-June,
+mid-July (primary) and end of August. All skill is leave-one-year-out (never random splits). Intervals are jackknife+
+from the held-out residuals, their coverage checked by nested leave-one-year-out. Every later change was written into a
+dated protocol addendum before it ran, with an adoption rule fixed in advance.</p>
+
+<h2>4. Results</h2>
+<h3>4.1 Skill on held-out seasons</h3>
+<figure><img src="wp1_nowcast.png" alt="Wheat skill by date, held-out predictions and 2026 nowcast">
+<figcaption><b>Figure 1.</b> Wheat. Left: out-of-sample R² by date of the last image, against the MODIS pilot on the same
+seasons, peak NDVI alone and weather alone. Middle: predicted against Defra yield anomalies for held-out region-years
+(mid-July). Right: the 2026 nowcast by region with 80% intervals, as written on 11 October 2026.</figcaption></figure>
+<div class="tcap"><b>Table 1.</b> Out-of-sample R² of the regional yield anomaly, 2017–2025 [results/wp1_results.md,
+wp1_addendum_b.md, wp1_addendum_c.md].</div>
+<table>
+<tr><th>Crop</th><th>Weather only</th><th>MODIS, same seasons</th><th>Sentinel-2, mid-May</th><th>Sentinel-2 + weather, mid-July</th><th>England</th><th>Model in use</th></tr>
+<tr><td>Wheat</td><td>−0.05</td><td>0.44</td><td>0.55</td><td><b>0.64</b></td><td>0.78</td><td>first run</td></tr>
+<tr><td>Winter barley</td><td>0.13</td><td>–</td><td>0.31</td><td><b>0.56</b></td><td>0.81</td><td>+ Sentinel-1 (addendum C)</td></tr>
+<tr><td>Spring barley</td><td>−0.18</td><td>–</td><td>−0.15</td><td><b>0.58</b></td><td>0.79</td><td>no extrapolation (addendum B)</td></tr>
+</table>
+<p>For wheat, Sentinel-2 with weather explains 64% of the regional year-to-year variation by mid-July (RMSE 0.49 t/ha),
+well above MODIS on the same seasons (44%) and above peak NDVI alone (45%). Most of the signal is available by
+mid-May (55%). Weather alone has no skill (−0.05), but adds to Sentinel-2. Winter barley and spring barley reach 0.56
+and 0.58 with the additions adopted under protocol addenda (Section 4.4); spring barley has no skill before June.
+Eighty per cent intervals contain the true yield in 79–81% of held-out region-years.</p>
+
+<h3>4.2 A blind test on an extreme season: 2026</h3>
+<figure><img src="fig_2026.png" alt="2026 wheat nowcast against Defra by region">
+<figcaption><b>Figure 2.</b> 2026 wheat by region: the mid-July nowcast written on 11 October 2026 (with its 80% interval)
+against Defra's provisional figure. Defra had published on 8 October; the figures were not looked at before the nowcast
+was written and committed.</figcaption></figure>
+<p>The 2026 nowcast was written and committed on 11 October 2026 without looking at Defra's provisional estimates. Those
+had been published three days earlier, so this is a blind test rather than a forecast made before publication. It
+failed: the nowcast was too high for every crop, by 0.89 t/ha for wheat (8.07 against 7.18, averaged over regions),
+0.79 for winter barley and 0.76 for spring barley, and only half the regions fell inside their 80% intervals
+[results/wp1_score_2026.md]. The misses were largest in the South East, West Midlands, South West and Eastern regions
+(1.4–1.8 t/ha); the North East (+0.11) and Yorkshire (+0.51) were close.</p>
+
+<h3>4.3 Why 2026 failed (post hoc)</h3>
+<p>A diagnosis run after the score, which changed nothing in the nowcast [results/wp1_diagnose_2026.md], rules out data
+quality (2026 had the most clear Sentinel-2 views of any season) and finds a small possible contribution from the crop
+mask (the classifier found 9–27% fewer wheat fields than in 2025 against a 1.8% fall in area; in 2025 the same mask
+changed the forecast by only +0.03 t/ha). The main cause is extrapolation. Summer 2026 had 9.6 days at or above 28 °C over
+wheat areas, against a 2017–2025 maximum of 5.75, four to five standard deviations beyond the training range in the
+south and west. In 2017–2025 the hottest summers (2018, 2022) happened to bring average or better yields, so the model
+learned a positive weight on hot days; applied to 2026 it alone added about +0.7 t/ha, close to the size of the miss
+(predicted anomaly +0.47, actual −0.41). The regions furthest outside the range were missed most. 2026 and 2025, the
+two over-predicted seasons, were also the two in which a dry spring was followed by a dry or hot early summer; 2018,
+2020 and 2022, under-predicted, were dry in only one of the two. With two cases this is a pattern to test, not a
+finding.</p>
+
+<h3>4.4 What the additional datasets added</h3>
+<div class="tcap"><b>Table 2.</b> Protocol addenda, each written before it ran, with its rule [results/protocol.md].
+Mid-July unless stated.</div>
+<table>
+<tr><th>Addendum</th><th>Change</th><th>Result</th><th>Decision</th></tr>
+<tr><td>A</td><td>Grain-fill weather, canopy decline after the peak</td><td>Wheat 0.64 → 0.56; spring barley 0.51 → 0.57</td><td>Spring barley only (since superseded by B)</td></tr>
+<tr><td>B</td><td>No extrapolation; weather may only lower a forecast; compound drought term</td><td>Spring barley 0.51 → 0.58 (dry-year error 0.30 → 0.15); wheat 0.64 → 0.55</td><td>Spring barley</td></tr>
+<tr><td>C1</td><td>MODIS long record, 2001–2025</td><td>Wheat 0.26 (0.34 on 2017–2025)</td><td>Not used</td></tr>
+<tr><td>C2</td><td>Sentinel-1 spring cross-ratio</td><td>Winter barley 0.52 → 0.56</td><td>Winter barley</td></tr>
+<tr><td>C3</td><td>Scheme uptake, flood and peat × wet winter</td><td>Wheat 0.64 → 0.79 from scheme share alone</td><td><b>Rejected</b>: timing coincidence</td></tr>
+<tr><td>D</td><td>AlphaEarth embeddings (previous year)</td><td>Lower everywhere; own-year embedding ≈ 0 even after the season</td><td>Not used</td></tr>
+</table>
+<p>Two results deserve comment. First, the share of wheat land under an agreement met the adoption rule (wheat R² rose
+to 0.79), but a check showed the gain came entirely from that share being near zero until 2020 and high only in 2024
+and 2025, the two poor wheat seasons; a plain trend added nothing. With nine seasons, any variable high only in the bad
+years will appear to explain them. It was rejected and the deviation from the rule was logged. Second, geospatial
+embeddings, which are effective at telling land apart, carried almost no information about year-to-year regional yield,
+even using the season's own embedding after harvest. Under addendum B, which was designed after Defra's 2026 figures
+were known and so cannot be tested on 2026, wheat would have been 7.56 t/ha against Defra's 7.18 (first nowcast 8.07): an
+illustration, not evidence.</p>
+
+<h2>5. Discussion</h2>
+<p><b>What works.</b> Field-level Sentinel-2, aggregated to regions, reads regional cereal yield anomalies well before
+harvest and beats the older MODIS record clearly, with intervals that are honest in ordinary years.</p>
+<p><b>Where it breaks.</b> A regression trained on nine seasons learns the weather-yield relationships those seasons
+happen to contain. When a season falls outside them, as 2026 did for heat, it extrapolates confidently and its
+intervals, calibrated on ordinary years, are too narrow. Three practical rules follow: never let weather features
+extrapolate beyond their training range; constrain their direction to what agronomy allows; and widen intervals, or
+flag the forecast, when inputs fall outside the training range.</p>
+<p><b>Limits.</b> Eight regions and nine seasons (72 region-years per crop); parcel points sample field centres; 2026
+crop masks come from a classifier; Defra's provisional figures may be revised (final figures due 10 December 2026).</p>
+
+<h2>6. Conclusion</h2>
+<p>By mid-July, satellites explain about two-thirds of the year-to-year swing in England's regional wheat yields. In
+the first blind test on an extreme season the forecast failed, for a reason that can be named: heat beyond anything in
+the training years, met by a weight learned from years in which heat did no harm. The fixes are written down; the 2027
+harvest is their first fair test.</p>
+
+<h2>Data and code availability</h2>
+<p style="text-align:left">Code, the protocol with its dated addenda, and aggregate results: christophe-christiaen/SentiNews
+(<code>eo-elms-resilience/wp1_regional_signal</code>). All inputs are open.</p>
+
+<h2>Still to do before submission</h2>
+<p class="todo">Literature review and positioning; learning from field-level signals directly (attention over fields)
+and smaller ITL3 regions; out-of-range detection and interval widening as a pre-registered addendum; re-score on Defra's
+final 2026 figures (10 December 2026) and on the 2027 harvest; venue choice and co-author review.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>Muñoz-Sabater, J. et al. (2021). ERA5-Land: a state-of-the-art global reanalysis dataset for land applications.
+<i>Earth System Science Data</i>, 13, 4349–4383.</li>
+<li class="todo">[Defra Cereal and oilseed production statistics; Sentinel-2, Sentinel-1, Cloud Score+, MODIS, AlphaEarth and
+CROME data references; crop-yield forecasting literature: to be added and checked.]</li>
+</ol>
+</body>
+</html>
