@@ -5,8 +5,9 @@ Design (fixed before the back-test was run)
   Unit         cereal-land parcel (381,400), scored as of the end of each season t (after the August images)
   Features     (known at t)  stress S_t; stress debt D_t (WP2: D_t = 0.5 D_{t-1} + min(S_t, 0)); mean S in past shock
                seasons (resistance); mean S in calm seasons after a shock (recovery); share of past seasons with
-               S <= -1; volatility of S; Flood Zone 3 / 2; deep / shallow peat; share of dry or heat shocks in the
-               parcel's ERA5 cell over the last 10 seasons (ERA5-Land, independent of the crop)
+               S <= -1; volatility of S; share of dry or heat shocks in the parcel's ERA5 cell over the last 10
+               seasons (ERA5-Land, independent of the crop). Flood zone and peat were removed from the score on
+               17 October 2026 (they lower, not raise, drought stress); they stay in the watch-list as exposure.
   Targets      at t+1: (A) hit hard, S_{t+1} <= -1; (B) among the worst 20% of its region at t+1;
                (C) depth of the next hit: S_{t+1} when t+1 is a shock season for the parcel's cell
   Models       baseline: region only; baseline: current stress only (the pilot outreach rule); transparent score
@@ -39,7 +40,11 @@ D = os.path.join(ROOT, 'shared', 'data')
 OUT = os.path.join(ROOT, 'results', 'lender')
 PRIV = os.path.join(ROOT, 'data', 'lender')
 LAM, FLAG = 0.5, 0.2
-FEATS = ['S', 'D', 'resist', 'recov', 'hit_share', 'vol', 'fz3', 'fz2', 'deep_peat', 'peat', 'shock_freq']
+FEATS = ['S', 'D', 'resist', 'recov', 'hit_share', 'vol', 'shock_freq']
+# Flood zone and peat are not in the crop-stress score: on the MODIS long-baseline panel these fields hold up *better*
+# in drought and heat seasons (wp2_resilience/results/wp2_supporting.md, W1). They measure flood and rewetting
+# exposure, which is kept for the stranding watch-list (high crop-stress score and Flood Zone 3 or deep peat).
+EXPOSURE = ['fz3', 'fz2', 'deep_peat', 'peat']
 NAMES = {'S': 'stressed this season', 'D': 'stress debt carried', 'resist': 'held up poorly in past shocks',
          'recov': 'slow to recover after past shocks', 'hit_share': 'often hit hard', 'vol': 'unstable season to season',
          'fz3': 'Flood Zone 3', 'fz2': 'Flood Zone 2', 'deep_peat': 'deep peat', 'peat': 'shallow peat',
@@ -186,6 +191,8 @@ def score_2026(p):
 def main():
     p = build()
     log('parcel-seasons', len(p))
+    chk = p[(p.year >= 2018) & (p.year <= 2025) & p.hit_next.notna()].assign(fp=lambda d: ((d.fz3 == 1) | (d.deep_peat == 1)))
+    fp_check = chk.groupby('fp').hit_next.mean().rename({True: 'Flood Zone 3 or deep peat', False: 'other'}).to_dict()
     bt, coef_avg = backtest(p)
     lro = leave_region_out(p)
     log('leave-region-out', {k: round(v, 3) for k, v in lro.items()})
@@ -194,7 +201,7 @@ def main():
     now[['parcref', 'region', 'x', 'y', 'score', 'band', 'reason_1', 'reason_2', 'watch', 'fz3', 'deep_peat', 'D', 'S']].to_parquet(
         os.path.join(PRIV, 'parcel_score_2026.parquet'), index=False)
     summ = bt.groupby('model').mean(numeric_only=True).drop(columns='year')
-    out = {'score_used_2026': 'transparent (equal-weight mid-rank percentiles)', 'backtest_mean_2020_2025': summ.round(4).to_dict('index'), 'backtest_by_year': bt.round(4).to_dict('records'),
+    out = {'flood_peat_check_hit_next_rate': fp_check, 'score_used_2026': 'transparent (equal-weight mid-rank percentiles)', 'backtest_mean_2020_2025': summ.round(4).to_dict('index'), 'backtest_by_year': bt.round(4).to_dict('records'),
            'leave_region_out_auc': lro, 'coefficients_2026_model': coef,
            'bands_2026': now.band.value_counts().sort_index().to_dict(),
            'reasons_2026_high_or_very_high': now[now.band.isin(['high', 'very high'])].reason_1.value_counts().to_dict(),
@@ -225,6 +232,11 @@ def report(o, summ, bt):
           bt.pivot(index='year', columns='model', values='hit_next_auc').round(3).to_markdown(), '',
           '## Fitted score held out by region (AUC, trained on the other regions)', '',
           '| Region | AUC |', '|---|---|'] + [f'| {k} | {v:.3f} |' for k, v in o['leave_region_out_auc'].items()]
+    fc = o['flood_peat_check_hit_next_rate']
+    L += ['', f"**Flood zone and peat are not in the score** (changed 17 October 2026). In the back-test data, fields in Flood "
+          f"Zone 3 or on deep peat were hit hard the next season {fc['Flood Zone 3 or deep peat']:.1%} of the time, other "
+          f"fields {fc['other']:.1%}; on the MODIS long panel they hold up better in drought seasons (WP2, W1). They stay "
+          'in the stranding watch-list as flood and rewetting exposure.']
     L += ['', '**The 2026 scores use the transparent score**, which did better than the fitted one in the back-test (chosen '
           'after the back-test). Its weights are equal by design; the fitted coefficients below are for information.',
           '', '## What drives the fitted score (standardised coefficients, 2026 model)', '', '| Feature | coefficient |', '|---|---|'] + \

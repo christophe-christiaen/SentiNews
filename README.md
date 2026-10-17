@@ -53,8 +53,10 @@ accounts do.
   joined, so we cannot yet say the agreements caused it. There is no sign of faster recovery, and no difference
   between types of action. The test was written down before we looked, and every later choice is recorded.
 - **A watch-list for lenders.** A simple score built from each field's own history picks out 20% of fields that
-  hold about 1.6 times their share of next season's hardest-hit fields. About 18,000 high-risk fields are also in
-  the highest flood-risk zone or on deep peat, mostly in the Fens and around the Humber.
+  hold about 1.6 times their share of next season's hardest-hit fields. About 11,600 high-risk fields are also in
+  the highest flood-risk zone or on deep peat, mostly in the East Midlands and the Fens. (Flood zone and peat are a
+  flood and rewetting risk, not a drought one: those fields actually hold up better in dry years, so since 17 October
+  they no longer raise the drought score itself.)
 
 ## What the data foundation shows
 

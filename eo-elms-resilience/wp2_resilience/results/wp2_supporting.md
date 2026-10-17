@@ -27,7 +27,8 @@ Within each field (field and cell × season effects). Positive = wetter-than-usu
 - **Flood Zone 3 and deep peat fields hold up better in droughts** (+0.050 SD in shock seasons, p < 0.001), with no
   difference in other seasons: wetter soils buffer dry and hot seasons. No carry-over within fields in either group.
   For a lender these fields carry flood and rewetting risk, not extra drought risk; the field score currently counts
-  flood zone and peat as raising drought risk, which these results do not support (to revisit).
+  flood zone and peat as raising drought risk, which these results do not support; fixed on 17 October 2026 (removed
+  from the score, kept in the watch-list as exposure; see results/lender/lender_score_backtest.md).
 - **Winter waterlogging shows up in the crop.** Within each field, a winter 1 dB wetter on radar than usual comes with
   a crop 0.054 SD worse that season; the slope is smaller in the wettest winters (−0.021). Two independent satellites
   agree on the direction, which gives Paper 2 a winter-shock signal it lacked.
