@@ -63,8 +63,9 @@ def build():
     return features(p)
 
 
-def features(p):
-    """History features and next-season targets from a panel with parcref, year, S, shock, cell_id_data."""
+def features(p, reg=None, shocks_file=None):
+    """History features and next-season targets from a panel with parcref, year, S, shock, cell_id_data. reg (parcref,
+    region, x, y) and shocks_file default to the cereal ones."""
     p = p.sort_values(['parcref', 'year']).reset_index(drop=True)
     # stress debt
     s = p.S.fillna(0).values; first = p.parcref.values != np.roll(p.parcref.values, 1)
@@ -84,7 +85,7 @@ def features(p):
     m1, m2 = cum(p.S) / n, cum(p.S ** 2) / n
     p['vol'] = np.sqrt((m2 - m1 ** 2).clip(lower=0) * n / (n - 1).replace(0, np.nan))
     # local shock frequency over the last 10 seasons (weather only)
-    w = pd.read_parquet(os.path.join(D, 'weather', 'cell_year_shocks.parquet'))[['cell_id', 'year', 'dry_shock', 'heat_shock']]
+    w = pd.read_parquet(shocks_file or os.path.join(D, 'weather', 'cell_year_shocks.parquet'))[['cell_id', 'year', 'dry_shock', 'heat_shock']]
     w['sh'] = (w.dry_shock | w.heat_shock).astype(float)
     w = w.sort_values(['cell_id', 'year'])
     w['shock_freq'] = w.groupby('cell_id').sh.transform(lambda v: v.rolling(10, min_periods=5).mean())
@@ -95,7 +96,8 @@ def features(p):
     pc = r.peat_class.fillna('').str.lower()
     r['deep_peat'] = pc.str.contains('deep').astype(float)
     r['peat'] = (pc.str.len().gt(0) & ~pc.str.contains('deep')).astype(float)
-    reg = pd.read_parquet(os.path.join(ROOT, 'wp2_resilience', 'results', 'parcel_resilience.parquet'), columns=['parcref', 'region', 'x', 'y'])
+    if reg is None:
+        reg = pd.read_parquet(os.path.join(ROOT, 'wp2_resilience', 'results', 'parcel_resilience.parquet'), columns=['parcref', 'region', 'x', 'y'])
     p = p.merge(r[['parcref', 'fz3', 'fz2', 'deep_peat', 'peat']], on='parcref', how='left').merge(reg, on='parcref', how='left')
     p = p.sort_values(['parcref', 'year']).reset_index(drop=True)
     g = p.groupby('parcref', sort=False)

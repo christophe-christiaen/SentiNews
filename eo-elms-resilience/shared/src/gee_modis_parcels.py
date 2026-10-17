@@ -69,11 +69,15 @@ def main():
     ap.add_argument('--workers', type=int, default=12)
     ap.add_argument('--parallel-squares', type=int, default=5)
     ap.add_argument('--only', help='one square, e.g. 10_8 (test)')
+    ap.add_argument('--set', default='cereal', choices=['cereal', 'grass'])
     a = ap.parse_args()
+    global OUT
+    if a.set == 'grass':
+        OUT = os.path.join(g.D, 'modis_parcels_grass')
     init_ee(a.project)
     IMG = stack()
     os.makedirs(OUT, exist_ok=True)
-    t = g.chunks()
+    t = g.chunks(a.set)
     jobs = [a.only] if a.only else sorted(t.sq.unique())
     print(f'{len(jobs)} squares to fetch, {a.workers} parallel requests', flush=True)
     t0 = time.time()

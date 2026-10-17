@@ -29,9 +29,12 @@ CS_MIN = 0.60
 PERIODS = [(m, d0, d1) for m in range(3, 9) for d0, d1 in ((1, 15), (16, 31))]
 
 
-def chunks():
-    t = pd.read_parquet(os.path.join(D, 'parcels', 'parcel_panel.parquet'), columns=['parcref', 'x', 'y', 'cereal_land'])
-    t = t[t.cereal_land].copy()
+def chunks(which='cereal'):
+    if which == 'grass':                                   # U1 sample (wp2_resilience/results/u1_grassland_protocol.md)
+        t = pd.read_parquet(os.path.join(D, 'parcels', 'grass_sample.parquet'), columns=['parcref', 'x', 'y'])
+    else:
+        t = pd.read_parquet(os.path.join(D, 'parcels', 'parcel_panel.parquet'), columns=['parcref', 'x', 'y', 'cereal_land'])
+        t = t[t.cereal_land].copy()
     t['sq'] = (t.x // SQUARE_M).astype(int).astype(str) + '_' + (t.y // SQUARE_M).astype(int).astype(str)
     return t
 

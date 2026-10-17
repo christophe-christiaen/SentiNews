@@ -60,14 +60,18 @@ def main():
     ap.add_argument('--only', help='one square_year, e.g. 10_8_2022 (test)')
     ap.add_argument('--all', action='store_true', help='also redo square-years already exported to Drive')
     ap.add_argument('--parallel-squares', type=int, default=6, help='square-years in flight at once (keeps all request slots busy)')
+    ap.add_argument('--set', default='cereal', choices=['cereal', 'grass'])
     a = ap.parse_args()
+    global OUT
+    if a.set == 'grass':
+        OUT = os.path.join(g.D, 's2', 'gee_local_grass')
     init_ee(a.project)
     os.makedirs(OUT, exist_ok=True)
-    t = g.chunks()
+    t = g.chunks(a.set)
     jobs = [(sq, y) for sq in sorted(t.sq.unique()) for y in g.YEARS]
     if a.only:
         sq, y = a.only.rsplit('_', 1); jobs = [(sq, int(y))]
-    elif not a.all:
+    elif not a.all and a.set == 'cereal':
         done = set()
         for task in ee.data.getTaskList():
             if task['description'].startswith('s2_') and task['state'] == 'COMPLETED':

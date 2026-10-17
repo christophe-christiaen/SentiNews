@@ -85,10 +85,10 @@ def anomalies(p):
     return p
 
 
-def shocks():
+def shocks(m=None, h=None, out=None):
     W = os.path.join(D, 'weather')
-    m = pd.read_parquet(os.path.join(W, 'era5land_monthly.parquet'))
-    h = pd.read_parquet(os.path.join(W, 'era5land_heatdays.parquet'))
+    m = pd.read_parquet(os.path.join(W, 'era5land_monthly.parquet')) if m is None else m
+    h = pd.read_parquet(os.path.join(W, 'era5land_heatdays.parquet')) if h is None else h
     spring = m[m.month.between(3, 7)].groupby(['cell_id', 'year']).precip_mm.sum().rename('spring_mm')
     w = m.copy(); w['season'] = np.where(w.month >= 10, w.year + 1, w.year)       # Oct-Mar belongs to the next season
     winter = w[(w.month >= 10) | (w.month <= 3)].groupby(['cell_id', 'season']).precip_mm.sum().rename('winter_mm')
@@ -106,7 +106,7 @@ def shocks():
     s['severe_dry_shock'] = (s.spring_anom_pct <= -30) | (s.soil_moist_z <= -1.5)
     s['heat_shock'] = s.hot_days_28 >= 5
     s['wet_shock'] = s.winter_anom_pct >= 30
-    s.to_parquet(os.path.join(W, 'cell_year_shocks.parquet'), index=False)
+    s.to_parquet(out or os.path.join(W, 'cell_year_shocks.parquet'), index=False)
     return s
 
 
