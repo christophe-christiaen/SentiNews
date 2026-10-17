@@ -15,3 +15,6 @@ wp*/data/
 # per-parcel lender scores stay local
 data/lender/
 logs/
+
+# proposal decks and internal planning stay out of the public repo
+docs/

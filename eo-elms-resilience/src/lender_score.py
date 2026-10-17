@@ -60,6 +60,11 @@ def build():
                         columns=['parcref', 'year', 'ndvi_july_z', 'ndvi_peak_z', 'cell_id_data', 'dry_shock', 'heat_shock'])
     p['S'] = p[['ndvi_july_z', 'ndvi_peak_z']].mean(axis=1).clip(-6, 6)
     p['shock'] = p.dry_shock.fillna(False).astype(bool) | p.heat_shock.fillna(False).astype(bool)
+    return features(p)
+
+
+def features(p):
+    """History features and next-season targets from a panel with parcref, year, S, shock, cell_id_data."""
     p = p.sort_values(['parcref', 'year']).reset_index(drop=True)
     # stress debt
     s = p.S.fillna(0).values; first = p.parcref.values != np.roll(p.parcref.values, 1)

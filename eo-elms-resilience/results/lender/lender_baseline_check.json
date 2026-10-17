@@ -1,0 +1,125 @@
+{
+ "parcels": 381400,
+ "summary": {
+  "V0 \u00b7 Sentinel-2, normal 2017\u20132020": {
+   "Current stress only (pilot rule)": {
+    "hit_next_auc": 0.6006,
+    "hit_next_lift": 1.5099,
+    "hit_next_base_rate": 0.2391,
+    "worst_next_auc": 0.6102,
+    "worst_next_lift": 1.6666
+   },
+   "Fitted score (logistic)": {
+    "hit_next_auc": 0.5708,
+    "hit_next_lift": 1.353,
+    "hit_next_base_rate": 0.2391,
+    "worst_next_auc": 0.5826,
+    "worst_next_lift": 1.5048
+   },
+   "Region only (baseline)": {
+    "hit_next_auc": 0.4958,
+    "hit_next_lift": 1.0365,
+    "hit_next_base_rate": 0.2391,
+    "worst_next_auc": 0.5,
+    "worst_next_lift": 1.0004
+   },
+   "Transparent score (no fitting)": {
+    "hit_next_auc": 0.6318,
+    "hit_next_lift": 1.5691,
+    "hit_next_base_rate": 0.2391,
+    "worst_next_auc": 0.6447,
+    "worst_next_lift": 1.7321
+   }
+  },
+  "V1 \u00b7 MODIS, normal 2017\u20132020": {
+   "Current stress only (pilot rule)": {
+    "hit_next_auc": 0.5751,
+    "hit_next_lift": 1.4823,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.5759,
+    "worst_next_lift": 1.5084
+   },
+   "Fitted score (logistic)": {
+    "hit_next_auc": 0.5679,
+    "hit_next_lift": 1.3725,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.5652,
+    "worst_next_lift": 1.3964
+   },
+   "Region only (baseline)": {
+    "hit_next_auc": 0.5299,
+    "hit_next_lift": 1.1479,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.4999,
+    "worst_next_lift": 1.0004
+   },
+   "Transparent score (no fitting)": {
+    "hit_next_auc": 0.6123,
+    "hit_next_lift": 1.5346,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.6157,
+    "worst_next_lift": 1.5866
+   }
+  },
+  "V2 \u00b7 MODIS, normal 2001\u20132016": {
+   "Current stress only (pilot rule)": {
+    "hit_next_auc": 0.6053,
+    "hit_next_lift": 1.4933,
+    "hit_next_base_rate": 0.2468,
+    "worst_next_auc": 0.6016,
+    "worst_next_lift": 1.5023
+   },
+   "Fitted score (logistic)": {
+    "hit_next_auc": 0.6115,
+    "hit_next_lift": 1.5586,
+    "hit_next_base_rate": 0.2468,
+    "worst_next_auc": 0.6061,
+    "worst_next_lift": 1.5464
+   },
+   "Region only (baseline)": {
+    "hit_next_auc": 0.5257,
+    "hit_next_lift": 1.2158,
+    "hit_next_base_rate": 0.2468,
+    "worst_next_auc": 0.5,
+    "worst_next_lift": 1.0004
+   },
+   "Transparent score (no fitting)": {
+    "hit_next_auc": 0.6556,
+    "hit_next_lift": 1.7016,
+    "hit_next_base_rate": 0.2468,
+    "worst_next_auc": 0.6495,
+    "worst_next_lift": 1.7122
+   }
+  }
+ },
+ "transparent_auc_by_year": {
+  "V0 \u00b7 Sentinel-2, normal 2017\u20132020": {
+   "2020": 0.4951,
+   "2021": 0.5792,
+   "2022": 0.6397,
+   "2023": 0.6361,
+   "2024": 0.6865,
+   "2025": 0.7542
+  },
+  "V1 \u00b7 MODIS, normal 2017\u20132020": {
+   "2020": 0.4804,
+   "2021": 0.5654,
+   "2022": 0.6287,
+   "2023": 0.6555,
+   "2024": 0.66,
+   "2025": 0.6837
+  },
+  "V2 \u00b7 MODIS, normal 2001\u20132016": {
+   "2020": 0.6672,
+   "2021": 0.6315,
+   "2022": 0.6515,
+   "2023": 0.6332,
+   "2024": 0.6596,
+   "2025": 0.6908
+  }
+ },
+ "verdict": {
+  "v1_minus_v2": -0.0433,
+  "inflated": false
+ }
+}
