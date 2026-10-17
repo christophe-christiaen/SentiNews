@@ -1,0 +1,47 @@
+{
+ "fields": 381400,
+ "threshold": 0.46111145466566084,
+ "changed": 19070,
+ "left_cereals_rate_changed": 0.654116413214473,
+ "left_cereals_rate_other": 0.1744597466398035,
+ "corr_shift_abs_offset": 0.1782368408085941,
+ "corr_shift_offset": -0.0872991699692573,
+ "mean_offset_changed": -0.4159277677536011,
+ "mean_offset_other": -0.30008968710899353,
+ "mean_abs_offset_changed": 1.0475362539291382,
+ "mean_abs_offset_other": 0.6799264550209045,
+ "tests": {
+  "all fields": {
+   "legacy (pooled)": {
+    "coef": 0.19885143323903698,
+    "se": 0.0020937808787175522,
+    "p": 0.0,
+    "n": 3429308,
+    "clusters": 1655
+   },
+   "season-shuffled placebo": {
+    "coef": 0.07934348577997241,
+    "se": 0.001100911535735264,
+    "p": 0.0,
+    "n": 3427410,
+    "clusters": 1655
+   }
+  },
+  "changed fields excluded": {
+   "legacy (pooled)": {
+    "coef": 0.1784985169349672,
+    "se": 0.0019528712166948761,
+    "p": 0.0,
+    "n": 3257825,
+    "clusters": 1653
+   },
+   "season-shuffled placebo": {
+    "coef": 0.07069032231737557,
+    "se": 0.0011324961404578413,
+    "p": 0.0,
+    "n": 3256022,
+    "clusters": 1653
+   }
+  }
+ }
+}

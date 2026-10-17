@@ -119,3 +119,10 @@ Recommendation: 2, with 1 as its key test.
   index on its winter radar wetness anomaly (VH, per-orbit panel), with field and cell × season effects, overall and in
   wet-shock winters; errors clustered by ERA5 cell. Tests whether winter waterlogging, seen independently by radar,
   shows up in the following crop.
+- **W3, land-use change from embeddings (specified 17 October 2026, before running):** each field's embedding shift =
+  Euclidean distance between its mean AlphaEarth embedding 2017–2019 and 2023–2025 (multi-year means smooth out
+  rotation); "changed" = the top 5% nationally. (a) Validation: how often changed fields left cereals in CROME (cereal in
+  at least 2 of 3 years 2017–2019 and at most 1 of 3 in 2023–2025) compared with other fields. (b) Does the lasting
+  offset (each field's mean Sentinel-2 stress 2021–2025 against its 2017–2020 normal) grow with the shift? Correlation
+  and mean offset, changed vs other. (c) The Sentinel-2 pooled legacy test and its season-shuffling placebo (the
+  lasting-difference component, +0.08) with changed fields excluded, against all fields.
