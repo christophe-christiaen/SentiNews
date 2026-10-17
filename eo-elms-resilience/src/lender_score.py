@@ -45,7 +45,7 @@ FEATS = ['S', 'D', 'resist', 'recov', 'hit_share', 'vol', 'shock_freq']
 # in drought and heat seasons (wp2_resilience/results/wp2_supporting.md, W1). They measure flood and rewetting
 # exposure, which is kept for the stranding watch-list (high crop-stress score and Flood Zone 3 or deep peat).
 EXPOSURE = ['fz3', 'fz2', 'deep_peat', 'peat']
-NAMES = {'S': 'stressed this season', 'D': 'stress debt carried', 'resist': 'held up poorly in past shocks',
+NAMES = {'S': 'stressed this season', 'D': 'lasting below-normal level', 'resist': 'held up poorly in past shocks',
          'recov': 'slow to recover after past shocks', 'hit_share': 'often hit hard', 'vol': 'unstable season to season',
          'fz3': 'Flood Zone 3', 'fz2': 'Flood Zone 2', 'deep_peat': 'deep peat', 'peat': 'shallow peat',
          'shock_freq': 'frequent weather shocks locally'}

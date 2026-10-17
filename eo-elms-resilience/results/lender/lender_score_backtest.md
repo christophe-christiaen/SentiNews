@@ -46,7 +46,7 @@ Base rate of a hard hit next season: 23.9% (varies with the weather of each seas
 
 | Feature | coefficient |
 |---|---|
-| stress debt carried | -0.952 |
+| lasting below-normal level | -0.952 |
 | stressed this season | +0.369 |
 | unstable season to season | -0.149 |
 | frequent weather shocks locally | +0.022 |
@@ -70,7 +70,7 @@ Main reason, high and very high bands:
 | frequent weather shocks locally | 31,964 |
 | held up poorly in past shocks | 19,933 |
 | often hit hard | 13,739 |
-| stress debt carried | 11,800 |
+| lasting below-normal level | 11,800 |
 | slow to recover after past shocks | 8,965 |
 | stressed this season | 4,520 |
 | unstable season to season | 4,239 |
