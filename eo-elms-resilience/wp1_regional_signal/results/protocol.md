@@ -101,6 +101,21 @@ Uses the datasets the WP1 plan lists as supporting. Same targets, regions and le
   above the first run and its dry-spring-year mean absolute error is not higher. C1 is reported as a separate model.
   2026 is not used as a test (Defra's figures are known).
 
+## Addendum D: AlphaEarth embeddings (written 17 October 2026, before running)
+
+Each annual AlphaEarth embedding summarises the whole calendar year, including the months after harvest, so the
+embedding of the season being forecast **cannot be used in a mid-July nowcast** (it would see the future).
+
+- **D1, nowcast-valid:** the previous year's embedding (known by January), as farming-system context: for each
+  region, season and crop, the median over that season's crop fields of their previous-year embedding (64 bands),
+  reduced to 5 principal components fitted on the training years of each fold, added to the first-run Sentinel-2 +
+  weather model. Seasons 2018–2025 (2017 has no previous-year embedding); the first run is re-scored on the same
+  seasons for a like-for-like comparison.
+- **D2, after-season, not a nowcast:** the same with the season's own embedding, alone and added to Sentinel-2 +
+  weather, to show how much yield information the embeddings carry at best. Never used for a forecast.
+- **Rule:** D1 is adopted for a crop and cutoff if its leave-one-year-out R² (2018–2025) is at least 0.02 above the
+  first run on the same seasons and its dry-spring-year mean absolute error is not higher. 2026 is not used.
+
 ## Record
 
 | Date | Change | Reason |
@@ -115,3 +130,5 @@ Uses the datasets the WP1 plan lists as supporting. Same targets, regions and le
 | 2026-10-14 | Addendum B run: adopted for spring barley (both cutoffs) under the rule; not for wheat or winter barley. 2026 shown as an illustration only | Results of addendum B |
 | 2026-10-17 | Addendum C written: MODIS long record, Sentinel-1 spring cross-ratio, scheme share and flood/peat × wet winter | Using the supporting datasets listed for WP1 |
 | 2026-10-17 | Addendum C run: C2 (Sentinel-1) adopted for winter barley at mid-July; C1 reported separately (weaker than Sentinel-2). **Deviation from the rule:** C3 met the adoption rule for wheat but is not adopted, because a post hoc check showed its gain comes from the agreement share acting as an indicator of the two poor 2024–2025 seasons (see wp1_addendum_c.md) | Avoid building a timing coincidence into future forecasts |
+| 2026-10-17 | Addendum D written: embeddings, previous-year only for the nowcast (the season's own embedding sees after the harvest) | Using the embeddings in WP1 |
+| 2026-10-17 | Addendum D run: embeddings not adopted for any crop; even the after-season own-year embedding carries little regional yield information | Results of addendum D |
