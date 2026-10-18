@@ -53,3 +53,4 @@ for each AUC and each difference; plus the range across held-out regions.
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-18 | Protocol written | Before any model |
+| 2026-10-18 | Run ([w3_4_metric.md](w3_4_metric.md)): calibration valid for both feature families; five families detectable beyond selection (herbal leys, cover crops, no-till, in-field plots, grassland options), margins and corners not; selection-invariant for Sentinel-2, not for AlphaEarth (herbal leys 0.031 against the 0.03 limit) | Result |
