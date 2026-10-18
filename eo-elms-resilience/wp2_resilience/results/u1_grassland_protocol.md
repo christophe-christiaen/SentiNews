@@ -54,3 +54,4 @@ A sample, not all grassland: national shares are not estimated.
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-18 | Protocol written | Before extraction |
+| 2026-10-18 | Run; results in [u1_grassland.md](u1_grassland.md). One deviation in data handling: ERA5-Land was fetched for 231 grassland cells outside the cereal run; 2.8% of parcels use the adjacent cell's weather (sea-masked cells), as for cereals (2.5%) | Result |

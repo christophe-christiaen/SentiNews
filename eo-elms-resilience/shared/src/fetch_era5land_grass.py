@@ -16,6 +16,16 @@ import build_s2_panel as b
 W = f.OUT
 
 
+def retry(fn, tries=30):
+    import time
+    for k in range(tries):
+        try:
+            return fn()
+        except Exception as e:
+            if k == tries - 1: raise
+            time.sleep(min(30 * (k + 1), 300))
+
+
 def grass_cells():
     g = pd.read_parquet(os.path.join(f.D, 'parcels', 'grass_sample.parquet'))
     lon, lat = Transformer.from_crs(27700, 4326, always_xy=True).transform(g.x.values, g.y.values)
@@ -33,9 +43,9 @@ def main(project):
     mon, heat = [], []
     for y in f.YEARS:
         col = ee.ImageCollection('ECMWF/ERA5_LAND/MONTHLY_AGGR').filterDate(f'{y}-01-01', f'{y + 1}-01-01').select(list(f.MONTHLY))
-        if col.size().getInfo() == 0:
+        if retry(lambda: col.size().getInfo()) == 0:
             continue
-        d = f.with_retry(lambda: f.sample(col.toBands(), fc))
+        d = retry(lambda: f.sample(col.toBands(), fc))
         if d.empty:
             continue
         long = d.melt(id_vars='cell_id', var_name='band', value_name='v')
@@ -45,7 +55,7 @@ def main(project):
         mon.append(w)
         daily = ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').filterDate(f'{y}-06-01', f'{y}-09-01').select('temperature_2m_max')
         hd = ee.Image.cat(daily.map(lambda i: i.gte(301.15)).sum().rename('hot_days_28'), daily.map(lambda i: i.gte(303.15)).sum().rename('hot_days_30'))
-        h = f.with_retry(lambda: f.sample(hd, fc)); h['year'] = y; heat.append(h)
+        h = retry(lambda: f.sample(hd, fc)); h['year'] = y; heat.append(h)
         print(f'  {y}: {len(w):,} cell-months', flush=True)
     mon, heat = pd.concat(mon, ignore_index=True), pd.concat(heat, ignore_index=True)
     mon.to_parquet(os.path.join(W, 'era5land_monthly_grass.parquet'), index=False)

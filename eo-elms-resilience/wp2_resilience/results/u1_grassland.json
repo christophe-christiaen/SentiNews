@@ -1,0 +1,550 @@
+{
+ "sample": {
+  "s2_parcels": 100000,
+  "modis_parcels": 100000,
+  "common": 100000,
+  "by_region": {
+   "South West": 29096,
+   "Yorkshire and the Humber": 12400,
+   "West Midlands": 12396,
+   "North West": 12262,
+   "South East": 11148,
+   "East Midlands": 10080,
+   "East of England": 6297,
+   "North East": 6047,
+   "London": 164,
+   "NaN": 110
+  }
+ },
+ "tests": {
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T1 | pooled": {
+   "coef": 0.26192088034597766,
+   "se": 0.0028702185031002463,
+   "p": 0.0,
+   "n": 899162,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | pooled": {
+   "coef": 0.28620322836610385,
+   "se": 0.0037151162796429968,
+   "p": 0.0,
+   "n": 466204,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T1 | field fixed effects": {
+   "coef": 0.040687076159405165,
+   "se": 0.0022325357506121322,
+   "p": 0.0,
+   "n": 899162,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | field fixed effects": {
+   "coef": 0.10413588165843524,
+   "se": 0.0035285269030137087,
+   "p": 0.0,
+   "n": 466204,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T1 | Anderson-Hsiao": {
+   "coef": 0.019816223491285152,
+   "se": 0.0029272194866905793,
+   "p": 1.2910339464156095e-11,
+   "n": 798944,
+   "clusters": 1733,
+   "first_stage_r": -0.5975229588453101
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | Anderson-Hsiao": {
+   "coef": 0.0586291828232796,
+   "se": 0.004232589224481784,
+   "p": 0.0,
+   "n": 370853,
+   "clusters": 1733,
+   "first_stage_r": -0.5893825413112209
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T3 | pooled": {
+   "coef": 0.18028884945602092,
+   "se": 0.006607467344288451,
+   "p": 0.0,
+   "n": 243988,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | pooled, without 2018": {
+   "coef": 0.33444036850905456,
+   "se": 0.003941348594594453,
+   "p": 0.0,
+   "n": 371009,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | pooled, without 2020": {
+   "coef": 0.3066841199215419,
+   "se": 0.0038032770542713664,
+   "p": 0.0,
+   "n": 406618,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | pooled, without 2022": {
+   "coef": 0.2837797603982134,
+   "se": 0.0040026716348302085,
+   "p": 0.0,
+   "n": 387117,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | pooled, without 2023": {
+   "coef": 0.28511472624557793,
+   "se": 0.0036928055151067745,
+   "p": 0.0,
+   "n": 439028,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | pooled, without 2025": {
+   "coef": 0.2792869191641865,
+   "se": 0.003982247644139562,
+   "p": 0.0,
+   "n": 372704,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | pooled, without 2026": {
+   "coef": 0.199377857059097,
+   "se": 0.004334712485750646,
+   "p": 0.0,
+   "n": 377219,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T1 | shuffled seasons (placebo)": {
+   "coef": 0.07267193023741628,
+   "se": 0.0017846233641132037,
+   "p": 0.0,
+   "n": 898888,
+   "clusters": 1733
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T1 | pooled": {
+   "coef": 0.31128039206161173,
+   "se": 0.003875468101713401,
+   "p": 0.0,
+   "n": 560858,
+   "clusters": 1721
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T2 | pooled": {
+   "coef": 0.3473806738502745,
+   "se": 0.004612566728619604,
+   "p": 0.0,
+   "n": 292338,
+   "clusters": 1709
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T1 | field fixed effects": {
+   "coef": 0.028198684376680893,
+   "se": 0.0030467947973717435,
+   "p": 0.0,
+   "n": 560858,
+   "clusters": 1721
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T2 | field fixed effects": {
+   "coef": 0.044304042456994736,
+   "se": 0.004556275199955339,
+   "p": 0.0,
+   "n": 292338,
+   "clusters": 1709
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T1 | Anderson-Hsiao": {
+   "coef": -0.05575840948166977,
+   "se": 0.004295959892466359,
+   "p": 0.0,
+   "n": 423467,
+   "clusters": 1709,
+   "first_stage_r": -0.5744888486537475
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T2 | Anderson-Hsiao": {
+   "coef": 0.031285444377959604,
+   "se": 0.006486705027289521,
+   "p": 1.4140775110860204e-06,
+   "n": 228371,
+   "clusters": 1683,
+   "first_stage_r": -0.5231903281081818
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T3 | pooled": {
+   "coef": 0.27682003608327216,
+   "se": 0.01134908853497358,
+   "p": 0.0,
+   "n": 159204,
+   "clusters": 1698
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T2 | pooled, without 2020": {
+   "coef": 0.3785638547225448,
+   "se": 0.004640564521287939,
+   "p": 0.0,
+   "n": 241957,
+   "clusters": 1709
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T2 | pooled, without 2022": {
+   "coef": 0.40122455190824957,
+   "se": 0.004750604210998595,
+   "p": 0.0,
+   "n": 229482,
+   "clusters": 1709
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T2 | pooled, without 2025": {
+   "coef": 0.3609798115816678,
+   "se": 0.0048360032036354325,
+   "p": 0.0,
+   "n": 228168,
+   "clusters": 1706
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T2 | pooled, without 2026": {
+   "coef": 0.18903227190660898,
+   "se": 0.005830490495477028,
+   "p": 0.0,
+   "n": 214496,
+   "clusters": 1696
+  },
+  "Sentinel-2 \u00b7 short normal \u00b7 season mean (secondary) | T1 | shuffled seasons (placebo)": {
+   "coef": 0.06087220089294463,
+   "se": 0.002532307746448551,
+   "p": 0.0,
+   "n": 516275,
+   "clusters": 1719
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T1 | pooled": {
+   "coef": 0.11271020107463406,
+   "se": 0.0016913922204292965,
+   "p": 0.0,
+   "n": 2497988,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled": {
+   "coef": 0.19052301657031856,
+   "se": 0.002460084167937886,
+   "p": 0.0,
+   "n": 782732,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T1 | field fixed effects": {
+   "coef": 0.06283619196633293,
+   "se": 0.001449285716698566,
+   "p": 0.0,
+   "n": 2497988,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | field fixed effects": {
+   "coef": 0.07942515636917512,
+   "se": 0.0022180954488860228,
+   "p": 0.0,
+   "n": 782732,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T1 | Anderson-Hsiao": {
+   "coef": 0.02118338460358129,
+   "se": 0.0013148761175148798,
+   "p": 0.0,
+   "n": 2397650,
+   "clusters": 1733,
+   "first_stage_r": -0.6708637738996525
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | Anderson-Hsiao": {
+   "coef": 0.02282918900161418,
+   "se": 0.0023285078997000806,
+   "p": 0.0,
+   "n": 782239,
+   "clusters": 1733,
+   "first_stage_r": -0.6570595740195163
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T3 | pooled": {
+   "coef": 0.10658213064970282,
+   "se": 0.0033349980458071845,
+   "p": 0.0,
+   "n": 489709,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2006": {
+   "coef": 0.19771319880524257,
+   "se": 0.0024876174015428685,
+   "p": 0.0,
+   "n": 735932,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2010": {
+   "coef": 0.21111230451650287,
+   "se": 0.0025257177927619696,
+   "p": 0.0,
+   "n": 698993,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2011": {
+   "coef": 0.20973707852058343,
+   "se": 0.002695665488107262,
+   "p": 0.0,
+   "n": 700820,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2018": {
+   "coef": 0.19060268442831638,
+   "se": 0.002620945585358231,
+   "p": 0.0,
+   "n": 687207,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2020": {
+   "coef": 0.18992316459043446,
+   "se": 0.0025437038623223615,
+   "p": 0.0,
+   "n": 723161,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2022": {
+   "coef": 0.18700251598398018,
+   "se": 0.0024922632369235604,
+   "p": 0.0,
+   "n": 703715,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2025": {
+   "coef": 0.17991603213267698,
+   "se": 0.0024867584589960386,
+   "p": 0.0,
+   "n": 689086,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | pooled, without 2026": {
+   "coef": 0.13928895164519595,
+   "se": 0.002371355791895079,
+   "p": 0.0,
+   "n": 693810,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2002-2026 | T1 | shuffled seasons (placebo)": {
+   "coef": -0.0015111154205359864,
+   "se": 0.0007550746881655072,
+   "p": 0.04536228821476995,
+   "n": 2398056,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T1 | pooled": {
+   "coef": 0.234661668094026,
+   "se": 0.002509463774869211,
+   "p": 0.0,
+   "n": 899307,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | pooled": {
+   "coef": 0.27766973636302444,
+   "se": 0.0030903073627351826,
+   "p": 0.0,
+   "n": 466479,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T1 | field fixed effects": {
+   "coef": -0.060339047269876565,
+   "se": 0.0017514564679701652,
+   "p": 0.0,
+   "n": 899307,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | field fixed effects": {
+   "coef": 0.0016962004972344165,
+   "se": 0.002770031611121234,
+   "p": 0.5403129875381483,
+   "n": 466479,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T1 | Anderson-Hsiao": {
+   "coef": 0.027105221959246462,
+   "se": 0.002257574374084659,
+   "p": 0.0,
+   "n": 799248,
+   "clusters": 1733,
+   "first_stage_r": -0.6240709529386533
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | Anderson-Hsiao": {
+   "coef": 0.022318677684958807,
+   "se": 0.0035349536743440268,
+   "p": 2.7242164080121256e-10,
+   "n": 370891,
+   "clusters": 1733,
+   "first_stage_r": -0.6408988976425555
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T3 | pooled": {
+   "coef": 0.20032130449375707,
+   "se": 0.004559184221927211,
+   "p": 0.0,
+   "n": 243854,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | pooled, without 2018": {
+   "coef": 0.2975840422164061,
+   "se": 0.0034358052112245085,
+   "p": 0.0,
+   "n": 370954,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | pooled, without 2020": {
+   "coef": 0.28967670379430355,
+   "se": 0.0032855330848399183,
+   "p": 0.0,
+   "n": 406908,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | pooled, without 2022": {
+   "coef": 0.2890185888597667,
+   "se": 0.0032694606838493995,
+   "p": 0.0,
+   "n": 387462,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | pooled, without 2023": {
+   "coef": 0.27971384277247674,
+   "se": 0.003120285719200795,
+   "p": 0.0,
+   "n": 439348,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | pooled, without 2025": {
+   "coef": 0.2817776444999479,
+   "se": 0.0032830998225530884,
+   "p": 0.0,
+   "n": 372833,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | pooled, without 2026": {
+   "coef": 0.22089717260887165,
+   "se": 0.0031684037347646824,
+   "p": 0.0,
+   "n": 377557,
+   "clusters": 1733
+  },
+  "MODIS \u00b7 long normal \u00b7 2017-2026 | T1 | shuffled seasons (placebo)": {
+   "coef": 0.06491123925476655,
+   "se": 0.0018529536813331182,
+   "p": 0.0,
+   "n": 899290,
+   "clusters": 1733
+  }
+ },
+ "score": {
+  "V0 \u00b7 Sentinel-2, normal 2017\u20132020": {
+   "Current stress only (pilot rule)": {
+    "hit_next_auc": 0.6169,
+    "hit_next_lift": 1.611,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.6225
+   },
+   "Fitted score (logistic)": {
+    "hit_next_auc": 0.5662,
+    "hit_next_lift": 1.4394,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.5755
+   },
+   "Region only (baseline)": {
+    "hit_next_auc": 0.4896,
+    "hit_next_lift": 1.0674,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.4998
+   },
+   "Transparent score (no fitting)": {
+    "hit_next_auc": 0.63,
+    "hit_next_lift": 1.6348,
+    "hit_next_base_rate": 0.2022,
+    "worst_next_auc": 0.6414
+   }
+  },
+  "V1 \u00b7 MODIS, normal 2017\u20132020": {
+   "Current stress only (pilot rule)": {
+    "hit_next_auc": 0.5881,
+    "hit_next_lift": 1.5288,
+    "hit_next_base_rate": 0.2061,
+    "worst_next_auc": 0.5927
+   },
+   "Fitted score (logistic)": {
+    "hit_next_auc": 0.564,
+    "hit_next_lift": 1.4025,
+    "hit_next_base_rate": 0.2061,
+    "worst_next_auc": 0.5655
+   },
+   "Region only (baseline)": {
+    "hit_next_auc": 0.4991,
+    "hit_next_lift": 0.9971,
+    "hit_next_base_rate": 0.2061,
+    "worst_next_auc": 0.5001
+   },
+   "Transparent score (no fitting)": {
+    "hit_next_auc": 0.6165,
+    "hit_next_lift": 1.5928,
+    "hit_next_base_rate": 0.2061,
+    "worst_next_auc": 0.6247
+   }
+  },
+  "V2 \u00b7 MODIS, normal 2001\u20132016": {
+   "Current stress only (pilot rule)": {
+    "hit_next_auc": 0.6177,
+    "hit_next_lift": 1.4884,
+    "hit_next_base_rate": 0.2809,
+    "worst_next_auc": 0.6147
+   },
+   "Fitted score (logistic)": {
+    "hit_next_auc": 0.6188,
+    "hit_next_lift": 1.4981,
+    "hit_next_base_rate": 0.2809,
+    "worst_next_auc": 0.6111
+   },
+   "Region only (baseline)": {
+    "hit_next_auc": 0.5613,
+    "hit_next_lift": 1.1967,
+    "hit_next_base_rate": 0.2809,
+    "worst_next_auc": 0.5
+   },
+   "Transparent score (no fitting)": {
+    "hit_next_auc": 0.6838,
+    "hit_next_lift": 1.7052,
+    "hit_next_base_rate": 0.2809,
+    "worst_next_auc": 0.665
+   }
+  }
+ },
+ "score_by_year": {
+  "V0 \u00b7 Sentinel-2, normal 2017\u20132020": {
+   "2020": 0.5048,
+   "2021": 0.5774,
+   "2022": 0.6074,
+   "2023": 0.6839,
+   "2024": 0.64,
+   "2025": 0.7666
+  },
+  "V1 \u00b7 MODIS, normal 2017\u20132020": {
+   "2020": 0.4766,
+   "2021": 0.5614,
+   "2022": 0.6122,
+   "2023": 0.6972,
+   "2024": 0.6321,
+   "2025": 0.7197
+  },
+  "V2 \u00b7 MODIS, normal 2001\u20132016": {
+   "2020": 0.6449,
+   "2021": 0.6777,
+   "2022": 0.6295,
+   "2023": 0.6656,
+   "2024": 0.6929,
+   "2025": 0.7921
+  }
+ },
+ "R1": {
+  "pooled_minus_AH": 0.2421,
+  "placebo": 0.0727,
+  "placebo_p": 0.0,
+  "replicates": true
+ },
+ "R2": {
+  "anderson_hsiao": {
+   "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T1 | Anderson-Hsiao": 0.019816223491285152,
+   "Sentinel-2 \u00b7 short normal \u00b7 2017-2026 | T2 | Anderson-Hsiao": 0.0586291828232796,
+   "MODIS \u00b7 long normal \u00b7 2002-2026 | T1 | Anderson-Hsiao": 0.02118338460358129,
+   "MODIS \u00b7 long normal \u00b7 2002-2026 | T2 | Anderson-Hsiao": 0.02282918900161418,
+   "MODIS \u00b7 long normal \u00b7 2017-2026 | T1 | Anderson-Hsiao": 0.027105221959246462,
+   "MODIS \u00b7 long normal \u00b7 2017-2026 | T2 | Anderson-Hsiao": 0.022318677684958807
+  },
+  "no_material_carryover": false
+ },
+ "R3": {
+  "v2_auc": 0.6838,
+  "v1_minus_v2": -0.0673,
+  "usable": true,
+  "robust": true
+ }
+}
