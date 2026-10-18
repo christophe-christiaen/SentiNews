@@ -29,8 +29,8 @@
 </head>
 <body>
 
-<div class="draft">DRAFT FOR DISCUSSION, 17 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (source commit 7e48730); results files are named in brackets. Items in orange are still to do.
+<div class="draft">DRAFT FOR DISCUSSION, 18 October 2026. Not for circulation or citation. All numbers come from the code in
+christophe-christiaen/SentiNews (source commit to follow); results files are named in brackets. Items in orange are still to do.
 The literature review has not been written and no papers beyond a few methods and data references are cited yet.</div>
 
 <h1>Seeing agri-environment options from space: detection, selection and effects on England's cereal land</h1>
@@ -50,7 +50,7 @@ and in-field flower and bird-food plots fall short of the threshold; margins and
 family including the controls scores about 0.7, entirely explained by the placebo: a naive evaluation would report
 detection of actions that a field-centre point cannot see. Embeddings beat a Sentinel-2 index baseline in every family.
 In the companion pre-registered evaluation, agreement land drops about 0.08 standard deviations less in drought
-seasons, consistently across designs but not established once cohorts are compared within themselves. Fields with the
+seasons, consistently across designs but not established once cohorts are compared within themselves; measured against a 16-season normal the placebo still carries about three fifths of the effect, so much of it reflects which land joined. Fields with the
 two visible options cushion droughts about twice as much as management-only scheme fields (+0.13 and +0.12 against
 +0.05), but the difference is well within its uncertainty.</p></div>
 
@@ -178,6 +178,25 @@ within their uncertainty. Within cohorts the estimates carry no information (sta
 changing); the before-entry placebo is clean for both options (+0.031 and +0.008). About 10,000 fields per option,
 clustered in weather cells and observed over nine seasons, are too few for this design. Verifying actions from space
 sharpens the question but does not yet answer it.</p>
+<p><b>Is the failed placebo an artefact of the short normal?</b> Every outcome above is a deviation from each field's
+2017–2020 seasons, the four-season normal that Paper 2 shows creates false persistence, and the seasons before entry
+include those baseline seasons. A further exploratory test, specified before running
+[results/wp3_x2_long_baseline.md], reran the frozen plan with MODIS July NDVI measured against each field's 2017–2020
+seasons and against its 2001–2016 seasons (Table 4). By the rule fixed in advance, the answer is no. With the long
+normal the placebo stays positive (+0.061, SE 0.009) and is no smaller than with the short one (+0.049), and the
+before-entry shock contrast fails clearly (p &lt; 0.001). The pre-trend failure of the frozen plan is specific to
+Sentinel-2: MODIS passes the pre-trend test on the effect with either normal (p = 0.75 and 0.31). The long normal makes
+the drought-season effect larger and far more precise (+0.104, SE 0.009), but about three fifths of it is already in
+the placebo. Land that joined the schemes was more drought-resistant before it joined; a long baseline removes noise,
+not selection.</p>
+<div class="tcap"><b>Table 4.</b> The frozen-plan test with three outcome versions (exploratory). July NDVI z-scores;
+matched sample, main shock definition, SE clustered by ERA5 cell. Pre-trend: Wald test over event times −4 to −1.</div>
+<table>
+<tr><th>Outcome</th><th>Shock − non-shock effect</th><th>Placebo (entry two seasons early)</th><th>Pre-trend p, effect</th><th>Pre-trend p, shock contrast</th></tr>
+<tr><td>Sentinel-2, normal 2017–2020 (frozen plan)</td><td>+0.082 (0.017)</td><td>+0.079 (0.016)</td><td>&lt; 0.001</td><td>0.049</td></tr>
+<tr><td>MODIS, normal 2017–2020</td><td>+0.075 (0.030)</td><td>+0.049 (0.040)</td><td>0.75</td><td>0.19</td></tr>
+<tr><td>MODIS, normal 2001–2016</td><td>+0.104 (0.009)</td><td>+0.061 (0.009)</td><td>0.31</td><td>&lt; 0.001</td></tr>
+</table>
 
 <h2>6. Discussion</h2>
 <p><b>For monitoring.</b> A field's annual embedding can confirm whole-field land-cover options such as herbal leys,
@@ -185,7 +204,9 @@ and no-till, against other scheme land and in regions the model has not seen. It
 from a centre point, nor management practices. Monitoring those needs field polygons, finer timing (cover crops are
 seasonal) or other evidence.</p>
 <p><b>For evaluation.</b> Any detection or effect study of voluntary schemes should include a pre-entry placebo and
-negative controls; without them, selection looks like detection, at about AUC 0.7 here.</p>
+negative controls; without them, selection looks like detection, at about AUC 0.7 here. A long baseline does not
+cure selection: with 16-season normals the placebo of the effect test still carries about three fifths of the
+effect.</p>
 <p><b>Limits.</b> Labels are declared options, not verified ones, and an option may cover only part of a field; the
 parcel point samples the field centre; the annual embedding cannot resolve within-season timing; SFI actions are snapped
 to parcel points; the live scheme layers omit agreements that have ended.</p>
