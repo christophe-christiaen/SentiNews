@@ -1,4 +1,4 @@
-"""U1 weather (wp2_resilience/results/u1_grassland_protocol.md): ERA5-Land for the grassland sample's cells that the
+"""U1/U3 weather: ERA5-Land for a parcel sample's cells (grassland, or the UKFields sample with --set ukfields) that the
 cereal run did not cover, and the grassland parcel -> cell map. Same variables and processing as fetch_era5land.py;
 cereal files are not changed.
 
@@ -26,16 +26,20 @@ def retry(fn, tries=30):
             time.sleep(min(30 * (k + 1), 300))
 
 
-def grass_cells():
-    g = pd.read_parquet(os.path.join(f.D, 'parcels', 'grass_sample.parquet'))
+SETS = {'grass': ('grass_sample.parquet', 'grass'), 'ukfields': ('ukfields_sample.parquet', 'ukfields')}
+
+
+def grass_cells(which='grass'):
+    g = pd.read_parquet(os.path.join(f.D, 'parcels', SETS[which][0]))
     lon, lat = Transformer.from_crs(27700, 4326, always_xy=True).transform(g.x.values, g.y.values)
     ci, cj = np.round(lon / 0.1).astype(int), np.round(lat / 0.1).astype(int)
     return g.assign(cell_id=[f'{i}_{j}' for i, j in zip(ci, cj)], clon=ci * 0.1, clat=cj * 0.1)
 
 
-def main(project):
+def main(project, which='grass'):
     ee.Initialize(project=project)
-    g = grass_cells()
+    sfx = SETS[which][1]
+    g = grass_cells(which)
     have = set(pd.read_parquet(os.path.join(W, 'era5land_monthly.parquet'), columns=['cell_id']).cell_id)
     c = g[~g.cell_id.isin(have)].groupby('cell_id').agg(lon=('clon', 'first'), lat=('clat', 'first')).reset_index()
     print(f'{len(c)} new cells for {(~g.cell_id.isin(have)).sum():,} grassland parcels', flush=True)
@@ -58,8 +62,8 @@ def main(project):
         h = retry(lambda: f.sample(hd, fc)); h['year'] = y; heat.append(h)
         print(f'  {y}: {len(w):,} cell-months', flush=True)
     mon, heat = pd.concat(mon, ignore_index=True), pd.concat(heat, ignore_index=True)
-    mon.to_parquet(os.path.join(W, 'era5land_monthly_grass.parquet'), index=False)
-    heat.to_parquet(os.path.join(W, 'era5land_heatdays_grass.parquet'), index=False)
+    mon.to_parquet(os.path.join(W, f'era5land_monthly_{sfx}.parquet'), index=False)
+    heat.to_parquet(os.path.join(W, f'era5land_heatdays_{sfx}.parquet'), index=False)
     # cells ERA5-Land masks as sea borrow the nearest cell with data (as for cereals)
     from scipy.spatial import cKDTree
     valid = sorted(have | set(mon.cell_id)); xy = lambda ids: np.array([[int(a) for a in s.split('_')] for s in ids])
@@ -67,14 +71,15 @@ def main(project):
     if miss:
         _, i = cKDTree(xy(valid)).query(xy(miss)); rep = dict(zip(miss, [valid[k] for k in i]))
     g['cell_id_data'] = g.cell_id.map(lambda s: rep.get(s, s))
-    g[['parcref', 'cell_id', 'cell_id_data']].to_parquet(os.path.join(W, 'grass_era5_cell.parquet'), index=False)
+    g[['parcref', 'cell_id', 'cell_id_data']].to_parquet(os.path.join(W, f'{sfx}_era5_cell.parquet'), index=False)
     m = pd.concat([pd.read_parquet(os.path.join(W, 'era5land_monthly.parquet')), mon], ignore_index=True)
     h = pd.concat([pd.read_parquet(os.path.join(W, 'era5land_heatdays.parquet')), heat], ignore_index=True)
-    s = b.shocks(m, h, os.path.join(W, 'cell_year_shocks_grass.parquet'))
-    s = s[s.cell_id.isin(set(g.cell_id_data))]; s.to_parquet(os.path.join(W, 'cell_year_shocks_grass.parquet'), index=False)
+    s = b.shocks(m, h, os.path.join(W, f'cell_year_shocks_{sfx}.parquet'))
+    s = s[s.cell_id.isin(set(g.cell_id_data))]; s.to_parquet(os.path.join(W, f'cell_year_shocks_{sfx}.parquet'), index=False)
     print(f'{len(miss)} sea-masked cells borrow a neighbour; shocks for {s.cell_id.nunique()} grassland cells', flush=True)
 
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); ap.add_argument('--project', required=True)
-    main(ap.parse_args().project)
+    ap.add_argument('--set', default='grass', choices=list(SETS))
+    a = ap.parse_args(); main(a.project, a.set)

@@ -60,11 +60,11 @@ def main():
     ap.add_argument('--only', help='one square_year, e.g. 10_8_2022 (test)')
     ap.add_argument('--all', action='store_true', help='also redo square-years already exported to Drive')
     ap.add_argument('--parallel-squares', type=int, default=6, help='square-years in flight at once (keeps all request slots busy)')
-    ap.add_argument('--set', default='cereal', choices=['cereal', 'grass'])
+    ap.add_argument('--set', default='cereal', choices=['cereal', 'grass', 'ukfields'])
     a = ap.parse_args()
     global OUT
-    if a.set == 'grass':
-        OUT = os.path.join(g.D, 's2', 'gee_local_grass')
+    if a.set != 'cereal':
+        OUT = os.path.join(g.D, 's2', f'gee_local_{a.set}')
     init_ee(a.project)
     os.makedirs(OUT, exist_ok=True)
     t = g.chunks(a.set)

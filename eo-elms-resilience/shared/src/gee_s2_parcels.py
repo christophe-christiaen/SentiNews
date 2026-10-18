@@ -32,6 +32,8 @@ PERIODS = [(m, d0, d1) for m in range(3, 9) for d0, d1 in ((1, 15), (16, 31))]
 def chunks(which='cereal'):
     if which == 'grass':                                   # U1 sample (wp2_resilience/results/u1_grassland_protocol.md)
         t = pd.read_parquet(os.path.join(D, 'parcels', 'grass_sample.parquet'), columns=['parcref', 'x', 'y'])
+    elif which == 'ukfields':                              # U3 sample (wp1_regional_signal/results/u3_protocol.md)
+        t = pd.read_parquet(os.path.join(D, 'parcels', 'ukfields_sample.parquet'), columns=['parcref', 'x', 'y'])
     else:
         t = pd.read_parquet(os.path.join(D, 'parcels', 'parcel_panel.parquet'), columns=['parcref', 'x', 'y', 'cereal_land'])
         t = t[t.cereal_land].copy()
