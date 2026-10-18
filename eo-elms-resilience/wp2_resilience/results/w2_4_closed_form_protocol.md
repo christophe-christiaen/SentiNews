@@ -38,3 +38,4 @@ removed but no scaling.
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-18 | Protocol written | Before the Monte Carlo |
+| 2026-10-18 | Run ([w2_4_closed_form.md](w2_4_closed_form.md)): 24 of 26 checks passed. The two failures are n = 8 without cell shocks (formula −0.082 vs Monte Carlo −0.081; 0.000 vs −0.0003): gaps of about 0.001, beyond 2 Monte Carlo SE (≈ 0.0002) because the formula is a ratio of expectations and the estimator a ratio of sums with heavy-tailed weights. Reported as failures; the rule is not changed. The unscaled version matches K = 1 in every case; n = 4 and 5 (medians) are within 0.004 | Result |
