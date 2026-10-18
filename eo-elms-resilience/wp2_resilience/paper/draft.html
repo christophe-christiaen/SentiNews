@@ -29,8 +29,8 @@
 </head>
 <body>
 
-<div class="draft">DRAFT FOR DISCUSSION, 17 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (commit c8a06cf); results files are named in brackets. Items in orange are still to do.
+<div class="draft">DRAFT FOR DISCUSSION, 18 October 2026. Not for circulation or citation. All numbers come from the code in
+christophe-christiaen/SentiNews (commit to follow); results files are named in brackets. Items in orange are still to do.
 A first related-work section is in place (references checked against publisher or index records); crop-specific studies are still to add.</div>
 
 <h1>Short baselines manufacture drought legacies: evidence from 381,400 cereal fields in England</h1>
@@ -146,7 +146,8 @@ effect (SD 0.8) and a seasonal term following an AR(1) process with a chosen car
 to keep unit variance). Each field is standardised against its first <i>n</i> seasons, exactly as in the real data,
 and the same tests are run. This gives (i) the apparent legacy produced by a baseline of <i>n</i> seasons when ρ = 0,
 and (ii) a calibration of each within-field estimator against known ρ
-(<code>src/baseline_artefact_sim.py</code>).</p>
+(<code>src/baseline_artefact_sim.py</code>). For the case ρ = 0 we also derive the artefact in closed form and check it
+against 200 replications of the same simulation per setting (section 4.3; <code>src/w2_4_closed_form.py</code>).</p>
 
 <h2>4. Results</h2>
 <h3>4.1 Where and when cereal land was stressed</h3>
@@ -180,10 +181,34 @@ squares and diamonds show the values reported for Sentinel-2 (<i>n</i> = 4) and 
 Right: T1 and T2 in the real data, as reported, within each field (Anderson–Hsiao), with field fixed effects, and with
 each field's seasons shuffled.</figcaption></figure>
 <p>With no carry-over at all, a four-season baseline over ten seasons yields an apparent legacy of +0.13 in the T1
-test; two seasons yield +0.62 and three +0.23, while eight or more yield about zero (Figure 2, left). The mechanism is
+test; eight or more seasons yield about zero (Figure 2, left). With two or three seasons a single run is not a
+reliable guide: across 200 runs of the two-season design (10 seasons, cell shocks) the coefficient ranges from 0.00 to +0.65
+(10th to 90th percentile), so the +0.62 in Figure 2 is one draw from that range. The mechanism is
 simple: every season after the baseline shares the error of the baseline mean. Seasons inside the baseline pull the
 other way, because their deviations from their own mean sum to zero, which is why the pooled figure is below the
 naive 1/(<i>n</i> + 1). In our set-up, the artefact alone accounts for about two-thirds of the reported +0.20.</p>
+<p><b>A closed form.</b> The three kinds of season pair can be added up exactly
+[w2_4_closed_form_protocol.md, written before the check]. For fields with no carry-over, z-scored against their first
+<i>n</i> of <i>T</i> seasons, pairs inside the baseline contribute a covariance of −1/<i>n</i> (their deviations sum to
+zero, whatever the field's scale); the pair across the edge of the baseline contributes nothing; and pairs after the
+baseline share the error of the baseline mean, +1/<i>n</i>, inflated by estimating each field's SD from only <i>n</i>
+seasons by the factor <i>K</i> = E[1/<i>s</i>²] = (<i>n</i> − 1)/(<i>n</i> − 3). The pooled coefficient is then</p>
+<p style="text-align:center">β(<i>n</i>, <i>T</i>) = [(<i>T</i> − <i>n</i> − 1)<i>K</i> − (<i>n</i> − 1)] /
+[<i>n</i>(<i>n</i> − 1) + (<i>T</i> − <i>n</i> − 1)(<i>n</i> + 1)<i>K</i>],</p>
+<p>with <i>K</i> = 1 if the anomalies are not scaled. Three consequences follow. First, for <i>n</i> ≤ 3, <i>K</i> is
+infinite: the pooled estimate is dominated by the few fields whose baseline seasons happen to be nearly equal, and it
+has no stable value, which explains the spread of the two- and three-season runs. Second, the artefact is positive
+only while <i>T</i> &lt; 2<i>n</i> − 2; it vanishes at <i>T</i> = 2<i>n</i> − 2 and turns negative for longer
+baselines in a fixed panel (−0.08 for <i>n</i> = 8 of 10 seasons), so a longer baseline is safe only together with
+the panel length. Third, for this study's design (<i>n</i> = 4, <i>T</i> = 10) it gives +0.138, against a simulated
+median of +0.141 (Figure 3). A Monte Carlo check fixed in advance passed 24 of 26 tests; the two failures, both for
+<i>n</i> = 8 without cell shocks, are gaps of about 0.001 between this ratio of expectations and the ratio of sums
+the regression computes [w2_4_closed_form.md].</p>
+<figure><img src="../../results/maps/wp2_closed_form.png" alt="Closed form against Monte Carlo">
+<figcaption><b>Figure 3.</b> Apparent carry-over with none present, by the number of baseline seasons <i>n</i> in a
+10-season panel. Lines: the closed form with each field's SD estimated (solid) and with no scaling (dashed); dotted:
+the earlier approximation 1/(<i>n</i> + 1). Points: medians of 200 Monte Carlo runs of the study's design with 10–90%
+of runs.</figcaption></figure>
 
 <h3>4.4 Within each field, little or nothing is left</h3>
 <div class="tcap"><b>Table 2.</b> Within-field estimates and their calibration by simulation [within_field_check.md,
@@ -281,7 +306,9 @@ seasons), it is invisible in the usual robustness checks (thresholds, carry-over
 our estimates unchanged), and it produces the substantively attractive result that drought damage compounds. We
 recommend three inexpensive diagnostics: (1) a within-unit dynamic estimator such as Anderson–Hsiao alongside the
 pooled test; (2) a season-shuffling placebo; (3) a simulation of the study's own design with a known carry-over, to
-calibrate both. Longer baselines from harmonised Landsat or MODIS records remove the artefact at its source.</p>
+calibrate both. Longer baselines from harmonised Landsat or MODIS records remove the artefact at its source, but the
+closed form shows they must be judged together with the panel length: within a fixed panel, a baseline longer than
+about half of it biases the test the other way.</p>
 <p><b>Limits.</b> Parcel points sample the field centre (15 m), not the whole field; the stress index is a crop
 condition proxy, not yield; the analysis covers cereal land only; with ten seasons the T2 estimators disagree;
 MODIS pixels (about 6 ha) mix neighbouring fields; and Sentinel-1 in 2026 is not usable until checked against flood
