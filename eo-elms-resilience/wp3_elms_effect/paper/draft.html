@@ -31,7 +31,7 @@
 <body>
 
 <div class="draft">DRAFT FOR DISCUSSION, 18 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (source commit f40ad36); results files are named in brackets. Items in orange are still to do.
+christophe-christiaen/SentiNews (source commit to follow); results files are named in brackets. Items in orange are still to do.
 The literature review has not been written and no papers beyond a few methods and data references are cited yet.</div>
 
 <h1>Seeing agri-environment options from space: detection, selection and effects on England's cereal land</h1>
@@ -49,7 +49,7 @@ Grassland options score highly (0.81) but mostly because the land was already di
 and in-field flower and bird-food plots fall short of the threshold; margins and corners, and the two negative controls
 (field-edge buffer strips and management-only actions), show no detection at all. Against land never in a scheme, every
 family including the controls scores about 0.7, entirely explained by the placebo: a naive evaluation would report
-detection of actions that a field-centre point cannot see. Embeddings beat a Sentinel-2 index baseline in every family.
+detection of actions that a field-centre point cannot see. Embeddings beat a Sentinel-2 index baseline in every family. A placebo-adjusted metric, calibrated on the negative controls, finds a real but weaker trace of in-field plots, grassland options and cover crops as well, and none for margins and corners.
 In the companion pre-registered evaluation, agreement land drops about 0.08 standard deviations less in drought
 seasons, consistently across designs but not established once cohorts are compared within themselves; measured against a 16-season normal the placebo still carries about three fifths of the effect, so much of it reflects which land joined. Fields with the
 two visible options cushion droughts about twice as much as management-only scheme fields (+0.13 and +0.12 against
@@ -149,6 +149,41 @@ within-scheme comparison (B) removes most of this, and the placebo measures what
 no-till 0.77 vs 0.72; grassland 0.81 vs 0.78), and adding the indices to the embedding changes almost nothing. The
 indices, however, are interpretable, and they reach the same verdict for herbal leys on their own (0.79).</p>
 
+<h3>4.4 A placebo-adjusted metric</h3>
+<p>The gain over the placebo in Table 2 is a difference of two AUCs from separate models. A further analysis,
+specified before any model was fitted [results/w3_4_metric_protocol.md], turns it into a defined metric with stated
+assumptions, uncertainty and a calibration check. <i>Incremental detection</i> I = AUC(pre + post) − AUC(pre) is what
+the 2025 record adds to a model that already knows the field's pre-entry record (2017–2019). Any extra year also adds
+something with no option present (more features; drift in the land that joins), so the same increment is computed with
+the 2020 record, which precedes every entry: I₀ = AUC(pre + 2020) − AUC(pre). <i>Selection-corrected detection</i> is
+I* = I − I₀. It assumes no anticipation before entry and no more option-unrelated drift between 2020 and 2025 than
+between 2017–2019 and 2020; the negative controls test the second assumption. Intervals come from a paired bootstrap
+of parcels within held-out regions.</p>
+<div class="tcap"><b>Table 3.</b> Selection-corrected detection I* against management-only scheme land (comparison B),
+with 95% intervals; AlphaEarth embeddings and Sentinel-2 indices [results/w3_4_metric.md]. Controls against never-treated land.</div>
+<table>
+<tr><th>Family</th><th>AlphaEarth I*</th><th>Sentinel-2 I*</th><th>Table 2 verdict</th></tr>
+<tr><td>Herbal leys</td><td>+0.182 (+0.173 to +0.189)</td><td>+0.171 (+0.161 to +0.180)</td><td>detected</td></tr>
+<tr><td>No-till</td><td>+0.088 (+0.080 to +0.097)</td><td>+0.097 (+0.087 to +0.106)</td><td>detected</td></tr>
+<tr><td>In-field flower and bird-food plots</td><td>+0.089 (+0.082 to +0.096)</td><td>+0.075 (+0.068 to +0.082)</td><td>not detected</td></tr>
+<tr><td>Grassland options</td><td>+0.078 (+0.067 to +0.089)</td><td>+0.065 (+0.054 to +0.076)</td><td>not detected</td></tr>
+<tr><td>Cover crops</td><td>+0.071 (+0.063 to +0.077)</td><td>+0.059 (+0.051 to +0.067)</td><td>not detected</td></tr>
+<tr><td>Margins and corners</td><td>−0.000 (−0.007 to +0.006)</td><td>+0.005 (−0.001 to +0.013)</td><td>not detected</td></tr>
+<tr><td>Buffer strips (control, vs never-treated)</td><td>+0.016</td><td>−0.002</td><td>–</td></tr>
+<tr><td>Management only (control, vs never-treated)</td><td>+0.018</td><td>+0.007</td><td>–</td></tr>
+</table>
+<p>The metric passes its calibration check for both feature families: the two negative controls stay within ±0.02 of
+zero even against land never in a scheme, where their raw AUCs are about 0.7. By the rule fixed in advance (95%
+interval above 0.02 within schemes), five families carry a real signal beyond selection: herbal leys, no-till, in-field
+plots, grassland options and cover crops; margins and corners carry none. This is a different question from the
+verdict in Table 2, which asks whether a field can be classified well (AUC ≥ 0.70): in-field plots, grassland options
+and cover crops leave a detectable trace, but too weak to verify a single field. It also separates selection from
+detection for grassland options, whose high AUC (0.81) is mostly selection but which still add about 0.07 beyond it.
+With the Sentinel-2 indices, I* agrees within 0.03 whether the comparison is never-treated land or management-only
+scheme land, although the raw AUCs differ by up to 0.10, so the metric removes the dependence on the comparison group;
+with AlphaEarth it does so for every family except herbal leys, which misses the pre-set limit narrowly (0.031 against
+0.03).</p>
+
 <h2>5. Do the options change resilience?</h2>
 <p>A companion evaluation, pre-registered and frozen on 11 October 2026 before any outcome was compared by agreement
 status [wp3_elms_effect/results/preregistration.md], asks whether agreement land drops less in drought and heat seasons
@@ -164,7 +199,7 @@ actions.</p>
 <p>For the two options that are visible, a further exploratory test, specified before running
 [results/wp3_e4_visible_options.md], compares their drought-season effect with that of scheme land carrying only
 management actions, so that both groups chose to join and only one changed the field visibly.</p>
-<div class="tcap"><b>Table 3.</b> Drought-season effect (shock minus non-shock seasons, July NDVI, SD) against never-treated
+<div class="tcap"><b>Table 4.</b> Drought-season effect (shock minus non-shock seasons, July NDVI, SD) against never-treated
 fields, embedding-matched sample; frozen-plan estimator. SE clustered by ERA5 cell.</div>
 <table>
 <tr><th>Group</th><th>Matched fields</th><th>Effect</th><th>95% CI</th></tr>
@@ -183,14 +218,14 @@ sharpens the question but does not yet answer it.</p>
 2017–2020 seasons, the four-season normal that Paper 2 shows creates false persistence, and the seasons before entry
 include those baseline seasons. A further exploratory test, specified before running
 [results/wp3_x2_long_baseline.md], reran the frozen plan with MODIS July NDVI measured against each field's 2017–2020
-seasons and against its 2001–2016 seasons (Table 4). By the rule fixed in advance, the answer is no. With the long
+seasons and against its 2001–2016 seasons (Table 5). By the rule fixed in advance, the answer is no. With the long
 normal the placebo stays positive (+0.061, SE 0.009) and is no smaller than with the short one (+0.049), and the
 before-entry shock contrast fails clearly (p &lt; 0.001). The pre-trend failure of the frozen plan is specific to
 Sentinel-2: MODIS passes the pre-trend test on the effect with either normal (p = 0.75 and 0.31). The long normal makes
 the drought-season effect larger and far more precise (+0.104, SE 0.009), but about three fifths of it is already in
 the placebo. Land that joined the schemes was more drought-resistant before it joined; a long baseline removes noise,
 not selection.</p>
-<div class="tcap"><b>Table 4.</b> The frozen-plan test with three outcome versions (exploratory). July NDVI z-scores;
+<div class="tcap"><b>Table 5.</b> The frozen-plan test with three outcome versions (exploratory). July NDVI z-scores;
 matched sample, main shock definition, SE clustered by ERA5 cell. Pre-trend: Wald test over event times −4 to −1.</div>
 <table>
 <tr><th>Outcome</th><th>Shock − non-shock effect</th><th>Placebo (entry two seasons early)</th><th>Pre-trend p, effect</th><th>Pre-trend p, shock contrast</th></tr>
@@ -205,7 +240,7 @@ and no-till, against other scheme land and in regions the model has not seen. It
 from a centre point, nor management practices. Monitoring those needs field polygons, finer timing (cover crops are
 seasonal) or other evidence.</p>
 <p><b>For evaluation.</b> Any detection or effect study of voluntary schemes should include a pre-entry placebo and
-negative controls; without them, selection looks like detection, at about AUC 0.7 here. A long baseline does not
+negative controls; without them, selection looks like detection, at about AUC 0.7 here. The selection-corrected increment I* (section 4.4) is a simple way to report it: it needs one extra pre-entry year, is checked by the controls, and gives the same answer whichever comparison group is used. A long baseline does not
 cure selection: with 16-season normals the placebo of the effect test still carries about three fifths of the
 effect.</p>
 <p><b>Limits.</b> Labels are declared options, not verified ones, and an option may cover only part of a field; the
