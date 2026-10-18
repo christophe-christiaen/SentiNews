@@ -1,0 +1,398 @@
+{
+ "gate": {
+  "Northern Ireland | spring barley": {
+   "years_within": 3,
+   "years": 9,
+   "median_ratio": 0.582138515660242,
+   "passed": false
+  },
+  "Northern Ireland | wheat": {
+   "years_within": 8,
+   "years": 9,
+   "median_ratio": 0.9385182659054115,
+   "passed": true
+  },
+  "Northern Ireland | winter barley": {
+   "years_within": 2,
+   "years": 9,
+   "median_ratio": 0.5562314703836194,
+   "passed": false
+  },
+  "Scotland | spring barley": {
+   "years_within": 3,
+   "years": 8,
+   "median_ratio": 0.6325878686060455,
+   "regional_spearman": 0.7999999999999999,
+   "passed": false
+  },
+  "Scotland | wheat": {
+   "years_within": 8,
+   "years": 8,
+   "median_ratio": 0.8442382950961391,
+   "regional_spearman": 1.0,
+   "passed": true
+  },
+  "Scotland | winter barley": {
+   "years_within": 4,
+   "years": 8,
+   "median_ratio": 0.6460126997855289,
+   "regional_spearman": 0.39999999999999997,
+   "passed": false
+  }
+ },
+ "skill": {
+  "wheat": {
+   "nations": [
+    "Scotland",
+    "Northern Ireland"
+   ],
+   "region_years": 41,
+   "fields_median": 969,
+   "D1 transfer | pilot | mid-July": {
+    "r2": 0.05426245021524445,
+    "rmse": 0.8739936827794319,
+    "r": 0.3060960097886975,
+    "n": 41
+   },
+   "D1 transfer | pilot | mid-July | without 2020, 2022": {
+    "r2": 0.06204803434216266,
+    "rmse": 0.9615696089267655,
+    "r": 0.2963166146325284,
+    "n": 31
+   },
+   "D1 transfer | pilot | mid-July | without 2025": {
+    "r2": 0.008919429211930674,
+    "rmse": 0.876313207593396,
+    "r": 0.28798869796114196,
+    "n": 36
+   },
+   "D2 local | pilot | mid-July": {
+    "r2": 0.03517933517902849,
+    "rmse": 0.882767377643704,
+    "r": 0.2237325956735386,
+    "n": 41
+   },
+   "D2 local | pilot | mid-July | without 2020, 2022": {
+    "r2": 0.0215597927435367,
+    "rmse": 0.9821042156284535,
+    "r": 0.20207834181569595,
+    "n": 31
+   },
+   "D2 local | pilot | mid-July | without 2025": {
+    "r2": 0.0007485888719865885,
+    "rmse": 0.8799181203345308,
+    "r": 0.20920223450130207,
+    "n": 36
+   },
+   "D3 pooled UK | pilot | mid-July": {
+    "r2": 0.05682077414647002,
+    "rmse": 0.8728107578060949,
+    "r": 0.2917737863509445,
+    "n": 41
+   },
+   "D3 pooled UK | pilot | mid-July | without 2020, 2022": {
+    "r2": 0.055543997564215686,
+    "rmse": 0.964897753565332,
+    "r": 0.2785280858834437,
+    "n": 31
+   },
+   "D3 pooled UK | pilot | mid-July | without 2025": {
+    "r2": 0.015827926674701343,
+    "rmse": 0.8732536205089558,
+    "r": 0.27501395532141903,
+    "n": 36
+   },
+   "D1 transfer | weather | mid-July": {
+    "r2": -0.21851441975208652,
+    "rmse": 0.9920608555001913,
+    "r": -0.05456864785180233,
+    "n": 41
+   },
+   "D1 transfer | weather | mid-July | without 2020, 2022": {
+    "r2": -0.2077284505067989,
+    "rmse": 1.091126436624328,
+    "r": -0.03212821729100251,
+    "n": 31
+   },
+   "D1 transfer | weather | mid-July | without 2025": {
+    "r2": -0.3469524659797152,
+    "rmse": 1.0216002982593693,
+    "r": -0.1837769728391771,
+    "n": 36
+   },
+   "D2 local | weather | mid-July": {
+    "r2": -0.13285424332183537,
+    "rmse": 0.9565551077781199,
+    "r": -0.7817793503551407,
+    "n": 41
+   },
+   "D2 local | weather | mid-July | without 2020, 2022": {
+    "r2": -0.14449399013445285,
+    "rmse": 1.0621777211831664,
+    "r": -0.7917299997736166,
+    "n": 31
+   },
+   "D2 local | weather | mid-July | without 2025": {
+    "r2": -0.17239142729596657,
+    "rmse": 0.9531059774734383,
+    "r": -0.794149799569859,
+    "n": 36
+   },
+   "D3 pooled UK | weather | mid-July": {
+    "r2": -0.23335895961466857,
+    "rmse": 0.99808544818849,
+    "r": -0.28914633200874795,
+    "n": 41
+   },
+   "D3 pooled UK | weather | mid-July | without 2020, 2022": {
+    "r2": -0.2373985951579749,
+    "rmse": 1.1044479134827911,
+    "r": -0.2846739847004646,
+    "n": 31
+   },
+   "D3 pooled UK | weather | mid-July | without 2025": {
+    "r2": -0.3062845230363067,
+    "rmse": 1.006059732783568,
+    "r": -0.3606816390007552,
+    "n": 36
+   },
+   "D1 transfer | s2 | mid-July": {
+    "r2": 0.2841664665775926,
+    "rmse": 0.7603770437997521,
+    "r": 0.5354676804357066,
+    "n": 41
+   },
+   "D1 transfer | s2 | mid-July | without 2020, 2022": {
+    "r2": 0.301741697092319,
+    "rmse": 0.8296568132640854,
+    "r": 0.5533836697766711,
+    "n": 31
+   },
+   "D1 transfer | s2 | mid-July | without 2025": {
+    "r2": 0.2360095061721409,
+    "rmse": 0.769394103409944,
+    "r": 0.4934001372764102,
+    "n": 36
+   },
+   "D2 local | s2 | mid-July": {
+    "r2": -0.27102353866292317,
+    "rmse": 1.0132107150994158,
+    "r": 0.109231224471816,
+    "n": 41
+   },
+   "D2 local | s2 | mid-July | without 2020, 2022": {
+    "r2": -0.31056475313549137,
+    "rmse": 1.136631457905011,
+    "r": 0.12323762947301219,
+    "n": 31
+   },
+   "D2 local | s2 | mid-July | without 2025": {
+    "r2": -0.3733767227897098,
+    "rmse": 1.0315724080537036,
+    "r": 0.13088617374982,
+    "n": 36
+   },
+   "D3 pooled UK | s2 | mid-July": {
+    "r2": 0.08001174438191916,
+    "rmse": 0.8620136021805979,
+    "r": 0.3836605265600791,
+    "n": 41
+   },
+   "D3 pooled UK | s2 | mid-July | without 2020, 2022": {
+    "r2": 0.09217429749661499,
+    "rmse": 0.9460011556707412,
+    "r": 0.4083103712632299,
+    "n": 31
+   },
+   "D3 pooled UK | s2 | mid-July | without 2025": {
+    "r2": -0.0036973451493387266,
+    "rmse": 0.8818734421243773,
+    "r": 0.35562384964329735,
+    "n": 36
+   },
+   "D1 transfer | s2+weather | mid-July": {
+    "r2": 0.22421468058467686,
+    "rmse": 0.7915780732000811,
+    "r": 0.48581306676429475,
+    "n": 41
+   },
+   "D1 transfer | s2+weather | mid-July | without 2020, 2022": {
+    "r2": 0.22855468949766877,
+    "rmse": 0.8720532429126235,
+    "r": 0.48850488456853525,
+    "n": 31
+   },
+   "D1 transfer | s2+weather | mid-July | without 2025": {
+    "r2": 0.17090099413547633,
+    "rmse": 0.8015083910791392,
+    "r": 0.45202874881610633,
+    "n": 36
+   },
+   "D2 local | s2+weather | mid-July": {
+    "r2": -0.16800664522173192,
+    "rmse": 0.9712826567631903,
+    "r": 0.10689534876133569,
+    "n": 41
+   },
+   "D2 local | s2+weather | mid-July | without 2020, 2022": {
+    "r2": -0.19416088377116325,
+    "rmse": 1.0849802940044517,
+    "r": 0.12188040233537081,
+    "n": 31
+   },
+   "D2 local | s2+weather | mid-July | without 2025": {
+    "r2": -0.2471366426682542,
+    "rmse": 0.9830189636598157,
+    "r": 0.12304193128077358,
+    "n": 36
+   },
+   "D3 pooled UK | s2+weather | mid-July": {
+    "r2": 0.06041845169232929,
+    "rmse": 0.8711445358902372,
+    "r": 0.35114993489532126,
+    "n": 41
+   },
+   "D3 pooled UK | s2+weather | mid-July | without 2020, 2022": {
+    "r2": 0.0786250644762001,
+    "rmse": 0.9530345092426873,
+    "r": 0.37394381297801016,
+    "n": 31
+   },
+   "D3 pooled UK | s2+weather | mid-July | without 2025": {
+    "r2": -0.051706538350277276,
+    "rmse": 0.9027181264852758,
+    "r": 0.2777439099772943,
+    "n": 36
+   },
+   "D1 transfer | s2 | end of August": {
+    "r2": 0.10271418923508158,
+    "rmse": 0.8513112591449967,
+    "r": 0.3863772693774767,
+    "n": 41
+   },
+   "D1 transfer | s2 | end of August | without 2020, 2022": {
+    "r2": 0.17517794077969762,
+    "rmse": 0.9017176352003897,
+    "r": 0.4355389537727184,
+    "n": 31
+   },
+   "D1 transfer | s2 | end of August | without 2025": {
+    "r2": 0.014711218814621896,
+    "rmse": 0.8737489062125291,
+    "r": 0.30668148004304313,
+    "n": 36
+   },
+   "D2 local | s2 | end of August": {
+    "r2": -0.41808273565957776,
+    "rmse": 1.0702217235125606,
+    "r": 0.08023730124671068,
+    "n": 41
+   },
+   "D2 local | s2 | end of August | without 2020, 2022": {
+    "r2": -0.4694145305078321,
+    "rmse": 1.2035457255810549,
+    "r": 0.09386395734922863,
+    "n": 31
+   },
+   "D2 local | s2 | end of August | without 2025": {
+    "r2": -0.5348936007478398,
+    "rmse": 1.0905460621780787,
+    "r": 0.11512761270221025,
+    "n": 36
+   },
+   "D3 pooled UK | s2 | end of August": {
+    "r2": -0.10031514573644063,
+    "rmse": 0.9427173992950353,
+    "r": 0.28142702780358114,
+    "n": 41
+   },
+   "D3 pooled UK | s2 | end of August | without 2020, 2022": {
+    "r2": -0.0789728396709799,
+    "rmse": 1.0313253338545005,
+    "r": 0.3102637906345891,
+    "n": 31
+   },
+   "D3 pooled UK | s2 | end of August | without 2025": {
+    "r2": -0.21486098624233252,
+    "rmse": 0.9702154114347662,
+    "r": 0.2529063476582273,
+    "n": 36
+   },
+   "D1 transfer | s2+weather | end of August": {
+    "r2": 0.07215132421102854,
+    "rmse": 0.8656883107468171,
+    "r": 0.3336938643484026,
+    "n": 41
+   },
+   "D1 transfer | s2+weather | end of August | without 2020, 2022": {
+    "r2": 0.11085246943927218,
+    "rmse": 0.9362187681668779,
+    "r": 0.3459226776657008,
+    "n": 31
+   },
+   "D1 transfer | s2+weather | end of August | without 2025": {
+    "r2": 0.09513536540420398,
+    "rmse": 0.8373300618785728,
+    "r": 0.3680881435152661,
+    "n": 36
+   },
+   "D2 local | s2+weather | end of August": {
+    "r2": -0.2636168427868768,
+    "rmse": 1.0102542362208575,
+    "r": 0.07641287592393593,
+    "n": 41
+   },
+   "D2 local | s2+weather | end of August | without 2020, 2022": {
+    "r2": -0.2973468623747342,
+    "rmse": 1.1308851016081651,
+    "r": 0.08986431950613773,
+    "n": 31
+   },
+   "D2 local | s2+weather | end of August | without 2025": {
+    "r2": -0.34754709017789076,
+    "rmse": 1.0218257706666263,
+    "r": 0.10744965071498601,
+    "n": 36
+   },
+   "D3 pooled UK | s2+weather | end of August": {
+    "r2": -0.14503567244569937,
+    "rmse": 0.9616842106378269,
+    "r": 0.21142617646634287,
+    "n": 41
+   },
+   "D3 pooled UK | s2+weather | end of August | without 2020, 2022": {
+    "r2": -0.13459823229543688,
+    "rmse": 1.0575757428999109,
+    "r": 0.2335938556003256,
+    "n": 31
+   },
+   "D3 pooled UK | s2+weather | end of August | without 2025": {
+    "r2": -0.2826795375134916,
+    "rmse": 0.9969283800604541,
+    "r": 0.1294817881430798,
+    "n": 36
+   }
+  },
+  "winter barley": "failed the validation gate in both nations",
+  "spring barley": "failed the validation gate in both nations"
+ },
+ "coverage": {
+  "wheat | D1 transfer": 0.7804878048780488,
+  "wheat | D2 local": 0.7804878048780488,
+  "wheat | D3 pooled UK": 0.8048780487804879
+ },
+ "sample": {
+  "Northern Ireland": 56208,
+  "Scotland": 113518
+ },
+ "reading": {
+  "wheat": {
+   "D1_r2": 0.22421468058467686,
+   "generalises": false,
+   "D3_minus_D1": -0.16379622889234757,
+   "local_helps": false
+  },
+  "spring barley": "failed the validation gate in both nations"
+ },
+ "nowcast_written": "2026-10-18 16:10"
+}
