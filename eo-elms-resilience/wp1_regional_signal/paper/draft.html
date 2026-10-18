@@ -28,8 +28,8 @@
 </head>
 <body>
 
-<div class="draft">DRAFT FOR DISCUSSION, 17 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (commit ae04995); results files are named in brackets. Items in orange are still to do.
+<div class="draft">DRAFT FOR DISCUSSION, 18 October 2026. Not for circulation or citation. All numbers come from the code in
+christophe-christiaen/SentiNews (commit to follow); results files are named in brackets. Items in orange are still to do.
 The literature review has not been written and no papers beyond a few data references are cited yet.</div>
 
 <h1>Reading the harvest from space by mid-July, and where it breaks: a pre-specified regional yield nowcast for England</h1>
@@ -48,7 +48,9 @@ happened to coincide with decent yields, extrapolated to a heatwave four to five
 training range. Protocol addenda written before each test show that constraining weather to damaging effects helps
 spring barley, radar helps winter barley at mid-July, and neither a 25-year MODIS record nor geospatial embeddings help
 at regional scale; an apparent gain from scheme uptake was a coincidence of timing and was rejected. Nine seasons are
-too few to learn how crops respond to weather outside their range; the 2027 harvest is the first fair test of the fixes.</p></div>
+too few to learn how crops respond to weather outside their range; the 2027 harvest is the first fair test of the fixes.
+In Scotland and Northern Ireland, wheat transfers weakly from England (R² 0.22) and barley could not be mapped
+reliably; a blind 2026 nowcast for both nations awaits their December figures.</p></div>
 
 <h2>1. Introduction</h2>
 <p>Official regional crop statistics arrive months after harvest. A forecast of regional yield by mid-July, a month
@@ -148,6 +150,38 @@ even using the season's own embedding after harvest. Under addendum B, which was
 were known and so cannot be tested on 2026, wheat would have been 7.56 t/ha against Defra's 7.18 (first nowcast 8.07): an
 illustration, not evidence.</p>
 
+<h3>4.5 Beyond England: Scotland and Northern Ireland</h3>
+<p>A test fixed before any Scottish or Northern Irish satellite value was extracted [results/u3_protocol.md] asks
+whether the nowcast travels to two nations where the season is later and spring barley dominates. No open field
+boundaries or crop labels exist there, so we use a random sample of the open UKFields boundaries (113,518 fields in
+Scotland, 56,208 in Northern Ireland, each at least 0.5 ha) and classify each field's crop with a model trained on
+England's CROME-labelled fields plus a grassland sample. Targets are the Scottish Government's regional yields
+(four ITL2 regions, 2018–2025; West Central and East Central Scotland excluded) and Northern Ireland's national yields
+(2017–2025). A crop is used only if its classified area is within a factor of 1.5 of the official area in at least six
+years and, in Scotland, its regional pattern matches (Spearman ≥ 0.6).</p>
+<div class="tcap"><b>Table 3.</b> Scotland and Northern Ireland: crop-area check and wheat skill (mid-July,
+leave-one-year-out, 41 region-years) [results/u3_scotland_ni.md].</div>
+<table>
+<tr><th>Crop-area check</th><th>Scotland</th><th>Northern Ireland</th></tr>
+<tr><td>Wheat</td><td>passed (8/8 years; regional ρ 1.00)</td><td>passed (8/9 years)</td></tr>
+<tr><td>Winter barley</td><td>failed (4/8; ρ 0.40)</td><td>failed (2/9)</td></tr>
+<tr><td>Spring barley</td><td>failed (3/8; ρ 0.80)</td><td>failed (3/9)</td></tr>
+<tr><th>Wheat, R² of the yield anomaly</th><th>Sentinel-2 + weather</th><th>Sentinel-2 only</th></tr>
+<tr><td>Transfer: trained on England</td><td>+0.22</td><td>+0.28</td></tr>
+<tr><td>Local: Scotland and NI only</td><td>−0.17</td><td>−0.27</td></tr>
+<tr><td>Pooled UK</td><td>+0.06</td><td>+0.08</td></tr>
+</table>
+<p>The classifier recovers wheat well but only about 0.6 of the official barley area in both nations, so barley,
+including spring barley, could not be tested. For wheat, the England-trained model transfers weakly (R² +0.22, below
+the pre-set threshold of 0.30), while models trained on the Scottish and Northern Irish region-years alone, or pooled
+with England, do worse: with four to five regions and eight seasons there is too little to learn from locally. The
+80% intervals keep their coverage (78–80%). The result holds without 2020 and 2022, when Scottish yields were
+estimated by a different method (+0.23). A blind 2026 wheat nowcast for the four Scottish regions and Northern Ireland
+was committed on 18 October 2026, before any official 2026 Scottish or Northern Irish figure was looked at
+[results/u3_nowcast_2026.csv]: at mid-July it lies 0.0–1.0 t/ha below each region's mean (Northern Ireland 6.45 t/ha
+against 7.44), with intervals of about ±0.9 t/ha. It will be scored against the Scottish final estimates (expected
+December 2026) and the Defra and DAERA figures.</p>
+
 <h2>5. Discussion</h2>
 <p><b>What works.</b> Field-level Sentinel-2, aggregated to regions, reads regional cereal yield anomalies well before
 harvest and beats the older MODIS record clearly, with intervals that are honest in ordinary years.</p>
@@ -155,15 +189,20 @@ harvest and beats the older MODIS record clearly, with intervals that are honest
 happen to contain. When a season falls outside them, as 2026 did for heat, it extrapolates confidently and its
 intervals, calibrated on ordinary years, are too narrow. Three practical rules follow: never let weather features
 extrapolate beyond their training range; constrain their direction to what agronomy allows; and widen intervals, or
-flag the forecast, when inputs fall outside the training range.</p>
+flag the forecast, when inputs fall outside the training range. The same fragility shows in space: a model fitted to
+England's regions transfers only weakly to Scotland and Northern Ireland, and there are too few region-seasons there
+to learn locally, which argues for pretraining on many countries' regions before fine-tuning on a small one.</p>
 <p><b>Limits.</b> Eight regions and nine seasons (72 region-years per crop); parcel points sample field centres; 2026
-crop masks come from a classifier; Defra's provisional figures may be revised (final figures due 10 December 2026).</p>
+crop masks come from a classifier; Defra's provisional figures may be revised (final figures due 10 December 2026). Outside England, crops are
+classified rather than declared and field boundaries are automatic and unofficial; the barley maps did not pass the
+area check.</p>
 
 <h2>6. Conclusion</h2>
 <p>By mid-July, satellites explain about two-thirds of the year-to-year swing in England's regional wheat yields. In
 the first blind test on an extreme season the forecast failed, for a reason that can be named: heat beyond anything in
 the training years, met by a weight learned from years in which heat did no harm. The fixes are written down; the 2027
-harvest is their first fair test.</p>
+harvest is their first fair test. Beyond England the nowcast travels weakly for wheat and not yet at all for barley,
+for want of reliable crop maps.</p>
 
 <h2>Data and code availability</h2>
 <p style="text-align:left">Code, the protocol with its dated addenda, and aggregate results: christophe-christiaen/SentiNews
@@ -172,7 +211,8 @@ harvest is their first fair test.</p>
 <h2>Still to do before submission</h2>
 <p class="todo">Literature review and positioning; learning from field-level signals directly (attention over fields)
 and smaller ITL3 regions; out-of-range detection and interval widening as a pre-registered addendum; re-score on Defra's
-final 2026 figures (10 December 2026) and on the 2027 harvest; venue choice and co-author review.</p>
+final 2026 figures (10 December 2026) and on the 2027 harvest; score the Scotland and Northern Ireland 2026 nowcast
+(December 2026); a Scotland-trained crop map (e.g. from the Scottish Crop Map 2019, if its licence allows) so barley can be tested; venue choice and co-author review.</p>
 
 <h2>References</h2>
 <ol class="refs">
