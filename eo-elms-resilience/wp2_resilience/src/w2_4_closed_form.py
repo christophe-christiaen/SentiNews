@@ -107,7 +107,7 @@ def figure(out):
     ax.plot(nn, [beta(n, 10, False) if 10 - n - 1 >= 1 else np.nan for n in nn], color=GREY, lw=2, ls='--', label='closed form, not scaled (T = 10)')
     ax.plot(nn, 1 / (nn + 1), color=BODY, lw=1, ls=':', label='earlier approximation 1/(n + 1)')
     for k, v in out.items():
-        if v['T'] != 10:
+        if ' | T = 10 | ' not in k:                         # one series only (the other repeats T = 10 for n <= 4)
             continue
         c = OCHRE if k.startswith('estimated SD, cell') else (GREY if k.startswith('mean removed') else None)
         if c is None:
