@@ -83,8 +83,8 @@ accounts do.
 | Folder | What it holds |
 |---|---|
 | [`eo-elms-resilience/`](eo-elms-resilience/) | **The land side**: satellite, weather, crop-map and scheme analysis, plus the code that links in the news and accounts. Start with its [README](eo-elms-resilience/README.md). |
-| [`Documents/SentiNews_Github/GDELT/`](Documents/SentiNews_Github/GDELT/) | **The news side**: UK news articles about drought, 2021–2026, from the GDELT news archive, sorted by a language model into real droughts vs figures of speech, with type, place and economic impact. |
-| [`Documents/SentiNews_Github/CompaniesHouse/`](Documents/SentiNews_Github/CompaniesHouse/) | **The money side**: balance sheets and financial resilience ratios from the published accounts of agricultural companies. |
+| [`Documents/SentiNews_Github/GDELT/`](Documents/SentiNews_Github/GDELT/) | **The news side**: UK news articles about drought, 2016–2026, from the GDELT news archive, sorted by a language model into real droughts vs figures of speech, with type, place and economic impact. |
+| [`Documents/SentiNews_Github/CompaniesHouse/`](Documents/SentiNews_Github/CompaniesHouse/) | **The money side**: balance sheets ratios from the published accounts of nearly 13k companies with agricultural SIC codes, mapped against FLAME database inclusion and coverage in the current countryside stewardship files. |
 
 ## How the pieces fit
 
