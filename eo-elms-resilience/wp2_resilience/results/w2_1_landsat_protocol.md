@@ -47,3 +47,4 @@ time; errors clustered by ERA5 cell.
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-29 | Protocol written | Before any Landsat value |
+| 2026-10-29 | Run ([w2_1_landsat.md](w2_1_landsat.md)); all 381,400 parcels have a usable long normal. R1 confirms MODIS (Anderson–Hsiao T1 −0.020, T2 −0.021). R2 artefact replicates on Landsat (short normal: pooled − Anderson–Hsiao +0.128; placebo +0.076, p < 0.001). R3 pixel mixing did not matter (Landsat −0.020 vs MODIS −0.019). R4 sensor mix flagged: Landsat 7 only gives Anderson–Hsiao T1 −0.083 (353,008 parcels, 2002–2023); every version is at or below zero, none shows positive carry-over | Result |
