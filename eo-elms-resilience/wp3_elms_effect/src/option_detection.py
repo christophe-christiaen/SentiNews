@@ -149,9 +149,11 @@ def figure(o):
     for ax, comp, title in [(axes[0], 'A: vs never-treated land', 'A. Option land vs land never in a scheme'),
                             (axes[1], 'B: vs management-only scheme land', 'B. Option land vs scheme land with management only')]:
         yy = np.arange(len(fams))[::-1]
-        for k, (lab, col, mk) in enumerate([('Embedding 2025', PURPLE, 'o'), ('Sentinel-2 2025', GREEN, 's'), ('Placebo: embedding 2017–2019', '#8C8C8C', 'D')]):
+        for k, (lab, col, mk, name) in enumerate([('Embedding 2025', PURPLE, 'o', 'AlphaEarth embedding 2025 (AI)'),
+                                                  ('Sentinel-2 2025', GREEN, 's', 'Sentinel-2 indices 2025 (no AI, baseline)'),
+                                                  ('Placebo: embedding 2017–2019', '#8C8C8C', 'D', 'Placebo: embedding 2017–2019')]):
             xs = [o['results'][f'{f} | {comp}'][lab]['auc'] if f'{f} | {comp}' in o['results'] else np.nan for f in fams]
-            ax.scatter(xs, yy + (1 - k) * 0.22, color=col, marker=mk, s=55, label=lab, zorder=3)
+            ax.scatter(xs, yy + (1 - k) * 0.22, color=col, marker=mk, s=55, label=name, zorder=3)
         ax.axvline(0.5, color=BODY, lw=0.8); ax.axvline(0.7, color=OCHRE, lw=1, ls='--')
         ax.set_yticks(yy, fams, fontsize=11, color=DARK); ax.set_xlim(0.45, 0.95)
         ax.set_title(title, loc='left', fontsize=12.5, fontweight='bold', color=DARK)
@@ -160,6 +162,9 @@ def figure(o):
     axes[1].text(0.47, 0, 'management only: the comparison group in this panel', fontsize=10, color=BODY, va='center', style='italic', bbox=dict(facecolor='white', edgecolor='none', pad=2))
     axes[1].legend(frameon=False, fontsize=10, loc='lower right', bbox_to_anchor=(1.0, 0.1))
     fig.tight_layout(w_pad=2); fig.savefig(os.path.join(ROOT, 'results', 'maps', 'p3_detection.png'), dpi=200)
+    for a in axes:                                          # deck version on the deck background
+        a.set_facecolor('#F6F4EE')
+    fig.savefig(os.path.join(ROOT, 'results', 'maps', 'p3_detection_deck.png'), dpi=200, facecolor='#F6F4EE')
 
 
 if __name__ == '__main__':

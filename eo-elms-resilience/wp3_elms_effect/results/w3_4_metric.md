@@ -2,7 +2,7 @@
 
 Protocol: [w3_4_metric_protocol.md](w3_4_metric_protocol.md), written before any model. I = AUC(pre + post) − AUC(pre); I₀ = AUC(pre + 2020) − AUC(pre) (2020 is before every entry); I* = I − I₀. G = AUC(post) − AUC(pre) (Paper 3). Comparison A: never-treated land; B: management-only scheme land. Leave-one-region-out; 95% intervals from a paired bootstrap of parcels within held-out regions.
 
-## AlphaEarth
+## AlphaEarth embedding (AI)
 
 | Family | comp. | AUC pre | AUC post | G | I | I₀ | **I*** (95% CI) | I* range over regions |
 |---|---|---|---|---|---|---|---|---|
@@ -29,7 +29,7 @@ Protocol: [w3_4_metric_protocol.md](w3_4_metric_protocol.md), written before any
 - Paper 3 rule (AUC ≥ 0.70 and G ≥ 0.10, comparison B): Herbal leys, No-till.
 - Selection-invariance (|I*(A) − I*(B)| vs |AUC post(A) − AUC post(B)|): Herbal leys 0.031 vs 0.023; Cover crops 0.018 vs 0.126; No-till 0.015 vs 0.078; In-field flower and bird-food plots 0.004 vs 0.092; Margins and corners 0.013 vs 0.144; Grassland options 0.023 vs 0.058 → **not invariant** for every family.
 
-## Sentinel-2
+## Sentinel-2 indices (no AI, baseline)
 
 | Family | comp. | AUC pre | AUC post | G | I | I₀ | **I*** (95% CI) | I* range over regions |
 |---|---|---|---|---|---|---|---|---|
@@ -49,7 +49,7 @@ Protocol: [w3_4_metric_protocol.md](w3_4_metric_protocol.md), written before any
 | Buffer strips (control) | B | 0.53 | 0.52 | -0.003 | +0.006 | +0.007 | **-0.001** (-0.008 to +0.006) | -0.055 to +0.160 |
 | Management only (control) | A | 0.63 | 0.63 | +0.005 | +0.016 | +0.009 | **+0.007** (+0.001 to +0.012) | -0.016 to +0.029 |
 
-**Reading (Sentinel-2, rules fixed in advance)**
+**Reading (Sentinel-2 indices, no-AI baseline; rules fixed in advance)**
 
 - Calibration (negative controls vs never-treated, I* within ±0.02): Buffer strips (control) -0.002; Management only (control) +0.007 → **valid**.
 - Detectable beyond selection (I* 95% CI above 0.02, comparison B): Herbal leys, Cover crops, No-till, In-field flower and bird-food plots, Grassland options.

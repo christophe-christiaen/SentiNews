@@ -111,24 +111,42 @@ def main():
     report(out, verdict)
 
 
+NAME = {'AlphaEarth': 'AlphaEarth (AI)', 'TESSERA': 'TESSERA (AI)', 'Presto': 'Presto (AI)', 'Sentinel-2': 'Sentinel-2 indices (no AI, baseline)'}
+AI = ['AlphaEarth', 'TESSERA', 'Presto']
+
+
 def report(out, verdict):
-    L = ['# W3-4 model comparison: which embedding sees which option best', '',
+    """Presentation: question 1 compares the three AI embeddings with each other; question 2 compares each with the
+    no-AI baseline (plain Sentinel-2 indices). The analysis and the Holm correction over all 36 tests are as fixed."""
+    nm = lambda t: ' '.join(NAME.get(w.strip(','), w) + (',' if w.endswith(',') else '') for w in t.split()) if t else t
+    L = ['# W3-4 model comparison: which AI embedding sees which option, and does any beat the plain indices?', '',
          'Protocol: [w3_4_model_comparison_protocol.md](w3_4_model_comparison_protocol.md), written 29 October 2026 before any '
-         'rerun result was read. Common years for all models: pre = 2018–2019, I₀ = 2020, post = 2025 (Presto: farm seasons). '
-         'I* = selection-corrected detection; options against management-only scheme land, controls against never-treated land. '
-         f'Paired bootstrap ({B:,}), Holm over 36 tests.', '',
-         '## Selection-corrected detection I* (95% interval)', '', '| Option | ' + ' | '.join(MODELS) + ' | verdict |', '|---' * (len(MODELS) + 2) + '|']
+         'rerun result was read. Three AI embeddings (AlphaEarth, TESSERA, Presto) and one no-AI baseline (plain Sentinel-2 '
+         'vegetation indices, the kind of satellite data the embeddings are learned from). Common years: pre = 2018–2019, '
+         'I₀ = 2020, post = 2025 (Presto: farm seasons). I* = selection-corrected detection; options against management-only '
+         f'scheme land, controls against never-treated land. Paired bootstrap ({B:,}), Holm over all 36 tests.', '',
+         '## Selection-corrected detection I* (95% interval)', '',
+         '| Option | ' + ' | '.join(NAME[n] for n in AI + ['Sentinel-2']) + ' | verdict (rule fixed in advance) |', '|---' * 6 + '|']
     for f in OPTIONS + CONTROLS:
         r = out[f]
-        cells = [f"{r['Istar'][n]:+.3f} ({r['Istar_ci'][n][0]:+.3f} to {r['Istar_ci'][n][1]:+.3f})" for n in MODELS]
-        L.append(f'| {f} | ' + ' | '.join(cells) + f" | {verdict.get(f, 'control (reported, not tested)')} |")
-    L += ['', '## Pairwise differences in I* (options; Holm-adjusted p)', '', '| Option | pair | difference (95% CI) | p (Holm) |', '|---|---|---|---|']
-    for f in OPTIONS:
-        for pr, v in out[f]['pairs'].items():
-            L.append(f"| {f} | {pr} | {v['diff']:+.3f} ({v['ci'][0]:+.3f} to {v['ci'][1]:+.3f}) | {v['p_holm']:.3g} |")
-    L += ['', '## How well a single field can be classified: AUC with the 2025 record (descriptive)', '', '| Option | ' + ' | '.join(MODELS) + ' |', '|---' * (len(MODELS) + 1) + '|']
+        cells = [f"{r['Istar'][n]:+.3f} ({r['Istar_ci'][n][0]:+.3f} to {r['Istar_ci'][n][1]:+.3f})" for n in AI + ['Sentinel-2']]
+        L.append(f'| {f} | ' + ' | '.join(cells) + f" | {nm(verdict.get(f, 'control (reported, not tested)'))} |")
+    for title, keep in (('## Question 1: which AI embedding suits which option (AI vs AI)', lambda a, b: a in AI and b in AI),
+                        ('## Question 2: does an AI embedding beat the plain indices (AI vs no-AI baseline)', lambda a, b: 'Sentinel-2' in (a, b))):
+        L += ['', title, '', '| Option | pair | difference in I* (95% CI) | p (Holm, over 36) |', '|---|---|---|---|']
+        for f in OPTIONS:
+            for pr, v in out[f]['pairs'].items():
+                a, b = pr.split(' vs ')
+                if keep(a, b):
+                    if b in AI and a == 'Sentinel-2':
+                        a, b, d, ci = b, a, -v['diff'], [-v['ci'][1], -v['ci'][0]]
+                    else:
+                        d, ci = v['diff'], v['ci']
+                    L.append(f"| {f} | {NAME[a]} vs {NAME[b]} | {d:+.3f} ({ci[0]:+.3f} to {ci[1]:+.3f}) | {v['p_holm']:.3g} |")
+    L += ['', '## How well a single field can be classified: AUC with the 2025 record (descriptive)', '',
+          '| Option | ' + ' | '.join(NAME[n] for n in AI + ['Sentinel-2']) + ' |', '|---' * 5 + '|']
     for f in OPTIONS + CONTROLS:
-        L.append(f'| {f} | ' + ' | '.join(f"{out[f]['auc_post'][n]:.2f}" for n in MODELS) + ' |')
+        L.append(f'| {f} | ' + ' | '.join(f"{out[f]['auc_post'][n]:.2f}" for n in AI + ['Sentinel-2']) + ' |')
     open(os.path.join(RES, 'w3_4_model_comparison.md'), 'w').write('\n'.join(L) + '\n')
     print('\n'.join(L))
 

@@ -40,7 +40,7 @@ The literature review has not been written and no papers beyond a few methods an
 <div class="abstract"><p><b>Abstract.</b> Paying farmers for environmental actions raises two questions a satellite
 might answer: are the actions on the ground, and do they change how land copes with shocks? We test the first for the
 options of England's Sustainable Farming Incentive and Countryside Stewardship on 381,400 cereal fields, using
-AlphaEarth annual embeddings and Sentinel-2, with a design fixed in advance. The central difficulty is selection: land
+AlphaEarth annual embeddings (an AI model) and, as a no-AI baseline, plain Sentinel-2 vegetation indices, with a design fixed in advance. The central difficulty is selection: land
 that joins a scheme differs from land that does not, so a detector can appear to work by recognising who joins. We
 measure this with a placebo, the same model applied to embeddings from 2017–2019, before any of these fields carried an
 option, and count only the gain over it. Against scheme land with management-only actions, and tested on regions held
@@ -78,7 +78,7 @@ reference) and Sustainable Farming Incentive actions (snapped to the nearest par
 options count. Parcels inside legacy Countryside Stewardship Scheme agreements are excluded.</p>
 <p><b>Embeddings.</b> AlphaEarth annual embeddings (64 dimensions, 10 m), 2017–2025, sampled at each parcel point.
 Each year's embedding summarises that year's satellite record.</p>
-<p><b>Sentinel-2.</b> Half-monthly medians of NDVI, red-edge NDRE and NDMI, March–August, from L2A surface reflectance
+<p><b>Sentinel-2 indices (no-AI baseline).</b> Not an AI model: the vegetation indices computed directly from Sentinel-2, the kind of raw satellite information the embeddings themselves are learned from. Half-monthly medians of NDVI, red-edge NDRE and NDMI, March–August, from L2A surface reflectance
 masked with Cloud Score+, over a 15 m buffer at each parcel point.</p>
 
 <h2>3. Methods</h2>
@@ -100,7 +100,7 @@ at least one option of the family.</div>
 season. Comparison A: parcels never in any scheme record. Comparison B: agreement parcels whose only options are
 management-only, so both groups chose to join. Each positive is matched by a random draw of comparison parcels from the
 same ITL1 region (positives capped at 15,000 per family).</p>
-<p><b>Features.</b> The 2025 AlphaEarth embedding; the 2025 Sentinel-2 indices (36 values); both together. <b>Placebo:</b>
+<p><b>Features.</b> The 2025 AlphaEarth embedding; the 2025 Sentinel-2 indices (36 values; the no-AI baseline); both together. <b>Placebo:</b>
 the mean embedding of 2017–2019, before any of these parcels carried an option. Detection gain = AUC with the 2025
 embedding minus AUC with the placebo.</p>
 <p><b>Model and evaluation.</b> Gradient-boosted trees (default settings, 200 iterations), one per family, comparison and
@@ -160,9 +160,9 @@ I* = I − I₀. It assumes no anticipation before entry and no more option-unre
 between 2017–2019 and 2020; the negative controls test the second assumption. Intervals come from a paired bootstrap
 of parcels within held-out regions.</p>
 <div class="tcap"><b>Table 3.</b> Selection-corrected detection I* against management-only scheme land (comparison B),
-with 95% intervals; AlphaEarth embeddings and Sentinel-2 indices [results/w3_4_metric.md]. Controls against never-treated land.</div>
+with 95% intervals; the AlphaEarth embedding (AI) and the plain Sentinel-2 indices (no-AI baseline) [results/w3_4_metric.md]. Controls against never-treated land.</div>
 <table>
-<tr><th>Family</th><th>AlphaEarth I*</th><th>Sentinel-2 I*</th><th>Table 2 verdict</th></tr>
+<tr><th>Family</th><th>AlphaEarth (AI) I*</th><th>Sentinel-2 indices (no AI) I*</th><th>Table 2 verdict</th></tr>
 <tr><td>Herbal leys</td><td>+0.182 (+0.173 to +0.189)</td><td>+0.171 (+0.161 to +0.180)</td><td>detected</td></tr>
 <tr><td>No-till</td><td>+0.088 (+0.080 to +0.097)</td><td>+0.097 (+0.087 to +0.106)</td><td>detected</td></tr>
 <tr><td>In-field flower and bird-food plots</td><td>+0.089 (+0.082 to +0.096)</td><td>+0.075 (+0.068 to +0.082)</td><td>not detected</td></tr>
