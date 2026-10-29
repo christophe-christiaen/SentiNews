@@ -31,7 +31,7 @@
 <body>
 
 <div class="draft">DRAFT FOR DISCUSSION, 18 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (source commit 62c1c58); results files are named in brackets. Items in orange are still to do.
+christophe-christiaen/SentiNews (source commit to follow); results files are named in brackets. Items in orange are still to do.
 The literature review has not been written and no papers beyond a few methods and data references are cited yet.</div>
 
 <h1>Seeing agri-environment options from space: detection, selection and effects on England's cereal land</h1>
@@ -49,7 +49,7 @@ Grassland options score highly (0.81) but mostly because the land was already di
 and in-field flower and bird-food plots fall short of the threshold; margins and corners, and the two negative controls
 (field-edge buffer strips and management-only actions), show no detection at all. Against land never in a scheme, every
 family including the controls scores about 0.7, entirely explained by the placebo: a naive evaluation would report
-detection of actions that a field-centre point cannot see. Embeddings beat a Sentinel-2 index baseline in every family. A placebo-adjusted metric, calibrated on the negative controls, finds a real but weaker trace of in-field plots, grassland options and cover crops as well, and none for margins and corners.
+detection of actions that a field-centre point cannot see. Embeddings beat a Sentinel-2 index baseline in every family. A placebo-adjusted metric, calibrated on the negative controls, finds a real but weaker trace of in-field plots, grassland options and cover crops as well, and none for margins and corners. The same holds with three AI embeddings (AlphaEarth, TESSERA, Presto), which beat plain Sentinel-2 indices only narrowly and for some options.
 In the companion pre-registered evaluation, agreement land drops about 0.08 standard deviations less in drought
 seasons, consistently across designs but not established once cohorts are compared within themselves; measured against a 16-season normal the placebo still carries about three fifths of the effect, so much of it reflects which land joined. Fields with the
 two visible options cushion droughts about twice as much as management-only scheme fields (+0.13 and +0.12 against
@@ -184,6 +184,40 @@ scheme land, although the raw AUCs differ by up to 0.11, so the metric removes t
 with AlphaEarth it does so for every family except herbal leys, which misses the pre-set limit narrowly (0.031 against
 0.03).</p>
 
+<h3>4.5 Three AI embeddings and the no-AI baseline</h3>
+<p>The same metric was rerun with two further AI embeddings, TESSERA (annual, 128 values, learned from Sentinel-1 and
+Sentinel-2) and Presto (run on our own monthly Sentinel-1, Sentinel-2, weather and terrain inputs, farm seasons
+October–September), under an addendum written before their values were extracted [results/w3_4_metric_ext.md]; a
+comparison between the models was fixed before any rerun result was read [results/w3_4_model_comparison_protocol.md].
+For the comparison all four use the same pre-entry years (2018–2019; TESSERA has no 2017), so the AlphaEarth and
+Sentinel-2 values differ slightly from Table 3. The plain Sentinel-2 indices are the no-AI baseline: the kind of
+satellite information the embeddings are themselves learned from.</p>
+<div class="tcap"><b>Table 4.</b> Selection-corrected detection I* against management-only scheme land, four feature
+families on the same parcels and years (95% intervals in the results file); negative controls against never-treated
+land. Verdict by the rule fixed in advance (paired bootstrap, Holm over 36 tests) [results/w3_4_model_comparison.md].</div>
+<table>
+<tr><th>Option</th><th>AlphaEarth (AI)</th><th>TESSERA (AI)</th><th>Presto (AI)</th><th>Sentinel-2 indices (no AI)</th><th>Verdict</th></tr>
+<tr><td>Herbal leys</td><td>+0.186</td><td>+0.190</td><td>+0.171</td><td>+0.171</td><td>no single best</td></tr>
+<tr><td>In-field flower and bird-food plots</td><td>+0.085</td><td>+0.104</td><td>+0.072</td><td>+0.076</td><td>TESSERA*</td></tr>
+<tr><td>No-till</td><td>+0.098</td><td>+0.100</td><td>+0.091</td><td>+0.091</td><td>no single best</td></tr>
+<tr><td>Cover crops</td><td>+0.072</td><td>+0.087</td><td>+0.057</td><td>+0.054</td><td>TESSERA*</td></tr>
+<tr><td>Grassland options</td><td>+0.077</td><td>+0.082</td><td>+0.068</td><td>+0.069</td><td>no single best</td></tr>
+<tr><td>Margins and corners</td><td>+0.005</td><td>+0.005</td><td>+0.009</td><td>+0.012</td><td>not detectable</td></tr>
+<tr><td>Buffer strips (control)</td><td>+0.019</td><td>+0.020</td><td>+0.010</td><td>−0.001</td><td>–</td></tr>
+<tr><td>Management only (control)</td><td>+0.015</td><td>+0.034</td><td>+0.017</td><td>+0.005</td><td>–</td></tr>
+</table>
+<p>Four results stand out. First, the selection trap does not depend on the model: against land never in a scheme the
+two invisible controls reach an AUC of 0.65–0.73 with every AI embedding (0.63 with the plain indices), and the same five
+families are detectable beyond selection with every feature family. Second, the metric's calibration check passes for
+AlphaEarth, Presto and the plain indices but fails for TESSERA, whose controls come out at +0.020 and +0.034; the plain
+indices have the cleanest controls, and every AI embedding carries a little residual selection signal. Third, by the
+rule TESSERA is best suited to cover crops and in-field plots, but its lead (+0.015 to +0.018 over AlphaEarth) is about the
+size of its calibration offset, so it is not established; for herbal leys, no-till and grassland options no model is best.
+Fourth, an AI embedding beats the plain indices only narrowly and for some options: TESSERA for herbal leys, cover crops and
+in-field plots (by 0.02–0.03), AlphaEarth for cover crops (+0.02), Presto never. The expectations stated before the result
+were not borne out: Presto, which sees the winter months, ranks lowest on cover crops, and radar gave TESSERA no edge on
+no-till. * Not established: TESSERA failed calibration.</p>
+
 <h2>5. Do the options change resilience?</h2>
 <p>A companion evaluation, pre-registered and frozen on 11 October 2026 before any outcome was compared by agreement
 status [wp3_elms_effect/results/preregistration.md], asks whether agreement land drops less in drought and heat seasons
@@ -199,7 +233,7 @@ actions.</p>
 <p>For the two options that are visible, a further exploratory test, specified before running
 [results/wp3_e4_visible_options.md], compares their drought-season effect with that of scheme land carrying only
 management actions, so that both groups chose to join and only one changed the field visibly.</p>
-<div class="tcap"><b>Table 4.</b> Drought-season effect (shock minus non-shock seasons, July NDVI, SD) against never-treated
+<div class="tcap"><b>Table 5.</b> Drought-season effect (shock minus non-shock seasons, July NDVI, SD) against never-treated
 fields, embedding-matched sample; frozen-plan estimator. SE clustered by ERA5 cell.</div>
 <table>
 <tr><th>Group</th><th>Matched fields</th><th>Effect</th><th>95% CI</th></tr>
@@ -218,14 +252,14 @@ sharpens the question but does not yet answer it.</p>
 2017–2020 seasons, the four-season normal that Paper 2 shows creates false persistence, and the seasons before entry
 include those baseline seasons. A further exploratory test, specified before running
 [results/wp3_x2_long_baseline.md], reran the frozen plan with MODIS July NDVI measured against each field's 2017–2020
-seasons and against its 2001–2016 seasons (Table 5). By the rule fixed in advance, the answer is no. With the long
+seasons and against its 2001–2016 seasons (Table 6). By the rule fixed in advance, the answer is no. With the long
 normal the placebo stays positive (+0.061, SE 0.009) and is no smaller than with the short one (+0.049), and the
 before-entry shock contrast fails clearly (p &lt; 0.001). The pre-trend failure of the frozen plan is specific to
 Sentinel-2: MODIS passes the pre-trend test on the effect with either normal (p = 0.75 and 0.31). The long normal makes
 the drought-season effect larger and far more precise (+0.104, SE 0.009), but about three fifths of it is already in
 the placebo. Land that joined the schemes was more drought-resistant before it joined; a long baseline removes noise,
 not selection.</p>
-<div class="tcap"><b>Table 5.</b> The frozen-plan test with three outcome versions (exploratory). July NDVI z-scores;
+<div class="tcap"><b>Table 6.</b> The frozen-plan test with three outcome versions (exploratory). July NDVI z-scores;
 matched sample, main shock definition, SE clustered by ERA5 cell. Pre-trend: Wald test over event times −4 to −1.</div>
 <table>
 <tr><th>Outcome</th><th>Shock − non-shock effect</th><th>Placebo (entry two seasons early)</th><th>Pre-trend p, effect</th><th>Pre-trend p, shock contrast</th></tr>
@@ -235,7 +269,7 @@ matched sample, main shock definition, SE clustered by ERA5 cell. Pre-trend: Wal
 </table>
 
 <h2>6. Discussion</h2>
-<p><b>For monitoring.</b> A field's annual embedding can confirm whole-field land-cover options such as herbal leys,
+<p><b>For monitoring.</b> The choice of AI model matters little: three embeddings and plain Sentinel-2 indices find the same options, the embeddings add at most 0.02–0.03 beyond the indices, and the indices have the cleanest negative controls, so the transparent option is close to the best. A field's annual embedding can confirm whole-field land-cover options such as herbal leys,
 and no-till, against other scheme land and in regions the model has not seen. It cannot confirm options at field edges
 from a centre point, nor management practices. Monitoring those needs field polygons, finer timing (cover crops are
 seasonal) or other evidence.</p>
