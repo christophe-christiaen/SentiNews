@@ -192,7 +192,7 @@ comparison between the models was fixed before any rerun result was read [result
 For the comparison all four use the same pre-entry years (2018–2019; TESSERA has no 2017), so the AlphaEarth and
 Sentinel-2 values differ slightly from Table 3. The plain Sentinel-2 indices are the no-AI baseline: the kind of
 satellite information the embeddings are themselves learned from.</p>
-<div class="tcap"><b>Table 4.</b> Selection-corrected detection I* against management-only scheme land, four feature
+<div style="break-inside:avoid; page-break-inside:avoid"><div class="tcap"><b>Table 4.</b> Selection-corrected detection I* against management-only scheme land, four feature
 families on the same parcels and years (95% intervals in the results file); negative controls against never-treated
 land. Verdict by the rule fixed in advance (paired bootstrap, Holm over 36 tests) [results/w3_4_model_comparison.md].</div>
 <table>
@@ -205,7 +205,7 @@ land. Verdict by the rule fixed in advance (paired bootstrap, Holm over 36 tests
 <tr><td>Margins and corners</td><td>+0.005</td><td>+0.005</td><td>+0.009</td><td>+0.012</td><td>not detectable</td></tr>
 <tr><td>Buffer strips (control)</td><td>+0.019</td><td>+0.020</td><td>+0.010</td><td>−0.001</td><td>–</td></tr>
 <tr><td>Management only (control)</td><td>+0.015</td><td>+0.034</td><td>+0.017</td><td>+0.005</td><td>–</td></tr>
-</table>
+</table></div>
 <p>Four results stand out. First, the selection trap does not depend on the model: against land never in a scheme the
 two invisible controls reach an AUC of 0.65–0.73 with every AI embedding (0.63 with the plain indices), and the same five
 families are detectable beyond selection with every feature family. Second, the metric's calibration check passes for
