@@ -30,7 +30,7 @@
 <body>
 
 <div class="draft">DRAFT FOR DISCUSSION, 18 October 2026. Not for circulation or citation. All numbers come from the code in
-christophe-christiaen/SentiNews (commit 8eabd27); results files are named in brackets. Items in orange are still to do.
+christophe-christiaen/SentiNews (commit b428cab); results files are named in brackets. Items in orange are still to do.
 A first related-work section is in place (references checked against publisher or index records); crop-specific studies are still to add.</div>
 
 <h1>Short baselines manufacture drought legacies: evidence from 381,400 cereal fields in England</h1>
@@ -47,7 +47,8 @@ the same test with a four-season normal returns +0.13. Once each field is compar
 dynamic-panel estimator calibrated by simulation, the carry-over is at most about 0.05; the "hit harder" effect is at
 most about 0.1 and unresolved; and the recovery effect is not supported. A long-baseline test with MODIS (each field's
 normal from 16 seasons, 2001–2026) confirms this with a second sensor: within each field the carry-over is about zero,
-and the artefact reappears whenever the tested seasons all lie after the baseline. What survives is a lasting difference between
+and the artefact reappears whenever the tested seasons all lie after the baseline. Landsat at 30 m, where a
+field-centre pixel sees one field, gives the same answer under rules fixed before extraction. What survives is a lasting difference between
 fields relative to their own normal, which still predicts next season's hardest-hit fields out of sample (AUC 0.63).
 Three independent sources sharpen the picture: fields in Flood Zone 3 or on deep peat hold up better in drought
 seasons; Sentinel-1 radar shows that a waterlogged winter is followed by a weaker crop in the same field; and AlphaEarth
@@ -114,6 +115,12 @@ to γ⁰ (σ⁰ / cos θ), averaged over a 20 m buffer at each parcel point; win
 within parcel × orbit direction × month, so changes in which satellites flew do not register as wetness. Within each
 weather cell, winter VH follows ERA5-Land topsoil moisture across seasons (r = +0.48). Seasons 2017–2025 are used;
 2026 reads dark despite record-wet soil, most likely standing water, and is excluded [shared/results/s1_orbit_panel_quality.md].</p>
+<p><b>Landsat.</b> Landsat 5, 7, 8 and 9 Collection 2 Level-2 surface reflectance via Earth Engine, 2001–2026, with
+the QA band's fill, cloud, dilated-cloud, shadow and snow flags masked. Per season, NDVI at the 30 m pixel containing
+each parcel point: the median of clear observations 1 July–15 August and the maximum 15 April–15 July (the MODIS
+windows, July widened for Landsat's 8–16-day revisit). No cross-sensor coefficients are applied; sensor changes act on
+all fields of a season alike and are absorbed by the cell × season effects. Landsat 7 alone (2001–2023) is kept as a
+single-sensor check [w2_1_landsat_protocol.md, written before any Landsat value was extracted].</p>
 <p><b>Embeddings.</b> AlphaEarth annual embeddings (64 dimensions, 10 m) at every parcel point, 2017–2025.</p>
 
 <h2>3. Methods</h2>
@@ -258,7 +265,39 @@ same MODIS data to 2017–2026, where every tested season lies after the baselin
 many seasons set the normal but on whether the tested seasons share its error, and any lasting change since it was
 set; it is not specific to one sensor.</p>
 
-<h3>4.6 What survives: lasting differences between fields</h3>
+<h3>4.6 A second long baseline: Landsat at 30 m</h3>
+<p>MODIS pixels mix neighbouring fields, so we repeated the long-baseline test with Landsat, whose 30 m field-centre
+pixel sees one field, under reading rules published before any Landsat value was extracted [w2_1_landsat_protocol.md;
+w2_1_landsat.md]. All 381,400 parcels have at least eight clear seasons in 2001–2016 for their normal.</p>
+<div class="tcap"><b>Table 4.</b> Long-baseline test with Landsat (16-season normal 2001–2016 unless stated; cell ×
+season effects; SE clustered by ERA5 cell, all ≤ 0.003).</div>
+<table>
+<tr><th>Normal and seasons tested</th><th></th><th>Pooled</th><th>Field fixed effects</th><th>Within each field (Anderson–Hsiao)</th><th>Seasons shuffled</th></tr>
+<tr><td>2002–2026</td><td>T1</td><td>+0.046</td><td>−0.001</td><td>−0.020</td><td>+0.001</td></tr>
+<tr><td>2002–2026</td><td>T2</td><td>+0.090</td><td>+0.006</td><td>−0.021</td><td>–</td></tr>
+<tr><td>2017–2026 only</td><td>T1</td><td>+0.161</td><td>−0.074</td><td>−0.011</td><td>+0.127</td></tr>
+<tr><td>2017–2026 only</td><td>T2</td><td>+0.157</td><td>−0.036</td><td>+0.004</td><td>–</td></tr>
+<tr><td>Four-season normal (2017–2020), 2017–2026</td><td>T1</td><td>+0.138</td><td>−0.031</td><td>+0.010</td><td>+0.076</td></tr>
+<tr><td>Four-season normal (2017–2020), 2017–2026</td><td>T2</td><td>+0.158</td><td>+0.036</td><td>+0.017</td><td>–</td></tr>
+<tr><td>Landsat 7 only, 2002–2023</td><td>T1</td><td>−0.010</td><td>−0.096</td><td>−0.083</td><td>−0.011</td></tr>
+<tr><td>Landsat 7 only, 2002–2023</td><td>T2</td><td>+0.018</td><td>−0.073</td><td>−0.101</td><td>–</td></tr>
+</table>
+<p>Each pre-set reading comes out the same way as on MODIS. Within each field, carry-over over 2002–2026 is about zero
+(Anderson–Hsiao −0.020 for T1 and −0.021 for T2, both inside the ±0.05 band fixed in advance), and it matches MODIS
+almost exactly (−0.019), so mixing neighbouring fields at 250 m did not drive the MODIS result. With 25 seasons the two
+"hit harder" estimators also agree (field fixed effects +0.006, Anderson–Hsiao −0.021), which they do not with ten
+Sentinel-2 seasons. Cutting the normal to the four Sentinel-2 years (2017–2020) on the same Landsat record brings the
+artefact back: pooled T1 +0.138 against +0.010 within fields, and a shuffled-season placebo of +0.076 (p &lt; 0.001), so
+the artefact replicates on a third sensor. Testing only 2017–2026 against the 2001–2016 normal again inflates the pooled
+estimate (+0.161) and the placebo (+0.127), as on MODIS: seasons that all lie after the normal share its drift.</p>
+<p>The single-sensor check is flagged, by the rule fixed in advance, as a limit. With Landsat 7 alone (353,008 parcels
+with enough clear seasons, 2002–2023) the within-field estimates are negative (Anderson–Hsiao −0.083 for T1, −0.101 for
+T2), more than 0.05 below the all-sensor value. Landsat 7 has two or three clear overpasses in a cloudy summer window and
+scan-line gaps after 2003, so its seasonal values are noisier; we do not have a tested explanation for the negative
+sign. With a 16-season normal, no within-field estimate on either sensor shows more than slight positive carry-over:
+they range from about −0.10 to +0.02 across Landsat and MODIS.</p>
+
+<h3>4.7 What survives: lasting differences between fields</h3>
 <p>Fields do differ, persistently, in how they sit against their own normal. Whether that reflects real lasting change
 (soil degradation, management, drainage) or noise in a four-season normal cannot be decided from these data. It is,
 however, useful: a transparent score built from each field's history (current stress, lasting below-normal level,
@@ -267,7 +306,7 @@ past resistance and recovery, volatility and local shock frequency), with no fit
 0.63, rising to 0.75 by 2025) [results/lender/lender_score_backtest.md]. Prediction does not require the legacy to be
 causal.</p>
 
-<h3>4.7 The MODIS pilot</h3>
+<h3>4.8 The MODIS pilot</h3>
 <p>A 50-site MODIS pilot (2001–2026, each site's normal 2001–2015, national year effects) reported a legacy of +0.12,
 a "hit harder" effect of +0.35 and a debt effect of +0.31. Re-checked with the same diagnostics
 [results/cumulative/pilot_within_check.md], it behaves differently from the field-level data. A fifteen-season normal
@@ -278,10 +317,10 @@ effects positive (+0.10, +0.30, +0.22). But the "hit harder" effect comes entire
 effects −0.12; Anderson–Hsiao −0.24). A single back-to-back drought cannot separate a land legacy from sites that are
 dry two years running for local reasons. The legacy effect is at most about 0.1 (site fixed effects match ρ ≈ 0.1 in
 simulation; Anderson–Hsiao −0.02, SE 0.035), and the debt effect turns negative within sites.</p>
-<h3>4.8 Supporting evidence: exposure, winter waterlogging and land-use change</h3>
+<h3>4.9 Supporting evidence: exposure, winter waterlogging and land-use change</h3>
 <p style="text-align:left">Three further analyses were specified before running [paper/outline.md; results/wp2_supporting.md,
 wp2_landuse_change.md].</p>
-<div class="tcap"><b>Table 4.</b> Supporting analyses. Estimates within ERA5 cell × season unless stated; SE clustered by
+<div class="tcap"><b>Table 5.</b> Supporting analyses. Estimates within ERA5 cell × season unless stated; SE clustered by
 ERA5 cell.</div>
 <table>
 <tr><th>Question</th><th>Data</th><th>Result</th></tr>
@@ -311,7 +350,8 @@ closed form shows they must be judged together with the panel length: within a f
 about half of it biases the test the other way.</p>
 <p><b>Limits.</b> Parcel points sample the field centre (15 m), not the whole field; the stress index is a crop
 condition proxy, not yield; the analysis covers cereal land only; with ten seasons the T2 estimators disagree;
-MODIS pixels (about 6 ha) mix neighbouring fields; and Sentinel-1 in 2026 is not usable until checked against flood
+MODIS pixels (about 6 ha) mix neighbouring fields, though Landsat at 30 m gives the same within-field answer; Landsat 7 alone gives
+negative within-field estimates (−0.08 to −0.10) that we cannot yet explain; and Sentinel-1 in 2026 is not usable until checked against flood
 records.</p>
 
 <h2>6. Conclusion</h2>
@@ -319,7 +359,8 @@ records.</p>
 anomaly is measured. A four-season normal manufactures about two-thirds of the reported legacy on its own; compared
 within each field, carry-over is at most about 0.05 SD per SD, and the "hit harder" effect is at most about 0.1 and
 unresolved. With a 16-season MODIS normal for every field the carry-over is about zero within each field, and the
-artefact returns whenever only post-baseline seasons are tested. In a 50-site MODIS pilot with a 15-season normal the artefact is absent, but the apparent "hit
+artefact returns whenever only post-baseline seasons are tested; Landsat at 30 m confirms both, and a four-season
+normal on Landsat manufactures the artefact again. In a 50-site MODIS pilot with a 15-season normal the artefact is absent, but the apparent "hit
 harder" effect rests on a single event (2025 to 2026). Lasting differences between fields remain, and they are
 predictive, wetter soils buffer droughts, and radar confirms that waterlogged winters weaken the next crop. Studies of resilience from short
 satellite records should test for this artefact before reading persistence as legacy.</p>
@@ -330,8 +371,8 @@ Field-level panels are rebuilt by the code from open data; RPA parcel references
 used.</p>
 
 <h2>Still to do before submission</h2>
-<p class="todo">Extend related work (crop-specific drought legacies, field-scale Sentinel-2 resilience studies); T2 resolution within fields (alternative instruments, or Landsat at
-30 m to separate neighbouring fields); Sentinel-1 2026 against Environment Agency flood records; venue choice and deadline
+<p class="todo">Extend related work (crop-specific drought legacies, field-scale Sentinel-2 resilience studies); T2 within fields on Sentinel-2 (the 25-season Landsat panel resolves it,
+the ten-season panel does not); the Landsat 7–only negative estimates; Sentinel-1 2026 against Environment Agency flood records; venue choice and deadline
 check (ISPRS Journal of Photogrammetry and Remote Sensing, Remote Sensing of Environment, or a methods venue);
 co-author review.</p>
 
