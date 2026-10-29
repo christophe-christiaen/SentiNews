@@ -42,3 +42,4 @@ say which model detects which option best. This addendum fixes how that comparis
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-29 | Protocol written (15:37), during the rerun, before any result was read | Question from the project lead: which model suits which option |
+| 2026-10-29 | Run ([w3_4_model_comparison.md](w3_4_model_comparison.md)). Q1: TESSERA best suited for cover crops and in-field plots by the rule; no single best for herbal leys, no-till, grassland; margins not detectable. Caveat in reading: TESSERA failed the W3-4 calibration check (control offsets +0.01 within schemes, up to +0.03 against never-treated land), about the size of its lead, so the lead is not established. Q2: AI beats the no-AI indices only narrowly (TESSERA: leys, cover crops, plots, by 0.02–0.03; AlphaEarth: cover crops, +0.02; Presto: never). Stated expectations (Presto best on cover crops; TESSERA on no-till) not borne out | Result |

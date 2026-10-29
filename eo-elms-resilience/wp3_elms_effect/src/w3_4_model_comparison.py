@@ -118,7 +118,7 @@ AI = ['AlphaEarth', 'TESSERA', 'Presto']
 def report(out, verdict):
     """Presentation: question 1 compares the three AI embeddings with each other; question 2 compares each with the
     no-AI baseline (plain Sentinel-2 indices). The analysis and the Holm correction over all 36 tests are as fixed."""
-    nm = lambda t: ' '.join(NAME.get(w.strip(','), w) + (',' if w.endswith(',') else '') for w in t.split()) if t else t
+    nm = lambda t: ' '.join(NAME[w.strip(',')] + (',' if w.endswith(',') else '') if w.strip(',') in NAME else w for w in t.split()) if t else t
     L = ['# W3-4 model comparison: which AI embedding sees which option, and does any beat the plain indices?', '',
          'Protocol: [w3_4_model_comparison_protocol.md](w3_4_model_comparison_protocol.md), written 29 October 2026 before any '
          'rerun result was read. Three AI embeddings (AlphaEarth, TESSERA, Presto) and one no-AI baseline (plain Sentinel-2 '
