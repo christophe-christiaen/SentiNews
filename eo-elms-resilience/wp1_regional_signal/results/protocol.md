@@ -116,6 +116,50 @@ embedding of the season being forecast **cannot be used in a mid-July nowcast** 
 - **Rule:** D1 is adopted for a crop and cutoff if its leave-one-year-out R² (2018–2025) is at least 0.02 above the
   first run on the same seasons and its dry-spring-year mean absolute error is not higher. 2026 is not used.
 
+## Addendum E: heat as degree-days, sign-constrained weather, an out-of-range flag and shift-aware intervals (written 29 October 2026, before any new feature was computed)
+
+Prompted by the 2026 miss (heat 4–5 SD beyond the training seasons, met by a positive hot-day weight) and planned as
+tasks W1-2 and W1-4 of the publication plan. **Defra's provisional 2026 figures are known**, so 2026 cannot test the
+skill of this addendum; it is judged on 2017–2025, and the 2027 harvest is its confirmatory test. One part can be
+tested on 2026 fairly: the out-of-range flag uses only inputs known at the nowcast date, never yields.
+
+- **E1, heat as degree-days.** Replace the count of days ≥ 28 °C with degree-days above 30 °C: the sum over days of
+  max(0, daily maximum 2 m temperature − 30 °C) from ERA5-Land daily data, 1 June to the cutoff (15 July at mid-July;
+  31 August at end of August), averaged over the crop's parcels in the region (the threshold follows the US evidence that
+  damage rises steeply above about 29–30 °C; not tuned on our data). New data: ERA5-Land DAILY_AGGR maximum temperature
+  for the cereal weather cells, 2017–2026; nothing else changes.
+- **E2, sign-constrained weather inside the fit.** As addendum B (monthly Sentinel-2 indices; bounded least squares with a
+  ridge penalty chosen by inner leave-one-year-out; features standardised within each fold; weather clipped to the
+  training range), with the degree-day term in place of hot days and constrained ≤ 0, spring rainfall anomaly ≥ 0,
+  June–July soil moisture ≥ 0, winter rainfall anomaly ≤ 0 and the compound drought term ≤ 0. Sentinel-2 terms
+  unconstrained.
+- **E3, out-of-range flag (area of applicability).** For each region-season, a dissimilarity index DI = distance to the
+  nearest training region-season in the standardised feature space, each feature weighted by the absolute value of its
+  fitted coefficient, divided by the mean distance between training region-seasons. The threshold is the upper
+  whisker (Q3 + 1.5 × IQR) of the DIs that the training region-seasons get under leave-one-year-out. A nowcast above the
+  threshold is flagged "outside the range of the training seasons".
+- **E4, shift-aware intervals.** 80% intervals by weighted conformal prediction: leave-one-year-out residuals weighted by
+  exp(−d²/2h²), with d the weighted distance between the new region-season and each calibration region-season and h the
+  median of those distances in training; the interval is the weighted 80% quantile of absolute residuals around the
+  point nowcast.
+
+**Scores.** Leave-one-year-out 2017–2025: R², England R², mean absolute error in the dry-spring years (2018, 2020,
+2022, 2025), and interval coverage for unweighted and weighted intervals. **Leave-one-extreme-season-out:** 2018, 2022
+and 2025 each held out with all other seasons as training, reporting the error and whether E3 flags the held-out
+season. **2026 (fair for E3 only):** the share of regions whose 2026 inputs the flag marks as out of range, computed from
+inputs alone; and, as an illustration only, the E2/E4 nowcast against Defra's provisional and final (10 December 2026)
+figures.
+
+**Adoption rules, fixed now.**
+- E1 + E2 replace the current model for a crop and cutoff (from 2027) if leave-one-year-out R² is no more than 0.02
+  below the current one **and** mean absolute error over the held-out extreme seasons is lower.
+- E3 is adopted if, under leave-one-extreme-season-out, it flags at least two of the three extreme seasons and at most
+  one in ten of the other held-out region-seasons. Its 2026 result is reported whatever it is: the protocol counts the
+  flag as having worked for 2026 if it marks at least half of the regions.
+- E4 is adopted if its leave-one-year-out coverage of 80% intervals is between 75% and 90% and its coverage in the
+  held-out extreme seasons is higher than the unweighted intervals'.
+- Everything adopted is frozen, with code and date, before the 2027 season's first image (1 March 2027) is used.
+
 ## Record
 
 | Date | Change | Reason |
@@ -132,3 +176,4 @@ embedding of the season being forecast **cannot be used in a mid-July nowcast** 
 | 2026-10-17 | Addendum C run: C2 (Sentinel-1) adopted for winter barley at mid-July; C1 reported separately (weaker than Sentinel-2). **Deviation from the rule:** C3 met the adoption rule for wheat but is not adopted, because a post hoc check showed its gain comes from the agreement share acting as an indicator of the two poor 2024–2025 seasons (see wp1_addendum_c.md) | Avoid building a timing coincidence into future forecasts |
 | 2026-10-17 | Addendum D written: embeddings, previous-year only for the nowcast (the season's own embedding sees after the harvest) | Using the embeddings in WP1 |
 | 2026-10-17 | Addendum D run: embeddings not adopted for any crop; even the after-season own-year embedding carries little regional yield information | Results of addendum D |
+| 2026-10-29 | Addendum E written: degree-days above 30 °C, sign-constrained weather, area-of-applicability flag, weighted conformal intervals; adoption rules fixed; 2027 is the confirmatory test, 2026 fair only for the flag | Registered before Defra's final 2026 figures (10 December 2026) |
