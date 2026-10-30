@@ -139,3 +139,4 @@ Per-parcel data stay out of the public repository.
 |---|---|---|
 | 2026-10-30 | Draft written, before any feature named here was extracted. OE13 coverage check (provenance tables only): England windows written 2017 0/826, 2018 0, 2019 458, 2020–2025 826 each | Project lead: adopt the five useful suggestions from a review of EO products |
 | 2026-10-30 | Decisions settled (above). LiDAR feasibility checked from the index catalogue before any download: 370 of 33,592 new-hedge parcels surveyed more than a year after entry, so section 5 is not run and nothing is downloaded. Registered by public commit | Project lead's decisions |
+| 2026-10-30 | Section 5 replaced by a different use, before any download: LiDAR measures the woody edge that existed before entry, used as a covariate in W3-1 (see W3-1's record for the measure and its uses) | Project lead's decision |
