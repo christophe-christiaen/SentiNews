@@ -293,8 +293,13 @@ estimate (+0.161) and the placebo (+0.127), as on MODIS: seasons that all lie af
 <p>The single-sensor check is flagged, by the rule fixed in advance, as a limit. With Landsat 7 alone (353,008 parcels
 with enough clear seasons, 2002–2023) the within-field estimates are negative (Anderson–Hsiao −0.083 for T1, −0.101 for
 T2), more than 0.05 below the all-sensor value. Landsat 7 has two or three clear overpasses in a cloudy summer window and
-scan-line gaps after 2003, so its seasonal values are noisier; we do not have a tested explanation for the negative
-sign. With a 16-season normal, no within-field estimate on either sensor shows more than slight positive carry-over:
+scan-line gaps after 2003. A follow-up registered before it was run [results/w2_1b_landsat7_protocol.md] traced
+the gap to incomplete seasons: only 37% of Landsat 7 field-seasons have a clear value in both the July and the peak window
+(75% with all sensors), so the stress index often rests on one window. Restricted to seasons with both windows, Landsat 7
+gives −0.026, within 0.05 of the all-sensor value; the all-sensor data on exactly the Landsat 7 field-seasons give −0.032,
+so the sample and period are not the cause; added noise of Landsat 7's size does not reproduce the gap (−0.017), nor do a
+longer baseline (−0.093) or tests outside the normal (−0.096). The both-window subset is small (64,102 observations) and
+favours well-covered fields [results/w2_1b_landsat7.md]. With a 16-season normal, no within-field estimate on either sensor shows more than slight positive carry-over:
 they range from about −0.10 to +0.02 across Landsat and MODIS.</p>
 
 <h3>4.7 What survives: lasting differences between fields</h3>
@@ -351,7 +356,7 @@ about half of it biases the test the other way.</p>
 <p><b>Limits.</b> Parcel points sample the field centre (15 m), not the whole field; the stress index is a crop
 condition proxy, not yield; the analysis covers cereal land only; with ten seasons the T2 estimators disagree;
 MODIS pixels (about 6 ha) mix neighbouring fields, though Landsat at 30 m gives the same within-field answer; Landsat 7 alone gives
-negative within-field estimates (−0.08 to −0.10) that we cannot yet explain; and Sentinel-1 in 2026 is not usable until checked against flood
+negative within-field estimates (−0.08 to −0.10), traced to seasons with one of the two windows missing; and Sentinel-1 in 2026 is not usable until checked against flood
 records.</p>
 
 <h2>6. Conclusion</h2>
@@ -372,7 +377,7 @@ used.</p>
 
 <h2>Still to do before submission</h2>
 <p class="todo">Extend related work (crop-specific drought legacies, field-scale Sentinel-2 resilience studies); T2 within fields on Sentinel-2 (the 25-season Landsat panel resolves it,
-the ten-season panel does not); the Landsat 7–only negative estimates; Sentinel-1 2026 against Environment Agency flood records; venue choice and deadline
+the ten-season panel does not); Sentinel-1 2026 against Environment Agency flood records; venue choice and deadline
 check (ISPRS Journal of Photogrammetry and Remote Sensing, Remote Sensing of Environment, or a methods venue);
 co-author review.</p>
 
