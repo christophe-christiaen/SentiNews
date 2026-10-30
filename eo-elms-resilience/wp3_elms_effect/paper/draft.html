@@ -218,6 +218,19 @@ in-field plots (by 0.02–0.03), AlphaEarth for cover crops (+0.02), Presto neve
 were not borne out: Presto, which sees the winter months, ranks lowest on cover crops, and radar gave TESSERA no edge on
 no-till. * Not established: TESSERA failed calibration.</p>
 
+<h3>4.6 A winter view of cover crops</h3>
+<p>Every record above is annual or March–August, while a winter cover crop is on the ground from December to February.
+A follow-up test, registered before any winter feature was computed [results/w3_4_cover_seasonal_protocol.md], split the
+family by timing and compared four views of winter 2025/26 under the same checks: Presto over the full farm season,
+Presto over December–February only, plain winter radar and optical values, and winter radar alone. Winter cover crops
+(SAM2, CSAM2) are detectable beyond selection in every view. Only winter Presto passes both checks (controls +0.007 and
++0.006; I* = +0.068, 95% interval +0.060 to +0.076). Full-season Presto scores higher (+0.120), but its two comparisons
+differ by 0.031, just outside the 0.03 invariance rule, and the plain winter features fail calibration (controls up to
++0.024), so by the pre-set rule none of the pairwise leads is established. Both radar views failed calibration on the
+winter WP2 found Sentinel-1 reading dark over standing water; read on the previous winter, as the protocol required in
+that case, radar alone matches radar plus optical (difference +0.011, +0.002 to +0.018, inside ±0.02). The expectation
+that the winter window would beat the full season was wrong [results/w3_4_cover_seasonal.md].</p>
+
 <h2>5. Do the options change resilience?</h2>
 <p>A companion evaluation, pre-registered and frozen on 11 October 2026 before any outcome was compared by agreement
 status [wp3_elms_effect/results/preregistration.md], asks whether agreement land drops less in drought and heat seasons
@@ -271,8 +284,8 @@ matched sample, main shock definition, SE clustered by ERA5 cell. Pre-trend: Wal
 <h2>6. Discussion</h2>
 <p><b>For monitoring.</b> The choice of AI model matters little: three embeddings and plain Sentinel-2 indices find the same options, the embeddings add at most 0.02–0.03 beyond the indices, and the indices have the cleanest negative controls, so the transparent option is close to the best. A field's annual embedding can confirm whole-field land-cover options such as herbal leys,
 and no-till, against other scheme land and in regions the model has not seen. It cannot confirm options at field edges
-from a centre point, nor management practices. Monitoring those needs field polygons, finer timing (cover crops are
-seasonal) or other evidence.</p>
+from a centre point, nor management practices. Monitoring those needs field polygons, finer timing (winter cover crops are detectable
+in a winter view, section 4.6) or other evidence.</p>
 <p><b>For evaluation.</b> Any detection or effect study of voluntary schemes should include a pre-entry placebo and
 negative controls; without them, selection looks like detection, at about AUC 0.7 here. The selection-corrected increment I* (section 4.4) is a simple way to report it: it needs one extra pre-entry year, is checked by the controls, and gives the same answer whichever comparison group is used. A long baseline does not
 cure selection: with 16-season normals the placebo of the effect test still carries about three fifths of the
@@ -294,7 +307,7 @@ inputs are open; parcel references are public and no personal data are used.</p>
 
 <h2>Still to do before submission</h2>
 <p class="todo">Literature review and positioning; field polygons instead of points (edge options, partial-field
-plots); seasonal Sentinel-1 and Sentinel-2 features for cover crops; the option-level effect test again with more
+plots); the winter cover-crop view repeated on winter 2026/27, when Sentinel-1 can be checked; the option-level effect test again with more
 seasons (2027 onwards) and field-polygon outcomes; verification against inspection data if obtainable; venue choice and co-author review.</p>
 
 <h2>References</h2>
