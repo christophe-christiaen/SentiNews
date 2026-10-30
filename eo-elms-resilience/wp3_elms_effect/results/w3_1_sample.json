@@ -1,0 +1,140 @@
+{
+ "seed": 30,
+ "cap": 3000,
+ "frame": "W3-4 cereal frame (od.load), UKFields-matched only",
+ "matched_vs_excluded": {
+  "new_hedges": {
+   "parcels": 6872,
+   "matched": 5168,
+   "excluded": 1704,
+   "ndvi_july_pre_mean": [
+    0.51,
+    0.523
+   ],
+   "ndvi_july_pre_std_diff": -0.091,
+   "area_ha_median_where_polygon": [
+    6.98,
+    9.83
+   ],
+   "area_std_diff_where_polygon": -0.413,
+   "region_share_max_abs_diff": 0.043
+  },
+  "area_strips": {
+   "parcels": 80573,
+   "matched": 60978,
+   "excluded": 19595,
+   "ndvi_july_pre_mean": [
+    0.502,
+    0.51
+   ],
+   "ndvi_july_pre_std_diff": -0.066,
+   "area_ha_median_where_polygon": [
+    6.4,
+    10.23
+   ],
+   "area_std_diff_where_polygon": -0.524,
+   "region_share_max_abs_diff": 0.028
+  },
+  "hedge_management": {
+   "parcels": 98865,
+   "matched": 71294,
+   "excluded": 27571,
+   "ndvi_july_pre_mean": [
+    0.51,
+    0.524
+   ],
+   "ndvi_july_pre_std_diff": -0.104,
+   "area_ha_median_where_polygon": [
+    5.6,
+    9.16
+   ],
+   "area_std_diff_where_polygon": -0.571,
+   "region_share_max_abs_diff": 0.06
+  },
+  "walls_banks": {
+   "parcels": 605,
+   "matched": 368,
+   "excluded": 237,
+   "ndvi_july_pre_mean": [
+    0.562,
+    0.569
+   ],
+   "ndvi_july_pre_std_diff": -0.054,
+   "area_ha_median_where_polygon": [
+    4.16,
+    9.49
+   ],
+   "area_std_diff_where_polygon": -1.009,
+   "region_share_max_abs_diff": 0.08
+  },
+  "never_treated": {
+   "parcels": 89646,
+   "matched": 43808,
+   "excluded": 45838,
+   "ndvi_july_pre_mean": [
+    0.521,
+    0.575
+   ],
+   "ndvi_july_pre_std_diff": -0.397,
+   "area_ha_median_where_polygon": [
+    4.66,
+    7.85
+   ],
+   "area_std_diff_where_polygon": -0.527,
+   "region_share_max_abs_diff": 0.013
+  },
+  "management_only": {
+   "parcels": 36606,
+   "matched": 24568,
+   "excluded": 12038,
+   "ndvi_july_pre_mean": [
+    0.519,
+    0.53
+   ],
+   "ndvi_july_pre_std_diff": -0.083,
+   "area_ha_median_where_polygon": [
+    5.21,
+    9.34
+   ],
+   "area_std_diff_where_polygon": -0.658,
+   "region_share_max_abs_diff": 0.034
+  }
+ },
+ "sample_counts": {
+  "new_hedges": {
+   "positive": 3001,
+   "A": 3001,
+   "A_shortfall": 0,
+   "B": 3001,
+   "B_shortfall": 0
+  },
+  "area_strips": {
+   "positive": 3001,
+   "A": 3001,
+   "A_shortfall": 0,
+   "B": 3001,
+   "B_shortfall": 0
+  },
+  "hedge_management": {
+   "positive": 3000,
+   "A": 3000,
+   "A_shortfall": 0,
+   "B": 3000,
+   "B_shortfall": 0
+  },
+  "walls_banks": {
+   "positive": 368,
+   "A": 368,
+   "A_shortfall": 0,
+   "B": 368,
+   "B_shortfall": 0
+  },
+  "management_only": {
+   "positive": 2998,
+   "A": 2998,
+   "A_shortfall": 0
+  }
+ },
+ "unique_parcels": 30242,
+ "unique_polygons": 30242
+}

@@ -56,7 +56,7 @@ j = j.merge(panel, on='parcref', how='left')
 j['never_treated'] = j.parcel_group.eq('no agreement')
 
 j[['parcref', 'id', 'area', 'pts_in_poly', 'dist_edge_m', 'reason', 'matched', 'cereal_land', 'parcel_group', *FAM]].rename(
-    columns={'id': 'ukfields_id', 'area': 'ukfields_area_m2'}).to_parquet(OUT_P, index=False)
+    columns={'id': 'ukfields_id', 'area': 'ukfields_area_ha'}).to_parquet(OUT_P, index=False)
 
 
 def summ(m):
