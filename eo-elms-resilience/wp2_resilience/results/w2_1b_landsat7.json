@@ -1,0 +1,571 @@
+{
+ "anderson_hsiao_T1": {
+  "D1 \u00b7 all-sensor on L7 field-seasons": -0.032167242878925785,
+  "D2 \u00b7 all-sensor plus L7 excess noise": -0.01651166402772262,
+  "D3a \u00b7 L7, both windows": -0.026482750340455854,
+  "D3b \u00b7 L7, >= 12 baseline seasons": -0.09313340461477558,
+  "D4 \u00b7 L7, tests 2017-2023": -0.09618186769593591
+ },
+ "R1_sample_not_cause": true,
+ "R2_noise_reproduces": false,
+ "R3_density_removes": {
+  "D3a \u00b7 L7, both windows": true,
+  "D3b \u00b7 L7, >= 12 baseline seasons": false,
+  "D4 \u00b7 L7, tests 2017-2023": false
+ },
+ "attributed_to_L7_data": true,
+ "descriptive": {
+  "baseline seasons, median (all-sensor, L7)": [
+   12.0,
+   5.0
+  ],
+  "L7 field-seasons 2002-2023 with both windows (share)": 0.37097344710873814,
+  "all-sensor field-seasons 2002-2023 with both windows (share)": 0.7514691090241693,
+  "D2 excess variance of L7 (within field)": 0.44689356336331987,
+  "D3b fields with >= 12 L7 baseline seasons": 80143
+ },
+ "tests": {
+  "D1 \u00b7 all-sensor on L7 field-seasons | T1 | pooled": {
+   "coef": 0.046727621278624155,
+   "se": 0.0019302104841666238,
+   "p": 0.0,
+   "n": 4340599,
+   "clusters": 1647
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled": {
+   "coef": 0.06952961104593325,
+   "se": 0.0022304607943166707,
+   "p": 0.0,
+   "n": 1534951,
+   "clusters": 1646
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T1 | field fixed effects": {
+   "coef": -0.036051192180494254,
+   "se": 0.0015944225927040285,
+   "p": 0.0,
+   "n": 4340599,
+   "clusters": 1647
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | field fixed effects": {
+   "coef": -0.017643287162218996,
+   "se": 0.0023415797734600645,
+   "p": 4.884981308350689e-14,
+   "n": 1534951,
+   "clusters": 1646
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T1 | Anderson-Hsiao": {
+   "coef": -0.032167242878925785,
+   "se": 0.0015512936700406682,
+   "p": 0.0,
+   "n": 3237822,
+   "clusters": 1647,
+   "first_stage_r": -0.6957495039516888
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | Anderson-Hsiao": {
+   "coef": -0.032516636696819,
+   "se": 0.0024189427216328298,
+   "p": 0.0,
+   "n": 1275897,
+   "clusters": 1642,
+   "first_stage_r": -0.6699465192214853
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T3 | pooled": {
+   "coef": 0.13241703039047148,
+   "se": 0.003051967129689185,
+   "p": 0.0,
+   "n": 1014181,
+   "clusters": 1647
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2003": {
+   "coef": 0.08018313174922459,
+   "se": 0.002311679889540729,
+   "p": 0.0,
+   "n": 1449524,
+   "clusters": 1646
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2006": {
+   "coef": 0.07673921398708836,
+   "se": 0.0022566270775407765,
+   "p": 0.0,
+   "n": 1447689,
+   "clusters": 1646
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2010": {
+   "coef": 0.07618738468260146,
+   "se": 0.002352858426736259,
+   "p": 0.0,
+   "n": 1424186,
+   "clusters": 1644
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2011": {
+   "coef": 0.07302132467370913,
+   "se": 0.0023374517548699282,
+   "p": 0.0,
+   "n": 1414942,
+   "clusters": 1645
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2015": {
+   "coef": 0.07386018679903317,
+   "se": 0.002297553242778725,
+   "p": 0.0,
+   "n": 1436844,
+   "clusters": 1646
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2018": {
+   "coef": 0.06401789938956685,
+   "se": 0.002374365270270406,
+   "p": 0.0,
+   "n": 1251235,
+   "clusters": 1643
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2019": {
+   "coef": 0.06911830068839317,
+   "se": 0.0022677955456107766,
+   "p": 0.0,
+   "n": 1423971,
+   "clusters": 1646
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2020": {
+   "coef": 0.05557165250712998,
+   "se": 0.002401616192786473,
+   "p": 0.0,
+   "n": 1251622,
+   "clusters": 1646
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T2 | pooled, without 2022": {
+   "coef": 0.05714302878222259,
+   "se": 0.0024277873778926805,
+   "p": 0.0,
+   "n": 1260430,
+   "clusters": 1645
+  },
+  "D1 \u00b7 all-sensor on L7 field-seasons | T1 | shuffled seasons (placebo)": {
+   "coef": -0.0020985669102938976,
+   "se": 0.0006878943600967693,
+   "p": 0.002283001839392673,
+   "n": 3948380,
+   "clusters": 1647
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T1 | pooled": {
+   "coef": 0.024856627297078777,
+   "se": 0.0011121701335231316,
+   "p": 0.0,
+   "n": 4340599,
+   "clusters": 1647
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled": {
+   "coef": 0.03827381958154962,
+   "se": 0.0014235874691234062,
+   "p": 0.0,
+   "n": 1534951,
+   "clusters": 1646
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T1 | field fixed effects": {
+   "coef": -0.049169271605942186,
+   "se": 0.0009461056123257286,
+   "p": 0.0,
+   "n": 4340599,
+   "clusters": 1647
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | field fixed effects": {
+   "coef": -0.03003129834038032,
+   "se": 0.0018232259948141685,
+   "p": 0.0,
+   "n": 1534951,
+   "clusters": 1646
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T1 | Anderson-Hsiao": {
+   "coef": -0.01651166402772262,
+   "se": 0.001042391280080112,
+   "p": 0.0,
+   "n": 3237822,
+   "clusters": 1647,
+   "first_stage_r": -0.7011697921105913
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | Anderson-Hsiao": {
+   "coef": -0.016322999975422126,
+   "se": 0.0016307209181582725,
+   "p": 0.0,
+   "n": 1275897,
+   "clusters": 1642,
+   "first_stage_r": -0.6881620576275385
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T3 | pooled": {
+   "coef": 0.09934662562345156,
+   "se": 0.002551047015400393,
+   "p": 0.0,
+   "n": 1014181,
+   "clusters": 1647
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2003": {
+   "coef": 0.043764281830436645,
+   "se": 0.001461039343620151,
+   "p": 0.0,
+   "n": 1449524,
+   "clusters": 1646
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2006": {
+   "coef": 0.042043684791048516,
+   "se": 0.0014611617089404418,
+   "p": 0.0,
+   "n": 1447689,
+   "clusters": 1646
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2010": {
+   "coef": 0.042423320692802066,
+   "se": 0.0015035969006520443,
+   "p": 0.0,
+   "n": 1424186,
+   "clusters": 1644
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2011": {
+   "coef": 0.04074647899946526,
+   "se": 0.0015061517188990836,
+   "p": 0.0,
+   "n": 1414942,
+   "clusters": 1645
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2015": {
+   "coef": 0.04111375570932683,
+   "se": 0.0014881529535168947,
+   "p": 0.0,
+   "n": 1436844,
+   "clusters": 1646
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2018": {
+   "coef": 0.03528692989846211,
+   "se": 0.0015313819151466733,
+   "p": 0.0,
+   "n": 1251235,
+   "clusters": 1643
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2019": {
+   "coef": 0.0385347721371255,
+   "se": 0.0014418802509861782,
+   "p": 0.0,
+   "n": 1423971,
+   "clusters": 1646
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2020": {
+   "coef": 0.030713901667808203,
+   "se": 0.0015469150321285776,
+   "p": 0.0,
+   "n": 1251622,
+   "clusters": 1646
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T2 | pooled, without 2022": {
+   "coef": 0.03000097099271805,
+   "se": 0.0014892076220084246,
+   "p": 0.0,
+   "n": 1260430,
+   "clusters": 1645
+  },
+  "D2 \u00b7 all-sensor plus L7 excess noise | T1 | shuffled seasons (placebo)": {
+   "coef": -0.0016053180350318272,
+   "se": 0.0005657380617189288,
+   "p": 0.004545921260262098,
+   "n": 3948107,
+   "clusters": 1647
+  },
+  "D3a \u00b7 L7, both windows | T1 | pooled": {
+   "coef": 0.10681568111686669,
+   "se": 0.00655098531551103,
+   "p": 0.0,
+   "n": 117788,
+   "clusters": 1079
+  },
+  "D3a \u00b7 L7, both windows | T2 | pooled": {
+   "coef": 0.1455406311492216,
+   "se": 0.008143544256770411,
+   "p": 0.0,
+   "n": 39570,
+   "clusters": 1051
+  },
+  "D3a \u00b7 L7, both windows | T1 | field fixed effects": {
+   "coef": -0.0529840993189489,
+   "se": 0.005203242657206023,
+   "p": 0.0,
+   "n": 117788,
+   "clusters": 1079
+  },
+  "D3a \u00b7 L7, both windows | T2 | field fixed effects": {
+   "coef": -0.01178928002743172,
+   "se": 0.009484231875188404,
+   "p": 0.21385307686189226,
+   "n": 39570,
+   "clusters": 1051
+  },
+  "D3a \u00b7 L7, both windows | T1 | Anderson-Hsiao": {
+   "coef": -0.026482750340455854,
+   "se": 0.008264418317623241,
+   "p": 0.0013533017381159862,
+   "n": 64102,
+   "clusters": 1055,
+   "first_stage_r": -0.6538783125166614
+  },
+  "D3a \u00b7 L7, both windows | T2 | Anderson-Hsiao": {
+   "coef": -0.022463987052216545,
+   "se": 0.015051925728058869,
+   "p": 0.13558573231057003,
+   "n": 25579,
+   "clusters": 979,
+   "first_stage_r": -0.6049590822955077
+  },
+  "D3a \u00b7 L7, both windows | T3 | pooled": {
+   "coef": 0.15635759797772814,
+   "se": 0.011467126579128566,
+   "p": 0.0,
+   "n": 34545,
+   "clusters": 1047
+  },
+  "D3a \u00b7 L7, both windows | T2 | pooled, without 2011": {
+   "coef": 0.14756657009926302,
+   "se": 0.008286112292428365,
+   "p": 0.0,
+   "n": 36933,
+   "clusters": 1038
+  },
+  "D3a \u00b7 L7, both windows | T2 | pooled, without 2015": {
+   "coef": 0.15731445085056192,
+   "se": 0.008625100818927606,
+   "p": 0.0,
+   "n": 35827,
+   "clusters": 1048
+  },
+  "D3a \u00b7 L7, both windows | T2 | pooled, without 2018": {
+   "coef": 0.12115173886255928,
+   "se": 0.009773603082198943,
+   "p": 0.0,
+   "n": 30889,
+   "clusters": 1015
+  },
+  "D3a \u00b7 L7, both windows | T2 | pooled, without 2020": {
+   "coef": 0.13728267610261222,
+   "se": 0.00860158765350548,
+   "p": 0.0,
+   "n": 32452,
+   "clusters": 1039
+  },
+  "D3a \u00b7 L7, both windows | T2 | pooled, without 2022": {
+   "coef": 0.14232912346950044,
+   "se": 0.009622420794094835,
+   "p": 0.0,
+   "n": 29364,
+   "clusters": 1020
+  },
+  "D3a \u00b7 L7, both windows | T1 | shuffled seasons (placebo)": {
+   "coef": 0.013652900185126292,
+   "se": 0.00452092444859165,
+   "p": 0.002528285307149547,
+   "n": 93899,
+   "clusters": 1075
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T1 | pooled": {
+   "coef": -0.037826990533214866,
+   "se": 0.0025323373249991387,
+   "p": 0.0,
+   "n": 1185414,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled": {
+   "coef": -0.008696765229861445,
+   "se": 0.0032405965179428168,
+   "p": 0.0072813999076379865,
+   "n": 422883,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T1 | field fixed effects": {
+   "coef": -0.09206069811238138,
+   "se": 0.0023226293490720964,
+   "p": 0.0,
+   "n": 1185414,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | field fixed effects": {
+   "coef": -0.06984636218710984,
+   "se": 0.003414600132108503,
+   "p": 0.0,
+   "n": 422883,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T1 | Anderson-Hsiao": {
+   "coef": -0.09313340461477558,
+   "se": 0.002945425308677366,
+   "p": 0.0,
+   "n": 916735,
+   "clusters": 1362,
+   "first_stage_r": -0.7179409440029064
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | Anderson-Hsiao": {
+   "coef": -0.10717307681453636,
+   "se": 0.003955269675779612,
+   "p": 0.0,
+   "n": 360086,
+   "clusters": 1362,
+   "first_stage_r": -0.6971474944604491
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T3 | pooled": {
+   "coef": 0.07221975065104118,
+   "se": 0.0038971839271454635,
+   "p": 0.0,
+   "n": 253352,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2003": {
+   "coef": -0.0012695290886297322,
+   "se": 0.003151642093290483,
+   "p": 0.6870842370589507,
+   "n": 396875,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2006": {
+   "coef": 0.0008266108552273034,
+   "se": 0.003136890662833943,
+   "p": 0.792155355828319,
+   "n": 395036,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2010": {
+   "coef": -0.0044831007193044765,
+   "se": 0.003448233019290532,
+   "p": 0.19356143337152454,
+   "n": 375143,
+   "clusters": 1361
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2011": {
+   "coef": -0.00862052446861978,
+   "se": 0.00350415042316847,
+   "p": 0.01389022828088926,
+   "n": 376057,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2015": {
+   "coef": -0.005075143970232817,
+   "se": 0.0033481512602962994,
+   "p": 0.12956870145404142,
+   "n": 398973,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2018": {
+   "coef": -0.02744261435961818,
+   "se": 0.003414011260033927,
+   "p": 8.881784197001252e-16,
+   "n": 357951,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2019": {
+   "coef": -0.007831619722177576,
+   "se": 0.003158139470026966,
+   "p": 0.013144845278106443,
+   "n": 394706,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2020": {
+   "coef": -0.012165861318648934,
+   "se": 0.003366456568721203,
+   "p": 0.00030168631911076105,
+   "n": 356213,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T2 | pooled, without 2022": {
+   "coef": -0.015847808057577597,
+   "se": 0.0037170816630722825,
+   "p": 2.012421344765869e-05,
+   "n": 359066,
+   "clusters": 1362
+  },
+  "D3b \u00b7 L7, >= 12 baseline seasons | T1 | shuffled seasons (placebo)": {
+   "coef": -0.018971276891435452,
+   "se": 0.0010062034196999402,
+   "p": 0.0,
+   "n": 1126441,
+   "clusters": 1362
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T1 | pooled": {
+   "coef": 0.059297107079164635,
+   "se": 0.002057774497821345,
+   "p": 0.0,
+   "n": 2175867,
+   "clusters": 1647
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T2 | pooled": {
+   "coef": 0.05047944739884422,
+   "se": 0.0023782260864778264,
+   "p": 0.0,
+   "n": 999945,
+   "clusters": 1638
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T1 | field fixed effects": {
+   "coef": -0.216311647218778,
+   "se": 0.0014292916618619202,
+   "p": 0.0,
+   "n": 2175867,
+   "clusters": 1647
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T2 | field fixed effects": {
+   "coef": -0.13450924903043165,
+   "se": 0.0035937240049159816,
+   "p": 0.0,
+   "n": 999945,
+   "clusters": 1638
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T1 | Anderson-Hsiao": {
+   "coef": -0.09618186769593591,
+   "se": 0.002301934133945984,
+   "p": 0.0,
+   "n": 2052332,
+   "clusters": 1646,
+   "first_stage_r": -0.6824515336741813
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T2 | Anderson-Hsiao": {
+   "coef": -0.11278705537590926,
+   "se": 0.0032328551632267387,
+   "p": 0.0,
+   "n": 954657,
+   "clusters": 1636,
+   "first_stage_r": -0.6355527130633537
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T3 | pooled": {
+   "coef": 0.11565860836455066,
+   "se": 0.002504020620752686,
+   "p": 0.0,
+   "n": 742267,
+   "clusters": 1643
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T2 | pooled, without 2018": {
+   "coef": 0.03536304977623288,
+   "se": 0.002631382339703717,
+   "p": 0.0,
+   "n": 716229,
+   "clusters": 1565
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T2 | pooled, without 2019": {
+   "coef": 0.054022272526278614,
+   "se": 0.002329472309734593,
+   "p": 0.0,
+   "n": 888965,
+   "clusters": 1638
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T2 | pooled, without 2020": {
+   "coef": 0.05516094121853892,
+   "se": 0.0025583789949649885,
+   "p": 0.0,
+   "n": 716616,
+   "clusters": 1636
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T2 | pooled, without 2022": {
+   "coef": 0.06640615925824171,
+   "se": 0.003062721582858091,
+   "p": 0.0,
+   "n": 725424,
+   "clusters": 1631
+  },
+  "D4 \u00b7 L7, tests 2017-2023 | T1 | shuffled seasons (placebo)": {
+   "coef": 0.08557436291543939,
+   "se": 0.0016696720804050041,
+   "p": 0.0,
+   "n": 1881483,
+   "clusters": 1647
+  }
+ }
+}
