@@ -1,0 +1,118 @@
+{
+ "rule": "polygon containing the RPA point; no other RPA point inside; point > 20 m from the boundary",
+ "ukfields_polygons": 1665637,
+ "all_parcels": {
+  "parcels": 2686103,
+  "matched": 537002,
+  "share_matched": 0.2,
+  "excluded": {
+   "no_polygon": 1467109,
+   "shared_polygon": 600646,
+   "near_edge": 81346
+  }
+ },
+ "cereal_frame": {
+  "parcels": 381400,
+  "matched": 244436,
+  "share_matched": 0.641,
+  "excluded": {
+   "no_polygon": 39222,
+   "shared_polygon": 80442,
+   "near_edge": 17300
+  }
+ },
+ "cereal_frame_by_family": {
+  "new_hedges": {
+   "parcels": 8913,
+   "matched": 6492,
+   "share_matched": 0.728,
+   "excluded": {
+    "no_polygon": 523,
+    "shared_polygon": 1426,
+    "near_edge": 472
+   }
+  },
+  "area_strips": {
+   "parcels": 85607,
+   "matched": 64560,
+   "share_matched": 0.754,
+   "excluded": {
+    "no_polygon": 4257,
+    "shared_polygon": 12501,
+    "near_edge": 4289
+   }
+  },
+  "hedge_management": {
+   "parcels": 116377,
+   "matched": 82685,
+   "share_matched": 0.71,
+   "excluded": {
+    "no_polygon": 6657,
+    "shared_polygon": 21897,
+    "near_edge": 5138
+   }
+  },
+  "walls_banks": {
+   "parcels": 1097,
+   "matched": 571,
+   "share_matched": 0.521,
+   "excluded": {
+    "no_polygon": 95,
+    "shared_polygon": 398,
+    "near_edge": 33
+   }
+  }
+ },
+ "cereal_frame_never_treated": {
+  "parcels": 90447,
+  "matched": 44203,
+  "share_matched": 0.489,
+  "excluded": {
+   "no_polygon": 19312,
+   "shared_polygon": 22748,
+   "near_edge": 4184
+  }
+ },
+ "all_land_by_family": {
+  "new_hedges": {
+   "parcels": 33469,
+   "matched": 12824,
+   "share_matched": 0.383,
+   "excluded": {
+    "no_polygon": 9936,
+    "shared_polygon": 9177,
+    "near_edge": 1532
+   }
+  },
+  "area_strips": {
+   "parcels": 111541,
+   "matched": 78623,
+   "share_matched": 0.705,
+   "excluded": {
+    "no_polygon": 9802,
+    "shared_polygon": 16666,
+    "near_edge": 6450
+   }
+  },
+  "hedge_management": {
+   "parcels": 405265,
+   "matched": 160281,
+   "share_matched": 0.395,
+   "excluded": {
+    "no_polygon": 120505,
+    "shared_polygon": 107103,
+    "near_edge": 17376
+   }
+  },
+  "walls_banks": {
+   "parcels": 18271,
+   "matched": 3002,
+   "share_matched": 0.164,
+   "excluded": {
+    "no_polygon": 8830,
+    "shared_polygon": 5895,
+    "near_edge": 544
+   }
+  }
+ }
+}
