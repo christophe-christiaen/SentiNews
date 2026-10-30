@@ -1,0 +1,500 @@
+{
+ "skill": {
+  "wheat | mid-July": {
+   "current model": "first run",
+   "current": {
+    "r2": 0.6449119355840628,
+    "rmse": 0.49094446832639,
+    "r": 0.8190698160021163,
+    "r2_england": 0.778094365182684,
+    "r_england": 0.8993590793571159,
+    "n": 72,
+    "extreme_mae": 0.366680633931665,
+    "dry_mae": 0.3586550788418974
+   },
+   "E1+E2": {
+    "r2": 0.5663334973456653,
+    "rmse": 0.5425531290461277,
+    "r": 0.7553626177658668,
+    "r2_england": 0.6739696238523647,
+    "r_england": 0.8246696054813889,
+    "n": 72,
+    "extreme_mae": 0.44003623703979217,
+    "dry_mae": 0.3421739861587644
+   },
+   "adopt E1+E2": false
+  },
+  "wheat | end of August": {
+   "current model": "first run",
+   "current": {
+    "r2": 0.596141849969084,
+    "rmse": 0.5235748289263511,
+    "r": 0.7876358108479726,
+    "r2_england": 0.7969753485123618,
+    "r_england": 0.9020239159721152,
+    "n": 72,
+    "extreme_mae": 0.29974236098359935,
+    "dry_mae": 0.3079461897492912
+   },
+   "E1+E2": {
+    "r2": 0.637190997845559,
+    "rmse": 0.49625324647060043,
+    "r": 0.7999160150798839,
+    "r2_england": 0.7791811656756233,
+    "r_england": 0.8851947670895932,
+    "n": 72,
+    "extreme_mae": 0.36208194679642486,
+    "dry_mae": 0.32079096523390227
+   },
+   "adopt E1+E2": false
+  },
+  "winter barley | mid-July": {
+   "current model": "first run + Sentinel-1 (C2)",
+   "current": {
+    "r2": 0.5636370900459093,
+    "rmse": 0.497606367696886,
+    "r": 0.758486760307756,
+    "r2_england": 0.8123940922516137,
+    "r_england": 0.9382415707586688,
+    "n": 72,
+    "extreme_mae": 0.08317452930271792,
+    "dry_mae": 0.1365714658487344
+   },
+   "E1+E2": {
+    "r2": 0.3792365128940577,
+    "rmse": 0.5935059765994798,
+    "r": 0.637252241865549,
+    "r2_england": 0.658824194604767,
+    "r_england": 0.8118638652862281,
+    "n": 72,
+    "extreme_mae": 0.37054102221276697,
+    "dry_mae": 0.3244060974796963
+   },
+   "adopt E1+E2": false
+  },
+  "winter barley | end of August": {
+   "current model": "first run",
+   "current": {
+    "r2": 0.6132209197742785,
+    "rmse": 0.4684826403962003,
+    "r": 0.7861501816209238,
+    "r2_england": 0.8557908216164541,
+    "r_england": 0.9419959111463809,
+    "n": 72,
+    "extreme_mae": 0.1492747445455451,
+    "dry_mae": 0.2035217408788335
+   },
+   "E1+E2": {
+    "r2": 0.5681901814877086,
+    "rmse": 0.4950035016832562,
+    "r": 0.7563277857121491,
+    "r2_england": 0.8501386072360662,
+    "r_england": 0.9430425217401018,
+    "n": 72,
+    "extreme_mae": 0.13678319051119872,
+    "dry_mae": 0.1759417740631523
+   },
+   "adopt E1+E2": false
+  },
+  "spring barley | mid-July": {
+   "current model": "addendum B",
+   "current": {
+    "r2": 0.5800945250877512,
+    "rmse": 0.4179831309506656,
+    "r": 0.7622008581051334,
+    "r2_england": 0.7935638541941463,
+    "r_england": 0.906314832595157,
+    "n": 72,
+    "extreme_mae": 0.19544006464077965,
+    "dry_mae": 0.14777688077451043
+   },
+   "E1+E2": {
+    "r2": 0.5568908542875853,
+    "rmse": 0.42937657073824564,
+    "r": 0.7463579628119191,
+    "r2_england": 0.7751136185515387,
+    "r_england": 0.8931970821438554,
+    "n": 72,
+    "extreme_mae": 0.17491303093772623,
+    "dry_mae": 0.1318011627280851
+   },
+   "adopt E1+E2": false
+  },
+  "spring barley | end of August": {
+   "current model": "addendum B",
+   "current": {
+    "r2": 0.5977834850864838,
+    "rmse": 0.4090844160663552,
+    "r": 0.773466186330193,
+    "r2_england": 0.8422232764506058,
+    "r_england": 0.9241864701582363,
+    "n": 72,
+    "extreme_mae": 0.14415992382151302,
+    "dry_mae": 0.10907291357249249
+   },
+   "E1+E2": {
+    "r2": 0.5994275018486532,
+    "rmse": 0.40824751572076906,
+    "r": 0.7747729610539461,
+    "r2_england": 0.8449362598278976,
+    "r_england": 0.9240380608136252,
+    "n": 72,
+    "extreme_mae": 0.11870952879263204,
+    "dry_mae": 0.0899851173008321
+   },
+   "adopt E1+E2": true
+  }
+ },
+ "flag": {
+  "wheat | mid-July": {
+   "share_flagged_by_year": {
+    "2017": 0.0,
+    "2018": 0.0,
+    "2019": 0.125,
+    "2020": 0.375,
+    "2021": 0.0,
+    "2022": 0.0,
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0
+   },
+   "extreme_seasons_flagged": 0,
+   "other_region_seasons_flagged": 0.08333333333333333,
+   "adopt E3": false
+  },
+  "wheat | end of August": {
+   "share_flagged_by_year": {
+    "2017": 0.0,
+    "2018": 0.0,
+    "2019": 0.0,
+    "2020": 0.5,
+    "2021": 0.0,
+    "2022": 0.0,
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0
+   },
+   "extreme_seasons_flagged": 0,
+   "other_region_seasons_flagged": 0.08333333333333333,
+   "adopt E3": false
+  },
+  "winter barley | mid-July": {
+   "share_flagged_by_year": {
+    "2017": 0.0,
+    "2018": 0.0,
+    "2019": 0.0,
+    "2020": 0.125,
+    "2021": 0.125,
+    "2022": 0.0,
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.625
+   },
+   "extreme_seasons_flagged": 1,
+   "other_region_seasons_flagged": 0.041666666666666664,
+   "adopt E3": false
+  },
+  "winter barley | end of August": {
+   "share_flagged_by_year": {
+    "2017": 0.0,
+    "2018": 0.0,
+    "2019": 0.0,
+    "2020": 0.125,
+    "2021": 0.125,
+    "2022": 0.0,
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0
+   },
+   "extreme_seasons_flagged": 0,
+   "other_region_seasons_flagged": 0.041666666666666664,
+   "adopt E3": false
+  },
+  "spring barley | mid-July": {
+   "share_flagged_by_year": {
+    "2017": 0.125,
+    "2018": 0.0,
+    "2019": 0.0,
+    "2020": 0.0,
+    "2021": 0.0,
+    "2022": 0.0,
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0
+   },
+   "extreme_seasons_flagged": 0,
+   "other_region_seasons_flagged": 0.020833333333333332,
+   "adopt E3": false
+  },
+  "spring barley | end of August": {
+   "share_flagged_by_year": {
+    "2017": 0.0,
+    "2018": 0.0,
+    "2019": 0.0,
+    "2020": 0.0,
+    "2021": 0.0,
+    "2022": 0.0,
+    "2023": 0.0,
+    "2024": 0.0,
+    "2025": 0.0
+   },
+   "extreme_seasons_flagged": 0,
+   "other_region_seasons_flagged": 0.0,
+   "adopt E3": false
+  }
+ },
+ "intervals": {
+  "wheat | mid-July": {
+   "coverage_weighted": 0.75,
+   "coverage_unweighted": 0.7777777777777778,
+   "extreme_weighted": 0.5833333333333334,
+   "extreme_unweighted": 0.6666666666666666,
+   "mean_halfwidth_weighted": 0.8135441330206381,
+   "mean_halfwidth_unweighted": 0.7504806851507644,
+   "adopt E4": false
+  },
+  "wheat | end of August": {
+   "coverage_weighted": 0.8333333333333334,
+   "coverage_unweighted": 0.8333333333333334,
+   "extreme_weighted": 0.6666666666666666,
+   "extreme_unweighted": 0.6666666666666666,
+   "mean_halfwidth_weighted": 0.8218175985936191,
+   "mean_halfwidth_unweighted": 0.7350214275459612,
+   "adopt E4": false
+  },
+  "winter barley | mid-July": {
+   "coverage_weighted": 0.8333333333333334,
+   "coverage_unweighted": 0.8333333333333334,
+   "extreme_weighted": 0.8333333333333334,
+   "extreme_unweighted": 0.8333333333333334,
+   "mean_halfwidth_weighted": 0.8459277386863593,
+   "mean_halfwidth_unweighted": 0.8586623760442538,
+   "adopt E4": false
+  },
+  "winter barley | end of August": {
+   "coverage_weighted": 0.8472222222222222,
+   "coverage_unweighted": 0.8611111111111112,
+   "extreme_weighted": 0.875,
+   "extreme_unweighted": 0.875,
+   "mean_halfwidth_weighted": 0.7307205011339618,
+   "mean_halfwidth_unweighted": 0.7303442464664547,
+   "adopt E4": false
+  },
+  "spring barley | mid-July": {
+   "coverage_weighted": 0.8472222222222222,
+   "coverage_unweighted": 0.8333333333333334,
+   "extreme_weighted": 0.9583333333333334,
+   "extreme_unweighted": 0.9166666666666666,
+   "mean_halfwidth_weighted": 0.5545144259568744,
+   "mean_halfwidth_unweighted": 0.5157829539142336,
+   "adopt E4": true
+  },
+  "spring barley | end of August": {
+   "coverage_weighted": 0.8194444444444444,
+   "coverage_unweighted": 0.7777777777777778,
+   "extreme_weighted": 0.9583333333333334,
+   "extreme_unweighted": 0.9583333333333334,
+   "mean_halfwidth_weighted": 0.523748861287005,
+   "mean_halfwidth_unweighted": 0.5018071815099118,
+   "adopt E4": false
+  }
+ },
+ "coefficients_full_fit": {
+  "wheat | mid-July": {
+   "alpha": 30,
+   "spring_anom_pct": 0.0,
+   "soil_moist_z": 0.0,
+   "dd30": -0.103,
+   "winter_anom_pct": -0.138,
+   "compound": -0.0
+  },
+  "wheat | end of August": {
+   "alpha": 100,
+   "spring_anom_pct": 0.0,
+   "soil_moist_z": 0.0,
+   "dd30": -0.0,
+   "winter_anom_pct": -0.064,
+   "compound": -0.019
+  },
+  "winter barley | mid-July": {
+   "alpha": 1,
+   "spring_anom_pct": 0.0,
+   "soil_moist_z": 0.0,
+   "dd30": -0.0,
+   "winter_anom_pct": -0.18,
+   "compound": -0.0
+  },
+  "winter barley | end of August": {
+   "alpha": 10,
+   "spring_anom_pct": 0.0,
+   "soil_moist_z": 0.0,
+   "dd30": -0.0,
+   "winter_anom_pct": -0.138,
+   "compound": -0.0
+  },
+  "spring barley | mid-July": {
+   "alpha": 30,
+   "spring_anom_pct": 0.0,
+   "soil_moist_z": 0.008,
+   "dd30": -0.016,
+   "winter_anom_pct": -0.0,
+   "compound": -0.0
+  },
+  "spring barley | end of August": {
+   "alpha": 10,
+   "spring_anom_pct": 0.0,
+   "soil_moist_z": 0.0,
+   "dd30": -0.0,
+   "winter_anom_pct": -0.0,
+   "compound": -0.003
+  }
+ },
+ "flag_2026": {
+  "wheat | mid-July": {
+   "regions_flagged": 5,
+   "regions": 8,
+   "share": 0.625,
+   "flag_worked (at least half)": true,
+   "by_region": {
+    "East Midlands": true,
+    "Eastern": false,
+    "North East": false,
+    "North West and Merseyside": true,
+    "South East and London": false,
+    "South West": true,
+    "West Midlands": true,
+    "Yorkshire & The Humber": true
+   }
+  },
+  "wheat | end of August": {
+   "regions_flagged": 0,
+   "regions": 8,
+   "share": 0.0,
+   "flag_worked (at least half)": false,
+   "by_region": {
+    "East Midlands": false,
+    "Eastern": false,
+    "North East": false,
+    "North West and Merseyside": false,
+    "South East and London": false,
+    "South West": false,
+    "West Midlands": false,
+    "Yorkshire & The Humber": false
+   }
+  },
+  "winter barley | mid-July": {
+   "regions_flagged": 0,
+   "regions": 8,
+   "share": 0.0,
+   "flag_worked (at least half)": false,
+   "by_region": {
+    "East Midlands": false,
+    "Eastern": false,
+    "North East": false,
+    "North West and Merseyside": false,
+    "South East and London": false,
+    "South West": false,
+    "West Midlands": false,
+    "Yorkshire & The Humber": false
+   }
+  },
+  "winter barley | end of August": {
+   "regions_flagged": 0,
+   "regions": 8,
+   "share": 0.0,
+   "flag_worked (at least half)": false,
+   "by_region": {
+    "East Midlands": false,
+    "Eastern": false,
+    "North East": false,
+    "North West and Merseyside": false,
+    "South East and London": false,
+    "South West": false,
+    "West Midlands": false,
+    "Yorkshire & The Humber": false
+   }
+  },
+  "spring barley | mid-July": {
+   "regions_flagged": 0,
+   "regions": 8,
+   "share": 0.0,
+   "flag_worked (at least half)": false,
+   "by_region": {
+    "East Midlands": false,
+    "Eastern": false,
+    "North East": false,
+    "North West and Merseyside": false,
+    "South East and London": false,
+    "South West": false,
+    "West Midlands": false,
+    "Yorkshire & The Humber": false
+   }
+  },
+  "spring barley | end of August": {
+   "regions_flagged": 0,
+   "regions": 8,
+   "share": 0.0,
+   "flag_worked (at least half)": false,
+   "by_region": {
+    "East Midlands": false,
+    "Eastern": false,
+    "North East": false,
+    "North West and Merseyside": false,
+    "South East and London": false,
+    "South West": false,
+    "West Midlands": false,
+    "Yorkshire & The Humber": false
+   }
+  }
+ },
+ "illustration_2026": {
+  "wheat | mid-July": {
+   "nowcast_mean": 7.058727132111208,
+   "defra_provisional_mean": 7.184374999999999,
+   "mean_error": -0.1256478678887919,
+   "inside_80pct": 7,
+   "regions": 8,
+   "infinite_intervals": 0
+  },
+  "wheat | end of August": {
+   "nowcast_mean": 7.560979028099777,
+   "defra_provisional_mean": 7.184374999999999,
+   "mean_error": 0.37660402809977755,
+   "inside_80pct": 6,
+   "regions": 8,
+   "infinite_intervals": 0
+  },
+  "winter barley | mid-July": {
+   "nowcast_mean": 6.393395597294301,
+   "defra_provisional_mean": 6.523875,
+   "mean_error": -0.13047940270569947,
+   "inside_80pct": 7,
+   "regions": 8,
+   "infinite_intervals": 0
+  },
+  "winter barley | end of August": {
+   "nowcast_mean": 6.62487425778329,
+   "defra_provisional_mean": 6.523875,
+   "mean_error": 0.10099925778328955,
+   "inside_80pct": 6,
+   "regions": 8,
+   "infinite_intervals": 0
+  },
+  "spring barley | mid-July": {
+   "nowcast_mean": 5.192869913052528,
+   "defra_provisional_mean": 4.535375,
+   "mean_error": 0.6574949130525272,
+   "inside_80pct": 3,
+   "regions": 8,
+   "infinite_intervals": 0
+  },
+  "spring barley | end of August": {
+   "nowcast_mean": 5.166723916010712,
+   "defra_provisional_mean": 4.535375,
+   "mean_error": 0.6313489160107124,
+   "inside_80pct": 3,
+   "regions": 8,
+   "infinite_intervals": 0
+  }
+ }
+}
