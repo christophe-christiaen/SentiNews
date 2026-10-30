@@ -83,12 +83,13 @@ Per-parcel data stay out of the public repository.
 `wp3_elms_effect/results/w3_4_wet_grassland.md`, `.json` (aggregates only).
 
 ## Decisions before registration (settled 30 October 2026: defaults adopted)
-1. Whether fen and reedbed are pooled with wet grassland (larger sample, mixed signal) or kept descriptive (as drafted). **Decided:** Fen and reedbed kept descriptive, not pooled.
+1. Whether fen and reedbed are pooled with wet grassland (larger sample, mixed signal) or kept descriptive (as drafted). **Decided:** Fen and reedbed kept descriptive, not pooled. **Changed (30 October 2026, before any extraction):** fen and reedbed are tested as a family of their own under the same rules, not pooled with wet grassland.
 2. Whether Part B also runs on cereal-land water options that are paid by area (WT2, buffering in-field ponds and
-   ditches on arable land; SW4 watercourse buffers), which sit in W3-4's buffer-strip family. **Decided:** Part B is not run on WT2 or SW4.
+   ditches on arable land; SW4 watercourse buffers), which sit in W3-4's buffer-strip family. **Decided:** Part B is not run on WT2 or SW4. **Changed (30 October 2026, before any extraction):** Part B is also run on WT2 and SW4, on the cereal-land frame.
 
 ## Record
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-30 | Draft written, before any feature for these parcels was extracted | Project lead's request to cover water and linear options |
 | 2026-10-30 | Open decisions settled with the defaults (above); protocol registered by public commit | Project lead's decision |
+| 2026-10-30 | Changed before any extraction: options dropped by the defaults are kept (see Decisions) | Project lead: keep every option as far as possible |

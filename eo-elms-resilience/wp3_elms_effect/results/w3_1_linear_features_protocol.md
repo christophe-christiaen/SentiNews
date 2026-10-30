@@ -94,10 +94,11 @@ Per-parcel data stay out of the public repository.
    pixels. **Decided:** 20 m edge band, 30 m interior.
 2. **Hedges on boundaries:** a hedge lies on the boundary between two fields. Whether to also sample a band outside
    the polygon, which brings in the neighbouring field and is drafted without it. **Decided:** No band outside the polygon.
-3. **Stone walls and earth banks** (BN12, BN4): add as a further "not visible" family, or leave out. **Decided:** Stone walls and earth banks left out.
+3. **Stone walls and earth banks** (BN12, BN4): add as a further "not visible" family, or leave out. **Decided:** Stone walls and earth banks left out. **Changed (30 October 2026, before any extraction):** added as a family expected not to be visible at 10 m, sampled in the edge band: stone walls (BN12, BN13, BN14), earth and stone-faced banks (BN1, BN2, BN3, BN4).
 
 ## Record
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-30 | Draft written, before any edge-band feature was extracted | Project lead's request to cover water and linear options |
 | 2026-10-30 | Open decisions settled with the defaults (above); protocol registered by public commit | Project lead's decision |
+| 2026-10-30 | Changed before any extraction: options dropped by the defaults are kept (see Decisions) | Project lead: keep every option as far as possible |
