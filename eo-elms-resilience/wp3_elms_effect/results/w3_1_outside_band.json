@@ -1,0 +1,199 @@
+{
+ "fields": 34106,
+ "with_ring": 33776,
+ "usable": 33761,
+ "by_group": [
+  {
+   "family": "area_strips",
+   "role": "A",
+   "n": 2967,
+   "outside_share": 0.0841,
+   "outside_median": 0.0655,
+   "outside_height": 0.6454,
+   "inside_share": 0.004
+  },
+  {
+   "family": "area_strips",
+   "role": "B",
+   "n": 2966,
+   "outside_share": 0.0801,
+   "outside_median": 0.06,
+   "outside_height": 0.6369,
+   "inside_share": 0.0034
+  },
+  {
+   "family": "area_strips",
+   "role": "positive",
+   "n": 2978,
+   "outside_share": 0.0799,
+   "outside_median": 0.0628,
+   "outside_height": 0.6391,
+   "inside_share": 0.0031
+  },
+  {
+   "family": "hedge_management",
+   "role": "A",
+   "n": 2961,
+   "outside_share": 0.0828,
+   "outside_median": 0.0644,
+   "outside_height": 0.6383,
+   "inside_share": 0.0041
+  },
+  {
+   "family": "hedge_management",
+   "role": "B",
+   "n": 2973,
+   "outside_share": 0.0748,
+   "outside_median": 0.0575,
+   "outside_height": 0.5873,
+   "inside_share": 0.0029
+  },
+  {
+   "family": "hedge_management",
+   "role": "positive",
+   "n": 2960,
+   "outside_share": 0.0826,
+   "outside_median": 0.0661,
+   "outside_height": 0.6424,
+   "inside_share": 0.0031
+  },
+  {
+   "family": "management_only",
+   "role": "A",
+   "n": 2957,
+   "outside_share": 0.082,
+   "outside_median": 0.063,
+   "outside_height": 0.6342,
+   "inside_share": 0.0036
+  },
+  {
+   "family": "management_only",
+   "role": "positive",
+   "n": 2969,
+   "outside_share": 0.0754,
+   "outside_median": 0.0545,
+   "outside_height": 0.5971,
+   "inside_share": 0.0033
+  },
+  {
+   "family": "new_hedges",
+   "role": "A",
+   "n": 2969,
+   "outside_share": 0.0864,
+   "outside_median": 0.0669,
+   "outside_height": 0.6661,
+   "inside_share": 0.0038
+  },
+  {
+   "family": "new_hedges",
+   "role": "B",
+   "n": 2977,
+   "outside_share": 0.078,
+   "outside_median": 0.0575,
+   "outside_height": 0.6184,
+   "inside_share": 0.003
+  },
+  {
+   "family": "new_hedges",
+   "role": "positive",
+   "n": 2985,
+   "outside_share": 0.0713,
+   "outside_median": 0.0527,
+   "outside_height": 0.5764,
+   "inside_share": 0.0025
+  },
+  {
+   "family": "walls_banks",
+   "role": "A",
+   "n": 365,
+   "outside_share": 0.0842,
+   "outside_median": 0.0657,
+   "outside_height": 0.6621,
+   "inside_share": 0.004
+  },
+  {
+   "family": "walls_banks",
+   "role": "B",
+   "n": 367,
+   "outside_share": 0.0742,
+   "outside_median": 0.057,
+   "outside_height": 0.5891,
+   "inside_share": 0.0023
+  },
+  {
+   "family": "walls_banks",
+   "role": "positive",
+   "n": 367,
+   "outside_share": 0.065,
+   "outside_median": 0.0382,
+   "outside_height": 0.5384,
+   "inside_share": 0.0034
+  }
+ ],
+ "check_vs_A": {
+  "diff": -0.00019444480288098587,
+  "lo": -0.0038375424968331235,
+  "hi": 0.0033905642779318334,
+  "n": [
+   2960,
+   2961
+  ]
+ },
+ "check_vs_B": {
+  "diff": 0.007213865712374992,
+  "lo": 0.003464188778083087,
+  "hi": 0.010961624143540384,
+  "n": [
+   2960,
+   2969
+  ]
+ },
+ "check_vs_A_pre2021_surveys": {
+  "diff": 0.0007789769283632758,
+  "lo": -0.003195618784829675,
+  "hi": 0.004677731220676019,
+  "n": [
+   2493,
+   2518
+  ]
+ },
+ "families_vs_own_A": {
+  "new_hedges": {
+   "diff": -0.015029483456497461,
+   "lo": -0.018671507885588214,
+   "hi": -0.011396078881867569,
+   "n": [
+    2985,
+    2969
+   ]
+  },
+  "area_strips": {
+   "diff": -0.004129374837159069,
+   "lo": -0.007741776999503085,
+   "hi": -0.0004223989849556183,
+   "n": [
+    2978,
+    2967
+   ]
+  },
+  "hedge_management": {
+   "diff": -0.00019444480288098587,
+   "lo": -0.0037399071546839226,
+   "hi": 0.003579180468230732,
+   "n": [
+    2960,
+    2961
+   ]
+  },
+  "walls_banks": {
+   "diff": -0.01915790175273177,
+   "lo": -0.02951832543303581,
+   "hi": -0.00836199737212126,
+   "n": [
+    367,
+    365
+   ]
+  }
+ },
+ "check_passed": false
+}
