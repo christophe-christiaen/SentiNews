@@ -1,0 +1,92 @@
+{
+ "ES options Oct 2023": {
+  "records": 859463,
+  "parcels": 193712,
+  "never_cereal_found": 53,
+  "never_all_found": 782
+ },
+ "ES options Nov 2025 (gdb)": {
+  "records": 852565,
+  "parcels": 163618,
+  "never_cereal_found": 129,
+  "never_all_found": 1659
+ },
+ "ES options elms.gpkg (Nov 2025)": {
+  "records": 852565,
+  "parcels": 163618,
+  "never_cereal_found": 129,
+  "never_all_found": 1659
+ },
+ "CS options Mar 2024": {
+  "records": 212096,
+  "parcels": 16848,
+  "never_cereal_found": 506,
+  "never_all_found": 2864
+ },
+ "CS options gpkg (Aug 2025)": {
+  "records": 1140044,
+  "parcels": 540721,
+  "never_cereal_found": 8976,
+  "never_all_found": 62418
+ },
+ "ES agreements Oct 2022": {
+  "outlines": 8265,
+  "never_cereal_inside": 1943,
+  "never_all_inside": 31207
+ },
+ "ES agreements Oct 2022 (not in any option snapshot)": {
+  "never_cereal": 1641,
+  "never_all": 27557
+ },
+ "ES agreements Oct 2023": {
+  "outlines": 7491,
+  "never_cereal_inside": 1410,
+  "never_all_inside": 24015
+ },
+ "ES agreements Oct 2023 (not in any option snapshot)": {
+  "never_cereal": 1168,
+  "never_all": 20897
+ },
+ "CS agreements Mar 2024": {
+  "outlines": 1312,
+  "never_cereal_inside": 757,
+  "never_all_inside": 6874
+ },
+ "CS agreements Mar 2024 (not in any option snapshot)": {
+  "never_cereal": 237,
+  "never_all": 3948
+ },
+ "summary": {
+  "never_cereal": 90447,
+  "never_all": 1350063,
+  "never_cereal_in_any_option_snapshot": 9539,
+  "share_cereal": 0.1055,
+  "never_all_in_any_option_snapshot": 67216,
+  "share_all": 0.0498
+ },
+ "cs_aug2025_detail": {
+  "never_cereal_parcels": 8976,
+  "agreement_start_years": {
+   "2016": 98,
+   "2017": 26,
+   "2018": 22,
+   "2019": 27,
+   "2020": 1310,
+   "2021": 2605,
+   "2022": 2916,
+   "2023": 1548,
+   "2024": 413
+  },
+  "agreement_end_years": {
+   "2024": 1371,
+   "2025": 2716,
+   "2026": 2887,
+   "2027": 1419,
+   "2028": 387,
+   "2029+": 196
+  },
+  "mid_tier": 8056,
+  "higher_tier": 644,
+  "note": "CS agreement IDs differ between the Aug 2025 and Oct 2026 layers (7 in common); parcels compared instead: 540,721 vs 540,462 parcels, 394,500 in both."
+ }
+}
