@@ -1,0 +1,27 @@
+{
+ "seed": 30,
+ "agreement": 20000,
+ "never_treated": 40000,
+ "never_treated_available": 88877,
+ "era5_cells": 1465,
+ "agreement_by_region": {
+  "East of England": 4824,
+  "East Midlands": 3911,
+  "Yorkshire and the Humber": 2747,
+  "South West": 2513,
+  "South East": 2284,
+  "West Midlands": 2108,
+  "North East": 1033,
+  "North West": 564,
+  "London": 16
+ },
+ "agreement_by_cohort": {
+  "2021": 869,
+  "2022": 1925,
+  "2023": 1394,
+  "2024": 4664,
+  "2025": 8892,
+  "2026": 1392,
+  "2027": 864
+ }
+}
