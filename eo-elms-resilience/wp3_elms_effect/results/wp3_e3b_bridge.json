@@ -1,0 +1,35 @@
+{
+ "versions": [
+  "e3bA",
+  "e3bB"
+ ],
+ "parcel_seasons": 399,
+ "parcels": 200,
+ "dim": [
+  768,
+  768
+ ],
+ "identical": false,
+ "cross_fitted": [
+  0.939,
+  0.903,
+  0.916,
+  0.829,
+  0.807,
+  0.645,
+  0.274,
+  0.06,
+  0.111,
+  0.121
+ ],
+ "cross_fitted_median": 0.7259488729299335,
+ "in_sample_median": 0.7275621820383349,
+ "first_cc_in_sample": 0.9515183954204577,
+ "per_season_in_sample_median": {
+  "2018": 0.6190765909353375,
+  "2025": 0.6369902129263245
+ },
+ "cos_same_parcel_median": 0.8788019418716431,
+ "cos_random_median": 0.8494935035705566,
+ "rule_met": false
+}
