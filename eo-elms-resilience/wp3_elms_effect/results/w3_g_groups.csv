@@ -1,0 +1,33 @@
+family,mechanism_group,mechanism,w3s_group,expectation,codes,parcel_code_pairs,note
+fen_reedbed,K,storage,W,visible,13,4153,
+other_water,K,storage,W,not_visible,18,924,"swales, leaky and check dams, flood mitigation, raised water levels, sluices, designed water bodies"
+pond_creation,K,storage,W,visible,4,2859,
+pond_restoration,K,storage,W,not_visible,7,4931,
+sfi_ponds_ditches,K,storage,W,not_visible,6,6760,ditches convey as well as store
+wet_grassland,K,storage,W,visible,13,16379,
+grazing_regime,N,no water mechanism,L,not_visible,9,32718,
+historic_grassland,N,no water mechanism,L,not_visible,9,13310,keeps existing grassland over archaeology
+lowland_heathland,N,no water mechanism,L,not_visible,8,3011,mostly management of existing heath (LH1); creation codes are small
+management_only,N,no water mechanism,L,not_visible,15,638457,
+moorland_rough_grazing,N,no water mechanism,L,not_visible,28,20641,grazing levels on existing moorland
+organic,N,no water mechanism,L,visible,20,38070,organic management names no water mechanism; leys within organic rotations are not identifiable
+other_land,N,no water mechanism,L,not_visible,29,4476,"coastal habitats and scrub, bracken and rhododendron control"
+rush_pastures,N,no water mechanism,L,not_visible,7,1672,management of existing rush pasture
+seasonal_livestock_removal,N,no water mechanism,L,not_visible,8,9668,
+woodland_management,N,no water mechanism,L,not_visible,12,32696,"management of existing woodland: no change in cover (the addendum table lists woodland under V, meant for creation, which is woodland_creation)"
+area_strips,P,pathway,I,visible,91,192521,"includes in-field grass strips, watercourse and pond buffers; also overwinter stubble and low-input cereal (AHW6-8, AHW10) as registered, which act as source, not pathway"
+beetle_banks,P,pathway,I,not_visible,6,1991,
+hedge_management,P,pathway,I,not_visible,12,747115,
+new_hedges,P,pathway,I,visible,3,37121,
+walls_banks,P,pathway,I,not_visible,9,33682,
+cover_crops,S,source,L,visible,5,27572,
+herbal_leys,S,source,L,visible,2,94801,
+infield_plots,S,source,L,visible,22,32709,"not in the addendum table; sown plots give cover in winter (bird food) or most of the year (nectar), so soil cover is the mechanism named first"
+no_till,S,source,L,visible,8,4393,includes reduced-depth cultivation on archaeology (small ES/CS codes)
+arable_reversion,V,conversion,L,visible,11,4465,
+grassland_options,V,conversion,L,visible,36,326235,low-input grassland and field corners (the addendum table); also winter bird food on grassland (IGL2)
+in_field_trees,V,conversion,L,not_visible,26,12558,"in-field trees, agroforestry and orchards (the addendum table); largest codes protect existing trees"
+scrub_successional,V,conversion,L,visible,13,10051,mixes management and creation of scrub
+species_rich_grassland,V,conversion,L,visible,19,65223,
+wood_pasture,V,conversion,L,not_visible,9,8004,"mixes management, restoration and creation (WD6 creation is the largest CS code)"
+woodland_creation,V,conversion,L,visible,6,3754,
