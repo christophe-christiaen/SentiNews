@@ -1,0 +1,632 @@
+scheme,code,description,unit,parcels,group,family,expectation,family_source,reason,note
+CS,AB3,Beetle banks,HA,1106,I,beetle_banks,not_visible,new,,"beetle bank (W3-S candidate); about 2 m wide, so not expected visible at 10 m"
+CS,AB8,Flower rich margins and plots,HA,35612,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+CS,AC1,Access Capital Items,POUNDS,171,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,AF1,Plant an agro-forestry woodland tree,TREES,3,L,in_field_trees,not_visible,new,,
+CS,AF2,Plant an agro-forestry fruit tree,TREES,5,L,in_field_trees,not_visible,new,,
+CS,AQ1,Automatic slurry scraper,UNITS,152,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,AQ2,Low ammonia emission flooring for livestock buildings,HA,36,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,BC4,Tree guard (wood post and wire),UNITS,5,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,BE1,Protection of in-field trees on arable land,HA,678,L,in_field_trees,not_visible,new,,
+CS,BE2,Protection of in-field trees on intensive grassland,HA,509,L,in_field_trees,not_visible,new,,
+CS,BE3,Management of hedgerows,METRES,126645,I,hedge_management,not_visible,W3-1,,
+CS,BE4,Management of traditional orchards,HA,808,L,in_field_trees,not_visible,new,,"traditional orchards, 808 parcels (< 1,000): W3-S candidate not formed; joins in_field_trees"
+CS,BE5,Creation of traditional orchards,HA,204,L,in_field_trees,not_visible,new,,"orchard creation (< 1,000): joins in_field_trees"
+CS,BE6,Veteran Tree Surgery,PLANT,287,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,BE7,Supplement for restorative pruning of fruit trees,TREES,514,X,not_testable,not_testable,,payment supplement,
+CS,BN1,Stone-faced bank repair,METRES,389,I,walls_banks,not_visible,W3-1,,
+CS,BN10,Hedgerow Supplement - Top Binding and Staking,METRES,2474,X,not_testable,not_testable,,payment supplement,
+CS,BN11,Planting new hedges,METRES,24180,I,new_hedges,visible,W3-1,,
+CS,BN12,Stone Wall Restoration,METRES,9043,I,walls_banks,not_visible,W3-1,,
+CS,BN13,Stone Wall - Top Wiring,METRES,3624,I,walls_banks,not_visible,W3-1,,stone wall supplement: kept in walls_banks as W3-1 registered
+CS,BN14,Stone wall supplement - Stone from quarry,METRES,2163,I,walls_banks,not_visible,W3-1,,stone wall supplement: kept in walls_banks as W3-1 registered
+CS,BN15,Stone wall supplement - difficult sites,METRES,131,X,not_testable,not_testable,,payment supplement,
+CS,BN2,Stone faced bank restoration,METRES,970,I,walls_banks,not_visible,W3-1,,
+CS,BN3,Earth bank creation,METRES,1042,I,walls_banks,not_visible,W3-1,,
+CS,BN4,Earth Bank Restoration,METRES,6997,I,walls_banks,not_visible,W3-1,,
+CS,BN5,Hedgerow laying,METRES,15727,I,hedge_management,not_visible,W3-1,,
+CS,BN6,Hedgerow Coppicing,METRES,9963,I,hedge_management,not_visible,W3-1,,
+CS,BN7,Hedgerow Gapping,METRES,12033,I,new_hedges,visible,W3-1,,
+CS,BN8,Hedgerow Supplement - Casting Up,METRES,7384,X,not_testable,not_testable,,payment supplement,
+CS,BN9,Hedgerow Supplement - substantial Pre-Work,METRES,109,X,not_testable,not_testable,,payment supplement,
+CS,CT1,Management of coastal sand dunes and vegetated shingle,HA,226,L,other_land,not_visible,pooled,,"coastal habitat: no coastal family (all codes < 1,000); other_land"
+CS,CT3,Management of coastal saltmarsh,HA,341,L,other_land,not_visible,pooled,,
+CS,CT5,Creation of inter-tidal and saline habitat by non-intervention,HA,23,L,other_land,not_visible,pooled,,
+CS,CT6,Coastal vegetation management supplement,HA,47,X,not_testable,not_testable,,payment supplement,
+CS,CT7,Creation of inter-tidal and saline habitat on intensive grassland,HA,7,L,other_land,not_visible,pooled,,
+CS,FG1,Fencing,METRES,20335,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG10,Temporary deer fencing / m,METRES,240,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG11,Deer exclosure plot/unit,UNITS,1939,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG12,Wooden Field Gate,UNITS,31048,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG13,Stone Gate Post,UNITS,51,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG14,Badger Gates,UNITS,114,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG15,Water Gates,UNITS,470,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG16,Deer Pedestrian Gate,UNITS,71,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG17,Deer Vehicle Gate,UNITS,152,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG2,Sheep netting,METRES,111583,X,not_testable,not_testable,,capital item or works unrelated to land cover,no description in the SFI list; metres; FG = fencing in CS
+CS,FG3,Permanent electric fencing,METRES,1940,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG4,Rabbit fencing supplement,METRES,1193,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG5,Fencing supplement - difficult sites,METRES,1002,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG7,Anti-predator combination fencing for vulnerable ground-nesting birds.,METRES,51,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG8,Anti-predator temporary electric fencing,METRES,12,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FG9,Woodland Fencing - Deer,METRES,303,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FM1,Management of geodiversity features,POUNDS,11,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,FY1,Deer high seat / unit,UNITS,2450,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,GS1,Take field corners and small areas out of management,HA,9737,L,grassland_options,visible,W3-4,,
+CS,GS10,Management of wet grassland for wintering waders and wildfowl,HA,3792,W,wet_grassland,visible,addendum 4,,
+CS,GS11,Creation of wet grassland for breeding waders,HA,120,W,wet_grassland,visible,addendum 4,,
+CS,GS12,Creation of wet grassland for wintering waders and wildfowl,HA,56,W,wet_grassland,visible,addendum 4,,"creation of wet grassland for wintering birds; not in addendum 4 list (GS9-11), joins by rule 3"
+CS,GS13,Management of grassland for target features,HA,6628,L,species_rich_grassland,visible,new,,
+CS,GS14,Creation of grassland for target features,HA,347,L,species_rich_grassland,visible,new,,
+CS,GS15,Haymaking supplement,HA,4833,X,not_testable,not_testable,,payment supplement,
+CS,GS16,Rush infestation control supplement,HA,3063,X,not_testable,not_testable,,payment supplement,
+CS,GS2,Permanent grassland with very low inputs (outside SDAs),HA,118735,L,grassland_options,visible,W3-4,,
+CS,GS5,Permanent grassland with very low inputs in SDA,HA,21423,L,grassland_options,visible,W3-4,,"very low inputs in SDAs: same action as GS2, joins grassland_options (W3-S candidate ""low-input grassland"" not formed)"
+CS,GS6,Management of species-rich grassland,HA,6589,L,species_rich_grassland,visible,new,,
+CS,GS7,Restoration towards species-rich grassland,HA,2796,L,species_rich_grassland,visible,new,,
+CS,GS8,Creation of species-rich grassland,HA,281,L,species_rich_grassland,visible,new,,
+CS,GS9,Management of wet grassland for breeding waders,HA,2423,W,wet_grassland,visible,addendum 4,,
+CS,HE1,Historic and archaeological feature protection.,POUNDS,148,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,HE3,Removal of eyesore,UNITS,183,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,HS1,Maintenance of Weatherproof Traditional Farm Buildings,HA,6200,X,not_testable,not_testable,,building,
+CS,HS2,Take historic and archaeological features currently on cultivated land out of cultivation.,HA,914,L,arable_reversion,visible,new,,archaeology taken out of cultivation: nearest is arable_reversion
+CS,HS3,"Reduced depth, non-inversion cultivation on historic and archaeological features",HA,736,L,no_till,visible,W3-4,,reduced-depth non-inversion cultivation on archaeology: nearest is no_till (small code)
+CS,HS4,Scrub control on historic and archaeological features,HA,301,L,scrub_successional,visible,new,,scrub on archaeology: nearest is scrub_successional
+CS,HS5,Management of historic and archaeological features on grassland,HA,2767,L,historic_grassland,not_visible,new,,
+CS,HS6,Maintenance of designed/engineered water-bodies,HA,62,W,other_water,not_visible,pooled,,
+CS,HS7,Management of historic water meadows through traditional irrigation,HA,21,W,wet_grassland,visible,addendum 4,,historic water meadows: nearest is wet_grassland
+CS,HS8,Maintenance of Weatherproof Traditional Farm Buildings in Remote Areas,HA,394,X,not_testable,not_testable,,building,
+CS,HS9,Restricted depth crop establishment to protect archaeology under and arable rotation,HA,235,L,no_till,visible,W3-4,,restricted-depth establishment on archaeology: nearest is no_till (small code)
+CS,LH1,Management of lowland heathland,HA,1152,L,lowland_heathland,not_visible,new,,management of existing heath: not expected visible
+CS,LH2,Restoration of forestry and woodland to lowland heathland,HA,28,L,lowland_heathland,not_visible,new,,
+CS,LH3,Creation of heathland from arable or improved grassland,HA,32,L,lowland_heathland,not_visible,new,,
+CS,LV1,Cattle Grid,UNITS,57,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,LV3,Hard bases for livestock drinkers,UNITS,11175,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,LV4,Hard bases for livestock feeders,UNITS,676,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,LV5,Pasture pumps and associated pipework/unit,UNITS,340,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,LV6,Ram pumps and pipework/unit,UNITS,196,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,LV7,Livestock troughs,UNITS,19124,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,LV8,Pipework for livestock troughs,METRES,16586,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,OR1,Organic conversion - improved permanent grassland,HA,2782,L,organic,visible,new,,
+CS,OR2,Organic conversion - unimproved permanent grassland,HA,618,L,organic,visible,new,,
+CS,OR5,Organic Conversion - Top Fruit,HA,97,L,organic,visible,new,,
+CS,OT1,Organic land management - improved permanent grassland,HA,16359,L,organic,visible,new,,
+CS,OT2,Organic Land Management - unimproved permanent grassland,HA,4225,L,organic,visible,new,,
+CS,OT5,Organic Land Management - Top Fruit,HA,312,L,organic,visible,new,,
+CS,OT6,Organic Land Management - Enclosed Rough Grazing,HA,82,L,organic,visible,new,,
+CS,PA1,Implementation Plan/Unit,UNITS,114,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP1,Resurfacing of gateways,UNITS,7460,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP10,Silt filtration dams or seepage barriers,UNITS,10,W,other_water,not_visible,pooled,,
+CS,RP11,Swales,HA,106,W,other_water,not_visible,pooled,,"swales (capital, water): other_water"
+CS,RP12,Check dams and woody debris dams,UNITS,47,W,other_water,not_visible,pooled,,check and woody debris dams: other_water
+CS,RP13,Yard - underground drainage pipework,METRES,2368,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP14,Yard inspection pit,UNITS,2058,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP15,Concrete yard renewal,HA,5927,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP16,Rainwater goods,METRES,2361,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP17,Storage tanks underground,CUBED ,80,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP18,Above ground tanks,CUBED ,1331,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP19,First-flush rainwater diverters/downpipe filters,UNITS,1069,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP2,Gateway relocation,UNITS,386,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP20,Relocation of sheep dips and pens,UNITS,7,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP21,Relocation of sheep pens only,UNITS,23,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP22,Sheep dip drainage aprons and sumps,HA,4,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP23,Installation of livestock drinking troughs (in draining pens for freshly dipped sheep),UNITS,3,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP24,Lined biobed plus pesticide loading and washdown area,HA,14,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP25,Lined biobed with existing washdown area,HA,4,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP26,Biofilters,UNITS,286,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP27,Sprayer or applicator load and washdown area/sq m,HA,308,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP28,"Roofing (sprayer washdown area, manure storage area, ...)",HA,3835,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP29,Self supporting covers for slurry stores/sq m,HA,50,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP3,Watercourse crossing/unit,UNITS,151,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP30,Floating covers for slurry stores and lagoons,HA,47,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP32,Small Leaky Woody Dam,UNITS,91,W,other_water,not_visible,pooled,,small leaky woody dam: other_water
+CS,RP33,Large Leaky Woody Dam,UNITS,47,W,other_water,not_visible,pooled,,large leaky woody dam: other_water
+CS,RP4,Livestock and machinery hardcore tracks,METRES,5282,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,RP5,Cross drains/unit,UNITS,2794,X,not_testable,not_testable,,capital item or works unrelated to land cover,cross drains on tracks
+CS,RP6,Installation of piped culverts and ditches,UNITS,1241,X,not_testable,not_testable,,capital item or works unrelated to land cover,piped culverts and ditches (yard and track drainage)
+CS,RP7,Sediment ponds and traps/sq m,HA,450,W,pond_creation,visible,W3-W,,sediment ponds: nearest is pond_creation
+CS,RP8,Constructed wetlands for the treatment of pollution,POUNDS,3,W,other_water,not_visible,pooled,,
+CS,RP9,Earth banks and soil bunds/unit,UNITS,60,W,other_water,not_visible,pooled,,
+CS,SB1A,Scrub Control and Felling Diseased Trees,HA,156,L,other_land,not_visible,pooled,,scrub control and felling diseased trees: other_land
+CS,SB1B,Scrub Control and Felling Diseased Trees,HA,212,L,other_land,not_visible,pooled,,
+CS,SB1C,Scrub Control and Felling Diseased Trees,HA,71,L,other_land,not_visible,pooled,,
+CS,SB1D,Scrub Control and Felling Diseased Trees,HA,92,L,other_land,not_visible,pooled,,
+CS,SB1E,Scrub Control and Felling Diseased Trees,HA,318,L,other_land,not_visible,pooled,,
+CS,SB1F,Scrub Control and Felling Diseased Trees,HA,391,L,other_land,not_visible,pooled,,
+CS,SB2,Scrub control - difficult sites,POUNDS,165,X,not_testable,not_testable,,payment supplement,
+CS,SB3,Tree removal,TREES,132,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,SB4,Chemical Bracken Control,HA,226,L,other_land,not_visible,pooled,,bracken control: other_land
+CS,SB5,Mechanical bracken control,HA,202,L,other_land,not_visible,pooled,,
+CS,SB6A,Rhododendron control,HA,203,L,other_land,not_visible,pooled,,
+CS,SB6B,Rhododendron control,HA,238,L,other_land,not_visible,pooled,,
+CS,SB6C,Rhododendron control,HA,159,L,other_land,not_visible,pooled,,
+CS,SP1,Difficult sites supplement,HA,737,X,not_testable,not_testable,,payment supplement,
+CS,SP2,Raised water level supplement,HA,359,X,not_testable,not_testable,,payment supplement,raised water level supplement: payment supplement (water-relevant)
+CS,SP3,Bracken control supplement,HA,1021,X,not_testable,not_testable,,payment supplement,
+CS,SP4,Control of invasive plant species supplement,HA,364,X,not_testable,not_testable,,payment supplement,
+CS,SP5,Shepherding supplement,HA,323,X,not_testable,not_testable,,payment supplement,
+CS,SP6,Cattle grazing supplement,HA,14251,X,not_testable,not_testable,,payment supplement,
+CS,SP7,Introduction of cattle grazing on the Scilly Isles,HA,14,X,not_testable,not_testable,,payment supplement,
+CS,SP8,Native breeds at risk supplement,HA,5399,X,not_testable,not_testable,,payment supplement,
+CS,SW1,4-6m buffer strip on cultivated land,HA,49007,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+CS,SW10,Seasonal livestock removal on intensive grassland,HA,474,L,seasonal_livestock_removal,not_visible,new,,
+CS,SW11,Riparian management strip,HA,998,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,"riparian strip, 998 parcels (< 1,000): W3-S candidate family not formed; joins area_strips"
+CS,SW12,Making space for water,HA,35,W,other_water,not_visible,pooled,,making space for water: other_water
+CS,SW13,Very low nitrogen inputs to groundwaters,HA,113,L,grassland_options,visible,W3-4,,very low nitrogen to groundwaters: nearest is grassland_options
+CS,SW14,Nil fertiliser supplement,HA,823,X,not_testable,not_testable,,payment supplement,
+CS,SW15,Flood mitigation on arable reversion to grassland,HA,24,L,arable_reversion,visible,new,,flood mitigation on arable reversion: arable_reversion (mechanism also water storage)
+CS,SW16,Flood mitigation on permanent grassland,HA,144,W,other_water,not_visible,pooled,,flood mitigation on permanent grassland: other_water
+CS,SW18,Raised water levels on grassland on peat soils,HA,19,W,other_water,not_visible,pooled,,raised water levels on peat grassland: other_water
+CS,SW2,4-6m buffer strip on intensive grassland,HA,3875,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,buffer strip on intensive grassland (negative control in addendum 4 Part B); same type as SW1
+CS,SW3,In-field grass strips,HA,9294,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+CS,SW4,12-24m watercourse buffer strip on cultivated land,HA,3933,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,watercourse buffer: in W3-4 buffer-strip control; joins area_strips
+CS,SW7,Arable reversion to grassland with low fertiliser inputs,HA,1379,L,arable_reversion,visible,new,,
+CS,SW8,Management of intensive grassland adjacent to a watercourse,HA,304,L,grassland_options,visible,W3-4,,"intensive grassland next to a watercourse, managed with low inputs: nearest is grassland_options"
+CS,SW9,Seasonal livestock removal on intensive grassland,HA,7914,L,seasonal_livestock_removal,not_visible,new,,not visible (W3-S candidate)
+CS,TE1,Planting Standard Hedgerow Tree,UNITS,4253,I,hedge_management,not_visible,W3-1,,hedgerow tree planting: as HRW3
+CS,TE10,Coppicing Bank-side Trees,TREES,2423,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE11,Tree surgery,TREES,7783,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE12,Stump Grinding,UNITS,37,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE13,Creation of dead wood habitat on trees,UNITS,41,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE14,Identification of orchard fruit tree varieties,VARIET,23,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE2,Planting Standard Parkland Tree,TREES,1394,L,in_field_trees,not_visible,new,,"parkland tree planting (capital, land cover): in_field_trees"
+CS,TE3,Planting Fruit Trees,TREES,942,L,in_field_trees,not_visible,new,,"fruit-tree planting (capital, land cover): in_field_trees"
+CS,TE4A,Woodland Tree Planting - Biodiversity,TREES,351,L,woodland_creation,visible,new,,
+CS,TE4B,Woodland Tree Planting - Improving water quality or reducing flood risk,TREES,59,L,woodland_creation,visible,new,,
+CS,TE4C,Woodland Tree Planting - Restock after a tree health issue,TREES,1161,L,woodland_creation,visible,new,,
+CS,TE4D,Woodland Tree Planting - Hedges and clumps,TREES,908,I,new_hedges,visible,W3-1,,tree planting for hedges and clumps: nearest is new_hedges
+CS,TE5,Woodland Tree Planting - Treeshelter Supplement,UNITS,1702,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE6,Tree guard (tube and mesh),TREES,1273,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE7,Tree guard (Wood post and rail),TREES,740,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE8,Tree Guard (wood post and wire),TREES,1788,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,TE9,Parkland Tree Guard - welded steel,TREES,165,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+CS,UP1,Enclosed rough grazing,HA,1054,L,moorland_rough_grazing,not_visible,new,,
+CS,UP2,Management of rough grazing for birds,HA,3997,L,moorland_rough_grazing,not_visible,new,,
+CS,UP3,Management of Moorland,HA,1624,L,moorland_rough_grazing,not_visible,new,,
+CS,UP4,Management of moorland vegetation supplement,HA,77,X,not_testable,not_testable,,payment supplement,
+CS,UP5,Moorland re-wetting supplement,HA,79,X,not_testable,not_testable,,payment supplement,moorland re-wetting supplement: payment supplement (water-relevant)
+CS,UP6,Upland livestock exclusion supplement,HA,680,X,not_testable,not_testable,,payment supplement,
+CS,WD1,Woodland creation - maintenance payments,HA,1239,L,woodland_creation,visible,new,,woodland creation (maintenance payment): expected visible as trees grow
+CS,WD10,Management of upland wood pasture and parkland,HA,39,L,wood_pasture,not_visible,new,,
+CS,WD11,Restoration of upland wood pasture and parkland,HA,192,L,wood_pasture,not_visible,new,,
+CS,WD12,Creation of upland wood pasture,HA,750,L,wood_pasture,not_visible,new,,
+CS,WD2,Woodland improvement,HA,18296,L,woodland_management,not_visible,new,,
+CS,WD3,Woodland edges on arable land,HA,1239,L,woodland_management,not_visible,new,,woodland edges on arable land: nearest is woodland_management
+CS,WD4,Management of wood pasture and parkland,HA,923,L,wood_pasture,not_visible,new,,
+CS,WD5,Restoration of wood pasture and parkland,HA,894,L,wood_pasture,not_visible,new,,
+CS,WD6,Creation of wood pasture,HA,1930,L,wood_pasture,not_visible,new,,
+CS,WD7,Management of successional areas and scrub,HA,3801,L,scrub_successional,visible,new,,
+CS,WD8,Creation of successional areas and scrub,HA,760,L,scrub_successional,visible,new,,
+CS,WD9,Livestock exclusion supplement - scrub and successional areas,HA,2716,X,not_testable,not_testable,,payment supplement,
+CS,WN1,Blocking Grips or Drainage Channels,UNITS,104,W,other_water,not_visible,pooled,,
+CS,WN10,Construction of water penning structures,POUNDS,25,W,other_water,not_visible,pooled,,
+CS,WN2,Creation of scrapes and gutters,HA,688,W,pond_creation,visible,W3-W,,"scrapes: shallow open water, nearest is pond_creation"
+CS,WN3,"Ditch, Dyke and Rhine Restoration",METRES,344,W,sfi_ponds_ditches,not_visible,W3-W,,ditch restoration: nearest is SFI ponds and ditches
+CS,WN4,"Ditch, Dyke and Rhine Creation",METRES,58,W,sfi_ponds_ditches,not_visible,W3-W,,ditch creation: nearest is SFI ponds and ditches
+CS,WN5A,Pond Management - creation (first 100 sq m),UNITS,1037,W,pond_creation,visible,W3-W,,
+CS,WN5B,Pond Management - restoration - first 100 sq m,UNITS,1092,W,pond_restoration,not_visible,W3-W,,
+CS,WN6A,Pond Management  - creation - (areas more than 100 sq m),HA,684,W,pond_creation,visible,W3-W,,
+CS,WN6B,Pond Management - restoration - (areas more than 100 sq m),HA,940,W,pond_restoration,not_visible,W3-W,,
+CS,WN7,Restoration of large water bodies,POUNDS,1,W,pond_restoration,not_visible,W3-W,,restoration of large water bodies
+CS,WN8,Timber sluice/unit,UNITS,66,W,other_water,not_visible,pooled,,
+CS,WN9,"Brick, Stone or Concrete Sluice",UNITS,44,W,other_water,not_visible,pooled,,
+CS,WS1,Deer Control and Management,HA,10187,X,not_testable,not_testable,,deer or squirrel control,
+CS,WS2,Restore and maintain plantations on ancient woodlands sites,HA,248,L,woodland_management,not_visible,new,,
+CS,WS3,Squirrel control and management,HA,9097,X,not_testable,not_testable,,deer or squirrel control,
+CS,WS4,Enable permissive access (by foot) across the whole woodland,HA,217,X,not_testable,not_testable,,access,
+CS,WT1,Buffering in field ponds and ditches in improved grassland,HA,292,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,buffers around ponds and ditches: a strip; joins area_strips (water-related)
+CS,WT10,Management of lowland raised bog,HA,72,W,fen_reedbed,visible,addendum 4,,lowland raised bog: nearest is fen_reedbed
+CS,WT11,Wetland cutting supplement,HA,344,X,not_testable,not_testable,,payment supplement,
+CS,WT12,Wetland grazing supplement,HA,599,X,not_testable,not_testable,,payment supplement,
+CS,WT2,Buffering in-field ponds and ditches on arable land,HA,1209,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,buffers around ponds and ditches: a strip; joins area_strips (water-related)
+CS,WT3,Management of ditches of high environmental value,METRES,2440,W,sfi_ponds_ditches,not_visible,W3-W,,ditches of high environmental value: nearest is SFI ponds and ditches
+CS,WT4,Management of ponds of High Wildlife value (100 sq m or less),HA,101,W,pond_restoration,not_visible,W3-W,,
+CS,WT5,Management of ponds of High Wildlife value (more than 100 sq m),HA,506,W,pond_restoration,not_visible,W3-W,,
+CS,WT6,Management of reedbed,HA,326,W,fen_reedbed,visible,addendum 4,,
+CS,WT7,Creation of reedbed,HA,4,W,fen_reedbed,visible,addendum 4,,
+CS,WT8,Management of fen,HA,826,W,fen_reedbed,visible,addendum 4,,
+CS,WT9,Creation of fen,HA,145,W,fen_reedbed,visible,addendum 4,,
+ES,A13,Non payment option - permanent grassland for Article 13,HA,167260,X,not_testable,not_testable,,"base, threshold or non-payment option",non-payment permanent-grassland option
+ES,EC1,Protection of in-field trees (arable),TREE(S),1502,L,in_field_trees,not_visible,new,,
+ES,EC2,Protection of in-field trees (grassland),TREE(S),3860,L,in_field_trees,not_visible,new,,
+ES,EC24,Hedgerow tree buffer strips on cultivated land,HA,173,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,hedgerow-tree buffer strip: a strip; joins area_strips
+ES,EC25,Hedgerow tree buffer strips on grassland,HA,55,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EC4,Management of woodland edges,HA,1111,L,woodland_management,not_visible,new,,woodland edges: as WD3
+ES,ED2,Take archaeological features out of cultivation,HA,229,L,arable_reversion,visible,new,,archaeology taken out of cultivation: nearest is arable_reversion
+ES,ED3,"Low depth, non-inversion cultivation on archaeological features",HA,432,L,no_till,visible,W3-4,,non-inversion cultivation on archaeology: nearest is no_till
+ES,ED4,Management of scrub on archaeological features,HA,101,L,scrub_successional,visible,new,,
+ES,ED5,Management of archaeological features on grassland,HA,7071,L,historic_grassland,not_visible,new,,
+ES,EE1,2m buffer strips on cultivated land,HA,3238,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE10,6m buffer strips on intensive grassland next to a watercourse,HA,442,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE12,Supplement to add wildflowers to buffer strips and field corners,HA,719,X,not_testable,not_testable,,payment supplement,
+ES,EE2,4m buffer strips on cultivated land,HA,4769,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE3,6m buffer strips on cultivated land,HA,11261,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE4,2m buffer strips on intensive grassland,HA,487,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE5,4m buffer strips on intensive grassland,HA,398,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE6,6m buffer strips on intensive grassland,HA,744,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE7,Buffering in-field ponds in improved grassland,HA,40,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE8,Buffering in-field ponds in arable land,HA,173,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EE9,6m buffer strips on cultivated land next to a watercourse,HA,3760,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EF1,Field corner management,HA,6291,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,arable field corners (ES): same as AHL3
+ES,EF11,"Uncropped, cultivated margins for rare plants on arable land",HA,302,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EF2NR,Wild bird seed mixture,HA,315,L,infield_plots,visible,W3-4,,
+ES,EF4NR,Nectar Flower mixture,HA,1265,L,infield_plots,visible,W3-4,,
+ES,EF7,Beetle banks,HA,332,I,beetle_banks,not_visible,new,,
+ES,EJ5,In-field grass areas,HA,259,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EJ9,12m buffer strips for watercourses on cultivated land,HA,273,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,EK1,Take field corners out of management: outside SDA & ML,HA,238,L,grassland_options,visible,W3-4,,
+ES,EK2,Permanent grassland with low inputs: outside SDA & ML,HA,17034,L,grassland_options,visible,W3-4,,ES low-input permanent grassland: same action as GS2
+ES,EK3,Permanent grassland with very low inputs: outside SDA & ML,HA,15686,L,grassland_options,visible,W3-4,,ES very low-input grassland: same action as GS2
+ES,EK4,Manage rush pastures: outside SDA & ML,HA,315,L,rush_pastures,not_visible,new,,
+ES,EK5,Mixed stocking,HA,8578,L,grazing_regime,not_visible,new,,
+ES,EL1,Field corner management: SDA land,HA,56,L,grassland_options,visible,W3-4,,
+ES,EL2,Permanent in-bye grassland with low inputs: SDA land,HA,16092,L,grassland_options,visible,W3-4,,ES low-input in-bye grassland (SDA): same action as GS5
+ES,EL3,In-bye pasture & meadows with very low inputs: SDA land,HA,11245,L,grassland_options,visible,W3-4,,ES very low-input in-bye (SDA): same action as GS5
+ES,EL4,Manage rush pastures: SDA land & ML parcels under 15ha,HA,1260,L,rush_pastures,not_visible,new,,"rush pastures: new family (>= 1,000 parcels); not wet grassland for waders"
+ES,EL5,Enclosed rough grazing: SDA land & ML parcels under 15ha,HA,2097,L,moorland_rough_grazing,not_visible,new,,
+ES,EL6,Moorland and rough grazing: ML land only,HA,1364,L,moorland_rough_grazing,not_visible,new,,
+ES,HB11,Maintenance of hedges of very high environmental value (2 sides),M,3576,I,hedge_management,not_visible,W3-1,,
+ES,HB12,Maintenance of hedges of very high environmental value (1 side),M,2400,I,hedge_management,not_visible,W3-1,,
+ES,HB14,Management of ditches of very high environmental value,M,679,W,sfi_ponds_ditches,not_visible,W3-W,,ditches of very high environmental value: nearest is SFI ponds and ditches
+ES,HC1,Protection of in-field trees on arable land,TREE(S),168,L,in_field_trees,not_visible,new,,
+ES,HC10,Creation of woodland outside of the SDA & ML,HA,470,L,woodland_creation,visible,new,,
+ES,HC11,Woodland livestock exclusion supplement,HA,2944,X,not_testable,not_testable,,payment supplement,
+ES,HC12,Maintenance of wood pasture and parkland,HA,1560,L,wood_pasture,not_visible,new,,
+ES,HC13,Restoration of wood pasture and parkland,HA,1588,L,wood_pasture,not_visible,new,,
+ES,HC14,Creation of wood pasture ,HA,128,L,wood_pasture,not_visible,new,,
+ES,HC15,Maintenance of successional areas and scrub ,HA,1951,L,scrub_successional,visible,new,,
+ES,HC16,Restoration of successional areas and scrub ,HA,1438,L,scrub_successional,visible,new,,
+ES,HC17,Creation of successional areas and scrub ,HA,1060,L,scrub_successional,visible,new,,
+ES,HC18,Maintenance of high value traditional orchards ,HA,585,L,in_field_trees,not_visible,new,,
+ES,HC19,Maintenance of traditional orchards in production,HA,35,L,in_field_trees,not_visible,new,,
+ES,HC2,Protection of in-field trees on grassland,TREE(S),191,L,in_field_trees,not_visible,new,,
+ES,HC20,Restoration of traditional orchards,HA,679,L,in_field_trees,not_visible,new,,
+ES,HC21,Creation of traditional orchards,HA,351,L,in_field_trees,not_visible,new,,
+ES,HC24,Hedgerow tree buffer strips on cultivated land,HA,21,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HC25,Hedgerow tree buffer strips on grassland,HA,4,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HC4,Management of woodland edges,HA,141,L,woodland_management,not_visible,new,,
+ES,HC5,Ancient trees in arable fields,TREE(S),45,L,in_field_trees,not_visible,new,,
+ES,HC6,Ancient trees in intensively-managed grass fields,TREE(S),85,L,in_field_trees,not_visible,new,,
+ES,HC7,Maintenance of woodland  ,HA,5806,L,woodland_management,not_visible,new,,
+ES,HC8,Restoration of woodland ,HA,5313,L,woodland_management,not_visible,new,,
+ES,HC9,Creation of woodland in the SDA,HA,474,L,woodland_creation,visible,new,,
+ES,HD10,Maintenance of traditional water meadows ,HA,29,W,wet_grassland,visible,addendum 4,,water meadows: nearest is wet_grassland
+ES,HD11,Restoration of traditional water meadows,HA,23,W,wet_grassland,visible,addendum 4,,water meadows: nearest is wet_grassland
+ES,HD2,Take archaeological features out of cultivation,HA,902,L,arable_reversion,visible,new,,
+ES,HD3,"Low depth, non-inversion cultivation on archaeological features",HA,516,L,no_till,visible,W3-4,,non-inversion cultivation on archaeology: nearest is no_till
+ES,HD4,Management of scrub on archaeological features,HA,185,L,scrub_successional,visible,new,,
+ES,HD5,Management of archaeological features on grassland,HA,2244,L,historic_grassland,not_visible,new,,
+ES,HD6,Crop establishment by direct drilling (non-rotational),HA,48,L,no_till,visible,W3-4,,direct drilling (ES): same action as no-till
+ES,HD7,Arable reversion by natural regeneration ,HA,190,L,arable_reversion,visible,new,,
+ES,HD8,Maintaining high water levels to protect archaeology,HA,1,W,other_water,not_visible,pooled,,
+ES,HD9,Maintenance of designed/engineered water bodies ,HA,53,W,other_water,not_visible,pooled,,
+ES,HE1,2 m buffer strips on cultivated land,HA,1049,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE10,Floristically enhanced grass margin ,HA,9622,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,floristically enhanced margin: same as AB8
+ES,HE11,Enhanced strips for target species on intensive grassland,HA,40,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE12,Supplement to add wildflowers to buffer strips and field corners,HA,231,X,not_testable,not_testable,,payment supplement,
+ES,HE2,4 m buffer strips on cultivated land,HA,2211,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE3,6 m buffer strips on cultivated land,HA,6584,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE4,2 m buffer strips on intensive grassland,HA,50,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE5,4 m buffer strips on intensive grassland,HA,97,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE6,6 m buffer strips on intensive grassland,HA,543,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE7,Buffering in-field ponds in improved permanent grassland,HA,27,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HE8,Buffering in-field ponds in arable land,HA,197,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HF1,Management of field corners,HA,2337,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,arable field corners (ES): same as AHL3
+ES,HF10NR,Unharvested cereal headlands for birds and rare arable plants,HA,4,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HF11,"Uncropped, cultivated margins for rare plants",HA,80,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HF12NR,Enhanced wild bird seed mix plots,HA,2635,L,infield_plots,visible,W3-4,,
+ES,HF13NR,Uncropped cultivated areas for ground-nesting birds - arable,HA,202,L,infield_plots,visible,W3-4,,
+ES,HF14NR,"Unharvested, fertiliser-free conservation headland",HA,135,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HF15NR,,,3,L,infield_plots,visible,W3-4,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,HF20NR,Cultivated fallow plots or margins for arable plants,HA,737,L,infield_plots,visible,W3-4,,
+ES,HF2NR,Wild bird seed mixture,HA,238,L,infield_plots,visible,W3-4,,
+ES,HF4NR,Nectar flower mixture,HA,3213,L,infield_plots,visible,W3-4,,
+ES,HF7,Beetle banks,HA,493,I,beetle_banks,not_visible,new,,
+ES,HF9NR,Cereal headlands for birds,HA,5,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HG2NR,ASD to Jan 2010 Wild bird seed mixture,HA,19,L,infield_plots,visible,W3-4,,
+ES,HG3,ASD to Jan 2010 Nectar flower mixture in grassland areas,HA,6,L,infield_plots,visible,W3-4,,
+ES,HG6NR,Fodder crop management to retain or re-create an arable mosaic,HA,3,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,fodder crop for arable mosaic; joins area_strips with AHW10 (low-input cereal)
+ES,HG7NR,Low input spring cereal to retain or re-create an arable mosaic ,HA,46,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,low-input spring cereal; joins area_strips with AHW10
+ES,HIOS1,Landscape management,HA,721,L,other_land,not_visible,pooled,,
+ES,HIOS2,Management of rare arable bulb/flora,HA,50,L,other_land,not_visible,pooled,,
+ES,HIOS3,Reintroduction of conservation grazing to St Mary's,HA,31,L,other_land,not_visible,pooled,,
+ES,HIOS4,Reintroduction of conservation grazing other than St Mary's,HA,116,L,other_land,not_visible,pooled,,
+ES,HJ11,Maintenance of watercourse fencing,M,73,X,not_testable,not_testable,,capital item or works unrelated to land cover,
+ES,HJ3,Reversion to unfertilised grassland to prevent erosion/run-off,HA,404,L,arable_reversion,visible,new,,
+ES,HJ4,Reversion to low input grassland to prevent erosion/run-off,HA,286,L,arable_reversion,visible,new,,
+ES,HJ5,In-field grass areas to prevent erosion or run-off,HA,525,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HJ6,Preventing erosion or run-off from intensively managed grassland,HA,364,L,grassland_options,visible,W3-4,,preventing erosion or run-off from intensive grassland: nearest is grassland_options
+ES,HJ7,Seasonal livestock removal from intensively managed grassland,HA,60,L,seasonal_livestock_removal,not_visible,new,,
+ES,HJ8,Nil fertiliser supplement,HA,159,X,not_testable,not_testable,,payment supplement,
+ES,HJ9,12 m buffer strips for watercourses on cultivated land,HA,338,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,HK1,Take field corners out of management,HA,49,L,grassland_options,visible,W3-4,,
+ES,HK10,Maintenance of wet grassland for wintering waders and wildfowl,HA,4768,W,wet_grassland,visible,addendum 4,,
+ES,HK11,Restoration of wet grassland for breeding waders. ,HA,1061,W,wet_grassland,visible,addendum 4,,
+ES,HK12,Restoration of wet grassland for wintering waders and wildfowl,HA,937,W,wet_grassland,visible,addendum 4,,
+ES,HK13,Creation of wet grassland for breeding waders ,HA,358,W,wet_grassland,visible,addendum 4,,
+ES,HK14,Creation of wet grassland for wintering waders and wildfowl ,HA,228,W,wet_grassland,visible,addendum 4,,
+ES,HK15,Maintenance of grassland for target features,HA,15470,L,species_rich_grassland,visible,new,,
+ES,HK16,Restoration of grassland for target features,HA,5824,L,species_rich_grassland,visible,new,,
+ES,HK17,Creation of grassland for target features,HA,1374,L,species_rich_grassland,visible,new,,
+ES,HK18,Supplement for haymaking,HA,5137,X,not_testable,not_testable,,payment supplement,
+ES,HK19,Raised water levels supplement,HA,961,X,not_testable,not_testable,,payment supplement,raised water levels supplement: payment supplement (water-relevant)
+ES,HK2,Permanent grassland with low inputs,HA,528,L,grassland_options,visible,W3-4,,
+ES,HK3,Permanent grassland with very low inputs,HA,692,L,grassland_options,visible,W3-4,,
+ES,HK4,Management of rush pastures,HA,28,L,rush_pastures,not_visible,new,,
+ES,HK5,Mixed stocking,HA,440,L,grazing_regime,not_visible,new,,
+ES,HK6,"Maintenance of species-rich, semi-natural grassland",HA,7482,L,species_rich_grassland,visible,new,,
+ES,HK7,"Restoration of species-rich, semi-natural grassland ",HA,14117,L,species_rich_grassland,visible,new,,
+ES,HK8,"Creation of species-rich, semi-natural grassland ",HA,605,L,species_rich_grassland,visible,new,,
+ES,HK9,Maintenance of wet grassland for breeding waders ,HA,2563,W,wet_grassland,visible,addendum 4,,
+ES,HL1,Take field corners out of management in SDAs,HA,13,L,grassland_options,visible,W3-4,,
+ES,HL10,Restoration of moorland ,HA,4225,L,moorland_rough_grazing,not_visible,new,,
+ES,HL11,Creation of upland heathland,HA,33,L,moorland_rough_grazing,not_visible,new,,
+ES,HL12,"Management of heather, gorse and grass",HA,947,L,moorland_rough_grazing,not_visible,new,,
+ES,HL13,Moorland re-wetting supplement,HA,95,X,not_testable,not_testable,,payment supplement,moorland re-wetting supplement: payment supplement (water-relevant)
+ES,HL15,Seasonal livestock exclusion supplement,HA,1774,X,not_testable,not_testable,,payment supplement,
+ES,HL16,Shepherding supplement ,HA,954,X,not_testable,not_testable,,payment supplement,
+ES,HL2,Permanent grassland with low inputs in SDAs,HA,196,L,grassland_options,visible,W3-4,,
+ES,HL3,Permanent grassland with very low inputs in SDAs,HA,714,L,grassland_options,visible,W3-4,,
+ES,HL4,Management of rush pastures in SDAs,HA,40,L,rush_pastures,not_visible,new,,
+ES,HL5,Enclosed rough grazing,HA,34,L,moorland_rough_grazing,not_visible,new,,
+ES,HL6,Unenclosed moorland rough grazing,HA,5,L,moorland_rough_grazing,not_visible,new,,
+ES,HL7,Maintenance of rough grazing for birds,HA,2184,L,moorland_rough_grazing,not_visible,new,,
+ES,HL8,Restoration of rough grazing for birds,HA,1693,L,moorland_rough_grazing,not_visible,new,,
+ES,HL9,Maintenance of moorland ,HA,773,L,moorland_rough_grazing,not_visible,new,,
+ES,HN2,ASD to Nov 2010 Permissive open access,HA,270,X,not_testable,not_testable,,access,
+ES,HN3,ASD to Nov 2010 Permissive footpath access,M,1044,X,not_testable,not_testable,,access,
+ES,HN4,ASD to Nov 2010 Permissive bridleway / cycle path access,M,552,X,not_testable,not_testable,,access,
+ES,HN5,ASD to Nov 2010 Access for people with reduced mobility,M,18,X,not_testable,not_testable,,access,
+ES,HN6,ASD to Nov 2010 Upgrading access for cyclists/horses,M,16,X,not_testable,not_testable,,access,
+ES,HN7,ASD to Nov 2010 Upgrading access - people with reduced mobility,M,2,X,not_testable,not_testable,,access,
+ES,HO1,Maintenance of lowland heathland ,HA,422,L,lowland_heathland,not_visible,new,,
+ES,HO2,Restoration of lowland heath,HA,1204,L,lowland_heathland,not_visible,new,,
+ES,HO3,Restoration of forestry areas to lowland heathland,HA,144,L,lowland_heathland,not_visible,new,,
+ES,HO4,Creation of lowland heathland from arable or improved grassland ,HA,26,L,lowland_heathland,not_visible,new,,
+ES,HO5,Creation of lowland heathland on worked mineral sites ,HA,3,L,lowland_heathland,not_visible,new,,
+ES,HP1,Maintenance of sand dunes ,HA,92,L,other_land,not_visible,pooled,,
+ES,HP10,Supplement for extensive grazing on saltmarsh,HA,117,L,other_land,not_visible,pooled,,
+ES,HP11,Saltmarsh livestock exclusion supplement,HA,9,L,other_land,not_visible,pooled,,
+ES,HP2,Restoration of sand dune systems,HA,40,L,other_land,not_visible,pooled,,
+ES,HP4,,,2,L,other_land,not_visible,pooled,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,HP5,Maintenance of coastal saltmarsh,HA,275,L,other_land,not_visible,pooled,,
+ES,HP6,Restoration of coastal saltmarsh,HA,64,L,other_land,not_visible,pooled,,
+ES,HP7,Creation of inter-tidal and saline habitat on arable land,HA,15,L,other_land,not_visible,pooled,,
+ES,HP8,Creation of inter-tidal and saline habitat on grassland,HA,49,L,other_land,not_visible,pooled,,
+ES,HP9,Creation of inter-tidal and saline habitat by non-intervention,HA,30,L,other_land,not_visible,pooled,,
+ES,HQ1,Maintenance of ponds of high wildlife value < 100 sq m,NUMBER,834,W,pond_restoration,not_visible,W3-W,,
+ES,HQ10,Restoration of lowland raised bog,HA,160,W,fen_reedbed,visible,addendum 4,,lowland raised bog: nearest is fen_reedbed
+ES,HQ11,Wetland cutting supplement,HA,644,X,not_testable,not_testable,,payment supplement,
+ES,HQ12,Wetland grazing supplement,HA,980,X,not_testable,not_testable,,payment supplement,
+ES,HQ13,Inundation grassland supplement ,HA,120,X,not_testable,not_testable,,payment supplement,inundation grassland supplement: payment supplement (water-relevant)
+ES,HQ2,Maintenance of ponds of high wildlife value > 100 sq m,NUMBER,1457,W,pond_restoration,not_visible,W3-W,,
+ES,HQ3,Maintenance of reedbeds,HA,458,W,fen_reedbed,visible,addendum 4,,
+ES,HQ4,Restoration of reedbeds,HA,122,W,fen_reedbed,visible,addendum 4,,
+ES,HQ5,Creation of reedbeds ,HA,106,W,fen_reedbed,visible,addendum 4,,
+ES,HQ6,Maintenance of fen,HA,893,W,fen_reedbed,visible,addendum 4,,
+ES,HQ7,Restoration of fen,HA,877,W,fen_reedbed,visible,addendum 4,,
+ES,HQ8,Creation of fen ,HA,130,W,fen_reedbed,visible,addendum 4,,
+ES,HQ9,Maintenance of lowland raised bog,HA,34,W,fen_reedbed,visible,addendum 4,,lowland raised bog: nearest is fen_reedbed
+ES,HR1,Grazing supplement for cattle,HA,10809,X,not_testable,not_testable,,payment supplement,
+ES,HR2,Grazing supplement for native breeds at risk,HA,5669,X,not_testable,not_testable,,payment supplement,
+ES,HR4,Supplement for control of invasive plant species ,HA,1107,X,not_testable,not_testable,,payment supplement,
+ES,HR5,Bracken control supplement,HA,1689,X,not_testable,not_testable,,payment supplement,
+ES,HR6,Supplement for small fields ,HA,5206,X,not_testable,not_testable,,payment supplement,
+ES,HR7,Supplement for difficult sites,HA,3726,X,not_testable,not_testable,,payment supplement,
+ES,HR8,Supplement for group applications,HA,933,X,not_testable,not_testable,,payment supplement,
+ES,ILC,Improved land  conversion payment,HA,909,L,organic,visible,new,,organic conversion payment for improved land
+ES,OC1,Protection of in field trees - rotational land,TREE(S),104,L,in_field_trees,not_visible,new,,
+ES,OC2,Protection of in field trees - grassland,TREE(S),119,L,in_field_trees,not_visible,new,,
+ES,OC24,Hedgerow tree buffer strips on rotational land,HA,12,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OC25,,,5,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OC4,Management of wood edges,HA,86,L,woodland_management,not_visible,new,,
+ES,OD2,Take archaeological features out of cultivation,HA,9,L,arable_reversion,visible,new,,
+ES,OD3,"Low depth, non-inversion cultivation on archaeological features",HA,11,L,no_till,visible,W3-4,,non-inversion cultivation on archaeology: nearest is no_till
+ES,OD4,Management of scrub on archaeological features,HA,8,L,scrub_successional,visible,new,,
+ES,OD5,Management of archaeological features on grassland,HA,209,L,historic_grassland,not_visible,new,,
+ES,OE1,2m buffer strips on rotational land,HA,253,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE10,6m buffer strip on organic grassland next to a watercourse,HA,29,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE12,,,1,X,not_testable,not_testable,,payment supplement,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OE2,4m buffer strips on rotational land,HA,165,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE3,6m buffer strips on rotational land,HA,293,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE4,2m buffer strip on organic grassland,HA,6,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE5,4m buffer strip on organic grassland,HA,5,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE6,6m buffer strip on organic grassland,HA,45,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE7,,,2,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OE8,Buffering in-field ponds in rotational land ,HA,6,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OE9,6m buffer strips on rotational land next to a watercourse,HA,102,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OF1,Field corner management,HA,113,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OF2NR,,,6,L,infield_plots,visible,W3-4,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OF4NR,Nectar Flower mixture,HA,8,L,infield_plots,visible,W3-4,,
+ES,OF7,Beetle banks,HA,19,I,beetle_banks,not_visible,new,,
+ES,OHC1,,,9,L,in_field_trees,not_visible,new,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHC2,,,4,L,in_field_trees,not_visible,new,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHC24,,,15,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHC4,Management of woodland edges,HA,7,L,woodland_management,not_visible,new,,
+ES,OHD2,Take archaeological features out of cultivation (Org),HA,41,L,arable_reversion,visible,new,,
+ES,OHD3,"Low depth, non-inversion cultivation on archaeological features",HA,15,L,no_till,visible,W3-4,,non-inversion cultivation on archaeology: nearest is no_till
+ES,OHD4,Management of scrub on archaeological features,HA,8,L,scrub_successional,visible,new,,
+ES,OHD5,Management of archaeological features on grassland,HA,105,L,historic_grassland,not_visible,new,,
+ES,OHE1,,,43,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHE12,Supplement to add wildflowers to buffer strips and field corners,HA,7,X,not_testable,not_testable,,payment supplement,
+ES,OHE2,,,60,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHE3,6 m buffer strips on rotational land,HA,177,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OHE4,,,2,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHE5,4 m buffer strips on organic grassland,HA,14,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OHE6,6 m buffer strips on organic grassland,HA,20,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OHE7,,,1,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHE8,,,2,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHF1,Management of field corners,HA,41,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OHF11,"Uncropped, cultivated margins for rare plants",HA,7,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OHF13NR,,,5,L,infield_plots,visible,W3-4,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHF2NR,,,48,L,infield_plots,visible,W3-4,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHF4NR,Nectar flower mixture,HA,180,L,infield_plots,visible,W3-4,,
+ES,OHF7,Beetle banks,HA,26,I,beetle_banks,not_visible,new,,
+ES,OHJ5,,,3,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHJ9,,,8,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OHK1,Take field corners out of management,HA,1,L,grassland_options,visible,W3-4,,
+ES,OHK2,Permanent grassland with low inputs,HA,9,L,grassland_options,visible,W3-4,,
+ES,OHK3,Permanent grassland with very low inputs,HA,29,L,grassland_options,visible,W3-4,,
+ES,OHK4,Management of rush pastures,HA,2,L,rush_pastures,not_visible,new,,
+ES,OHK5,Mixed stocking,HA,57,L,grazing_regime,not_visible,new,,
+ES,OHL3,Permanent grassland with very low inputs in SDAs,HA,6,L,grassland_options,visible,W3-4,,
+ES,OHL5,Enclosed rough grazing,HA,3,L,moorland_rough_grazing,not_visible,new,,
+ES,OJ5,In-field grass areas to prevent erosion or run-off,HA,2,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+ES,OJ9,,,5,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OK1,,,6,L,grassland_options,visible,W3-4,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,OK2,Permanent grassland with low inputs: outside SDA & ML(organic),HA,587,L,grassland_options,visible,W3-4,,organic ES version of EK2
+ES,OK3,Permanent grassland with very low inputs:outside SDA&ML(organic),HA,1031,L,grassland_options,visible,W3-4,,organic ES version of EK3
+ES,OK4,Manage rush pastures: outside SDA & ML(organic),HA,18,L,rush_pastures,not_visible,new,,
+ES,OK5,Mixed stocking,HA,532,L,grazing_regime,not_visible,new,,
+ES,OL2,Permanent in-bye grassland with low inputs: SDA land(organic),HA,50,L,grassland_options,visible,W3-4,,
+ES,OL3,In-bye pasture & meadows with very low inputs: SDA land(organic),HA,262,L,grassland_options,visible,W3-4,,
+ES,OL4,Manage rush pastures: SDA land & ML parcels under 15ha(organic),HA,9,L,rush_pastures,not_visible,new,,
+ES,OL5,Enclosed rough grazing:SDA land & ML parcels under 15ha(organic),HA,18,L,moorland_rough_grazing,not_visible,new,,
+ES,OPTELSTHR,Non-Organic threshold payment option,POINTS,144213,X,not_testable,not_testable,,"base, threshold or non-payment option",
+ES,OPTOELSTHR,Non-displayable Organic threshold options,POINTS,4042,X,not_testable,not_testable,,"base, threshold or non-payment option",
+ES,OU1,Organic Management,HA,11950,L,organic,visible,new,,whole-farm organic management (ES)
+ES,TFC,Top fruit orchards conversion payment,HA,16,L,organic,visible,new,,
+ES,UC22,Woodland livestock exclusion,HA,403,L,woodland_management,not_visible,new,,woodland livestock exclusion: woodland_management
+ES,UD13,Maintaining visibility of archaeological features on moorland,FEATURE(S),850,L,historic_grassland,not_visible,new,,
+ES,UHC22,Woodland livestock exclusion,HA,6,L,woodland_management,not_visible,new,,
+ES,UHD13,Maintaining visibility of archaeological features on moorland,FEATURE(S),7,L,historic_grassland,not_visible,new,,
+ES,UHJ12,"Winter livestock removal next to streams, rivers and lakes",HA,2,L,seasonal_livestock_removal,not_visible,new,,
+ES,UHL17,No supplementary feeding on moorland,HA,1,L,grazing_regime,not_visible,new,,
+ES,UHL18,Cattle grazing on upland grassland and moorland,HA,56,L,grazing_regime,not_visible,new,,
+ES,UHL20,Haymaking,HA,37,L,species_rich_grassland,visible,new,,
+ES,UHL21,No cutting strip within meadows,HA,5,L,species_rich_grassland,visible,new,,
+ES,UHL23,Management of upland grassland for birds,HA,1,L,moorland_rough_grazing,not_visible,new,,
+ES,UJ12,"Winter livestock removal next to streams, rivers and lakes",HA,919,L,seasonal_livestock_removal,not_visible,new,,
+ES,UL17,No supplementary feeding on moorland,HA,838,L,grazing_regime,not_visible,new,,no supplementary feeding on moorland: nearest is grazing_regime
+ES,UL18,Cattle grazing on upland grassland and moorland,HA,21885,L,grazing_regime,not_visible,new,,
+ES,UL20,Haymaking,HA,2927,L,species_rich_grassland,visible,new,,"upland meadow haymaking (option, not supplement): nearest is species_rich_grassland"
+ES,UL21,No cutting strip within meadows,HA,676,L,species_rich_grassland,visible,new,,no-cutting strip in meadows: nearest is species_rich_grassland
+ES,UL22,Management of enclosed rough grazing for birds,HA,174,L,moorland_rough_grazing,not_visible,new,,
+ES,UL23,Management of upland grassland for birds,HA,287,L,moorland_rough_grazing,not_visible,new,,
+ES,UOD13,Maintaining visibility of archaeological features on moorland,FEATURE(S),2,L,historic_grassland,not_visible,new,,
+ES,UOHL20,Haymaking,HA,2,L,species_rich_grassland,visible,new,,
+ES,UOJ12,"Winter livestock removal next to streams, rivers and lakes",HA,9,L,seasonal_livestock_removal,not_visible,new,,
+ES,UOL18,Cattle grazing on upland grassland and moorland,HA,331,L,grazing_regime,not_visible,new,,
+ES,UOL20,Haymaking,HA,57,L,species_rich_grassland,visible,new,,
+ES,UOL21,No cutting strip within meadows,HA,4,L,species_rich_grassland,visible,new,,
+ES,UOL22,,,1,L,moorland_rough_grazing,not_visible,new,,no description in the layer; assigned from the code pattern of its sibling codes
+ES,UOL23,Management of upland grassland for birds,HA,1,L,moorland_rough_grazing,not_visible,new,,
+ES,UOX2,Grassland and arable,HA,997,X,not_testable,not_testable,,"base, threshold or non-payment option",
+ES,UOX3,Moorland,HA,69,X,not_testable,not_testable,,"base, threshold or non-payment option",
+ES,UX1,Commons and shared grazing,HA,882,X,not_testable,not_testable,,"base, threshold or non-payment option",
+ES,UX2,Grassland and arable,HA,65893,X,not_testable,not_testable,,"base, threshold or non-payment option",Uplands ELS base payment by land type
+ES,UX3,Moorland,HA,9875,X,not_testable,not_testable,,"base, threshold or non-payment option",
+SFI,AGF1,Maintain very low density in-field agroforestry on less sensitive land,HA,56,L,in_field_trees,not_visible,new,,"agroforestry (< 1,000): joins in_field_trees"
+SFI,AGF2,Maintain low density in-field agroforestry on less sensitive land,HA,201,L,in_field_trees,not_visible,new,,"agroforestry (< 1,000): joins in_field_trees"
+SFI,AHL1,Pollen and nectar flower mix,HA,3938,L,infield_plots,visible,W3-4,,
+SFI,AHL2,Winter bird food on arable and horticultural land,HA,18100,L,infield_plots,visible,W3-4,,
+SFI,AHL3,Grassy field corners or blocks,HA,12213,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,AHL4,4m to 12m grass buffer strip on arable and horticultural land,HA,12780,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,AHW1,Bumblebird mix,HA,22,L,infield_plots,visible,W3-4,,
+SFI,AHW10,Low input harvested cereal crop,HA,466,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,"low-input cereal crop, not a strip; kept as registered"
+SFI,AHW11,Cultivated areas for arable plants,HA,34,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,AHW12,Manage woodland edges on arable land,HA,40,L,woodland_management,not_visible,new,,woodland edges on arable land: as WD3
+SFI,AHW3,Beetle banks,HA,15,I,beetle_banks,not_visible,new,,
+SFI,AHW4,Skylark plots,UNITS,1,L,infield_plots,visible,W3-4,,
+SFI,AHW5,Nesting plots for lapwing,HA,19,L,infield_plots,visible,W3-4,,
+SFI,AHW6,Basic overwinter stubble,HA,136,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,"overwinter stubble, not a strip; kept where W3-4 and W3-1 registered it"
+SFI,AHW7,Enhanced overwinter stubble,HA,322,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,"overwinter stubble, not a strip; kept where W3-4 and W3-1 registered it"
+SFI,AHW8,Harvest whole crop spring cereals and maintain overwinter stubble,HA,154,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,"whole-crop spring cereal and stubble, not a strip; kept as registered"
+SFI,AHW9,Unharvested cereal headland,HA,238,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,BFS1,12m to 24m watercourse buffer strip on cultivated land,HA,105,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,BFS2,Buffer in-field ponds on arable land,HA,15,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,pond buffer: a strip; joins area_strips
+SFI,BFS3,Buffer in-field ponds on improved grassland,HA,12,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,pond buffer: a strip; joins area_strips
+SFI,BFS4,Protect in-field trees on arable land,HA,15,L,in_field_trees,not_visible,new,,
+SFI,BFS5,Protect in-field trees on intensive grassland,HA,6,L,in_field_trees,not_visible,new,,
+SFI,BFS6,Habitat strip next to watercourses,HA,88,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,BND1,Maintain dry stone walls,METRES,4753,I,walls_banks,not_visible,W3-1,,
+SFI,BND2,Maintain earth banks or stone-faced hedgebanks,METRES,4701,I,walls_banks,not_visible,W3-1,,
+SFI,CAHL1,Pollen and nectar flower mix,HA,360,L,infield_plots,visible,W3-4,,
+SFI,CAHL2,Winter bird food on arable and horticultural land,HA,1389,L,infield_plots,visible,W3-4,,
+SFI,CAHL3,Grassy field corners and blocks,HA,964,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,CAHL4,4m to 12m grass buffer strip on arable and horticultural land,HA,1225,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,CHRW1,Assess and record hedgerow condition,METRES,23688,I,hedge_management,not_visible,W3-1,,hedgerow assessment: kept in hedge_management as W3-1 registered
+SFI,CHRW2,Manage hedgerows,METRES,19159,I,hedge_management,not_visible,W3-1,,
+SFI,CHRW3,Maintain or establish hedgerow trees,METRES,15269,I,hedge_management,not_visible,W3-1,,
+SFI,CIGL1,Take improved grassland field corners or blocks out of management,HA,311,L,grassland_options,visible,W3-4,,grassland field corners out of management: same action as GS1 (grassland_options)
+SFI,CIGL2,Winter bird food on improved grassland,HA,1172,L,grassland_options,visible,W3-4,,
+SFI,CIGL3,4m to 12m grass buffer strip on improved grassland,HA,104,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,CIPM2,"Flower-rich grass margins, blocks or in-field strips",HA,810,L,management_only,not_visible,W3-4 control,,flower-rich margins: W3-4 registered as management-only control; kept there
+SFI,CIPM3,Companion crop on arable and horticultural land,HA,1995,L,management_only,not_visible,W3-4 control,,companion crop: W3-4 registered as management-only control; kept there
+SFI,CIPM4,No use of insecticide on arable crops and permanent crops,HA,5795,L,management_only,not_visible,W3-4 control,,
+SFI,CLIG3,Manage grassland with very low nutrient inputs - outside SDAs or within SDAs,HA,13715,L,grassland_options,visible,W3-4,,
+SFI,CMOR1,Assess moorland and produce a written record,HA,143,X,not_testable,not_testable,,assessment or record,
+SFI,CNUM2,Legumes on improved grassland,HA,5333,L,management_only,not_visible,W3-4 control,,
+SFI,CNUM3,Legume fallow,HA,866,L,management_only,not_visible,W3-4 control,,
+SFI,CSAM1,"Assess soil, test soil organic matter and produce a soil management plan",HA,40426,L,management_only,not_visible,W3-4 control,,
+SFI,CSAM2,Multi-species winter cover crops,HA,1916,L,cover_crops,visible,W3-4,,
+SFI,CSAM3,Herbal leys,HA,9589,L,herbal_leys,visible,W3-4,,
+SFI,FG2,,METRES,17,X,not_testable,not_testable,,capital item or works unrelated to land cover,no description in the SFI list; metres; FG = fencing in CS
+SFI,GRH1,Manage rough grazing for birds,HA,11,L,moorland_rough_grazing,not_visible,new,,
+SFI,GRH10,Supplement: Lenient grazing,HA,677,X,not_testable,not_testable,,payment supplement,
+SFI,GRH11,Supplement: Cattle grazing (non-moorland),HA,1573,X,not_testable,not_testable,,payment supplement,
+SFI,GRH6,Manage priority habitat species-rich grassland (endorsed),HA,2,L,species_rich_grassland,visible,new,,
+SFI,GRH7,Supplement: Haymaking,HA,1337,X,not_testable,not_testable,,payment supplement,
+SFI,GRH8,Supplement: Haymaking (late cut),HA,460,X,not_testable,not_testable,,payment supplement,
+SFI,HEF1,Maintain weatherproof traditional farm or forestry buildings,HA,376,X,not_testable,not_testable,,building,
+SFI,HEF2,Maintain weatherproof traditional farm or forestry buildings in remote areas,HA,22,X,not_testable,not_testable,,building,
+SFI,HEF5,Control scrub on historic and archaeological features,HA,27,L,scrub_successional,visible,new,,scrub on archaeology: nearest is scrub_successional
+SFI,HEF6,Manage historic and archaeological features on grassland,HA,55,L,historic_grassland,not_visible,new,,
+SFI,HEF8,Maintain designed or engineered waterbodies,HA,7,W,other_water,not_visible,pooled,,
+SFI,HRW1,Assess and record hedgerow condition,METRES,221988,I,hedge_management,not_visible,W3-1,,hedgerow assessment: kept in hedge_management as W3-1 registered
+SFI,HRW2,Manage hedgerows,METRES,166594,I,hedge_management,not_visible,W3-1,,
+SFI,HRW3,"Maintain existing hedgerow trees, or establish new hedgerow trees",METRES,137853,I,hedge_management,not_visible,W3-1,,
+SFI,IGL1,Take grassland field corners or blocks out of management,HA,2669,L,grassland_options,visible,W3-4,,grassland field corners out of management: same action as GS1 (grassland_options)
+SFI,IGL2,Winter bird food on improved grassland,HA,11481,L,grassland_options,visible,W3-4,,
+SFI,IGL3,4m to 12m grass buffer strip on improved grassland,HA,1303,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,IPM2,"Flower-rich grass margins, blocks, or in-field strips",HA,7146,L,management_only,not_visible,W3-4 control,,flower-rich margins: W3-4 registered as management-only control; kept there
+SFI,IPM3,Companion crop on arable and horticultural land,HA,16000,L,management_only,not_visible,W3-4 control,,companion crop: W3-4 registered as management-only control; kept there
+SFI,IPM4,"No use of insecticide, nematicide or acaricide on arable crops and permanent crops",HA,75984,L,management_only,not_visible,W3-4 control,,
+SFI,LIG1,Manage grassland with very low nutrient inputs (outside SDAs),HA,65830,L,grassland_options,visible,W3-4,,
+SFI,LIG2,Manage grassland with very low nutrient inputs (SDAs),HA,15747,L,grassland_options,visible,W3-4,,"very low inputs in SDAs: same action as LIG1, joins grassland_options"
+SFI,MOR1,Assess moorland and produce a written record,HA,2191,X,not_testable,not_testable,,assessment or record,moorland assessment and record
+SFI,NUM2,Legumes on improved grassland,HA,43394,L,management_only,not_visible,W3-4 control,,
+SFI,NUM3,Legume fallow,HA,11434,L,management_only,not_visible,W3-4 control,,
+SFI,OFA1,Overwinter stubble (organic land),HA,1,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,overwinter stubble (organic); joins area_strips because AHW6/7 are there
+SFI,OFC1,Organic conversion - improved permanent grassland,HA,105,L,organic,visible,new,,
+SFI,OFC2,Organic conversion - unimproved permanent grassland,HA,36,L,organic,visible,new,,
+SFI,OFC3,Organic conversion - rotational land,HA,113,L,organic,visible,new,,
+SFI,OFC4,Organic conversion - horticultural land,HA,16,L,organic,visible,new,,
+SFI,OFC5,Organic conversion - top fruit,HA,11,L,organic,visible,new,,
+SFI,OFM1,Organic land management - improved permanent grassland,HA,264,L,organic,visible,new,,
+SFI,OFM2,Organic land management - unimproved permanent grassland,HA,67,L,organic,visible,new,,
+SFI,OFM4,Organic land management - rotational land,HA,91,L,organic,visible,new,,
+SFI,OFM5,Organic land management - horticultural land,HA,10,L,organic,visible,new,,
+SFI,OFM6,Organic land management - top fruit,HA,7,L,organic,visible,new,,
+SFI,PRF1,Variable rate application of nutrients,HA,7837,L,management_only,not_visible,W3-4 control,,
+SFI,PRF2,Camera or remote sensor guided herbicide spraying,HA,97,L,management_only,not_visible,W3-4 control,,
+SFI,PRF4,Mechanical robotic weeding,HA,194,L,management_only,not_visible,W3-4 control,,
+SFI,SAM1,"Assess soil, produce a soil management plan and test soil organic matter",HA,421146,L,management_only,not_visible,W3-4 control,,soil assessment: kept in management_only as W3-4 registered
+SFI,SAM2,Multi-species winter cover crops,HA,23611,L,cover_crops,visible,W3-4,,
+SFI,SAM3,Establish and maintain Herbal leys,HA,85212,L,herbal_leys,visible,W3-4,,
+SFI,SCR1,Create scrub and open habitat mosaics,HA,145,L,scrub_successional,visible,new,,
+SFI,SCR2,Manage scrub and open habitat mosaics,HA,266,L,scrub_successional,visible,new,,
+SFI,SOH1,No-till farming,HA,2400,L,no_till,visible,W3-4,,
+SFI,SOH2,Multi-species spring-sown cover crop,HA,111,L,cover_crops,visible,W3-4,,
+SFI,SOH3,Multi-species summer-sown cover crop,HA,1391,L,cover_crops,visible,W3-4,,
+SFI,SOH4,Winter cover following maize crops,HA,543,L,cover_crops,visible,W3-4,,winter cover after maize: same purpose as cover crops
+SFI,SPM2,Supplement: Keep native breeds on grazed habitats (50-80%),HA,63,X,not_testable,not_testable,,payment supplement,
+SFI,SPM3,Supplement: Keep native breeds on grazed habitats supplement (more than 80%),HA,132,X,not_testable,not_testable,,payment supplement,
+SFI,SPM5,Supplement: Keep native breeds on extensively managed habitats (more than 80%),HA,1,X,not_testable,not_testable,,payment supplement,
+SFI,UPL1,Moderate livestock grazing on moorland,HA,15,L,moorland_rough_grazing,not_visible,new,,
+SFI,UPL10,Shepherding livestock on moorland (remove stock for at least 8 months),HA,17,L,moorland_rough_grazing,not_visible,new,,
+SFI,UPL2,Low livestock grazing on moorland,HA,9,L,moorland_rough_grazing,not_visible,new,,
+SFI,UPL3,Limited livestock grazing on moorland,HA,19,L,moorland_rough_grazing,not_visible,new,,
+SFI,UPL6,Supplement: Keep cattle and ponies on moorland (100% GLU),HA,12,X,not_testable,not_testable,,payment supplement,
+SFI,UPL7,Shepherding livestock on moorland (no required stock removal period),HA,17,L,moorland_rough_grazing,not_visible,new,,
+SFI,UPL8,Shepherding livestock on moorland (remove stock for at least 4 months),HA,33,L,moorland_rough_grazing,not_visible,new,,
+SFI,UPL9,Shepherding livestock on moorland (remove stock for at least 6 months),HA,5,L,moorland_rough_grazing,not_visible,new,,
+SFI,WBD1,Manage ponds,UNITS,1281,W,sfi_ponds_ditches,not_visible,W3-W,,
+SFI,WBD2,Manage ditches,METRES,1958,W,sfi_ponds_ditches,not_visible,W3-W,,
+SFI,WBD3,In-field grass strips,HA,122,I,area_strips,visible,W3-1 (W3-4 buffer strips and margins),,
+SFI,WBD4,Arable reversion to grassland with low fertiliser input,HA,87,L,arable_reversion,visible,new,,
+SFI,WBD5,Manage intensive grassland adjacent to a watercourse,HA,46,L,grassland_options,visible,W3-4,,intensive grassland next to a watercourse: same as SW8
+SFI,WBD6,Remove livestock from intensive grassland during the autumn and winter (outside SDAs),HA,277,L,seasonal_livestock_removal,not_visible,new,,
+SFI,WBD7,Remove livestock from grassland during the autumn and winter (SDAs),HA,13,L,seasonal_livestock_removal,not_visible,new,,
+SFI,WBD8,Manage grassland to reduce nutrient levels in groundwater,HA,64,L,grassland_options,visible,W3-4,,grassland to reduce nutrients in groundwater: nearest is grassland_options
+SFI,WBD9,Supplement: Nil fertiliser,HA,39,X,not_testable,not_testable,,payment supplement,

@@ -1,0 +1,632 @@
+scheme,code,parcels,description,unit
+CS,AB3,1106,Beetle banks,HA
+CS,AB8,35612,Flower rich margins and plots,HA
+CS,AC1,171,Access Capital Items,POUNDS
+CS,AF1,3,Plant an agro-forestry woodland tree,TREES
+CS,AF2,5,Plant an agro-forestry fruit tree,TREES
+CS,AQ1,152,Automatic slurry scraper,UNITS
+CS,AQ2,36,Low ammonia emission flooring for livestock buildings,HA
+CS,BC4,5,Tree guard (wood post and wire),UNITS
+CS,BE1,678,Protection of in-field trees on arable land,HA
+CS,BE2,509,Protection of in-field trees on intensive grassland,HA
+CS,BE3,126645,Management of hedgerows,METRES
+CS,BE4,808,Management of traditional orchards,HA
+CS,BE5,204,Creation of traditional orchards,HA
+CS,BE6,287,Veteran Tree Surgery,PLANT
+CS,BE7,514,Supplement for restorative pruning of fruit trees,TREES
+CS,BN1,389,Stone-faced bank repair,METRES
+CS,BN10,2474,Hedgerow Supplement - Top Binding and Staking,METRES
+CS,BN11,24180,Planting new hedges,METRES
+CS,BN12,9043,Stone Wall Restoration,METRES
+CS,BN13,3624,Stone Wall - Top Wiring,METRES
+CS,BN14,2163,Stone wall supplement - Stone from quarry,METRES
+CS,BN15,131,Stone wall supplement - difficult sites,METRES
+CS,BN2,970,Stone faced bank restoration,METRES
+CS,BN3,1042,Earth bank creation,METRES
+CS,BN4,6997,Earth Bank Restoration,METRES
+CS,BN5,15727,Hedgerow laying,METRES
+CS,BN6,9963,Hedgerow Coppicing,METRES
+CS,BN7,12033,Hedgerow Gapping,METRES
+CS,BN8,7384,Hedgerow Supplement - Casting Up,METRES
+CS,BN9,109,Hedgerow Supplement - substantial Pre-Work,METRES
+CS,CT1,226,Management of coastal sand dunes and vegetated shingle,HA
+CS,CT3,341,Management of coastal saltmarsh,HA
+CS,CT5,23,Creation of inter-tidal and saline habitat by non-intervention,HA
+CS,CT6,47,Coastal vegetation management supplement,HA
+CS,CT7,7,Creation of inter-tidal and saline habitat on intensive grassland,HA
+CS,FG1,20335,Fencing,METRES
+CS,FG10,240,Temporary deer fencing / m,METRES
+CS,FG11,1939,Deer exclosure plot/unit,UNITS
+CS,FG12,31048,Wooden Field Gate,UNITS
+CS,FG13,51,Stone Gate Post,UNITS
+CS,FG14,114,Badger Gates,UNITS
+CS,FG15,470,Water Gates,UNITS
+CS,FG16,71,Deer Pedestrian Gate,UNITS
+CS,FG17,152,Deer Vehicle Gate,UNITS
+CS,FG2,111583,Sheep netting,METRES
+CS,FG3,1940,Permanent electric fencing,METRES
+CS,FG4,1193,Rabbit fencing supplement,METRES
+CS,FG5,1002,Fencing supplement - difficult sites,METRES
+CS,FG7,51,Anti-predator combination fencing for vulnerable ground-nesting birds.,METRES
+CS,FG8,12,Anti-predator temporary electric fencing,METRES
+CS,FG9,303,Woodland Fencing - Deer,METRES
+CS,FM1,11,Management of geodiversity features,POUNDS
+CS,FY1,2450,Deer high seat / unit,UNITS
+CS,GS1,9737,Take field corners and small areas out of management,HA
+CS,GS10,3792,Management of wet grassland for wintering waders and wildfowl,HA
+CS,GS11,120,Creation of wet grassland for breeding waders,HA
+CS,GS12,56,Creation of wet grassland for wintering waders and wildfowl,HA
+CS,GS13,6628,Management of grassland for target features,HA
+CS,GS14,347,Creation of grassland for target features,HA
+CS,GS15,4833,Haymaking supplement,HA
+CS,GS16,3063,Rush infestation control supplement,HA
+CS,GS2,118735,Permanent grassland with very low inputs (outside SDAs),HA
+CS,GS5,21423,Permanent grassland with very low inputs in SDA,HA
+CS,GS6,6589,Management of species-rich grassland,HA
+CS,GS7,2796,Restoration towards species-rich grassland,HA
+CS,GS8,281,Creation of species-rich grassland,HA
+CS,GS9,2423,Management of wet grassland for breeding waders,HA
+CS,HE1,148,Historic and archaeological feature protection.,POUNDS
+CS,HE3,183,Removal of eyesore,UNITS
+CS,HS1,6200,Maintenance of Weatherproof Traditional Farm Buildings,HA
+CS,HS2,914,Take historic and archaeological features currently on cultivated land out of cultivation.,HA
+CS,HS3,736,"Reduced depth, non-inversion cultivation on historic and archaeological features",HA
+CS,HS4,301,Scrub control on historic and archaeological features,HA
+CS,HS5,2767,Management of historic and archaeological features on grassland,HA
+CS,HS6,62,Maintenance of designed/engineered water-bodies,HA
+CS,HS7,21,Management of historic water meadows through traditional irrigation,HA
+CS,HS8,394,Maintenance of Weatherproof Traditional Farm Buildings in Remote Areas,HA
+CS,HS9,235,Restricted depth crop establishment to protect archaeology under and arable rotation,HA
+CS,LH1,1152,Management of lowland heathland,HA
+CS,LH2,28,Restoration of forestry and woodland to lowland heathland,HA
+CS,LH3,32,Creation of heathland from arable or improved grassland,HA
+CS,LV1,57,Cattle Grid,UNITS
+CS,LV3,11175,Hard bases for livestock drinkers,UNITS
+CS,LV4,676,Hard bases for livestock feeders,UNITS
+CS,LV5,340,Pasture pumps and associated pipework/unit,UNITS
+CS,LV6,196,Ram pumps and pipework/unit,UNITS
+CS,LV7,19124,Livestock troughs,UNITS
+CS,LV8,16586,Pipework for livestock troughs,METRES
+CS,OR1,2782,Organic conversion - improved permanent grassland,HA
+CS,OR2,618,Organic conversion - unimproved permanent grassland,HA
+CS,OR5,97,Organic Conversion - Top Fruit,HA
+CS,OT1,16359,Organic land management - improved permanent grassland,HA
+CS,OT2,4225,Organic Land Management - unimproved permanent grassland,HA
+CS,OT5,312,Organic Land Management - Top Fruit,HA
+CS,OT6,82,Organic Land Management - Enclosed Rough Grazing,HA
+CS,PA1,114,Implementation Plan/Unit,UNITS
+CS,RP1,7460,Resurfacing of gateways,UNITS
+CS,RP10,10,Silt filtration dams or seepage barriers,UNITS
+CS,RP11,106,Swales,HA
+CS,RP12,47,Check dams and woody debris dams,UNITS
+CS,RP13,2368,Yard - underground drainage pipework,METRES
+CS,RP14,2058,Yard inspection pit,UNITS
+CS,RP15,5927,Concrete yard renewal,HA
+CS,RP16,2361,Rainwater goods,METRES
+CS,RP17,80,Storage tanks underground,CUBED 
+CS,RP18,1331,Above ground tanks,CUBED 
+CS,RP19,1069,First-flush rainwater diverters/downpipe filters,UNITS
+CS,RP2,386,Gateway relocation,UNITS
+CS,RP20,7,Relocation of sheep dips and pens,UNITS
+CS,RP21,23,Relocation of sheep pens only,UNITS
+CS,RP22,4,Sheep dip drainage aprons and sumps,HA
+CS,RP23,3,Installation of livestock drinking troughs (in draining pens for freshly dipped sheep),UNITS
+CS,RP24,14,Lined biobed plus pesticide loading and washdown area,HA
+CS,RP25,4,Lined biobed with existing washdown area,HA
+CS,RP26,286,Biofilters,UNITS
+CS,RP27,308,Sprayer or applicator load and washdown area/sq m,HA
+CS,RP28,3835,"Roofing (sprayer washdown area, manure storage area, ...)",HA
+CS,RP29,50,Self supporting covers for slurry stores/sq m,HA
+CS,RP3,151,Watercourse crossing/unit,UNITS
+CS,RP30,47,Floating covers for slurry stores and lagoons,HA
+CS,RP32,91,Small Leaky Woody Dam,UNITS
+CS,RP33,47,Large Leaky Woody Dam,UNITS
+CS,RP4,5282,Livestock and machinery hardcore tracks,METRES
+CS,RP5,2794,Cross drains/unit,UNITS
+CS,RP6,1241,Installation of piped culverts and ditches,UNITS
+CS,RP7,450,Sediment ponds and traps/sq m,HA
+CS,RP8,3,Constructed wetlands for the treatment of pollution,POUNDS
+CS,RP9,60,Earth banks and soil bunds/unit,UNITS
+CS,SB1A,156,Scrub Control and Felling Diseased Trees,HA
+CS,SB1B,212,Scrub Control and Felling Diseased Trees,HA
+CS,SB1C,71,Scrub Control and Felling Diseased Trees,HA
+CS,SB1D,92,Scrub Control and Felling Diseased Trees,HA
+CS,SB1E,318,Scrub Control and Felling Diseased Trees,HA
+CS,SB1F,391,Scrub Control and Felling Diseased Trees,HA
+CS,SB2,165,Scrub control - difficult sites,POUNDS
+CS,SB3,132,Tree removal,TREES
+CS,SB4,226,Chemical Bracken Control,HA
+CS,SB5,202,Mechanical bracken control,HA
+CS,SB6A,203,Rhododendron control,HA
+CS,SB6B,238,Rhododendron control,HA
+CS,SB6C,159,Rhododendron control,HA
+CS,SP1,737,Difficult sites supplement,HA
+CS,SP2,359,Raised water level supplement,HA
+CS,SP3,1021,Bracken control supplement,HA
+CS,SP4,364,Control of invasive plant species supplement,HA
+CS,SP5,323,Shepherding supplement,HA
+CS,SP6,14251,Cattle grazing supplement,HA
+CS,SP7,14,Introduction of cattle grazing on the Scilly Isles,HA
+CS,SP8,5399,Native breeds at risk supplement,HA
+CS,SW1,49007,4-6m buffer strip on cultivated land,HA
+CS,SW10,474,Seasonal livestock removal on intensive grassland,HA
+CS,SW11,998,Riparian management strip,HA
+CS,SW12,35,Making space for water,HA
+CS,SW13,113,Very low nitrogen inputs to groundwaters,HA
+CS,SW14,823,Nil fertiliser supplement,HA
+CS,SW15,24,Flood mitigation on arable reversion to grassland,HA
+CS,SW16,144,Flood mitigation on permanent grassland,HA
+CS,SW18,19,Raised water levels on grassland on peat soils,HA
+CS,SW2,3875,4-6m buffer strip on intensive grassland,HA
+CS,SW3,9294,In-field grass strips,HA
+CS,SW4,3933,12-24m watercourse buffer strip on cultivated land,HA
+CS,SW7,1379,Arable reversion to grassland with low fertiliser inputs,HA
+CS,SW8,304,Management of intensive grassland adjacent to a watercourse,HA
+CS,SW9,7914,Seasonal livestock removal on intensive grassland,HA
+CS,TE1,4253,Planting Standard Hedgerow Tree,UNITS
+CS,TE10,2423,Coppicing Bank-side Trees,TREES
+CS,TE11,7783,Tree surgery,TREES
+CS,TE12,37,Stump Grinding,UNITS
+CS,TE13,41,Creation of dead wood habitat on trees,UNITS
+CS,TE14,23,Identification of orchard fruit tree varieties,VARIET
+CS,TE2,1394,Planting Standard Parkland Tree,TREES
+CS,TE3,942,Planting Fruit Trees,TREES
+CS,TE4A,351,Woodland Tree Planting - Biodiversity,TREES
+CS,TE4B,59,Woodland Tree Planting - Improving water quality or reducing flood risk,TREES
+CS,TE4C,1161,Woodland Tree Planting - Restock after a tree health issue,TREES
+CS,TE4D,908,Woodland Tree Planting - Hedges and clumps,TREES
+CS,TE5,1702,Woodland Tree Planting - Treeshelter Supplement,UNITS
+CS,TE6,1273,Tree guard (tube and mesh),TREES
+CS,TE7,740,Tree guard (Wood post and rail),TREES
+CS,TE8,1788,Tree Guard (wood post and wire),TREES
+CS,TE9,165,Parkland Tree Guard - welded steel,TREES
+CS,UP1,1054,Enclosed rough grazing,HA
+CS,UP2,3997,Management of rough grazing for birds,HA
+CS,UP3,1624,Management of Moorland,HA
+CS,UP4,77,Management of moorland vegetation supplement,HA
+CS,UP5,79,Moorland re-wetting supplement,HA
+CS,UP6,680,Upland livestock exclusion supplement,HA
+CS,WD1,1239,Woodland creation - maintenance payments,HA
+CS,WD10,39,Management of upland wood pasture and parkland,HA
+CS,WD11,192,Restoration of upland wood pasture and parkland,HA
+CS,WD12,750,Creation of upland wood pasture,HA
+CS,WD2,18296,Woodland improvement,HA
+CS,WD3,1239,Woodland edges on arable land,HA
+CS,WD4,923,Management of wood pasture and parkland,HA
+CS,WD5,894,Restoration of wood pasture and parkland,HA
+CS,WD6,1930,Creation of wood pasture,HA
+CS,WD7,3801,Management of successional areas and scrub,HA
+CS,WD8,760,Creation of successional areas and scrub,HA
+CS,WD9,2716,Livestock exclusion supplement - scrub and successional areas,HA
+CS,WN1,104,Blocking Grips or Drainage Channels,UNITS
+CS,WN10,25,Construction of water penning structures,POUNDS
+CS,WN2,688,Creation of scrapes and gutters,HA
+CS,WN3,344,"Ditch, Dyke and Rhine Restoration",METRES
+CS,WN4,58,"Ditch, Dyke and Rhine Creation",METRES
+CS,WN5A,1037,Pond Management - creation (first 100 sq m),UNITS
+CS,WN5B,1092,Pond Management - restoration - first 100 sq m,UNITS
+CS,WN6A,684,Pond Management  - creation - (areas more than 100 sq m),HA
+CS,WN6B,940,Pond Management - restoration - (areas more than 100 sq m),HA
+CS,WN7,1,Restoration of large water bodies,POUNDS
+CS,WN8,66,Timber sluice/unit,UNITS
+CS,WN9,44,"Brick, Stone or Concrete Sluice",UNITS
+CS,WS1,10187,Deer Control and Management,HA
+CS,WS2,248,Restore and maintain plantations on ancient woodlands sites,HA
+CS,WS3,9097,Squirrel control and management,HA
+CS,WS4,217,Enable permissive access (by foot) across the whole woodland,HA
+CS,WT1,292,Buffering in field ponds and ditches in improved grassland,HA
+CS,WT10,72,Management of lowland raised bog,HA
+CS,WT11,344,Wetland cutting supplement,HA
+CS,WT12,599,Wetland grazing supplement,HA
+CS,WT2,1209,Buffering in-field ponds and ditches on arable land,HA
+CS,WT3,2440,Management of ditches of high environmental value,METRES
+CS,WT4,101,Management of ponds of High Wildlife value (100 sq m or less),HA
+CS,WT5,506,Management of ponds of High Wildlife value (more than 100 sq m),HA
+CS,WT6,326,Management of reedbed,HA
+CS,WT7,4,Creation of reedbed,HA
+CS,WT8,826,Management of fen,HA
+CS,WT9,145,Creation of fen,HA
+ES,A13,167260,Non payment option - permanent grassland for Article 13,HA
+ES,EC1,1502,Protection of in-field trees (arable),TREE(S)
+ES,EC2,3860,Protection of in-field trees (grassland),TREE(S)
+ES,EC24,173,Hedgerow tree buffer strips on cultivated land,HA
+ES,EC25,55,Hedgerow tree buffer strips on grassland,HA
+ES,EC4,1111,Management of woodland edges,HA
+ES,ED2,229,Take archaeological features out of cultivation,HA
+ES,ED3,432,"Low depth, non-inversion cultivation on archaeological features",HA
+ES,ED4,101,Management of scrub on archaeological features,HA
+ES,ED5,7071,Management of archaeological features on grassland,HA
+ES,EE1,3238,2m buffer strips on cultivated land,HA
+ES,EE10,442,6m buffer strips on intensive grassland next to a watercourse,HA
+ES,EE12,719,Supplement to add wildflowers to buffer strips and field corners,HA
+ES,EE2,4769,4m buffer strips on cultivated land,HA
+ES,EE3,11261,6m buffer strips on cultivated land,HA
+ES,EE4,487,2m buffer strips on intensive grassland,HA
+ES,EE5,398,4m buffer strips on intensive grassland,HA
+ES,EE6,744,6m buffer strips on intensive grassland,HA
+ES,EE7,40,Buffering in-field ponds in improved grassland,HA
+ES,EE8,173,Buffering in-field ponds in arable land,HA
+ES,EE9,3760,6m buffer strips on cultivated land next to a watercourse,HA
+ES,EF1,6291,Field corner management,HA
+ES,EF11,302,"Uncropped, cultivated margins for rare plants on arable land",HA
+ES,EF2NR,315,Wild bird seed mixture,HA
+ES,EF4NR,1265,Nectar Flower mixture,HA
+ES,EF7,332,Beetle banks,HA
+ES,EJ5,259,In-field grass areas,HA
+ES,EJ9,273,12m buffer strips for watercourses on cultivated land,HA
+ES,EK1,238,Take field corners out of management: outside SDA & ML,HA
+ES,EK2,17034,Permanent grassland with low inputs: outside SDA & ML,HA
+ES,EK3,15686,Permanent grassland with very low inputs: outside SDA & ML,HA
+ES,EK4,315,Manage rush pastures: outside SDA & ML,HA
+ES,EK5,8578,Mixed stocking,HA
+ES,EL1,56,Field corner management: SDA land,HA
+ES,EL2,16092,Permanent in-bye grassland with low inputs: SDA land,HA
+ES,EL3,11245,In-bye pasture & meadows with very low inputs: SDA land,HA
+ES,EL4,1260,Manage rush pastures: SDA land & ML parcels under 15ha,HA
+ES,EL5,2097,Enclosed rough grazing: SDA land & ML parcels under 15ha,HA
+ES,EL6,1364,Moorland and rough grazing: ML land only,HA
+ES,HB11,3576,Maintenance of hedges of very high environmental value (2 sides),M
+ES,HB12,2400,Maintenance of hedges of very high environmental value (1 side),M
+ES,HB14,679,Management of ditches of very high environmental value,M
+ES,HC1,168,Protection of in-field trees on arable land,TREE(S)
+ES,HC10,470,Creation of woodland outside of the SDA & ML,HA
+ES,HC11,2944,Woodland livestock exclusion supplement,HA
+ES,HC12,1560,Maintenance of wood pasture and parkland,HA
+ES,HC13,1588,Restoration of wood pasture and parkland,HA
+ES,HC14,128,Creation of wood pasture ,HA
+ES,HC15,1951,Maintenance of successional areas and scrub ,HA
+ES,HC16,1438,Restoration of successional areas and scrub ,HA
+ES,HC17,1060,Creation of successional areas and scrub ,HA
+ES,HC18,585,Maintenance of high value traditional orchards ,HA
+ES,HC19,35,Maintenance of traditional orchards in production,HA
+ES,HC2,191,Protection of in-field trees on grassland,TREE(S)
+ES,HC20,679,Restoration of traditional orchards,HA
+ES,HC21,351,Creation of traditional orchards,HA
+ES,HC24,21,Hedgerow tree buffer strips on cultivated land,HA
+ES,HC25,4,Hedgerow tree buffer strips on grassland,HA
+ES,HC4,141,Management of woodland edges,HA
+ES,HC5,45,Ancient trees in arable fields,TREE(S)
+ES,HC6,85,Ancient trees in intensively-managed grass fields,TREE(S)
+ES,HC7,5806,Maintenance of woodland  ,HA
+ES,HC8,5313,Restoration of woodland ,HA
+ES,HC9,474,Creation of woodland in the SDA,HA
+ES,HD10,29,Maintenance of traditional water meadows ,HA
+ES,HD11,23,Restoration of traditional water meadows,HA
+ES,HD2,902,Take archaeological features out of cultivation,HA
+ES,HD3,516,"Low depth, non-inversion cultivation on archaeological features",HA
+ES,HD4,185,Management of scrub on archaeological features,HA
+ES,HD5,2244,Management of archaeological features on grassland,HA
+ES,HD6,48,Crop establishment by direct drilling (non-rotational),HA
+ES,HD7,190,Arable reversion by natural regeneration ,HA
+ES,HD8,1,Maintaining high water levels to protect archaeology,HA
+ES,HD9,53,Maintenance of designed/engineered water bodies ,HA
+ES,HE1,1049,2 m buffer strips on cultivated land,HA
+ES,HE10,9622,Floristically enhanced grass margin ,HA
+ES,HE11,40,Enhanced strips for target species on intensive grassland,HA
+ES,HE12,231,Supplement to add wildflowers to buffer strips and field corners,HA
+ES,HE2,2211,4 m buffer strips on cultivated land,HA
+ES,HE3,6584,6 m buffer strips on cultivated land,HA
+ES,HE4,50,2 m buffer strips on intensive grassland,HA
+ES,HE5,97,4 m buffer strips on intensive grassland,HA
+ES,HE6,543,6 m buffer strips on intensive grassland,HA
+ES,HE7,27,Buffering in-field ponds in improved permanent grassland,HA
+ES,HE8,197,Buffering in-field ponds in arable land,HA
+ES,HF1,2337,Management of field corners,HA
+ES,HF10NR,4,Unharvested cereal headlands for birds and rare arable plants,HA
+ES,HF11,80,"Uncropped, cultivated margins for rare plants",HA
+ES,HF12NR,2635,Enhanced wild bird seed mix plots,HA
+ES,HF13NR,202,Uncropped cultivated areas for ground-nesting birds - arable,HA
+ES,HF14NR,135,"Unharvested, fertiliser-free conservation headland",HA
+ES,HF15NR,3,,
+ES,HF20NR,737,Cultivated fallow plots or margins for arable plants,HA
+ES,HF2NR,238,Wild bird seed mixture,HA
+ES,HF4NR,3213,Nectar flower mixture,HA
+ES,HF7,493,Beetle banks,HA
+ES,HF9NR,5,Cereal headlands for birds,HA
+ES,HG2NR,19,ASD to Jan 2010 Wild bird seed mixture,HA
+ES,HG3,6,ASD to Jan 2010 Nectar flower mixture in grassland areas,HA
+ES,HG6NR,3,Fodder crop management to retain or re-create an arable mosaic,HA
+ES,HG7NR,46,Low input spring cereal to retain or re-create an arable mosaic ,HA
+ES,HIOS1,721,Landscape management,HA
+ES,HIOS2,50,Management of rare arable bulb/flora,HA
+ES,HIOS3,31,Reintroduction of conservation grazing to St Mary's,HA
+ES,HIOS4,116,Reintroduction of conservation grazing other than St Mary's,HA
+ES,HJ11,73,Maintenance of watercourse fencing,M
+ES,HJ3,404,Reversion to unfertilised grassland to prevent erosion/run-off,HA
+ES,HJ4,286,Reversion to low input grassland to prevent erosion/run-off,HA
+ES,HJ5,525,In-field grass areas to prevent erosion or run-off,HA
+ES,HJ6,364,Preventing erosion or run-off from intensively managed grassland,HA
+ES,HJ7,60,Seasonal livestock removal from intensively managed grassland,HA
+ES,HJ8,159,Nil fertiliser supplement,HA
+ES,HJ9,338,12 m buffer strips for watercourses on cultivated land,HA
+ES,HK1,49,Take field corners out of management,HA
+ES,HK10,4768,Maintenance of wet grassland for wintering waders and wildfowl,HA
+ES,HK11,1061,Restoration of wet grassland for breeding waders. ,HA
+ES,HK12,937,Restoration of wet grassland for wintering waders and wildfowl,HA
+ES,HK13,358,Creation of wet grassland for breeding waders ,HA
+ES,HK14,228,Creation of wet grassland for wintering waders and wildfowl ,HA
+ES,HK15,15470,Maintenance of grassland for target features,HA
+ES,HK16,5824,Restoration of grassland for target features,HA
+ES,HK17,1374,Creation of grassland for target features,HA
+ES,HK18,5137,Supplement for haymaking,HA
+ES,HK19,961,Raised water levels supplement,HA
+ES,HK2,528,Permanent grassland with low inputs,HA
+ES,HK3,692,Permanent grassland with very low inputs,HA
+ES,HK4,28,Management of rush pastures,HA
+ES,HK5,440,Mixed stocking,HA
+ES,HK6,7482,"Maintenance of species-rich, semi-natural grassland",HA
+ES,HK7,14117,"Restoration of species-rich, semi-natural grassland ",HA
+ES,HK8,605,"Creation of species-rich, semi-natural grassland ",HA
+ES,HK9,2563,Maintenance of wet grassland for breeding waders ,HA
+ES,HL1,13,Take field corners out of management in SDAs,HA
+ES,HL10,4225,Restoration of moorland ,HA
+ES,HL11,33,Creation of upland heathland,HA
+ES,HL12,947,"Management of heather, gorse and grass",HA
+ES,HL13,95,Moorland re-wetting supplement,HA
+ES,HL15,1774,Seasonal livestock exclusion supplement,HA
+ES,HL16,954,Shepherding supplement ,HA
+ES,HL2,196,Permanent grassland with low inputs in SDAs,HA
+ES,HL3,714,Permanent grassland with very low inputs in SDAs,HA
+ES,HL4,40,Management of rush pastures in SDAs,HA
+ES,HL5,34,Enclosed rough grazing,HA
+ES,HL6,5,Unenclosed moorland rough grazing,HA
+ES,HL7,2184,Maintenance of rough grazing for birds,HA
+ES,HL8,1693,Restoration of rough grazing for birds,HA
+ES,HL9,773,Maintenance of moorland ,HA
+ES,HN2,270,ASD to Nov 2010 Permissive open access,HA
+ES,HN3,1044,ASD to Nov 2010 Permissive footpath access,M
+ES,HN4,552,ASD to Nov 2010 Permissive bridleway / cycle path access,M
+ES,HN5,18,ASD to Nov 2010 Access for people with reduced mobility,M
+ES,HN6,16,ASD to Nov 2010 Upgrading access for cyclists/horses,M
+ES,HN7,2,ASD to Nov 2010 Upgrading access - people with reduced mobility,M
+ES,HO1,422,Maintenance of lowland heathland ,HA
+ES,HO2,1204,Restoration of lowland heath,HA
+ES,HO3,144,Restoration of forestry areas to lowland heathland,HA
+ES,HO4,26,Creation of lowland heathland from arable or improved grassland ,HA
+ES,HO5,3,Creation of lowland heathland on worked mineral sites ,HA
+ES,HP1,92,Maintenance of sand dunes ,HA
+ES,HP10,117,Supplement for extensive grazing on saltmarsh,HA
+ES,HP11,9,Saltmarsh livestock exclusion supplement,HA
+ES,HP2,40,Restoration of sand dune systems,HA
+ES,HP4,2,,
+ES,HP5,275,Maintenance of coastal saltmarsh,HA
+ES,HP6,64,Restoration of coastal saltmarsh,HA
+ES,HP7,15,Creation of inter-tidal and saline habitat on arable land,HA
+ES,HP8,49,Creation of inter-tidal and saline habitat on grassland,HA
+ES,HP9,30,Creation of inter-tidal and saline habitat by non-intervention,HA
+ES,HQ1,834,Maintenance of ponds of high wildlife value < 100 sq m,NUMBER
+ES,HQ10,160,Restoration of lowland raised bog,HA
+ES,HQ11,644,Wetland cutting supplement,HA
+ES,HQ12,980,Wetland grazing supplement,HA
+ES,HQ13,120,Inundation grassland supplement ,HA
+ES,HQ2,1457,Maintenance of ponds of high wildlife value > 100 sq m,NUMBER
+ES,HQ3,458,Maintenance of reedbeds,HA
+ES,HQ4,122,Restoration of reedbeds,HA
+ES,HQ5,106,Creation of reedbeds ,HA
+ES,HQ6,893,Maintenance of fen,HA
+ES,HQ7,877,Restoration of fen,HA
+ES,HQ8,130,Creation of fen ,HA
+ES,HQ9,34,Maintenance of lowland raised bog,HA
+ES,HR1,10809,Grazing supplement for cattle,HA
+ES,HR2,5669,Grazing supplement for native breeds at risk,HA
+ES,HR4,1107,Supplement for control of invasive plant species ,HA
+ES,HR5,1689,Bracken control supplement,HA
+ES,HR6,5206,Supplement for small fields ,HA
+ES,HR7,3726,Supplement for difficult sites,HA
+ES,HR8,933,Supplement for group applications,HA
+ES,ILC,909,Improved land  conversion payment,HA
+ES,OC1,104,Protection of in field trees - rotational land,TREE(S)
+ES,OC2,119,Protection of in field trees - grassland,TREE(S)
+ES,OC24,12,Hedgerow tree buffer strips on rotational land,HA
+ES,OC25,5,,
+ES,OC4,86,Management of wood edges,HA
+ES,OD2,9,Take archaeological features out of cultivation,HA
+ES,OD3,11,"Low depth, non-inversion cultivation on archaeological features",HA
+ES,OD4,8,Management of scrub on archaeological features,HA
+ES,OD5,209,Management of archaeological features on grassland,HA
+ES,OE1,253,2m buffer strips on rotational land,HA
+ES,OE10,29,6m buffer strip on organic grassland next to a watercourse,HA
+ES,OE12,1,,
+ES,OE2,165,4m buffer strips on rotational land,HA
+ES,OE3,293,6m buffer strips on rotational land,HA
+ES,OE4,6,2m buffer strip on organic grassland,HA
+ES,OE5,5,4m buffer strip on organic grassland,HA
+ES,OE6,45,6m buffer strip on organic grassland,HA
+ES,OE7,2,,
+ES,OE8,6,Buffering in-field ponds in rotational land ,HA
+ES,OE9,102,6m buffer strips on rotational land next to a watercourse,HA
+ES,OF1,113,Field corner management,HA
+ES,OF2NR,6,,
+ES,OF4NR,8,Nectar Flower mixture,HA
+ES,OF7,19,Beetle banks,HA
+ES,OHC1,9,,
+ES,OHC2,4,,
+ES,OHC24,15,,
+ES,OHC4,7,Management of woodland edges,HA
+ES,OHD2,41,Take archaeological features out of cultivation (Org),HA
+ES,OHD3,15,"Low depth, non-inversion cultivation on archaeological features",HA
+ES,OHD4,8,Management of scrub on archaeological features,HA
+ES,OHD5,105,Management of archaeological features on grassland,HA
+ES,OHE1,43,,
+ES,OHE12,7,Supplement to add wildflowers to buffer strips and field corners,HA
+ES,OHE2,60,,
+ES,OHE3,177,6 m buffer strips on rotational land,HA
+ES,OHE4,2,,
+ES,OHE5,14,4 m buffer strips on organic grassland,HA
+ES,OHE6,20,6 m buffer strips on organic grassland,HA
+ES,OHE7,1,,
+ES,OHE8,2,,
+ES,OHF1,41,Management of field corners,HA
+ES,OHF11,7,"Uncropped, cultivated margins for rare plants",HA
+ES,OHF13NR,5,,
+ES,OHF2NR,48,,
+ES,OHF4NR,180,Nectar flower mixture,HA
+ES,OHF7,26,Beetle banks,HA
+ES,OHJ5,3,,
+ES,OHJ9,8,,
+ES,OHK1,1,Take field corners out of management,HA
+ES,OHK2,9,Permanent grassland with low inputs,HA
+ES,OHK3,29,Permanent grassland with very low inputs,HA
+ES,OHK4,2,Management of rush pastures,HA
+ES,OHK5,57,Mixed stocking,HA
+ES,OHL3,6,Permanent grassland with very low inputs in SDAs,HA
+ES,OHL5,3,Enclosed rough grazing,HA
+ES,OJ5,2,In-field grass areas to prevent erosion or run-off,HA
+ES,OJ9,5,,
+ES,OK1,6,,
+ES,OK2,587,Permanent grassland with low inputs: outside SDA & ML(organic),HA
+ES,OK3,1031,Permanent grassland with very low inputs:outside SDA&ML(organic),HA
+ES,OK4,18,Manage rush pastures: outside SDA & ML(organic),HA
+ES,OK5,532,Mixed stocking,HA
+ES,OL2,50,Permanent in-bye grassland with low inputs: SDA land(organic),HA
+ES,OL3,262,In-bye pasture & meadows with very low inputs: SDA land(organic),HA
+ES,OL4,9,Manage rush pastures: SDA land & ML parcels under 15ha(organic),HA
+ES,OL5,18,Enclosed rough grazing:SDA land & ML parcels under 15ha(organic),HA
+ES,OPTELSTHR,144213,Non-Organic threshold payment option,POINTS
+ES,OPTOELSTHR,4042,Non-displayable Organic threshold options,POINTS
+ES,OU1,11950,Organic Management,HA
+ES,TFC,16,Top fruit orchards conversion payment,HA
+ES,UC22,403,Woodland livestock exclusion,HA
+ES,UD13,850,Maintaining visibility of archaeological features on moorland,FEATURE(S)
+ES,UHC22,6,Woodland livestock exclusion,HA
+ES,UHD13,7,Maintaining visibility of archaeological features on moorland,FEATURE(S)
+ES,UHJ12,2,"Winter livestock removal next to streams, rivers and lakes",HA
+ES,UHL17,1,No supplementary feeding on moorland,HA
+ES,UHL18,56,Cattle grazing on upland grassland and moorland,HA
+ES,UHL20,37,Haymaking,HA
+ES,UHL21,5,No cutting strip within meadows,HA
+ES,UHL23,1,Management of upland grassland for birds,HA
+ES,UJ12,919,"Winter livestock removal next to streams, rivers and lakes",HA
+ES,UL17,838,No supplementary feeding on moorland,HA
+ES,UL18,21885,Cattle grazing on upland grassland and moorland,HA
+ES,UL20,2927,Haymaking,HA
+ES,UL21,676,No cutting strip within meadows,HA
+ES,UL22,174,Management of enclosed rough grazing for birds,HA
+ES,UL23,287,Management of upland grassland for birds,HA
+ES,UOD13,2,Maintaining visibility of archaeological features on moorland,FEATURE(S)
+ES,UOHL20,2,Haymaking,HA
+ES,UOJ12,9,"Winter livestock removal next to streams, rivers and lakes",HA
+ES,UOL18,331,Cattle grazing on upland grassland and moorland,HA
+ES,UOL20,57,Haymaking,HA
+ES,UOL21,4,No cutting strip within meadows,HA
+ES,UOL22,1,,
+ES,UOL23,1,Management of upland grassland for birds,HA
+ES,UOX2,997,Grassland and arable,HA
+ES,UOX3,69,Moorland,HA
+ES,UX1,882,Commons and shared grazing,HA
+ES,UX2,65893,Grassland and arable,HA
+ES,UX3,9875,Moorland,HA
+SFI,AGF1,56,Maintain very low density in-field agroforestry on less sensitive land,HA
+SFI,AGF2,201,Maintain low density in-field agroforestry on less sensitive land,HA
+SFI,AHL1,3938,Pollen and nectar flower mix,HA
+SFI,AHL2,18100,Winter bird food on arable and horticultural land,HA
+SFI,AHL3,12213,Grassy field corners or blocks,HA
+SFI,AHL4,12780,4m to 12m grass buffer strip on arable and horticultural land,HA
+SFI,AHW1,22,Bumblebird mix,HA
+SFI,AHW10,466,Low input harvested cereal crop,HA
+SFI,AHW11,34,Cultivated areas for arable plants,HA
+SFI,AHW12,40,Manage woodland edges on arable land,HA
+SFI,AHW3,15,Beetle banks,HA
+SFI,AHW4,1,Skylark plots,UNITS
+SFI,AHW5,19,Nesting plots for lapwing,HA
+SFI,AHW6,136,Basic overwinter stubble,HA
+SFI,AHW7,322,Enhanced overwinter stubble,HA
+SFI,AHW8,154,Harvest whole crop spring cereals and maintain overwinter stubble,HA
+SFI,AHW9,238,Unharvested cereal headland,HA
+SFI,BFS1,105,12m to 24m watercourse buffer strip on cultivated land,HA
+SFI,BFS2,15,Buffer in-field ponds on arable land,HA
+SFI,BFS3,12,Buffer in-field ponds on improved grassland,HA
+SFI,BFS4,15,Protect in-field trees on arable land,HA
+SFI,BFS5,6,Protect in-field trees on intensive grassland,HA
+SFI,BFS6,88,Habitat strip next to watercourses,HA
+SFI,BND1,4753,Maintain dry stone walls,METRES
+SFI,BND2,4701,Maintain earth banks or stone-faced hedgebanks,METRES
+SFI,CAHL1,360,Pollen and nectar flower mix,HA
+SFI,CAHL2,1389,Winter bird food on arable and horticultural land,HA
+SFI,CAHL3,964,Grassy field corners and blocks,HA
+SFI,CAHL4,1225,4m to 12m grass buffer strip on arable and horticultural land,HA
+SFI,CHRW1,23688,Assess and record hedgerow condition,METRES
+SFI,CHRW2,19159,Manage hedgerows,METRES
+SFI,CHRW3,15269,Maintain or establish hedgerow trees,METRES
+SFI,CIGL1,311,Take improved grassland field corners or blocks out of management,HA
+SFI,CIGL2,1172,Winter bird food on improved grassland,HA
+SFI,CIGL3,104,4m to 12m grass buffer strip on improved grassland,HA
+SFI,CIPM2,810,"Flower-rich grass margins, blocks or in-field strips",HA
+SFI,CIPM3,1995,Companion crop on arable and horticultural land,HA
+SFI,CIPM4,5795,No use of insecticide on arable crops and permanent crops,HA
+SFI,CLIG3,13715,Manage grassland with very low nutrient inputs - outside SDAs or within SDAs,HA
+SFI,CMOR1,143,Assess moorland and produce a written record,HA
+SFI,CNUM2,5333,Legumes on improved grassland,HA
+SFI,CNUM3,866,Legume fallow,HA
+SFI,CSAM1,40426,"Assess soil, test soil organic matter and produce a soil management plan",HA
+SFI,CSAM2,1916,Multi-species winter cover crops,HA
+SFI,CSAM3,9589,Herbal leys,HA
+SFI,FG2,17,,METRES
+SFI,GRH1,11,Manage rough grazing for birds,HA
+SFI,GRH10,677,Supplement: Lenient grazing,HA
+SFI,GRH11,1573,Supplement: Cattle grazing (non-moorland),HA
+SFI,GRH6,2,Manage priority habitat species-rich grassland (endorsed),HA
+SFI,GRH7,1337,Supplement: Haymaking,HA
+SFI,GRH8,460,Supplement: Haymaking (late cut),HA
+SFI,HEF1,376,Maintain weatherproof traditional farm or forestry buildings,HA
+SFI,HEF2,22,Maintain weatherproof traditional farm or forestry buildings in remote areas,HA
+SFI,HEF5,27,Control scrub on historic and archaeological features,HA
+SFI,HEF6,55,Manage historic and archaeological features on grassland,HA
+SFI,HEF8,7,Maintain designed or engineered waterbodies,HA
+SFI,HRW1,221988,Assess and record hedgerow condition,METRES
+SFI,HRW2,166594,Manage hedgerows,METRES
+SFI,HRW3,137853,"Maintain existing hedgerow trees, or establish new hedgerow trees",METRES
+SFI,IGL1,2669,Take grassland field corners or blocks out of management,HA
+SFI,IGL2,11481,Winter bird food on improved grassland,HA
+SFI,IGL3,1303,4m to 12m grass buffer strip on improved grassland,HA
+SFI,IPM2,7146,"Flower-rich grass margins, blocks, or in-field strips",HA
+SFI,IPM3,16000,Companion crop on arable and horticultural land,HA
+SFI,IPM4,75984,"No use of insecticide, nematicide or acaricide on arable crops and permanent crops",HA
+SFI,LIG1,65830,Manage grassland with very low nutrient inputs (outside SDAs),HA
+SFI,LIG2,15747,Manage grassland with very low nutrient inputs (SDAs),HA
+SFI,MOR1,2191,Assess moorland and produce a written record,HA
+SFI,NUM2,43394,Legumes on improved grassland,HA
+SFI,NUM3,11434,Legume fallow,HA
+SFI,OFA1,1,Overwinter stubble (organic land),HA
+SFI,OFC1,105,Organic conversion - improved permanent grassland,HA
+SFI,OFC2,36,Organic conversion - unimproved permanent grassland,HA
+SFI,OFC3,113,Organic conversion - rotational land,HA
+SFI,OFC4,16,Organic conversion - horticultural land,HA
+SFI,OFC5,11,Organic conversion - top fruit,HA
+SFI,OFM1,264,Organic land management - improved permanent grassland,HA
+SFI,OFM2,67,Organic land management - unimproved permanent grassland,HA
+SFI,OFM4,91,Organic land management - rotational land,HA
+SFI,OFM5,10,Organic land management - horticultural land,HA
+SFI,OFM6,7,Organic land management - top fruit,HA
+SFI,PRF1,7837,Variable rate application of nutrients,HA
+SFI,PRF2,97,Camera or remote sensor guided herbicide spraying,HA
+SFI,PRF4,194,Mechanical robotic weeding,HA
+SFI,SAM1,421146,"Assess soil, produce a soil management plan and test soil organic matter",HA
+SFI,SAM2,23611,Multi-species winter cover crops,HA
+SFI,SAM3,85212,Establish and maintain Herbal leys,HA
+SFI,SCR1,145,Create scrub and open habitat mosaics,HA
+SFI,SCR2,266,Manage scrub and open habitat mosaics,HA
+SFI,SOH1,2400,No-till farming,HA
+SFI,SOH2,111,Multi-species spring-sown cover crop,HA
+SFI,SOH3,1391,Multi-species summer-sown cover crop,HA
+SFI,SOH4,543,Winter cover following maize crops,HA
+SFI,SPM2,63,Supplement: Keep native breeds on grazed habitats (50-80%),HA
+SFI,SPM3,132,Supplement: Keep native breeds on grazed habitats supplement (more than 80%),HA
+SFI,SPM5,1,Supplement: Keep native breeds on extensively managed habitats (more than 80%),HA
+SFI,UPL1,15,Moderate livestock grazing on moorland,HA
+SFI,UPL10,17,Shepherding livestock on moorland (remove stock for at least 8 months),HA
+SFI,UPL2,9,Low livestock grazing on moorland,HA
+SFI,UPL3,19,Limited livestock grazing on moorland,HA
+SFI,UPL6,12,Supplement: Keep cattle and ponies on moorland (100% GLU),HA
+SFI,UPL7,17,Shepherding livestock on moorland (no required stock removal period),HA
+SFI,UPL8,33,Shepherding livestock on moorland (remove stock for at least 4 months),HA
+SFI,UPL9,5,Shepherding livestock on moorland (remove stock for at least 6 months),HA
+SFI,WBD1,1281,Manage ponds,UNITS
+SFI,WBD2,1958,Manage ditches,METRES
+SFI,WBD3,122,In-field grass strips,HA
+SFI,WBD4,87,Arable reversion to grassland with low fertiliser input,HA
+SFI,WBD5,46,Manage intensive grassland adjacent to a watercourse,HA
+SFI,WBD6,277,Remove livestock from intensive grassland during the autumn and winter (outside SDAs),HA
+SFI,WBD7,13,Remove livestock from grassland during the autumn and winter (SDAs),HA
+SFI,WBD8,64,Manage grassland to reduce nutrient levels in groundwater,HA
+SFI,WBD9,39,Supplement: Nil fertiliser,HA
