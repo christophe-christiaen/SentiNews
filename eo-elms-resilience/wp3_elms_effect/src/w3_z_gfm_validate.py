@@ -25,7 +25,7 @@ LAG = pd.Timedelta(days=7)
 
 def merge():
     c = pd.concat([pd.read_parquet(f) for f in sorted(glob.glob(os.path.join(GFM, 'E*T3_20??.parquet')))], ignore_index=True)
-    c = c[c.prow.notna()]
+    c = c[c.prow.notna()].copy(); c['season'] = c.season.astype(int)
     e = pd.concat([pd.read_parquet(f) for f in sorted(glob.glob(os.path.join(GFM, 'E*T3_20??_events.parquet')))], ignore_index=True)
     e['date'] = pd.to_datetime(e.date)
     assert not c.duplicated(['parcref', 'season']).any(), 'a parcel-season appears in two tiles'
