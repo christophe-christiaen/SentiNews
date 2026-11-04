@@ -31,7 +31,7 @@ def long_panel(d, keep, buf, extra=None):
 
 def contrast(x, by, wet, rng):
     s = x.groupby(by + ['buf']).dy.agg(['size', 'sum']).unstack('buf').dropna()
-    s.columns = ['no', 'so', 'nb', 'sb']; s = s.reset_index()
+    s = s[[('size', False), ('sum', False), ('size', True), ('sum', True)]]; s.columns = ['no', 'so', 'nb', 'sb']; s = s.reset_index()
     if s.empty: return None
     s['tau'] = s.sb / s.nb - s.so / s.no
     s['wet'] = wet.reindex(pd.MultiIndex.from_arrays([s.cell, s.t])).fillna(False).astype(bool).values
