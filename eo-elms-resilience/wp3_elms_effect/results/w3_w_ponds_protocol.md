@@ -89,3 +89,4 @@ Per-parcel data stay out of the public repository.
 |---|---|---|
 | 2026-10-30 | Draft written, before any water feature for these parcels was extracted | Project lead's request to cover water and linear options |
 | 2026-10-30 | Open decisions settled with the defaults (above); protocol registered by public commit | Project lead's decision |
+| 2026-11-04 | Method suggestions from the project lead recorded and checked against their sources: [w3_detection_method_suggestions.md](w3_detection_method_suggestions.md). Not adopted; no rule here changes | Keep them with this protocol for when it resumes; resilience work comes first |
