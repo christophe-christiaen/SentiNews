@@ -91,5 +91,16 @@ Spearman correlation across region-seasons, 2021–2025, between Defra's yield a
 ### Not run or not stated
 
 - **Farm-level reading: not run.** The farm grouping links agreements to companies by nearest location, covers only fields under an option, and holds no fields for non-agreement farms, so it cannot group fields into holdings.
-- **£/ha: not stated yet.** Defra's farm-gate price series is not held locally.
+
 - **2026:** added after Defra's final figures on 10 December 2026.
+
+### £/ha
+
+- **£/ha:** the t/ha contrast times Defra's mean UK feed wheat price for 2021–2025, £204/t (*Agriculture in the UK*, sales-weighted; 2025 provisional). Across all crop prices in those seasons, £152–£280/t. Revenue only; costs are not counted.
+
+| Family | £/ha (95% interval) | At lowest and highest price |
+|---|---|---|
+| All agreement land | +7.9 (+2.8, +12.9) | +5.9 to +10.8 |
+| Management-only | +8.4 (+2.4, +14.4) | +6.3 to +11.5 |
+| Cover crops | +11.5 (-2.5, +25.5) | +8.6 to +15.8 |
+| No-till | -7.9 (-39.5, +23.7) | -5.9 to -10.9 |
