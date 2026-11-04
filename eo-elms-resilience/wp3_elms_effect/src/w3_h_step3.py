@@ -180,7 +180,7 @@ def main():
     L += ['', '### Reported only', '', '| Family | Within cohort | Within cohort, before entry | Never-treated controls only | Strata with CROME crop | July NDVI, same rows (SD) |', '|---|---|---|---|---|---|']
     for r in res:
         L.append(f"| {r['family']} | {c(r['within'])} | {c(r['within_before'])} | {c(r['never_only'])} | {c(r['crop_strata'])} | {c(r['july_ndvi_same_rows'])} |")
-    L += ['', f"Management-only, no other option: contrast {c(res[-1]['frozen'])}, placebo {c(res[-1]['placebo'])}.", '',
+    L += ['', f"Management-only, no other option: contrast {c(res[-1]['frozen'])}, placebo {c(res[-1]['placebo']) or 'not possible (no field in a cohort early enough)'}; the rule cannot be applied.", '',
           '### By crop: field in the same crop in both seasons compared', '', '| Family | ' + ' | '.join(f'{k}: contrast; placebo' for k in CROPS) + ' |', '|---|' + '---|' * len(CROPS)]
     for r in res:
         L.append(f"| {r['family']} | " + ' | '.join(f"{c(r[k])}; {c(r[k + ' placebo'])}" for k in CROPS) + ' |')
