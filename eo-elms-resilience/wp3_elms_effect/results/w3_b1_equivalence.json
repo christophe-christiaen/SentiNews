@@ -1,0 +1,263 @@
+{
+ "rows": [
+  {
+   "name": "A: H1 July NDVI, frozen",
+   "est": 0.08208984318829562,
+   "limit": 0.1,
+   "unit": "SD",
+   "cell": {
+    "se": 0.01692004941806568,
+    "lo": 0.05425636189557759,
+    "hi": 0.10992332448101366,
+    "passes": false,
+    "smallest_ruled_out": 0.10992332448101366
+   },
+   "shuffled": {
+    "sd": 0.05162095734031991,
+    "mean_of_draws": -0.0017482272331890102,
+    "q05": -0.07696430909778428,
+    "q95": 0.07759028359513116,
+    "lo": 0.0051255340905113494,
+    "hi": 0.1596801267834268,
+    "passes": false,
+    "smallest_ruled_out": 0.1596801267834268,
+    "draws": 1999
+   },
+   "within_limit": false,
+   "X": 0.1596801267834268
+  },
+  {
+   "name": "B: H1 July NDVI, E3 sample",
+   "est": 0.08655422993093441,
+   "limit": 0.1,
+   "unit": "SD",
+   "cell": {
+    "se": 0.018631554607313357,
+    "lo": 0.05590532260190394,
+    "hi": 0.11720313725996488,
+    "passes": false,
+    "smallest_ruled_out": 0.11720313725996488
+   },
+   "shuffled": {
+    "sd": 0.0533494831240391,
+    "mean_of_draws": 0.0005784876072285431,
+    "q05": -0.08137524524777216,
+    "q95": 0.07942274721854817,
+    "lo": 0.005178984683162247,
+    "hi": 0.16597697714948256,
+    "passes": false,
+    "smallest_ruled_out": 0.16597697714948256,
+    "draws": 1999
+   },
+   "within_limit": false,
+   "X": 0.16597697714948256
+  },
+  {
+   "name": "C: dry or heat harvest, All agreement land",
+   "est": 0.03866376541505953,
+   "limit": 0.1,
+   "unit": "t/ha",
+   "cell": {
+    "se": 0.012605276328735482,
+    "lo": 0.017928085854289663,
+    "hi": 0.0593994449758294,
+    "passes": true,
+    "smallest_ruled_out": 0.0593994449758294
+   },
+   "shuffled": {
+    "sd": 0.03232377269322939,
+    "mean_of_draws": 0.005921721259116795,
+    "q05": -0.05342772296994921,
+    "q95": 0.03958801540372781,
+    "lo": -0.014763957554889677,
+    "hi": 0.07825178081878734,
+    "passes": true,
+    "smallest_ruled_out": 0.07825178081878734,
+    "draws": 1999
+   },
+   "within_limit": true,
+   "X": 0.07825178081878734,
+   "readings": {
+    "share_of_bad_season_loss": 0.09206091861033805,
+    "share_of_notill_payment_annualised": 0.10277781842336069,
+    "gbp_per_ha_shock_season": 15.963363287032617
+   }
+  },
+  {
+   "name": "C: dry or heat harvest, Management-only",
+   "est": 0.04117954818423838,
+   "limit": 0.1,
+   "unit": "t/ha",
+   "cell": {
+    "se": 0.014959915187506532,
+    "lo": 0.016570487700790133,
+    "hi": 0.06578860866768663,
+    "passes": true,
+    "smallest_ruled_out": 0.06578860866768663
+   },
+   "shuffled": {
+    "sd": 0.03480166408871509,
+    "mean_of_draws": 0.005820090303318106,
+    "q05": -0.05615013186292217,
+    "q95": 0.047070295639260816,
+    "lo": -0.014970583678683792,
+    "hi": 0.0882498438234992,
+    "passes": true,
+    "smallest_ruled_out": 0.0882498438234992,
+    "draws": 1999
+   },
+   "within_limit": true,
+   "X": 0.0882498438234992,
+   "readings": {
+    "share_of_bad_season_loss": 0.10382334567470494,
+    "share_of_notill_payment_annualised": 0.11590952090133018,
+    "gbp_per_ha_shock_season": 18.002968139993836
+   }
+  },
+  {
+   "name": "D: wet-winter harvest, All agreement land",
+   "est": -0.04016219184915503,
+   "limit": 0.1,
+   "unit": "t/ha",
+   "cell": {
+    "se": 0.012351500397425549,
+    "lo": -0.06048041000292006,
+    "hi": -0.019843973695390003,
+    "passes": true,
+    "smallest_ruled_out": 0.06048041000292006
+   },
+   "shuffled": {
+    "sd": 0.034636071174865266,
+    "mean_of_draws": 0.0024548534067141497,
+    "q05": -0.04651102632566571,
+    "q95": 0.06361541553510723,
+    "lo": -0.08667321817482074,
+    "hi": 0.0234532236859522,
+    "passes": true,
+    "smallest_ruled_out": 0.08667321817482074,
+    "draws": 1987
+   },
+   "within_limit": true,
+   "X": 0.08667321817482074,
+   "readings": {
+    "share_of_bad_season_loss": 0.10196849197037734,
+    "share_of_notill_payment_annualised": 0.07266302674382231,
+    "gbp_per_ha_shock_season": 17.68133650766343
+   }
+  },
+  {
+   "name": "D: wet-winter harvest, Management-only",
+   "est": -0.050452707822724804,
+   "limit": 0.1,
+   "unit": "t/ha",
+   "cell": {
+    "se": 0.014729751048407432,
+    "lo": -0.07468314829735503,
+    "hi": -0.026222267348094578,
+    "passes": true,
+    "smallest_ruled_out": 0.07468314829735503
+   },
+   "shuffled": {
+    "sd": 0.039325905563717574,
+    "mean_of_draws": 0.003979203710327245,
+    "q05": -0.05938208691515389,
+    "q95": 0.06455293602362913,
+    "lo": -0.10983479473787869,
+    "hi": 0.014100228200904327,
+    "passes": false,
+    "smallest_ruled_out": 0.10983479473787869,
+    "draws": 1981
+   },
+   "within_limit": false,
+   "X": 0.10983479473787869,
+   "readings": {
+    "share_of_bad_season_loss": 0.12921740557397493,
+    "share_of_notill_payment_annualised": 0.09208067723230379,
+    "gbp_per_ha_shock_season": 22.406298126527254
+   }
+  },
+  {
+   "name": "D: wet-winter harvest, Buffer strips",
+   "est": -0.06762608367068482,
+   "limit": 0.1,
+   "unit": "t/ha",
+   "cell": {
+    "se": 0.015060613813222306,
+    "lo": -0.09240079339343552,
+    "hi": -0.04285137394793412,
+    "passes": true,
+    "smallest_ruled_out": 0.09240079339343552
+   },
+   "shuffled": {
+    "sd": 0.0426667147158997,
+    "mean_of_draws": 0.0037288148568701013,
+    "q05": -0.06464420724527052,
+    "q95": 0.06896361768454037,
+    "lo": -0.13227029091595532,
+    "hi": 0.001337534013855557,
+    "passes": false,
+    "smallest_ruled_out": 0.13227029091595532,
+    "draws": 1981
+   },
+   "within_limit": false,
+   "X": 0.13227029091595532,
+   "readings": {
+    "share_of_bad_season_loss": 0.15561210695994745,
+    "share_of_notill_payment_annualised": 0.11088961375419817,
+    "gbp_per_ha_shock_season": 26.983139346854887
+   }
+  },
+  {
+   "name": "E: wet-winter July NDVI, All agreement land",
+   "est": -0.014004893043464927,
+   "limit": 0.1,
+   "unit": "SD",
+   "cell": {
+    "se": 0.015101856644488954,
+    "lo": -0.03884744722364926,
+    "hi": 0.010837661136719402,
+    "passes": true,
+    "smallest_ruled_out": 0.03884744722364926
+   },
+   "shuffled": {
+    "sd": 0.06363407889854743,
+    "mean_of_draws": -0.012441411226806552,
+    "q05": -0.10168856838389989,
+    "q95": 0.09482532024602831,
+    "lo": -0.11569346142736482,
+    "hi": 0.08082042720256338,
+    "passes": false,
+    "smallest_ruled_out": 0.11569346142736482,
+    "draws": 1999
+   },
+   "within_limit": false,
+   "X": 0.11569346142736482
+  },
+  {
+   "name": "E: wet-winter July NDVI, Buffer strips",
+   "est": -0.05253673198615134,
+   "limit": 0.1,
+   "unit": "SD",
+   "cell": {
+    "se": 0.01863724201113077,
+    "lo": -0.08319499509446146,
+    "hi": -0.021878468877841218,
+    "passes": true,
+    "smallest_ruled_out": 0.08319499509446146
+   },
+   "shuffled": {
+    "sd": 0.05624350248018587,
+    "mean_of_draws": 0.003721273767395896,
+    "q05": -0.10118501778792444,
+    "q95": 0.08357513846448271,
+    "lo": -0.15372174977407577,
+    "hi": 0.031038406478331372,
+    "passes": false,
+    "smallest_ruled_out": 0.15372174977407577,
+    "draws": 1999
+   },
+   "within_limit": false,
+   "X": 0.15372174977407577
+  }
+ ]
+}
