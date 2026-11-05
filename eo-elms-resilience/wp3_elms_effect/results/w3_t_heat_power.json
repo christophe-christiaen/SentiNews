@@ -1,0 +1,657 @@
+{
+ "rows": [
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T1 heat on top of drought",
+   "family": "All agreement land",
+   "limit": 0.1,
+   "main": {
+    "se": 0.025540850686389564,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 158138,
+     "cells": 992,
+     "seasons": {
+      "2022": 21105,
+      "2025": 87054,
+      "2026": 49979
+     }
+    },
+    "other": {
+     "parcel_seasons": 124790,
+     "cells": 930,
+     "seasons": {
+      "2021": 30,
+      "2022": 5609,
+      "2023": 2863,
+      "2025": 101868,
+      "2026": 14420
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.07151438192189077,
+   "readable": true
+  },
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T1 heat on top of drought",
+   "family": "Management-only",
+   "limit": 0.1,
+   "main": {
+    "se": 0.029652124271798537,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 108833,
+     "cells": 957,
+     "seasons": {
+      "2022": 12000,
+      "2025": 63520,
+      "2026": 33313
+     }
+    },
+    "other": {
+     "parcel_seasons": 91757,
+     "cells": 899,
+     "seasons": {
+      "2021": 9,
+      "2022": 3028,
+      "2023": 1629,
+      "2025": 77443,
+      "2026": 9648
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.08302594796103589,
+   "readable": true
+  },
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T1 heat on top of drought",
+   "family": "Cover crops",
+   "limit": 0.1,
+   "main": {
+    "se": 0.06830383970816528,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 9769,
+     "cells": 719,
+     "seasons": {
+      "2022": 1064,
+      "2025": 5997,
+      "2026": 2708
+     }
+    },
+    "other": {
+     "parcel_seasons": 11431,
+     "cells": 706,
+     "seasons": {
+      "2021": 1,
+      "2022": 453,
+      "2023": 94,
+      "2025": 9687,
+      "2026": 1196
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.19125075118286278,
+   "readable": false
+  },
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T1 heat on top of drought",
+   "family": "No-till",
+   "limit": 0.1,
+   "main": {
+    "se": 0.13761605005488717,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 2366,
+     "cells": 288,
+     "seasons": {
+      "2022": 345,
+      "2025": 1407,
+      "2026": 614
+     }
+    },
+    "other": {
+     "parcel_seasons": 1122,
+     "cells": 198,
+     "seasons": {
+      "2022": 73,
+      "2023": 13,
+      "2025": 968,
+      "2026": 68
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.38532494015368407,
+   "readable": false
+  },
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T2 literal heat-only",
+   "family": "All agreement land",
+   "limit": 0.1,
+   "main": {
+    "se": 0.05766808235605593,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 4164,
+     "cells": 129,
+     "seasons": {
+      "2022": 4163,
+      "2026": 1
+     }
+    },
+    "other": {
+     "parcel_seasons": 37401,
+     "cells": 1171,
+     "seasons": {
+      "2021": 2198,
+      "2022": 1602,
+      "2023": 28756,
+      "2024": 408,
+      "2025": 2038,
+      "2026": 2399
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.034492498796531955,
+    "clusters": 1313,
+    "hazard": {
+     "parcel_seasons": 4466,
+     "cells": 287,
+     "seasons": {
+      "2019": 4466
+     }
+    },
+    "other": {
+     "parcel_seasons": 6839,
+     "cells": 685,
+     "seasons": {
+      "2019": 5519,
+      "2020": 1320
+     }
+    }
+   },
+   "mde": 0.1614706305969566,
+   "readable": false
+  },
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T2 literal heat-only",
+   "family": "Management-only",
+   "limit": 0.1,
+   "main": {
+    "se": 0.0758214238955746,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 2336,
+     "cells": 113,
+     "seasons": {
+      "2022": 2336
+     }
+    },
+    "other": {
+     "parcel_seasons": 21531,
+     "cells": 1035,
+     "seasons": {
+      "2021": 1168,
+      "2022": 826,
+      "2023": 15941,
+      "2024": 322,
+      "2025": 1632,
+      "2026": 1642
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.04443754888634488,
+    "clusters": 1313,
+    "hazard": {
+     "parcel_seasons": 2655,
+     "cells": 238,
+     "seasons": {
+      "2019": 2655
+     }
+    },
+    "other": {
+     "parcel_seasons": 3840,
+     "cells": 509,
+     "seasons": {
+      "2019": 3025,
+      "2020": 815
+     }
+    }
+   },
+   "mde": 0.21229998690760887,
+   "readable": false
+  },
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T2 literal heat-only",
+   "family": "Cover crops",
+   "limit": 0.1,
+   "main": {
+    "se": 0.1764432674927893,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 197,
+     "cells": 51,
+     "seasons": {
+      "2022": 197
+     }
+    },
+    "other": {
+     "parcel_seasons": 2039,
+     "cells": 466,
+     "seasons": {
+      "2021": 142,
+      "2022": 68,
+      "2023": 1492,
+      "2024": 28,
+      "2025": 154,
+      "2026": 155
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.10882058417971896,
+    "clusters": 1313,
+    "hazard": {
+     "parcel_seasons": 223,
+     "cells": 72,
+     "seasons": {
+      "2019": 223
+     }
+    },
+    "other": {
+     "parcel_seasons": 586,
+     "cells": 159,
+     "seasons": {
+      "2019": 423,
+      "2020": 163
+     }
+    }
+   },
+   "mde": 0.49404114897981,
+   "readable": false
+  },
+  {
+   "outcome": "July NDVI (SD)",
+   "contrast": "T2 literal heat-only",
+   "family": "No-till",
+   "limit": 0.1,
+   "main": {
+    "se": 0.24953789490220318,
+    "clusters": 1542,
+    "hazard": {
+     "parcel_seasons": 78,
+     "cells": 24,
+     "seasons": {
+      "2022": 78
+     }
+    },
+    "other": {
+     "parcel_seasons": 572,
+     "cells": 166,
+     "seasons": {
+      "2021": 66,
+      "2022": 6,
+      "2023": 478,
+      "2024": 5,
+      "2025": 8,
+      "2026": 9
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.1643863321480584,
+    "clusters": 1313,
+    "hazard": {
+     "parcel_seasons": 52,
+     "cells": 21,
+     "seasons": {
+      "2019": 52
+     }
+    },
+    "other": {
+     "parcel_seasons": 152,
+     "cells": 52,
+     "seasons": {
+      "2019": 137,
+      "2020": 15
+     }
+    }
+   },
+   "mde": 0.6987061057261689,
+   "readable": false
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T1 heat on top of drought",
+   "family": "All agreement land",
+   "limit": 0.1,
+   "main": {
+    "se": 0.02211022908703765,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 41780,
+     "cells": 846,
+     "seasons": {
+      "2022": 8214,
+      "2025": 33566
+     }
+    },
+    "other": {
+     "parcel_seasons": 42676,
+     "cells": 868,
+     "seasons": {
+      "2021": 19,
+      "2022": 2187,
+      "2023": 1362,
+      "2025": 39108
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.06190864144370541,
+   "readable": true
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T1 heat on top of drought",
+   "family": "Management-only",
+   "limit": 0.1,
+   "main": {
+    "se": 0.02598296728963062,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 29525,
+     "cells": 790,
+     "seasons": {
+      "2022": 4635,
+      "2025": 24890
+     }
+    },
+    "other": {
+     "parcel_seasons": 32074,
+     "cells": 847,
+     "seasons": {
+      "2021": 6,
+      "2022": 1165,
+      "2023": 758,
+      "2025": 30145
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.07275230841096574,
+   "readable": true
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T1 heat on top of drought",
+   "family": "Cover crops",
+   "limit": 0.1,
+   "main": {
+    "se": 0.05441523880835436,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 2936,
+     "cells": 507,
+     "seasons": {
+      "2022": 393,
+      "2025": 2543
+     }
+    },
+    "other": {
+     "parcel_seasons": 4628,
+     "cells": 593,
+     "seasons": {
+      "2021": 1,
+      "2022": 168,
+      "2023": 48,
+      "2025": 4411
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.1523626686633922,
+   "readable": false
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T1 heat on top of drought",
+   "family": "No-till",
+   "limit": 0.1,
+   "main": {
+    "se": 0.13257885033220213,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 674,
+     "cells": 176,
+     "seasons": {
+      "2022": 141,
+      "2025": 533
+     }
+    },
+    "other": {
+     "parcel_seasons": 481,
+     "cells": 143,
+     "seasons": {
+      "2022": 35,
+      "2023": 9,
+      "2025": 437
+     }
+    }
+   },
+   "placebo": null,
+   "mde": 0.3712207809301659,
+   "readable": false
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T2 literal heat-only",
+   "family": "All agreement land",
+   "limit": 0.1,
+   "main": {
+    "se": 0.036458033151578535,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 1708,
+     "cells": 118,
+     "seasons": {
+      "2022": 1708
+     }
+    },
+    "other": {
+     "parcel_seasons": 19315,
+     "cells": 1135,
+     "seasons": {
+      "2021": 817,
+      "2022": 655,
+      "2023": 16773,
+      "2024": 240,
+      "2025": 830
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.05463277519755095,
+    "clusters": 1253,
+    "hazard": {
+     "parcel_seasons": 1328,
+     "cells": 235,
+     "seasons": {
+      "2019": 1328
+     }
+    },
+    "other": {
+     "parcel_seasons": 2501,
+     "cells": 522,
+     "seasons": {
+      "2019": 1832,
+      "2020": 669
+     }
+    }
+   },
+   "mde": 0.10208249282441989,
+   "readable": false
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T2 literal heat-only",
+   "family": "Management-only",
+   "limit": 0.1,
+   "main": {
+    "se": 0.04685056069004232,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 914,
+     "cells": 104,
+     "seasons": {
+      "2022": 914
+     }
+    },
+    "other": {
+     "parcel_seasons": 11013,
+     "cells": 1017,
+     "seasons": {
+      "2021": 435,
+      "2022": 338,
+      "2023": 9368,
+      "2024": 201,
+      "2025": 671
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.06813736130874992,
+    "clusters": 1253,
+    "hazard": {
+     "parcel_seasons": 760,
+     "cells": 178,
+     "seasons": {
+      "2019": 760
+     }
+    },
+    "other": {
+     "parcel_seasons": 1409,
+     "cells": 364,
+     "seasons": {
+      "2019": 1006,
+      "2020": 403
+     }
+    }
+   },
+   "mde": 0.1311815699321185,
+   "readable": false
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T2 literal heat-only",
+   "family": "Cover crops",
+   "limit": 0.1,
+   "main": {
+    "se": 0.15525199453266383,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 64,
+     "cells": 25,
+     "seasons": {
+      "2022": 64
+     }
+    },
+    "other": {
+     "parcel_seasons": 1066,
+     "cells": 397,
+     "seasons": {
+      "2021": 33,
+      "2022": 26,
+      "2023": 919,
+      "2024": 29,
+      "2025": 59
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.16561286645459675,
+    "clusters": 1253,
+    "hazard": {
+     "parcel_seasons": 68,
+     "cells": 34,
+     "seasons": {
+      "2019": 68
+     }
+    },
+    "other": {
+     "parcel_seasons": 224,
+     "cells": 92,
+     "seasons": {
+      "2019": 141,
+      "2020": 83
+     }
+    }
+   },
+   "mde": 0.4347055846914587,
+   "readable": false
+  },
+  {
+   "outcome": "Harvest index (t/ha)",
+   "contrast": "T2 literal heat-only",
+   "family": "No-till",
+   "limit": 0.1,
+   "main": {
+    "se": 0.19065415323720866,
+    "clusters": 1518,
+    "hazard": {
+     "parcel_seasons": 38,
+     "cells": 13,
+     "seasons": {
+      "2022": 38
+     }
+    },
+    "other": {
+     "parcel_seasons": 323,
+     "cells": 131,
+     "seasons": {
+      "2021": 20,
+      "2022": 4,
+      "2023": 294,
+      "2024": 1,
+      "2025": 4
+     }
+    }
+   },
+   "placebo": {
+    "se": 0.5175757785068461,
+    "clusters": 1253,
+    "hazard": {
+     "parcel_seasons": 12,
+     "cells": 9,
+     "seasons": {
+      "2019": 12
+     }
+    },
+    "other": {
+     "parcel_seasons": 43,
+     "cells": 27,
+     "seasons": {
+      "2019": 36,
+      "2020": 7
+     }
+    }
+   },
+   "mde": 0.5338316290641842,
+   "readable": false
+  }
+ ],
+ "k": 2.8,
+ "min_cells": 30
+}
