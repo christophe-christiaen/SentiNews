@@ -67,3 +67,5 @@ Feed wheat mean 2021–2025, £204/t; all crop prices £152–£280/t. Revenue o
 | spring barley | 15 | 0.33 | 0.38 | 0.86 | -0.07 | -0.05 |
 
 Hot region-seasons by harvest year: 2017: 0, 2018: 1, 2019: 2, 2020: 3, 2021: 0, 2022: 5, 2023: 0, 2024: 0, 2025: 4.
+
+**Limit:** wheat's error ratio in hot region-seasons is 1.70, over the 1.5 yardstick, and harvest rows lean on wheat.
