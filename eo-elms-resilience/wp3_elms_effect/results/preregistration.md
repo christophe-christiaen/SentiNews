@@ -167,3 +167,4 @@ separate, smaller descriptive check.
 **Frozen version:** commit `b0f232b67dbb6d32630dae55778e7c08ff5750e3` in christophe-christiaen/SentiNews
 (`eo-elms-resilience/wp3_elms_effect/results/preregistration.md`), 11 October 2026. The text above this line is
 identical to that commit except for rows added to the decisions record (section 11) after it.
+| 2026-11-05 | **W3-B1 equivalence tests registered before the shuffled-season spread or any equivalence result was computed** ([w3_b1_equivalence_protocol.md](w3_b1_equivalence_protocol.md)): limits of 0.10 t/ha and 0.10 SD, chosen after the estimates were public but anchored on numbers written earlier; a result is within the limit only if it passes on both cell errors and the shuffled-season spread. Labels only; no registered reading changes | Project lead: option A with the two-part test |
