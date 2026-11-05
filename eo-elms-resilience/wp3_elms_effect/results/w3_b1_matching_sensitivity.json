@@ -1,0 +1,311 @@
+{
+ "rows": [
+  {
+   "name": "A: H1 July NDVI, frozen",
+   "unit": "SD",
+   "est": 0.08208984318829562,
+   "placebo": "+0.079, fails",
+   "shifts": {
+    "NDVI trajectory": 0.014573648074564738,
+    "Crop history": 0.01740117219394352,
+    "Flood zone": 0.010779976391830592,
+    "Peat class": 0.007651442455422236,
+    "Scheme intensity, 1 km": 0.014362380775755551
+   },
+   "no_matching_shift": 0.029321320649859373,
+   "S": 0.01740117219394352,
+   "k1": 4.717489274479279,
+   "strongest_b": {
+    "covariate": "ndvi_p11",
+    "b": 0.014589260112967779,
+    "delta": -0.3313332295177073,
+    "gamma": 0.04403198596833793
+   },
+   "max_b": 0.014589260112967779,
+   "k2": 5.626731071531819,
+   "largest_delta": {
+    "covariate": "scheme_1km",
+    "delta": 0.8139766990048563,
+    "gamma": 0.002711730956363668
+   },
+   "largest_gamma": {
+    "covariate": "crop_2018_AC67",
+    "delta": 0.08396132947495329,
+    "gamma": 0.07930790341284176
+   },
+   "gamma_needed_at_largest_delta": 0.1008503600762236,
+   "delta_needed_at_largest_gamma": 1.0350777117505214,
+   "bias_to_limit": 0.01791015681170438,
+   "k": 4.717489274479279,
+   "label": "strong"
+  },
+  {
+   "name": "B: H1 July NDVI, E3 sample",
+   "unit": "SD",
+   "est": 0.08655422993093441,
+   "placebo": "+0.080, fails",
+   "shifts": {
+    "NDVI trajectory": -0.013229176765659628,
+    "Crop history": -0.0038384675587843503,
+    "Flood zone": -0.005870303467440094,
+    "Peat class": -0.0025664767645630776,
+    "Scheme intensity, 1 km": 0.005025236560787821,
+    "Embedding components": -0.0044643867426387845
+   },
+   "no_matching_shift": 0.024856933907220588,
+   "S": 0.013229176765659628,
+   "k1": 6.5426769529312185,
+   "strongest_b": {
+    "covariate": "emb_pc1",
+    "b": 0.027288001511916092,
+    "delta": 0.46469547151503826,
+    "gamma": 0.05872233147215641
+   },
+   "max_b": 0.027288001511916092,
+   "k2": 3.1718786695734393,
+   "largest_delta": {
+    "covariate": "scheme_1km",
+    "delta": 0.8139766990048563,
+    "gamma": -0.002545005289432592
+   },
+   "largest_gamma": {
+    "covariate": "emb_pc8",
+    "delta": -0.14501861333886573,
+    "gamma": 0.09944321870165938
+   },
+   "gamma_needed_at_largest_delta": 0.10633502167414993,
+   "delta_needed_at_largest_gamma": 0.8703884594746137,
+   "bias_to_limit": 0.013445770069065596,
+   "k": 3.1718786695734393,
+   "label": "strong"
+  },
+  {
+   "name": "C: dry or heat harvest, All agreement land",
+   "unit": "t/ha",
+   "est": 0.03866376541505953,
+   "placebo": "-0.081, passes narrowly",
+   "shifts": {
+    "NDVI trajectory": -0.003688876639707031,
+    "Crop history": -0.0073886514563009376,
+    "Flood zone": -0.00015043053437164416,
+    "Peat class": -0.0019187014356126728,
+    "Scheme intensity, 1 km": -0.006254597594811354,
+    "Embedding components": -0.039698419647307845
+   },
+   "no_matching_shift": -0.06976282849409617,
+   "S": 0.039698419647307845,
+   "k1": 0.973937143054044,
+   "strongest_b": {
+    "covariate": "emb_pc1",
+    "b": 0.029846802467339804,
+    "delta": 0.46469547151503826,
+    "gamma": -0.06422873536949007
+   },
+   "max_b": 0.029846802467339804,
+   "k2": 1.295407287174825,
+   "largest_delta": {
+    "covariate": "scheme_1km",
+    "delta": 0.8139766990048563,
+    "gamma": 0.025455216513730936
+   },
+   "largest_gamma": {
+    "covariate": "emb_pc7",
+    "delta": 0.2971413040447825,
+    "gamma": -0.09165776277012766
+   },
+   "gamma_needed_at_largest_delta": 0.047499843008195076,
+   "delta_needed_at_largest_gamma": 0.4218275053475395,
+   "bias_to_limit": 0.061336234584940474,
+   "k": 0.973937143054044,
+   "label": "fragile"
+  },
+  {
+   "name": "C: dry or heat harvest, Management-only",
+   "unit": "t/ha",
+   "est": 0.04117954818423838,
+   "placebo": "-0.095, passes narrowly",
+   "shifts": {
+    "NDVI trajectory": -0.004168808698142422,
+    "Crop history": -0.007391869969318392,
+    "Flood zone": -0.00027130686826380007,
+    "Peat class": -0.0022065623416145375,
+    "Scheme intensity, 1 km": -0.007196698689124557,
+    "Embedding components": -0.041272573837023076
+   },
+   "no_matching_shift": -0.06937533315502359,
+   "S": 0.041272573837023076,
+   "k1": 0.9977460661127644,
+   "strongest_b": {
+    "covariate": "emb_pc1",
+    "b": 0.030138850839554185,
+    "delta": 0.4692424763802953,
+    "gamma": -0.06422873536949007
+   },
+   "max_b": 0.030138850839554185,
+   "k2": 1.3663277476457196,
+   "largest_delta": {
+    "covariate": "scheme_1km",
+    "delta": 0.868835812507935,
+    "gamma": 0.025455216513730936
+   },
+   "largest_gamma": {
+    "covariate": "emb_pc7",
+    "delta": 0.30190703395802354,
+    "gamma": -0.09165776277012766
+   },
+   "gamma_needed_at_largest_delta": 0.04739623711570049,
+   "delta_needed_at_largest_gamma": 0.44927507436019676,
+   "bias_to_limit": 0.05882045181576163,
+   "k": 0.9977460661127644,
+   "label": "fragile"
+  },
+  {
+   "name": "D: wet-winter harvest, All agreement land",
+   "unit": "t/ha",
+   "est": -0.04016219184915503,
+   "placebo": "-0.128, fails",
+   "shifts": {
+    "NDVI trajectory": 0.0024660045155045635,
+    "Crop history": 0.006721395727611067,
+    "Flood zone": 0.0002952000138573274,
+    "Peat class": 0.000704759881882025,
+    "Scheme intensity, 1 km": 0.005035663156799132,
+    "Embedding components": 0.02736122968974663
+   },
+   "no_matching_shift": 0.03744449978849515,
+   "S": 0.02736122968974663,
+   "k1": 1.4678503965121656,
+   "strongest_b": {
+    "covariate": "emb_pc1",
+    "b": 0.014198278390231323,
+    "delta": 0.46469547151503826,
+    "gamma": -0.030553941797497902
+   },
+   "max_b": 0.014198278390231323,
+   "k2": 2.8286663175154643,
+   "largest_delta": {
+    "covariate": "scheme_1km",
+    "delta": 0.8139766990048563,
+    "gamma": 0.008157696689142187
+   },
+   "largest_gamma": {
+    "covariate": "emb_pc6",
+    "delta": 0.07510981622387752,
+    "gamma": 0.05795333763069978
+   },
+   "gamma_needed_at_largest_delta": 0.04934071441879864,
+   "delta_needed_at_largest_gamma": 0.6930091258088267,
+   "bias_to_limit": 0.059837808150844975,
+   "k": 1.4678503965121656,
+   "label": "moderate"
+  },
+  {
+   "name": "D: wet-winter harvest, Management-only",
+   "unit": "t/ha",
+   "est": -0.050452707822724804,
+   "placebo": "-0.139, fails",
+   "shifts": {
+    "NDVI trajectory": 0.003599147579888329,
+    "Crop history": 0.006651362585931908,
+    "Flood zone": -0.0002574338968407419,
+    "Peat class": 0.001275984581913206,
+    "Scheme intensity, 1 km": 0.00598311856332337,
+    "Embedding components": 0.03049395903813023
+   },
+   "no_matching_shift": 0.04054872417344713,
+   "S": 0.03049395903813023,
+   "k1": 1.6545148420917657,
+   "strongest_b": {
+    "covariate": "emb_pc1",
+    "b": 0.014337207312237327,
+    "delta": 0.4692424763802953,
+    "gamma": -0.030553941797497902
+   },
+   "max_b": 0.014337207312237327,
+   "k2": 3.5190052514384433,
+   "largest_delta": {
+    "covariate": "scheme_1km",
+    "delta": 0.868835812507935,
+    "gamma": 0.008157696689142187
+   },
+   "largest_gamma": {
+    "covariate": "emb_pc6",
+    "delta": 0.07253231812984283,
+    "gamma": 0.05795333763069978
+   },
+   "gamma_needed_at_largest_delta": 0.058069323451447885,
+   "delta_needed_at_largest_gamma": 0.8705746706812336,
+   "bias_to_limit": 0.0495472921772752,
+   "k": 1.6545148420917657,
+   "label": "moderate"
+  },
+  {
+   "name": "D: wet-winter harvest, Buffer strips",
+   "unit": "t/ha",
+   "est": -0.06762608367068482,
+   "placebo": "-0.162, fails",
+   "shifts": {
+    "NDVI trajectory": -0.0009185794008706033,
+    "Crop history": 0.005643086823881788,
+    "Flood zone": 0.0003934901587738099,
+    "Peat class": -0.0008531640874977486,
+    "Scheme intensity, 1 km": 0.003849419611813676,
+    "Embedding components": 0.017985050201041318
+   },
+   "no_matching_shift": 0.02838079003431248,
+   "S": 0.017985050201041318,
+   "k1": 3.7601276012434663,
+   "strongest_b": {
+    "covariate": "emb_pc1",
+    "b": 0.01879627880589657,
+    "delta": 0.6151834329747863,
+    "gamma": -0.030553941797497902
+   },
+   "max_b": 0.01879627880589657,
+   "k2": 3.597844252526722,
+   "largest_delta": {
+    "covariate": "scheme_1km",
+    "delta": 0.8837517468036351,
+    "gamma": 0.008157696689142187
+   },
+   "largest_gamma": {
+    "covariate": "emb_pc6",
+    "delta": 0.17845588101243243,
+    "gamma": 0.05795333763069978
+   },
+   "gamma_needed_at_largest_delta": 0.07652158416124859,
+   "delta_needed_at_largest_gamma": 1.1669057630748272,
+   "bias_to_limit": 0.03237391632931519,
+   "k": 3.597844252526722,
+   "label": "strong"
+  }
+ ],
+ "embedding_test": {
+  "predicted_shift": -0.0012299126735652588,
+  "realised_shift": 0.0044643867426387845,
+  "delta": [
+   0.2965419500675047,
+   0.3304148384300896,
+   0.04231333508941698,
+   0.12294756096573936,
+   0.16976442516791754,
+   0.060145863809946395,
+   0.2573918426758326,
+   -0.10565540387254224,
+   0.18295113866792323,
+   0.09775704815677849
+  ],
+  "gamma": [
+   0.029437667394780105,
+   -0.05319450295542824,
+   -0.019690060674312976,
+   0.04115942232919753,
+   0.04761156584663295,
+   -0.02765537648404,
+   0.022115265768032966,
+   0.128183966535442,
+   0.006787040422598978,
+   0.06177880280816283
+  ]
+ }
+}
