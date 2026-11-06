@@ -97,7 +97,7 @@ Joint test of event times −4 to −1: effect χ²(4) = 32.8, p = 0.000; shock 
 | Secondary outcome: July NDMI (canopy water) | +0.105 | 0.017 | [+0.072, +0.139] | 0.000 |
 | Secondary outcome: July NDRE (chlorophyll) | +0.100 | 0.016 | [+0.069, +0.130] | 0.000 |
 | Secondary outcome: Seasonal NDVI integral | +0.120 | 0.036 | [+0.049, +0.191] | 0.001 |
-| Secondary outcome: Senescence timing (half-months) | -0.172 | 0.033 | [-0.237, -0.108] | 0.000 |
+| Secondary outcome: Senescence timing (half-months), **corrected 6 November 2026; was -0.172, which averaged the -1 "no date" code as a date ([details](w3_b1_resilience_indices.md))** | -0.012 | 0.011 | [-0.034, +0.011] | 0.306 |
 | Compound shock (shock after shock), peak NDVI vs calm-after-calm | +0.050 | 0.064 | [-0.076, +0.176] | 0.440 |
 | Wet winter (waterlogging) vs not, July NDVI (Sentinel-2 only) | -0.069 | 0.017 | [-0.103, -0.036] | 0.000 |
 

@@ -58,6 +58,8 @@ def load():
     for c in ['ndvi_july_z', 'ndvi_peak_z', 'ndmi_july_z', 'ndre_july_z', 'integral_z', 'senesc_k']:
         m = np.full((len(t), len(SEASONS)), np.nan, dtype='float64')
         m[s2.i.values, s2.j.values] = s2[c].values
+        if c == 'senesc_k':
+            m[m == -1] = np.nan                                       # build_s2_panel.py codes "no date" as -1
         Y[c] = m
     base = Y['senesc_k'][:, :4]                                       # senescence timing vs the parcel's 2017-2020 mean
     ok = (~np.isnan(base)).sum(1) >= 2

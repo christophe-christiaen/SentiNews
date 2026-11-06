@@ -701,14 +701,15 @@
   },
   {
    "name": "Secondary outcome: Senescence timing (half-months)",
-   "est": -0.17228906798430765,
-   "se": 0.03282165341148962,
-   "lo": -0.23661950867082732,
-   "hi": -0.107958627297788,
-   "p": 1.52719605382266e-07,
+   "est": -0.01161844265085354,
+   "se": 0.011339200229024399,
+   "lo": -0.03384327509974136,
+   "hi": 0.010606389798034282,
+   "p": 0.3055395552635125,
    "clusters": 1536,
    "n": 400875,
-   "note": ""
+   "note": "corrected 6 November 2026, see w3_b1_resilience_indices.md",
+   "old_est_coding_error": -0.17228906798430765
   },
   {
    "name": "Compound shock (shock after shock), peak NDVI vs calm-after-calm",
