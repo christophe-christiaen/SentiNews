@@ -1,0 +1,36 @@
+{
+ "fields_M0": 31224,
+ "fields_MA": 30472,
+ "rows": [
+  {
+   "contrast": "Dry or heat, all land",
+   "se_cell_MA": 0.03162418330444738,
+   "se_cell_M0": 0.030594659741713565,
+   "clusters_MA": 1357,
+   "parcel_seasons_MA": 11298,
+   "se_block_jackknife_MA": 0.029895635822647124,
+   "se_difference_M0_MA_block_jackknife": 0.014907014380028534,
+   "blocks": 75
+  },
+  {
+   "contrast": "Dry or heat, management-only",
+   "se_cell_MA": 0.03780568617501993,
+   "se_cell_M0": 0.03633741433035569,
+   "clusters_MA": 1357,
+   "parcel_seasons_MA": 7913,
+   "se_block_jackknife_MA": 0.03147873770746323,
+   "se_difference_M0_MA_block_jackknife": 0.018204428392682433,
+   "blocks": 75
+  },
+  {
+   "contrast": "Wet, all land",
+   "se_cell_MA": 0.03192393816620597,
+   "se_cell_M0": 0.03081732952139921,
+   "clusters_MA": 1357,
+   "parcel_seasons_MA": 11298,
+   "se_block_jackknife_MA": 0.03358092653951454,
+   "se_difference_M0_MA_block_jackknife": 0.014327311529047732,
+   "blocks": 75
+  }
+ ]
+}
