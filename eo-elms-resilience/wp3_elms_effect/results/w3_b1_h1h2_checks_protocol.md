@@ -50,3 +50,4 @@ The same four, plus the frozen z-score, on the seasonal integral (the registered
 | Date | Change | Reason |
 |---|---|---|
 | 2026-11-09 | Registered by public commit before any statistic above was computed | Project lead: register the two H1/H2 checks |
+| 2026-11-09 | **Run** ([w3_b1_h1h2_checks.md](w3_b1_h1h2_checks.md)). Reproduced H1 +0.082 and H2 +0.035. **H2:** comparison side 93% season 2024, 94% in wet-shock cells; without wet cells −0.028 (−0.164, +0.109): dominated by wet seasons, depends on wet seasons. **H1 depends on scaling:** frozen sample raw −0.0014 (−0.0044, +0.0016), ratio −0.68% (−1.34, −0.03), pooled-SD z −0.011 (−0.029, +0.006); capped z +0.074 (+0.050, +0.099). E3 sample alike. Registered readings unchanged | Registered checks |
