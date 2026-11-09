@@ -35,3 +35,4 @@ Frozen H1 sample (X2 matched sample), crop strata, 2017–2025; E3 sample report
 | Date | Change | Reason |
 |---|---|---|
 | 2026-11-09 | Registered by public commit before any statistic above was computed | Project lead: register the baseline-variability check |
+| 2026-11-09 | **Run** ([w3_b1_baseline_sd.md](w3_b1_baseline_sd.md)). **Scaling artefact supported** on both samples: agreement fields' baseline SD higher by 11% (frozen; log difference +0.105, +0.099 to +0.111) and 6% (E3); comparison fields' July NDVI falls 0.167 in shock seasons; H1 with SD-tercile strata −0.010 (−0.042, +0.021) and +0.021 (−0.012, +0.055). Registered reading unchanged | Registered check |

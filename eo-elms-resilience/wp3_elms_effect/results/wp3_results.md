@@ -16,7 +16,7 @@ Run of the frozen pre-registration ([preregistration.md](preregistration.md), co
 | H2 peak NDVI: calm-after-shock minus calm-after-calm effect | +0.035 | 0.024 | [-0.012, +0.081] | 0.141 | 0.141 | 164,698 |
 | H3 H1 contrast, family B minus family A | +0.065 | 0.034 | [-0.003, +0.132] | 0.060 | 0.119 | 327,710 |
 
-**Added 9 November 2026, readings unchanged:** H1 is positive only on the field z-score; on raw July NDVI, a ratio to normal and a shared-scale z-score it is near zero or below. H2's comparison side is almost all the wet 2024 season. See [w3_b1_h1h2_checks.md](w3_b1_h1h2_checks.md).
+**Added 9 November 2026, readings unchanged:** H1 is positive only on the field z-score; on raw July NDVI, a ratio to normal and a shared-scale z-score it is near zero or below. H2's comparison side is almost all the wet 2024 season. See [w3_b1_h1h2_checks.md](w3_b1_h1h2_checks.md). **The baseline-variability check then supported a scaling artefact:** agreement fields had more variable July NDVI before entry, so the same NDVI fall is a smaller z-score fall; with strata by baseline variability H1 is −0.010 (−0.042, +0.021). So H1 can't be read as evidence of a cushion ([w3_b1_baseline_sd.md](w3_b1_baseline_sd.md)).
 
 Components:
 
