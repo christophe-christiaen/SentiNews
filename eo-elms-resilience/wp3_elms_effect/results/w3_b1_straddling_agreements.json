@@ -1,0 +1,100 @@
+{
+ "Herbal leys": {
+  "fields": 15870,
+  "fields_linked": 15866,
+  "agreements": 10253,
+  "agreements_2plus_fields": 5103,
+  "agreements_straddling": 74,
+  "share_of_multi_agreements_straddling": 0.01450127376053302,
+  "fields_in_straddling_agreements": 289,
+  "share_of_linked_fields": 0.018215051052565233,
+  "never_treated_fields_not_countable": 0
+ },
+ "Cover crops": {
+  "fields": 30000,
+  "fields_linked": 29996,
+  "agreements": 13158,
+  "agreements_2plus_fields": 8231,
+  "agreements_straddling": 281,
+  "share_of_multi_agreements_straddling": 0.03413922974122221,
+  "fields_in_straddling_agreements": 1862,
+  "share_of_linked_fields": 0.06207494332577677,
+  "never_treated_fields_not_countable": 0
+ },
+ "No-till": {
+  "fields": 15540,
+  "fields_linked": 15538,
+  "agreements": 7484,
+  "agreements_2plus_fields": 3844,
+  "agreements_straddling": 156,
+  "share_of_multi_agreements_straddling": 0.04058272632674298,
+  "fields_in_straddling_agreements": 982,
+  "share_of_linked_fields": 0.06319989702664436,
+  "never_treated_fields_not_countable": 0
+ },
+ "In-field flower and bird-food plots": {
+  "fields": 30000,
+  "fields_linked": 29991,
+  "agreements": 13317,
+  "agreements_2plus_fields": 8148,
+  "agreements_straddling": 217,
+  "share_of_multi_agreements_straddling": 0.02663230240549828,
+  "fields_in_straddling_agreements": 1428,
+  "share_of_linked_fields": 0.04761428428528559,
+  "never_treated_fields_not_countable": 0
+ },
+ "Margins and corners": {
+  "fields": 30000,
+  "fields_linked": 29993,
+  "agreements": 15386,
+  "agreements_2plus_fields": 9143,
+  "agreements_straddling": 265,
+  "share_of_multi_agreements_straddling": 0.02898392212621678,
+  "fields_in_straddling_agreements": 1291,
+  "share_of_linked_fields": 0.043043376787917184,
+  "never_treated_fields_not_countable": 0
+ },
+ "Grassland options": {
+  "fields": 6662,
+  "fields_linked": 6660,
+  "agreements": 5986,
+  "agreements_2plus_fields": 1652,
+  "agreements_straddling": 34,
+  "share_of_multi_agreements_straddling": 0.020581113801452784,
+  "fields_in_straddling_agreements": 79,
+  "share_of_linked_fields": 0.011861861861861863,
+  "never_treated_fields_not_countable": 0
+ },
+ "Buffer strips (control)": {
+  "fields": 15000,
+  "fields_linked": 15000,
+  "agreements": 9440,
+  "agreements_2plus_fields": 5688,
+  "agreements_straddling": 159,
+  "share_of_multi_agreements_straddling": 0.027953586497890294,
+  "fields_in_straddling_agreements": 668,
+  "share_of_linked_fields": 0.044533333333333334,
+  "never_treated_fields_not_countable": 15000
+ },
+ "Management only (control)": {
+  "fields": 15000,
+  "fields_linked": 14998,
+  "agreements": 12275,
+  "agreements_2plus_fields": 5572,
+  "agreements_straddling": 173,
+  "share_of_multi_agreements_straddling": 0.031048097631012204,
+  "fields_in_straddling_agreements": 528,
+  "share_of_linked_fields": 0.03520469395919456,
+  "never_treated_fields_not_countable": 15000
+ },
+ "All samples together": {
+  "fields": 95930,
+  "fields_linked": 95918,
+  "agreements": 27840,
+  "agreements_2plus_fields": 20835,
+  "agreements_straddling": 630,
+  "share_of_multi_agreements_straddling": 0.03023758099352052,
+  "fields_in_straddling_agreements": 5878,
+  "share_of_linked_fields": 0.061281511290894305
+ }
+}
