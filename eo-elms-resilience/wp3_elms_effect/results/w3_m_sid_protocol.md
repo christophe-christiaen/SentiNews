@@ -68,3 +68,4 @@ These are the same as the four-model comparison, so results line up with I\*, Δ
 |---|---|---|
 | 2026-11-19 | Draft written from Paper B's pending section 4 and W3-M in the publication plan | Project lead: draft the SID protocol |
 | 2026-11-19 | Registered with all four products primary (the draft had Sentinel-2 and AlphaEarth primary); the Paper B rule and the note on twelve labels adjusted to match | Project lead: register now with all four products |
+| 2026-11-19 | Environment, before any SID model on real data: PyTorch 2.2.2 installed (the last build for Intel macOS). It has no NumPy 2 bridge, so SID-A passes values to and from PyTorch as Python lists. That is an exact float32 conversion and changes nothing in the method. Checked on synthetic data only | Project lead approved installing PyTorch |

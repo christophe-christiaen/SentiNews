@@ -57,8 +57,9 @@ def adv_fit_predict(Ptr, Qtr, ytr, Pte, Qte, lam, seed):
     import torch
     torch.set_num_threads(1); torch.manual_seed(seed); rng = np.random.default_rng(seed)
     s = StandardScaler().fit(np.vstack([Ptr, Qtr]))
-    T = lambda X: torch.tensor(s.transform(X), dtype=torch.float32)
-    P, Q, y = T(Ptr), T(Qtr), torch.tensor(ytr, dtype=torch.float32)
+    # torch 2.2.2 (last Intel-macOS build) has no NumPy 2 bridge: pass values as Python lists (exact float32 conversion)
+    T = lambda X: torch.tensor(s.transform(X).tolist(), dtype=torch.float32)
+    P, Q, y = T(Ptr), T(Qtr), torch.tensor(np.asarray(ytr, dtype=float).tolist(), dtype=torch.float32)
 
     class GRL(torch.autograd.Function):
         @staticmethod
@@ -73,11 +74,11 @@ def adv_fit_predict(Ptr, Qtr, ytr, Pte, Qte, lam, seed):
     n = len(y)
     for _ in range(60):
         for b in np.array_split(rng.permutation(n), max(1, n // 512)):
-            b = torch.tensor(b)
+            b = torch.tensor(b.tolist())
             loss = bce(head(enc(Q[b])).squeeze(1), y[b]) + lam * bce(adv(GRL.apply(enc(P[b]))).squeeze(1), y[b])
             opt.zero_grad(); loss.backward(); opt.step()
     with torch.no_grad():
-        f = lambda X: torch.sigmoid(head(enc(T(X)))).squeeze(1).numpy()
+        f = lambda X: np.array(torch.sigmoid(head(enc(T(X)))).squeeze(1).tolist())
         return f(Qte), f(Pte)
 
 
