@@ -42,3 +42,5 @@ For each option family:
 | Date | Change | Reason |
 |---|---|---|
 | 2026-11-09 | Registered by public commit before any statistic above was computed | Project lead: start #9 |
+| 2026-11-19 | The first run (9 November) ended with the session before writing any output; its log was in a temporary folder and is lost. Rerun unchanged from the registered script, with the log and cached predictions kept locally | Operational; no statistic was seen before the rerun |
+| 2026-11-19 | **Run** ([w3_b1_block_bootstrap.md](w3_b1_block_bootstrap.md)). Point estimates reproduced exactly. **Detection holds under clustering for every family and model**: the same five families are detected by all four models, margins and corners by none. Intervals widen by a median factor of 1.27 (1.07 to 1.90). **Five of six verdicts unchanged; cover crops: ranking changes** at 10 km only (TESSERA vs AlphaEarth Holm p 0.056; "best suited: TESSERA" holds at 5 and 20 km) | Registered check |
