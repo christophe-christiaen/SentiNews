@@ -101,16 +101,30 @@ def sid_a(df, Xpre, Xq, tr, te):
     return sc, lam
 
 
+def impute(X, tr):
+    with np.errstate(all='ignore'):
+        import warnings
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', RuntimeWarning)
+            m = np.nanmedian(X[tr], axis=0)
+    m = np.where(np.isfinite(m), m, 0.0)
+    return np.where(np.isnan(X), m, X)
+
+
 def fold(df, Xpre, Xq, blocks, r, with_adv):
     """One held-out region: scores of each detector with Xq in the post role."""
     y = df.y.values; te = (df.region == r).values; tr = ~te
     out = {'idx': np.where(te)[0]}
     out['STD'] = hgb(Xq[tr], y[tr], Xq[te])
     out['SID-D'] = hgb((Xq - Xpre)[tr], y[tr], (Xq - Xpre)[te])
-    Rtr, Rte, a = residualise(Xpre[tr], Xq[tr], Xpre[te], Xq[te], blocks[tr]); out['alpha'] = a
+    # Ridge and the MLP cannot take missing values (deviation logged 20 Nov): fill each feature with its median over the
+    # training regions only (no labels, nothing from the held-out region); 0 if a feature is missing in all of them
+    out['missing'] = [float(np.isnan(Xpre).mean()), float(np.isnan(Xq).mean())]
+    Ip, Iq = impute(Xpre, tr), impute(Xq, tr)
+    Rtr, Rte, a = residualise(Ip[tr], Iq[tr], Ip[te], Iq[te], blocks[tr]); out['alpha'] = a
     out['SID-R'] = hgb(Rtr, y[tr], Rte)
     if with_adv:
-        out['SID-A'], out['lambda'] = sid_a(df, Xpre, Xq, tr, te)
+        out['SID-A'], out['lambda'] = sid_a(df, Ip, Iq, tr, te)
     return out
 
 
@@ -131,7 +145,7 @@ def scores(df, F, xy, cache, key, workers, with_adv):
             for d in S[role]:
                 if d != 'meta':
                     S[role][d][o['idx']] = o[d]
-            S[role]['meta'][r] = {k: o[k] for k in ('alpha', 'lambda') if k in o}
+            S[role]['meta'][r] = {k: o[k] for k in ('alpha', 'lambda', 'missing') if k in o}
     pickle.dump(S, open(f, 'wb'))
     return S
 
