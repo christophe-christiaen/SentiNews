@@ -1,0 +1,73 @@
+{
+ "model": "TerraMind-1.0-base (terratorch terramind_v1_base, merge_method=mean)",
+ "torch": "2.14.1+cu130",
+ "gpu": "Tesla T4",
+ "tile_km2": 2689,
+ "imagery": {
+  "2018": {
+   "s2_items": 128,
+   "s1_items": 164,
+   "s2_days_offset_removed": 0,
+   "chip_seconds_mean": 100.1,
+   "s2_scenes_per_chip_mean": 51.585,
+   "s1_scenes_per_chip_mean": 72.465,
+   "s2_clear_obs_median": 26.0,
+   "s2_px_no_clear": 1.1957908163265306e-06,
+   "MB": 189
+  },
+  "2025": {
+   "s2_items": 197,
+   "s1_items": 89,
+   "s2_days_offset_removed": 55,
+   "chip_seconds_mean": 274.6,
+   "s2_scenes_per_chip_mean": 78.43,
+   "s1_scenes_per_chip_mean": 47.965,
+   "s2_clear_obs_median": 21.0,
+   "s2_px_no_clear": 0.0,
+   "MB": 188
+  }
+ },
+ "embedding": {
+  "2018": {
+   "parcels": 200,
+   "model_seconds": 4.8,
+   "ms_per_chip": 24.1,
+   "s2_px_filled_mean": 1.1957908163265306e-06,
+   "s2_chips_over_10pct_filled": 0,
+   "s1_px_filled_mean": 0.0,
+   "nonfinite": 0.0
+  },
+  "2025": {
+   "parcels": 200,
+   "model_seconds": 3.9,
+   "ms_per_chip": 19.7,
+   "s2_px_filled_mean": 0.0,
+   "s2_chips_over_10pct_filled": 0,
+   "s1_px_filled_mean": 0.0,
+   "nonfinite": 0.0
+  }
+ },
+ "dim": 768,
+ "cos_same_median": 0.9600483065511061,
+ "cos_random_median": 0.8995206067074141,
+ "cos_same_iqr": [
+  0.9394169958099098,
+  0.9734240260973585
+ ],
+ "cos_random_iqr": [
+  0.8768532607123348,
+  0.9169109505179632
+ ],
+ "share_same_above_random_median": 0.9,
+ "per_200_chips_season": {
+  "MB": 188,
+  "chip_seconds_mean": 187.4
+ },
+ "projection": {
+  "note": "imagery and model both scale with parcels x years; imagery hours assume 8 chips in parallel as here",
+  "model_hours_for_160000_chips": 0.97,
+  "imagery_hours_for_160000_chips_8_parallel": 1040.8
+ },
+ "computed_locally": "summary cell failed (TypeError); computed from the saved parquet and chip files with the same definitions",
+ "labels_read": false
+}
