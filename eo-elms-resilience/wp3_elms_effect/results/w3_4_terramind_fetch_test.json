@@ -1,0 +1,49 @@
+{
+ "test": "TerraMind imagery-speed test, tile composite vs per-chip (registered 28 Nov 2026)",
+ "season": 2025,
+ "labels_read": false,
+ "machine": "project laptop (8 cores, 16 GB)",
+ "s2_items": 197,
+ "s1_items": 89,
+ "tile": {
+  "km": [
+   51.8,
+   51.9
+  ],
+  "km2": 2689,
+  "blocks": 36,
+  "block_px": 1024,
+  "workers": 3,
+  "wall_min": 60.9,
+  "block_secs_mean": 282.7,
+  "s2_scenes_per_block_mean": 103.7,
+  "GB_decoded": 88.5
+ },
+ "per_chip": {
+  "chips": 16,
+  "parallel": 8,
+  "wall_min": 6.6,
+  "chip_secs_mean": 189.6,
+  "wall_secs_per_chip": 24.8,
+  "GB_decoded": 2.61
+ },
+ "agreement": {
+  "s2_identical_share_min": 1.0,
+  "s1_identical_share_min": 0.9867167570153061,
+  "s2_max_abs_diff": 0.0,
+  "s1_max_abs_diff": 5.462950706481934
+ },
+ "projection": {
+  "note": "tile cost scales with area (82 squares with parcels x 4 years, each a full 2,500 km2 square: an upper bound); per-chip with chips (160,000); same machine and session",
+  "tile_hours": 309.6,
+  "per_chip_hours": 1101.8,
+  "tile_hours_per_square_year": 0.94,
+  "speed_up": 3.6
+ },
+ "notes": {
+  "block_failures": "3 of 36 blocks failed at 13:34 when the cached Planetary Computer token expired during their reads (planetary_computer.sign reuses a cached token until it expires); retried with a fresh token and succeeded; their wasted reads are included in tile wall time, so the tile figure is slightly pessimistic. A full run must refresh the token when it is near expiry",
+  "s1_differences": "Sentinel-2 identical in all 16 chips. Sentinel-1: 9 of 16 chips identical in every pixel, the others differ on 0.2-1.3% of pixels, scattered, median 0.2 dB (max 5.5 dB). Likely cause (not tested): S1 RTC is resampled to the 10 m UTM grid and the nearest-neighbour pick can differ with the size of the read window; S2 is already on that grid. Both values are valid neighbour picks",
+  "GB_decoded": "decoded array size, not bytes transferred (registration said MB read)",
+  "tile_deleted": "the test tile and chips were deleted after the check, as registered"
+ }
+}
